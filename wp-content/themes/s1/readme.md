@@ -8,7 +8,12 @@
 
 ### Groupe : 02
 
-## Description du projet:
+## Liens
+
+- Github-Project : https://github.com/orgs/5W5-ProjetWeb-gr2-8/projects/1/views/1
+- Github-Pages : https://5w5-projetweb-gr2-8.github.io/5w5-2024/
+
+## Description du projet :
 
 Le projet consiste à créer une page web pour le programme **TIM** du Collège de Maisonneuve, en présentant :
 
