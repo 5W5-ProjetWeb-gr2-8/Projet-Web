@@ -121,37 +121,66 @@ figure {
 /* les sections de la page                    */
 /* ////////////////////////////////////////// */
 footer {
-  background-color: black;
+  background-color: black; /* #f2f2f2 Gris clair */
   padding: 1.2rem 0;
 }
-footer .footer-content {
+
+.footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-left: 2rem;
+  padding-left: 2rem; /* Espacement à gauche */
 }
-footer .footer-content .left-section {
+
+.left-section {
   display: flex;
   align-items: center;
 }
-footer .footer-content .left-section .logo img {
+
+.logo img {
   max-width: 7rem;
   height: auto;
-  margin-right: 1rem;
+  margin-right: 1rem; /* Espace entre le logo et le copyright */
 }
-footer .footer-content .left-section .copyright {
+
+.copyright {
   font-size: 1.5rem;
-  color: white;
+  color: white; /* #555 */
 }
-footer .footer-content .credits {
+
+.credits {
   font-size: 1.5rem;
-  color: white;
+  color: white; /* #555 */
   text-align: right;
-  margin-right: 20px;
+  margin-right: 20px; /* Ajout d'un espacement à droite pour la section crédits */
   padding-right: 2rem;
 }
 
+/* Responsivité pour les tablettes et mobiles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Aligne les éléments en colonne */
+    text-align: center; /* Centrer les textes */
+    padding-left: 0;
+  }
+  .logo img {
+    margin-bottom: 1rem; /* Ajoute un espace entre le logo et le copyright */
+  }
+  .copyright, .credits {
+    font-size: 1.2rem; /* Réduit la taille du texte pour les écrans plus petits */
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 5rem; /* Réduit la taille du logo sur mobile */
+  }
+  .copyright, .credits {
+    font-size: 1rem; /* Réduction supplémentaire de la taille du texte */
+  }
+}
 /* ////////////////////////////////////////// */
 /* composants                             */
 /* ////////////////////////////////////////// *//*# sourceMappingURL=style.css.map */
