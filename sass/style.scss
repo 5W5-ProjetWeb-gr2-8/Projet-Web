@@ -25,13 +25,18 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* ////////////////////////////////////////// */
 
 @import "base/h";
+@import "base/a";
 //@import "base/bouton";
 //@import "base/lien";
 
 /* ////////////////////////////////////////// */
 /* les sections de la page                    */
 /* ////////////////////////////////////////// */
+@import "menu";
 @import "footer";
+
+
+
 
 /* ////////////////////////////////////////// */
 /* composants                             */

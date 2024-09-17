@@ -117,9 +117,45 @@ figure {
   color: var(--color5);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ////////////////////////////////////////// */
 /* les sections de la page                    */
 /* ////////////////////////////////////////// */
+nav.menu {
+  background-color: #000;
+  color: #fff;
+  height: 10vh;
+  padding: 0 4%;
+}
+nav.menu div.menu_contenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+nav.menu div.menu_contenu p {
+  background-color: gray;
+  width: 20%;
+  text-align: center;
+}
+nav.menu div.menu_contenu p.menu_titre {
+  width: 50%;
+  padding-left: 2%;
+  text-align: unset;
+}
+nav.menu div.menu_contenu ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  width: 30%;
+}
+nav.menu div.menu_contenu ul a {
+  color: white;
+}
+
 footer {
   background-color: black; /* #f2f2f2 Gris clair */
   padding: 1.2rem 0;
