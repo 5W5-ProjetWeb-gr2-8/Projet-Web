@@ -1,0 +1,8 @@
+# /*
+# !/themes
+# /themes/*
+# /plugins/*
+# !/themes/s1
+# # // Ne pas ignorer les fichiers .gitignore et readme.md à la racine
+# !.gitignore
+# !readme.md
