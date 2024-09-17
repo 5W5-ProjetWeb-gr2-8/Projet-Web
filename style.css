@@ -118,8 +118,40 @@ figure {
 }
 
 /* ////////////////////////////////////////// */
-/* règles de la pagination                             */
+/* les sections de la page                    */
 /* ////////////////////////////////////////// */
+footer {
+  background-color: black;
+  padding: 1.2rem 0;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 2rem;
+}
+footer .footer-content .left-section {
+  display: flex;
+  align-items: center;
+}
+footer .footer-content .left-section .logo img {
+  max-width: 7rem;
+  height: auto;
+  margin-right: 1rem;
+}
+footer .footer-content .left-section .copyright {
+  font-size: 1.5rem;
+  color: white;
+}
+footer .footer-content .credits {
+  font-size: 1.5rem;
+  color: white;
+  text-align: right;
+  margin-right: 20px;
+  padding-right: 2rem;
+}
+
 /* ////////////////////////////////////////// */
 /* composants                             */
 /* ////////////////////////////////////////// *//*# sourceMappingURL=style.css.map */

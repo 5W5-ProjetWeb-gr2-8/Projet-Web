@@ -1,0 +1,36 @@
+footer {
+  background-color: black; // #f2f2f2 Gris clair
+  padding: 1.2rem 0;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 2rem; // Espacement à gauche
+
+    .left-section {
+      display: flex;
+      align-items: center;
+
+      .logo img {
+        max-width: 7rem;
+        height: auto;
+        margin-right: 1rem; // Espace entre le logo et le copyright
+      }
+
+      .copyright {
+        font-size: 1.5rem;
+        color: white; // #555
+      }
+    }
+
+    .credits {
+      font-size: 1.5rem;
+      color: white; // #555
+      text-align: right;
+      margin-right: 20px; // Ajout d'un espacement à droite pour la section crédits
+      padding-right: 2rem;
+    }
+  }
+}
