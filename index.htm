@@ -41,6 +41,49 @@
         </figure>
       </main>
     </div>
+    <section class="faq-section">
+      <div class="faq-container">
+        <!-- Section de gauche avec le logo et les questions -->
+        <div class="left-section">
+          <div class="logo">
+            <img src="images/logo_TIM.png" alt="Logo TIM" />
+          </div>
+          <div class="questions">
+            <button class="question" data-reponse="réponse1">Question 1</button>
+            <button class="question" data-reponse="réponse2">Question 2</button>
+            <button class="question" data-reponse="réponse3">Question 3</button>
+            <button class="question" data-reponse="réponse4">Question 4</button>
+            <button class="question" data-reponse="réponse5">Question 5</button>
+          </div>
+        </div>
+
+        <!-- Section de droite avec la réponse, icônes et boîte d'inscription -->
+        <div class="right-section">
+          <div class="reponse" id="reponse-box">
+            <!-- La réponse sera affichée ici -->
+            Sélectionnez une question pour voir la réponse.
+          </div>
+          <div class="contact-icons">
+            <div class="icon">
+              <img src="images/phone_icon.png" alt="Téléphone" />
+              <span>(514) 123-4567</span>
+            </div>
+            <div class="icon">
+              <img src="images/address_icon.png" alt="Adresse" />
+              <span>123 rue TIM, Montréal, QC</span>
+            </div>
+          </div>
+          <div class="inscription-box">
+            <input
+              type="email"
+              placeholder="Inscrivez-vous à notre newsletter"
+            />
+            <button>S'inscrire</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="global">
       <footer class="pied-page">
         <div class="footer-content">
@@ -54,5 +97,7 @@
         </div>
       </footer>
     </div>
+    <!-- Inclure le fichier JavaScript -->
+    <script src="js/faq.js"></script>
   </body>
 </html>

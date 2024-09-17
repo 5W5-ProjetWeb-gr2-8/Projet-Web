@@ -156,6 +156,134 @@ nav.menu div.menu_contenu ul a {
   color: white;
 }
 
+:root {
+  --couleur-fond: black;
+  --couleur-principale: #0044cc;
+  --couleur-texte: black;
+  --couleur-blanc: #ffffff;
+  --espacement: 1.5rem;
+  --taille-police: 1.2rem;
+  --taille-police-grande: 1.5rem;
+  --taille-police-petite: 1rem;
+}
+
+.faq-section {
+  background-color: var(--couleur-fond);
+  padding: var(--espacement);
+  border-bottom: 0.8rem solid white; /* Ligne blanche en bas */
+}
+
+.faq-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--espacement);
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo img {
+  max-width: 8rem;
+  margin-bottom: var(--espacement);
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-blanc);
+  border: none;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: var(--taille-police);
+  cursor: pointer;
+}
+
+.right-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacement);
+}
+
+.reponse {
+  background-color: var(--couleur-blanc);
+  padding: var(--espacement);
+  border: 1px solid var(--couleur-principale);
+  font-size: var(--taille-police);
+  color: var(--couleur-texte);
+}
+
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacement);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon img {
+  width: 2rem;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.inscription-box {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.inscription-box input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid var(--couleur-principale);
+  font-size: var(--taille-police);
+}
+
+.inscription-box button {
+  padding: 0.8rem 1.2rem;
+  background-color: var(--couleur-principale);
+  color: var(--couleur-blanc);
+  border: none;
+  cursor: pointer;
+}
+
+/* Adaptation pour les tablettes */
+@media (max-width: 768px) {
+  .faq-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+  .reponse {
+    text-align: center;
+  }
+}
+/* Adaptation pour les mobiles */
+@media (max-width: 480px) {
+  .question {
+    font-size: var(--taille-police-petite);
+  }
+  .reponse {
+    font-size: var(--taille-police-petite);
+  }
+  .icon img {
+    width: 1.5rem;
+  }
+}
 footer {
   background-color: black; /* #f2f2f2 Gris clair */
   padding: 1.2rem 0;
