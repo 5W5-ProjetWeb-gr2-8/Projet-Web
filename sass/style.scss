@@ -25,10 +25,11 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* ////////////////////////////////////////// */
 
 @import "base/h";
+@import "base/a";
 //@import "base/bouton";
 //@import "base/lien";
 /* ////////////////////////////////////////// */
-/* règles de la pagination                             */
+/* règles de la pagination                    */
 /* ////////////////////////////////////////// */
 //@import "layout";
 
@@ -36,7 +37,7 @@ Ce thème a été développé dans le cadre du cours 4W4
 
 //@import "effet/diagonal";
 
-//@import "entete";
+@import "menu";
 //@import "footer";
 
 /* ////////////////////////////////////////// */

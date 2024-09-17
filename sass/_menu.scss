@@ -1,0 +1,44 @@
+// Feuille de style pour la navigation
+
+// Conteneur du menu
+nav.menu {
+  background-color: /*couleur de fond*/#000;
+  color: /*couleur de texte*/#fff;
+  height: /*hauteur de la boite*/ 10vh;
+  padding: 0 4%;
+  
+
+  // Contenu de la boîte
+  div.menu_contenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    // Bouton Inscription
+    p {
+      background-color: gray;
+      width: 20%;
+      text-align: center;
+    }
+    
+    // Titre du menu
+    p.menu_titre {
+      width: 50%;
+      padding-left: 2%;
+      text-align: unset;
+    }
+
+    // Onglets de navigation
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      list-style: none;
+      width: 30%;
+      // Liens vers les onglets
+      a {
+        color: white;
+      }
+    }
+  } 
+}
