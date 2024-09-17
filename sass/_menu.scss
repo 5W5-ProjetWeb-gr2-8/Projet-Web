@@ -2,10 +2,14 @@
 
 // Conteneur du menu
 nav.menu {
-  background-color: /*couleur de fond*/#000;
-  color: /*couleur de texte*/#fff;
-  height: /*hauteur de la boite*/ 10vh;
+  // Affichage/Structure
+  position: sticky; 
+  top: 0;
+  height: /* VARIABLE hauteur du menu*/ 10vh;
   padding: 0 4%;
+  // 
+  background-color: /* VARIABLE couleur de fond*/#000;
+  color: /* VARIABLE couleur de texte*/#fff;
   
 
   // Contenu de la boîte

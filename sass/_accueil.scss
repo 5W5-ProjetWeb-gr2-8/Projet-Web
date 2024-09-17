@@ -1,0 +1,10 @@
+// Feuille de style pour l'accueil
+
+section.section_accueil {
+    background-color: lightblue;
+    height: 80vh;
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
