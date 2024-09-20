@@ -172,7 +172,6 @@ nav.menu div.menu_contenu ul a {
   color: white;
 }
 
-<<<<<<< HEAD
 section.section_accueil {
   background-color: lightblue;
   height: 80vh;
@@ -181,10 +180,6 @@ section.section_accueil {
   align-items: center;
 }
 
-footer {
-  background-color: black; /* #f2f2f2 Gris clair */
-  padding: 1.2rem 0;
-=======
 .faq-section {
   background-color: var(--couleur-fond-gris);
   padding: var(--espacement);
@@ -308,7 +303,6 @@ footer {
   .faq-section .faq-container .right-section {
     width: auto; /* Réduire la largeur sur mobile */
   }
->>>>>>> Dev
 }
 
 footer {
