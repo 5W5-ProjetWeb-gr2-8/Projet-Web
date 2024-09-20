@@ -10,20 +10,49 @@ section.section_competences {
 
     // Boite contenant une carte de compétence
     div.skill {
-        background-color: /* VARIABLE */ lightgray;
+        background-color: /* VARIABLE */ grey;
         width: /* VARIABLE */ 80%;
-        height: /* VARIABLE */ 80%;
+        // height: /* VARIABLE */ 80%;
+        padding: /* VARIABLE */ 50px 20px;
+        border-radius: 20px;
+        
+
+        .logoInfo {
+            display: flex;
+            align-items: center;
+            .logo{}
+            // Informations des compétences
+            .info {
+                // padding: 0 10px;
+
+                // Outils utilisés dans le cours
+                .outils {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    // Icone et un outil
+                    .outil {
+                        display: flex;
+                        // justify-content: center;
+                        align-items: center;
+                    }
+                }   
+            }
+        }
+        
 
         // Carrousel d'exemples
         .exemples {
-            background-color: red; /*TEMPORAIRE*/
+            // background-color: red; /*TEMPORAIRE*/
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             
             img {
                 border-radius: 12px;
             }
         }
+        
     }
 }
