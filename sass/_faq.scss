@@ -20,7 +20,7 @@
 
       .logo-faq {
         img {
-          max-width: 4rem;
+          max-width: 2rem;
           margin-bottom: var(--espacement);
         }
       }
@@ -60,7 +60,7 @@
     }
 
     .right-section {
-      width: 250px; /* Largeur fixe pour la section droite */
+      width: 20rem; /* Largeur fixe pour la section droite */
       display: flex;
       flex-direction: column;
       gap: var(--espacement);
@@ -136,7 +136,7 @@
       }
 
       .logo-faq img {
-        max-width: 3rem;
+        max-width: 2rem;
       }
 
       .right-section {

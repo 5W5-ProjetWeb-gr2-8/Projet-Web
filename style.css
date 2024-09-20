@@ -187,7 +187,7 @@ nav.menu div.menu_contenu ul a {
   flex-direction: column;
 }
 .faq-section .faq-container .left-section .logo-faq img {
-  max-width: 4rem;
+  max-width: 2rem;
   margin-bottom: var(--espacement);
 }
 .faq-section .faq-container .left-section .questions-et-reponse {
@@ -220,7 +220,7 @@ nav.menu div.menu_contenu ul a {
   margin-top: 0.5rem;
 }
 .faq-section .faq-container .right-section {
-  width: 250px; /* Largeur fixe pour la section droite */
+  width: 20rem; /* Largeur fixe pour la section droite */
   display: flex;
   flex-direction: column;
   gap: var(--espacement);
@@ -283,7 +283,7 @@ nav.menu div.menu_contenu ul a {
     text-align: center;
   }
   .faq-section .faq-container .logo-faq img {
-    max-width: 3rem;
+    max-width: 2rem;
   }
   .faq-section .faq-container .right-section {
     width: auto; /* Réduire la largeur sur mobile */
