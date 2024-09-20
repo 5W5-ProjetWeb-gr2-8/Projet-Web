@@ -47,6 +47,11 @@ $color5: #9b59b6; // Violet
 /* ////////////////////////////////////////// */
 /* règles de base                             */
 /* ////////////////////////////////////////// */
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
 /*
 Sélecteur textuel de base
 
@@ -169,6 +174,7 @@ nav.menu div.menu_contenu ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
   list-style: none;
   width: 30%;
 }
@@ -192,14 +198,27 @@ section.section_competences {
   align-items: center;
 }
 section.section_competences div.skill {
-  background-color: lightgray;
+  background-color: grey;
   width: 80%;
-  height: 80%;
+  padding: 50px 20px;
+  border-radius: 20px;
 }
-section.section_competences div.skill .exemples {
-  background-color: red; /*TEMPORAIRE*/
+section.section_competences div.skill .logoInfo {
+  display: flex;
+  align-items: center;
+}
+section.section_competences div.skill .logoInfo .info .outils {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+section.section_competences div.skill .logoInfo .info .outils .outil {
+  display: flex;
+  align-items: center;
+}
+section.section_competences div.skill .exemples {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 section.section_competences div.skill .exemples img {
