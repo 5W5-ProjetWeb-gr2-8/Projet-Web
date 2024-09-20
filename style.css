@@ -180,6 +180,28 @@ section.section_accueil {
   align-items: center;
 }
 
+section.section_competences {
+  background-color: lightblue;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section.section_competences div.skill {
+  background-color: lightgray;
+  width: 80%;
+  height: 80%;
+}
+section.section_competences div.skill .exemples {
+  background-color: red; /*TEMPORAIRE*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section.section_competences div.skill .exemples img {
+  border-radius: 12px;
+}
+
 .faq-section {
   background-color: var(--couleur-fond-gris);
   padding: var(--espacement);

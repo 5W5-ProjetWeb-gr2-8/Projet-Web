@@ -1,0 +1,29 @@
+// Feuille de style pour la section des compétences
+
+section.section_competences {
+    background-color: lightblue;
+    height: 90vh;
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    // Boite contenant une carte de compétence
+    div.skill {
+        background-color: /* VARIABLE */ lightgray;
+        width: /* VARIABLE */ 80%;
+        height: /* VARIABLE */ 80%;
+
+        // Carrousel d'exemples
+        .exemples {
+            background-color: red; /*TEMPORAIRE*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+            img {
+                border-radius: 12px;
+            }
+        }
+    }
+}
