@@ -34,6 +34,9 @@ $color5: #9b59b6; // Violet
   --couleur-texte: black;
   --couleur-blanc: #ffffff;
   --couleur-fond-gris: #2f2f2f;
+  --couleur-galerie-fond: #ffffff;
+  --couleur-galerie-texte: #000000;
+  --couleur-galerie-bordure: #000000;
   --espacement: 1.5rem;
   --taille-police: 1.2rem;
   --taille-police-grande: 1.5rem;
@@ -201,6 +204,46 @@ section.section_competences div.skill .exemples {
 }
 section.section_competences div.skill .exemples img {
   border-radius: 12px;
+}
+
+.galerie-projets {
+  background-color: var(--couleur-galerie-fond); /* Fond blanc */
+  padding: var(--espacement);
+  text-align: center;
+}
+.galerie-projets .galerie-titre {
+  color: var(--couleur-galerie-texte); /* Texte noir */
+  font-size: var(--taille-police-grande);
+  margin-bottom: var(--espacement);
+}
+.galerie-projets .projets-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacement);
+}
+@media (min-width: 768px) {
+  .galerie-projets .projets-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.galerie-projets .projets-container .projet {
+  background-color: var(--couleur-galerie-fond); /* Fond blanc */
+  border: 1px solid var(--couleur-galerie-bordure); /* Bordure noire */
+  padding: var(--espacement);
+  border-radius: 0.5rem;
+}
+.galerie-projets .projets-container .projet img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: var(--espacement);
+}
+.galerie-projets .projets-container .projet h3 {
+  color: var(--couleur-galerie-texte); /* Titre en noir */
+  margin-bottom: 0.5rem;
+}
+.galerie-projets .projets-container .projet p {
+  color: var(--couleur-galerie-texte); /* Texte en noir */
 }
 
 .faq-section {
