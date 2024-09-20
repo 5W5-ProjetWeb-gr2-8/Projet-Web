@@ -7,11 +7,22 @@ $color5: #9b59b6; // Violet
 */
 
 :root {
+  // temporaire
   --color1: #3498db; // Bleu
   --color2: #e74c3c; // Rouge
   --color3: #2ecc71; // Vert
   --color4: #f1c40f; // Jaune
   --color5: #9b59b6; // Violet
+  // ------------------------------------------------
+  --couleur-fond: black;
+  --couleur-principale: #0044cc;
+  --couleur-texte: black;
+  --couleur-blanc: #ffffff;
+  --couleur-fond-gris: #2f2f2f; // Fond gris pour la FAQ
+  --espacement: 1.5rem;
+  --taille-police: 1.2rem;
+  --taille-police-grande: 1.5rem;
+  --taille-police-petite: 1rem;
 }
 
 $color1: --color1;

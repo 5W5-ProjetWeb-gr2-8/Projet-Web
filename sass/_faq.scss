@@ -1,0 +1,147 @@
+.faq-section {
+  background-color: var(--couleur-fond-gris);
+  padding: var(--espacement);
+  border-bottom: 0.8rem solid white;
+
+  .faq-container {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--espacement);
+    flex-direction: column;
+
+    @media (min-width: 769px) {
+      flex-direction: row;
+    }
+
+    .left-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .logo-faq {
+        img {
+          max-width: 2rem;
+          margin-bottom: var(--espacement);
+        }
+      }
+
+      .questions-et-reponse {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 769px) {
+          flex-direction: row;
+          gap: 1rem; /* Ajuster l'espacement entre les questions et la boîte de réponse */
+        }
+
+        .questions {
+          display: flex;
+          flex-direction: column;
+          gap: var(--espacement);
+        }
+
+        .boite-reponse {
+          background-color: var(--couleur-blanc);
+          padding: var(--espacement);
+          border: 1px solid var(--couleur-principale);
+          font-size: var(--taille-police);
+          color: var(--couleur-texte);
+          flex: 1; /* La boîte de réponse prend aussi de l'espace */
+
+          .question-affichee {
+            font-weight: bold;
+          }
+
+          .reponse-affichee {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .right-section {
+      width: 20rem; /* Largeur fixe pour la section droite */
+      display: flex;
+      flex-direction: column;
+      gap: var(--espacement);
+
+      .social-media {
+        display: flex;
+        gap: 1rem;
+        img {
+          width: 2rem; /* Taille des logos */
+        }
+      }
+
+      .contact-info {
+        background-color: var(--couleur-blanc);
+        padding: 0.5rem; /* Réduire le padding pour rendre la boîte plus petite */
+        border: 1px solid var(--couleur-principale);
+        border-radius: 0.5rem;
+        font-size: var(
+          --taille-police
+        ); /* Assurez-vous que la taille de police soit cohérente */
+        p {
+          padding: 0rem;
+          margin: 0rem;
+        }
+      }
+
+      .inscription-section {
+        background-color: var(--couleur-blanc);
+        padding: var(--espacement);
+        border: 1px solid var(--couleur-principale);
+        border-radius: 0.5rem;
+
+        h3 {
+          margin: 0 0 0.5rem;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.5rem;
+          margin-bottom: 0.5rem;
+          border: 1px solid var(--couleur-principale);
+          border-radius: 0.25rem;
+        }
+
+        button {
+          width: 100%;
+          padding: 0.5rem;
+          background-color: var(--couleur-principale);
+          color: var(--couleur-blanc);
+          border: none;
+          border-radius: 0.25rem;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .faq-container {
+        flex-direction: column;
+      }
+
+      .questions {
+        font-size: var(--taille-police-petite);
+      }
+
+      .boite-reponse {
+        text-align: center;
+      }
+
+      .logo-faq img {
+        max-width: 2rem;
+      }
+
+      .right-section {
+        width: auto; /* Réduire la largeur sur mobile */
+      }
+    }
+  }
+}
