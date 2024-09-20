@@ -59,44 +59,89 @@
       }
     }
 
-    .question {
-      background-color: var(--couleur-blanc); /* Fond blanc */
-      color: var(--couleur-texte); /* Couleur du texte */
-      padding: 1rem; /* Augmenter le padding pour un meilleur espacement */
-      margin-bottom: 0.5rem;
-      font-size: var(--taille-police);
-      cursor: pointer;
-      border: 1px solid var(--couleur-principale); /* Bordure */
-      border-radius: 0.5rem; /* Arrondir les coins */
-      transition: background-color 0.3s ease, transform 0.2s ease; /* Effet de transition */
-
-      &:hover {
-        background-color: var(--couleur-principale); /* Fond change au survol */
-        color: var(--couleur-blanc); /* Couleur du texte change au survol */
-        transform: scale(1.05); /* Effet d'agrandissement au survol */
-      }
-
-      &:active {
-        transform: scale(0.95); /* Réduire légèrement lors du clic */
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .faq-container {
+    .right-section {
+      width: 250px; /* Largeur fixe pour la section droite */
+      display: flex;
       flex-direction: column;
+      gap: var(--espacement);
+
+      .social-media {
+        display: flex;
+        gap: 1rem;
+        img {
+          width: 2rem; /* Taille des logos */
+        }
+      }
+
+      .contact-info {
+        background-color: var(--couleur-blanc);
+        padding: 0.5rem; /* Réduire le padding pour rendre la boîte plus petite */
+        border: 1px solid var(--couleur-principale);
+        border-radius: 0.5rem;
+        font-size: var(
+          --taille-police
+        ); /* Assurez-vous que la taille de police soit cohérente */
+        p {
+          padding: 0rem;
+          margin: 0rem;
+        }
+      }
+
+      .inscription-section {
+        background-color: var(--couleur-blanc);
+        padding: var(--espacement);
+        border: 1px solid var(--couleur-principale);
+        border-radius: 0.5rem;
+
+        h3 {
+          margin: 0 0 0.5rem;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.5rem;
+          margin-bottom: 0.5rem;
+          border: 1px solid var(--couleur-principale);
+          border-radius: 0.25rem;
+        }
+
+        button {
+          width: 100%;
+          padding: 0.5rem;
+          background-color: var(--couleur-principale);
+          color: var(--couleur-blanc);
+          border: none;
+          border-radius: 0.25rem;
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
     }
 
-    .questions {
-      font-size: var(--taille-police-petite);
-    }
+    @media (max-width: 768px) {
+      .faq-container {
+        flex-direction: column;
+      }
 
-    .boite-reponse {
-      text-align: center;
-    }
+      .questions {
+        font-size: var(--taille-police-petite);
+      }
 
-    .logo-faq img {
-      max-width: 3rem;
+      .boite-reponse {
+        text-align: center;
+      }
+
+      .logo-faq img {
+        max-width: 3rem;
+      }
+
+      .right-section {
+        width: auto; /* Réduire la largeur sur mobile */
+      }
     }
   }
 }

@@ -63,12 +63,12 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.4375rem, 0.0313rem + 4.5vw, 3.125rem);
+  font-size: clamp(1.4375rem, 0.0313rem + 4.5vw, 2.125rem);
   font-weight: bold;
 }
 
 p {
-  font-size: clamp(1rem, 0.4792rem + 1.6667vw, 1.625rem);
+  font-size: clamp(1rem, 0.4792rem + 1.6667vw, 1.2rem);
   line-height: 1.8rem;
   padding: 2rem 0;
 }
@@ -219,37 +219,74 @@ nav.menu div.menu_contenu ul a {
 .faq-section .faq-container .left-section .questions-et-reponse .boite-reponse .reponse-affichee {
   margin-top: 0.5rem;
 }
-.faq-section .faq-container .question {
-  background-color: var(--couleur-blanc); /* Fond blanc */
-  color: var(--couleur-texte); /* Couleur du texte */
-  padding: 1rem; /* Augmenter le padding pour un meilleur espacement */
+.faq-section .faq-container .right-section {
+  width: 250px; /* Largeur fixe pour la section droite */
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacement);
+}
+.faq-section .faq-container .right-section .social-media {
+  display: flex;
+  gap: 1rem;
+}
+.faq-section .faq-container .right-section .social-media img {
+  width: 2rem; /* Taille des logos */
+}
+.faq-section .faq-container .right-section .contact-info {
+  background-color: var(--couleur-blanc);
+  padding: 0.5rem; /* Réduire le padding pour rendre la boîte plus petite */
+  border: 1px solid var(--couleur-principale);
+  border-radius: 0.5rem;
+  font-size: var(--taille-police); /* Assurez-vous que la taille de police soit cohérente */
+}
+.faq-section .faq-container .right-section .contact-info p {
+  padding: 0rem;
+  margin: 0rem;
+}
+.faq-section .faq-container .right-section .inscription-section {
+  background-color: var(--couleur-blanc);
+  padding: var(--espacement);
+  border: 1px solid var(--couleur-principale);
+  border-radius: 0.5rem;
+}
+.faq-section .faq-container .right-section .inscription-section h3 {
+  margin: 0 0 0.5rem;
+}
+.faq-section .faq-container .right-section .inscription-section input {
+  width: 100%;
+  padding: 0.5rem;
   margin-bottom: 0.5rem;
-  font-size: var(--taille-police);
+  border: 1px solid var(--couleur-principale);
+  border-radius: 0.25rem;
+}
+.faq-section .faq-container .right-section .inscription-section button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--couleur-principale);
+  color: var(--couleur-blanc);
+  border: none;
+  border-radius: 0.25rem;
   cursor: pointer;
-  border: 1px solid var(--couleur-principale); /* Bordure */
-  border-radius: 0.5rem; /* Arrondir les coins */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Effet de transition */
 }
-.faq-section .faq-container .question:hover {
-  background-color: var(--couleur-principale); /* Fond change au survol */
-  color: var(--couleur-blanc); /* Couleur du texte change au survol */
-  transform: scale(1.05); /* Effet d'agrandissement au survol */
-}
-.faq-section .faq-container .question:active {
-  transform: scale(0.95); /* Réduire légèrement lors du clic */
+.faq-section .faq-container .right-section .inscription-section button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 768px) {
-  .faq-section .faq-container {
+  .faq-section .faq-container .faq-container {
     flex-direction: column;
   }
-  .faq-section .questions {
+  .faq-section .faq-container .questions {
     font-size: var(--taille-police-petite);
   }
-  .faq-section .boite-reponse {
+  .faq-section .faq-container .boite-reponse {
     text-align: center;
   }
-  .faq-section .logo-faq img {
+  .faq-section .faq-container .logo-faq img {
     max-width: 3rem;
+  }
+  .faq-section .faq-container .right-section {
+    width: auto; /* Réduire la largeur sur mobile */
   }
 }
 
