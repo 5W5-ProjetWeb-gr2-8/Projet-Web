@@ -41,62 +41,57 @@
         </figure>
       </main>
     </div>
+    <!-- FAQ //////////////////////////////////////////////////////////////////////// -->
     <section class="faq-section">
       <div class="faq-container">
-        <!-- Section de gauche avec le logo et les questions -->
+        <!-- Section gauche avec le logo et les questions -->
         <div class="left-section">
-          <div class="logo">
-            <img src="images/logo_TIM.png" alt="Logo TIM" />
-          </div>
-          <div class="questions">
-            <button class="question" data-reponse="réponse1">Question 1</button>
-            <button class="question" data-reponse="réponse2">Question 2</button>
-            <button class="question" data-reponse="réponse3">Question 3</button>
-            <button class="question" data-reponse="réponse4">Question 4</button>
-            <button class="question" data-reponse="réponse5">Question 5</button>
-          </div>
-        </div>
-
-        <!-- Section de droite avec la réponse, icônes et boîte d'inscription -->
-        <div class="right-section">
-          <div class="reponse" id="reponse-box">
-            <!-- La réponse sera affichée ici -->
-            Sélectionnez une question pour voir la réponse.
-          </div>
-          <div class="contact-icons">
-            <div class="icon">
-              <img src="images/phone_icon.png" alt="Téléphone" />
-              <span>(514) 123-4567</span>
-            </div>
-            <div class="icon">
-              <img src="images/address_icon.png" alt="Adresse" />
-              <span>123 rue TIM, Montréal, QC</span>
-            </div>
-          </div>
-          <div class="inscription-box">
-            <input
-              type="email"
-              placeholder="Inscrivez-vous à notre newsletter"
+          <div class="logo-faq">
+            <img
+              src="images/logo_college.jpg"
+              alt="Logo Collège de Maisonneuve"
             />
-            <button>S'inscrire</button>
+          </div>
+          <div class="questions-et-reponse">
+            <!-- Questions dans les boîtes bleues -->
+            <div class="questions">
+              <button class="question" data-question="question1">
+                Question 1
+              </button>
+              <button class="question" data-question="question2">
+                Question 2
+              </button>
+              <button class="question" data-question="question3">
+                Question 3
+              </button>
+              <button class="question" data-question="question4">
+                Question 4
+              </button>
+              <button class="question" data-question="question5">
+                Question 5
+              </button>
+            </div>
+
+            <!-- Boîte de réponse blanche -->
+            <div id="boite-reponse" class="boite-reponse">
+              <div class="question-affichee">Sélectionnez une question</div>
+              <div class="reponse-affichee">La réponse s'affichera ici.</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="global">
-      <footer class="pied-page">
-        <div class="footer-content">
-          <div class="left-section">
-            <div class="logo">
-              <img src="images/logo_TIM.png" alt="Logo" />
-            </div>
-            <div class="copyright">&copy; 2024 Tous droits réservés</div>
-          </div>
-          <div class="credits">Crédits</div>
-        </div>
-      </footer>
-    </div>
+    <!-- Footer ////////////////////////////////////////////////////////////////// -->
+    <footer>
+      <div class="footer-gauche">
+        <img class="logo" src="images/logo_TIM.png" alt="Logo TIM" />
+
+        <div class="copyright">© 2024 Collège de Maisonneuve</div>
+      </div>
+      <div class="footer-droite">Crédits</div>
+    </footer>
+
     <!-- Inclure le fichier JavaScript -->
     <script src="js/faq.js"></script>
   </body>

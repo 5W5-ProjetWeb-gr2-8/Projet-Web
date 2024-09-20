@@ -29,6 +29,15 @@ $color5: #9b59b6; // Violet
   --color3: #2ecc71;
   --color4: #f1c40f;
   --color5: #9b59b6;
+  --couleur-fond: black;
+  --couleur-principale: #0044cc;
+  --couleur-texte: black;
+  --couleur-blanc: #ffffff;
+  --couleur-fond-gris: #2f2f2f;
+  --espacement: 1.5rem;
+  --taille-police: 1.2rem;
+  --taille-police-grande: 1.5rem;
+  --taille-police-petite: 1rem;
 }
 
 /* ////////////////////////////////////////// */
@@ -156,195 +165,129 @@ nav.menu div.menu_contenu ul a {
   color: white;
 }
 
-:root {
-  --couleur-fond: black;
-  --couleur-principale: #0044cc;
-  --couleur-texte: black;
-  --couleur-blanc: #ffffff;
-  --espacement: 1.5rem;
-  --taille-police: 1.2rem;
-  --taille-police-grande: 1.5rem;
-  --taille-police-petite: 1rem;
-}
-
 .faq-section {
-  background-color: var(--couleur-fond);
+  background-color: var(--couleur-fond-gris);
   padding: var(--espacement);
-  border-bottom: 0.8rem solid white; /* Ligne blanche en bas */
+  border-bottom: 0.8rem solid white;
 }
-
-.faq-container {
+.faq-section .faq-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   gap: var(--espacement);
+  flex-direction: column;
 }
-
-.left-section {
+@media (min-width: 769px) {
+  .faq-section .faq-container {
+    flex-direction: row;
+  }
+}
+.faq-section .faq-container .left-section {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-
-.logo img {
-  max-width: 8rem;
+.faq-section .faq-container .left-section .logo-faq img {
+  max-width: 4rem;
   margin-bottom: var(--espacement);
 }
-
-.questions {
+.faq-section .faq-container .left-section .questions-et-reponse {
   display: flex;
   flex-direction: column;
 }
-
-.question {
-  background-color: var(--couleur-principale);
-  color: var(--couleur-blanc);
-  border: none;
-  padding: 0.8rem;
-  margin-bottom: 0.5rem;
-  font-size: var(--taille-police);
-  cursor: pointer;
+@media (min-width: 769px) {
+  .faq-section .faq-container .left-section .questions-et-reponse {
+    flex-direction: row;
+    gap: 1rem; /* Ajuster l'espacement entre les questions et la boîte de réponse */
+  }
 }
-
-.right-section {
-  flex: 2;
+.faq-section .faq-container .left-section .questions-et-reponse .questions {
   display: flex;
   flex-direction: column;
   gap: var(--espacement);
 }
-
-.reponse {
+.faq-section .faq-container .left-section .questions-et-reponse .boite-reponse {
   background-color: var(--couleur-blanc);
   padding: var(--espacement);
   border: 1px solid var(--couleur-principale);
   font-size: var(--taille-police);
   color: var(--couleur-texte);
+  flex: 1; /* La boîte de réponse prend aussi de l'espace */
 }
-
-.contact-icons {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacement);
+.faq-section .faq-container .left-section .questions-et-reponse .boite-reponse .question-affichee {
+  font-weight: bold;
 }
-
-.icon {
-  display: flex;
-  align-items: center;
+.faq-section .faq-container .left-section .questions-et-reponse .boite-reponse .reponse-affichee {
+  margin-top: 0.5rem;
 }
-
-.icon img {
-  width: 2rem;
-  height: auto;
-  margin-right: 0.5rem;
-}
-
-.inscription-box {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.inscription-box input {
-  flex: 1;
-  padding: 0.8rem;
-  border: 1px solid var(--couleur-principale);
+.faq-section .faq-container .question {
+  background-color: var(--couleur-blanc); /* Fond blanc */
+  color: var(--couleur-texte); /* Couleur du texte */
+  padding: 1rem; /* Augmenter le padding pour un meilleur espacement */
+  margin-bottom: 0.5rem;
   font-size: var(--taille-police);
-}
-
-.inscription-box button {
-  padding: 0.8rem 1.2rem;
-  background-color: var(--couleur-principale);
-  color: var(--couleur-blanc);
-  border: none;
   cursor: pointer;
+  border: 1px solid var(--couleur-principale); /* Bordure */
+  border-radius: 0.5rem; /* Arrondir les coins */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Effet de transition */
 }
-
-/* Adaptation pour les tablettes */
+.faq-section .faq-container .question:hover {
+  background-color: var(--couleur-principale); /* Fond change au survol */
+  color: var(--couleur-blanc); /* Couleur du texte change au survol */
+  transform: scale(1.05); /* Effet d'agrandissement au survol */
+}
+.faq-section .faq-container .question:active {
+  transform: scale(0.95); /* Réduire légèrement lors du clic */
+}
 @media (max-width: 768px) {
-  .faq-container {
+  .faq-section .faq-container {
     flex-direction: column;
-    align-items: center;
   }
-  .left-section,
-  .right-section {
-    width: 100%;
+  .faq-section .questions {
+    font-size: var(--taille-police-petite);
   }
-  .reponse {
+  .faq-section .boite-reponse {
     text-align: center;
   }
-}
-/* Adaptation pour les mobiles */
-@media (max-width: 480px) {
-  .question {
-    font-size: var(--taille-police-petite);
+  .faq-section .logo-faq img {
+    max-width: 3rem;
   }
-  .reponse {
-    font-size: var(--taille-police-petite);
-  }
-  .icon img {
-    width: 1.5rem;
-  }
-}
-footer {
-  background-color: black; /* #f2f2f2 Gris clair */
-  padding: 1.2rem 0;
 }
 
-.footer-content {
+footer {
+  background-color: #000;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding-left: 2rem; /* Espacement à gauche */
+  padding: 20px;
+  flex-wrap: wrap;
 }
-
-.left-section {
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+footer .footer-gauche {
   display: flex;
   align-items: center;
 }
-
-.logo img {
-  max-width: 7rem;
-  height: auto;
-  margin-right: 1rem; /* Espace entre le logo et le copyright */
+footer .footer-gauche .logo {
+  width: 4rem;
+  margin-right: 1rem;
 }
-
-.copyright {
-  font-size: 1.5rem;
-  color: white; /* #555 */
+footer .footer-gauche .copyright {
+  font-size: 14px;
 }
-
-.credits {
-  font-size: 1.5rem;
-  color: white; /* #555 */
-  text-align: right;
-  margin-right: 20px; /* Ajout d'un espacement à droite pour la section crédits */
-  padding-right: 2rem;
+footer .footer-droite {
+  font-size: 14px;
 }
-
-/* Responsivité pour les tablettes et mobiles */
 @media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column; /* Aligne les éléments en colonne */
-    text-align: center; /* Centrer les textes */
-    padding-left: 0;
-  }
-  .logo img {
-    margin-bottom: 1rem; /* Ajoute un espace entre le logo et le copyright */
-  }
-  .copyright, .credits {
-    font-size: 1.2rem; /* Réduit la taille du texte pour les écrans plus petits */
-    margin-right: 0;
-    padding-right: 0;
+  footer .footer-droite {
+    margin-top: 10px;
   }
 }
-@media (max-width: 480px) {
-  .logo img {
-    max-width: 5rem; /* Réduit la taille du logo sur mobile */
-  }
-  .copyright, .credits {
-    font-size: 1rem; /* Réduction supplémentaire de la taille du texte */
-  }
-}
+
 /* ////////////////////////////////////////// */
 /* composants                             */
 /* ////////////////////////////////////////// *//*# sourceMappingURL=style.css.map */
