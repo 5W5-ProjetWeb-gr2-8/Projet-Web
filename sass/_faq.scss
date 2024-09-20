@@ -38,6 +38,25 @@
           display: flex;
           flex-direction: column;
           gap: var(--espacement);
+
+          .question {
+            background-color: var(--couleur-blanc); /* Fond blanc par défaut */
+            color: var(--couleur-principale); /* Texte en bleu par défaut */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--couleur-principale); /* Bordure bleue par défaut */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease,
+              box-shadow 0.3s ease;
+
+            &:hover {
+              background-color: var(
+                --couleur-principale
+              ); /* Fond bleu au hover */
+              color: var(--couleur-blanc); /* Texte en blanc au hover */
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre au hover */
+            }
+          }
         }
 
         .boite-reponse {
@@ -69,7 +88,8 @@
         display: flex;
         gap: 1rem;
         img {
-          width: 2rem; /* Taille des logos */
+          height: var(--taille-icone);
+          width: var(--taille-icone); /* Taille des logos */
         }
       }
 

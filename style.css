@@ -25,8 +25,8 @@ $color5: #9b59b6; // Violet
 */
 :root {
   --color1: #3498db;
-  --color2: #e74c3c;
-  --color3: #2ecc71;
+  --color2: black;
+  --color3: black;
   --color4: #f1c40f;
   --color5: #9b59b6;
   --couleur-fond: black;
@@ -38,6 +38,7 @@ $color5: #9b59b6; // Violet
   --taille-police: 1.2rem;
   --taille-police-grande: 1.5rem;
   --taille-police-petite: 1rem;
+  --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
 }
 
 /* ////////////////////////////////////////// */
@@ -242,6 +243,20 @@ section.section_competences div.skill .exemples img {
   flex-direction: column;
   gap: var(--espacement);
 }
+.faq-section .faq-container .left-section .questions-et-reponse .questions .question {
+  background-color: var(--couleur-blanc); /* Fond blanc par défaut */
+  color: var(--couleur-principale); /* Texte en bleu par défaut */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--couleur-principale); /* Bordure bleue par défaut */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.faq-section .faq-container .left-section .questions-et-reponse .questions .question:hover {
+  background-color: var(--couleur-principale); /* Fond bleu au hover */
+  color: var(--couleur-blanc); /* Texte en blanc au hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre au hover */
+}
 .faq-section .faq-container .left-section .questions-et-reponse .boite-reponse {
   background-color: var(--couleur-blanc);
   padding: var(--espacement);
@@ -267,7 +282,8 @@ section.section_competences div.skill .exemples img {
   gap: 1rem;
 }
 .faq-section .faq-container .right-section .social-media img {
-  width: 2rem; /* Taille des logos */
+  height: var(--taille-icone);
+  width: var(--taille-icone); /* Taille des logos */
 }
 .faq-section .faq-container .right-section .contact-info {
   background-color: var(--couleur-blanc);

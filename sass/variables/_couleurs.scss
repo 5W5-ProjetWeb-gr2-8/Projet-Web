@@ -9,8 +9,8 @@ $color5: #9b59b6; // Violet
 :root {
   // temporaire
   --color1: #3498db; // Bleu
-  --color2: #e74c3c; // Rouge
-  --color3: #2ecc71; // Vert
+  --color2: black; // Noir
+  --color3: black; // Noir
   --color4: #f1c40f; // Jaune
   --color5: #9b59b6; // Violet
   // ------------------------------------------------
@@ -23,6 +23,7 @@ $color5: #9b59b6; // Violet
   --taille-police: 1.2rem;
   --taille-police-grande: 1.5rem;
   --taille-police-petite: 1rem;
+  --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
 }
 
 $color1: --color1;
