@@ -4,9 +4,12 @@
 nav.menu {
   // Affichage/Structure
   position: sticky;
+  display: flex;
+  align-items: center;
   top: 0;
   height: /* VARIABLE hauteur du menu*/ 10vh;
-  padding: 0 4%;
+  padding: /* VARIABLE padding X*/ 0 4%;
+  z-index: 100;
   //
   background-color: /* VARIABLE couleur de fond*/ #000;
   color: /* VARIABLE couleur de texte*/ #fff;
@@ -17,8 +20,7 @@ nav.menu {
   // Contenu de la boîte
   div.menu_contenu {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
 
     // Bouton Inscription
     p {

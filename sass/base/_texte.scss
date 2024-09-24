@@ -45,6 +45,16 @@ p {
   line-height: 1.8rem;
 }
 
+// Formatage par défaut des <a>
+a {
+  text-decoration: none;
+}
+
+// Classe pour empêcher la sélection
+.noSelect {
+  user-select: none;
+}
+
 hr {
 }
 

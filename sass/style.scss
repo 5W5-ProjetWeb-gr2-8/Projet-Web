@@ -23,9 +23,8 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* ////////////////////////////////////////// */
 /* règles de base                             */
 /* ////////////////////////////////////////// */
-@import "reinitialisationSupp";
-@import "base/h";
-@import "base/a";
+@import "base/reinitialisationSupp";
+@import "base/texte";
 //@import "base/bouton";
 //@import "base/lien";
 
@@ -34,8 +33,8 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* ////////////////////////////////////////// */
 @import "menu";
 @import "accueil";
-@import "competences";
 @import "competences_test";
+@import "competences";
 @import "galerie";
 @import "faq";
 @import "footer";

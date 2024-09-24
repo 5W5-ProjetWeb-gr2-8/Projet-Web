@@ -1,58 +1,82 @@
 // Feuille de style pour la section des compétences
 
-section.section_competences {
-    background-color: lightblue;
-    height: 90vh;
-    display: flex;
-    // flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+section.competences {
+  background-color: lightblue;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    // Boite contenant une carte de compétence
-    div.skill {
-        background-color: /* VARIABLE */ grey;
-        width: /* VARIABLE */ 80%;
-        // height: /* VARIABLE */ 80%;
-        padding: /* VARIABLE */ 50px 20px;
-        border-radius: 20px;
-        
+  padding: /* VARIABLE padding X*/ 4%;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
 
-        .logoInfo {
+  // Boite contenant une carte de compétence
+  div.competence-item {
+    background-color: /* VARIABLE */ grey;
+    width: /* VARIABLE */ 80%;
+    // height: /* VARIABLE */ 80%;
+    padding: /* VARIABLE */ 50px 20px;
+    border-radius: /* VARIABLE border-radius */ 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 2px solid black;
+    // position: relative;
+
+    // Entête de la compétence
+    .competence-header {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: /* VARIABLE font-size*/ 1.5rem;
+      background-color: #e0e0e0;
+      border-radius: 0.5rem;
+
+      .logo {
+      }
+      // Informations des compétences
+      .info {
+        // padding: 0 10px;
+
+        // Outils utilisés dans le cours
+        .outils {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          // Icone et un outil
+          .outil {
             display: flex;
+            // justify-content: center;
             align-items: center;
-            .logo{}
-            // Informations des compétences
-            .info {
-                // padding: 0 10px;
-
-                // Outils utilisés dans le cours
-                .outils {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-
-                    // Icone et un outil
-                    .outil {
-                        display: flex;
-                        // justify-content: center;
-                        align-items: center;
-                    }
-                }   
-            }
+          }
         }
-        
-
-        // Carrousel d'exemples
-        .exemples {
-            // background-color: red; /*TEMPORAIRE*/
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-            img {
-                border-radius: 12px;
-            }
-        }
-        
+      }
     }
+
+    // Carrousel d'exemples
+    .competence-content {
+      // background-color: red; /*TEMPORAIRE*/
+    //   display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+      display: none;
+      padding: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      img {
+        border-radius: 12px;
+      }
+    }
+
+    // Quand on clique sur la compétence : elle se déplie
+    &.active .competence-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  }
 }
