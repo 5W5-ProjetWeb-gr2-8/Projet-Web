@@ -155,13 +155,16 @@ nav.menu {
   background-color: #000;
   color: #fff;
 }
+nav.menu .logo_img {
+  width: 4rem;
+}
 nav.menu div.menu_contenu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 nav.menu div.menu_contenu p {
-  background-color: gray;
+  color: white;
   width: 20%;
   text-align: center;
 }

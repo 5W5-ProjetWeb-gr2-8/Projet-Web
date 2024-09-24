@@ -10,7 +10,9 @@ nav.menu {
   // 
   background-color: /* VARIABLE couleur de fond*/#000;
   color: /* VARIABLE couleur de texte*/#fff;
-  
+  .logo_img {
+    width: 4rem;
+  }
 
   // Contenu de la boîte
   div.menu_contenu {
@@ -20,7 +22,7 @@ nav.menu {
     
     // Bouton Inscription
     p {
-      background-color: gray;
+      color: white;
       width: 20%;
       text-align: center;
     }
