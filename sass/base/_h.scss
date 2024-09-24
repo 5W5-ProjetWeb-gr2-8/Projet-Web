@@ -5,7 +5,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiI5MDBweCIsIm1pbkZvbnRTaXplIjoiMTZweCIsIm1heEZvbnRTaXplIjoiNDhweCJ9
 
 */
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
 }
@@ -38,7 +43,6 @@ h6 {
 p {
   font-size: clamp(1rem, 0.4792rem + 1.6667vw, 1.2rem);
   line-height: 1.8rem;
-  padding: 2rem 0;
 }
 
 hr {

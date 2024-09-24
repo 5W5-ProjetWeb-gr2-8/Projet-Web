@@ -3,13 +3,13 @@
 // Conteneur du menu
 nav.menu {
   // Affichage/Structure
-  position: sticky; 
+  position: sticky;
   top: 0;
   height: /* VARIABLE hauteur du menu*/ 10vh;
   padding: 0 4%;
-  // 
-  background-color: /* VARIABLE couleur de fond*/#000;
-  color: /* VARIABLE couleur de texte*/#fff;
+  //
+  background-color: /* VARIABLE couleur de fond*/ #000;
+  color: /* VARIABLE couleur de texte*/ #fff;
   .logo_img {
     width: 4rem;
   }
@@ -19,14 +19,15 @@ nav.menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
     // Bouton Inscription
     p {
+      padding: 2rem 0;
       color: white;
       width: 20%;
       text-align: center;
     }
-    
+
     // Titre du menu
     p.menu_titre {
       width: 50%;
@@ -47,5 +48,5 @@ nav.menu {
         color: white;
       }
     }
-  } 
+  }
 }
