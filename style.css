@@ -225,6 +225,55 @@ section.section_competences div.skill .exemples img {
   border-radius: 12px;
 }
 
+.competences {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+.competences .competence-item {
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 2px solid black;
+  position: relative;
+}
+.competences .competence-item .competence-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: #e0e0e0;
+  border-radius: 0.5rem;
+}
+.competences .competence-item .competence-title {
+  flex: 1;
+  text-align: left;
+  font-weight: bold;
+}
+.competences .competence-item .competence-icon {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.competences .competence-item .competence-content {
+  display: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.competence-item.active .competence-content {
+  display: block;
+}
+
+.competence-item.active .competence-icon {
+  content: "-";
+  transform: rotate(45deg);
+}
+
 .galerie-projets {
   background-color: var(--couleur-galerie-fond); /* Fond blanc */
   padding: var(--espacement);
