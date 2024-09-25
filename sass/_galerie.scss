@@ -26,9 +26,12 @@
       border-radius: 0.5rem;
 
       img {
-        max-width: 100%;
+        width: 100%;
+        max-width: 300px; /* Taille moyenne */
+        height: auto; /* Maintient la proportion de l'image */
         border-radius: 0.5rem;
         margin-bottom: var(--espacement);
+        object-fit: cover; /* Assure que l'image remplisse bien le cadre */
       }
 
       h3 {

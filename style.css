@@ -205,10 +205,6 @@ section.section_accueil {
   align-items: center;
 }
 
-.competence-item.active .competence-icon {
-  content: "-";
-}
-
 section.competences {
   background-color: lightblue;
   text-align: center;
@@ -291,9 +287,12 @@ section.competences div.competence-item.active .competence-content {
   border-radius: 0.5rem;
 }
 .galerie-projets .projets-container .projet img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 300px; /* Taille moyenne */
+  height: auto; /* Maintient la proportion de l'image */
   border-radius: 0.5rem;
   margin-bottom: var(--espacement);
+  object-fit: cover; /* Assure que l'image remplisse bien le cadre */
 }
 .galerie-projets .projets-container .projet h3 {
   color: var(--couleur-galerie-texte); /* Titre en noir */
@@ -306,7 +305,6 @@ section.competences div.competence-item.active .competence-content {
 .faq-section {
   background-color: var(--couleur-fond-gris);
   padding: var(--espacement);
-  border-bottom: 0.8rem solid white;
 }
 .faq-section .faq-container {
   display: flex;
