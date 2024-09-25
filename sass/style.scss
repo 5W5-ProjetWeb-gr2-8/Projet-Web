@@ -25,21 +25,17 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* ////////////////////////////////////////// */
 @import "base/reinitialisationSupp";
 @import "base/texte";
-//@import "base/bouton";
-//@import "base/lien";
 
 /* ////////////////////////////////////////// */
 /* les sections de la page                    */
 /* ////////////////////////////////////////// */
 @import "menu";
-@import "accueil";
-@import "competences";
-@import "galerie";
-@import "faq";
 @import "footer";
 
 /* ////////////////////////////////////////// */
-/* composants                             */
+/* Accueil                                    */
 /* ////////////////////////////////////////// */
-//@import "composant/sociaux";
-//@import "composant/recherche";
+@import "accueil/accueil";
+@import "accueil/galerie";
+@import "accueil/faq";
+@import "accueil/competences";

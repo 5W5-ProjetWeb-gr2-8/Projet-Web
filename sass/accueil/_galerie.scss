@@ -20,8 +20,8 @@
     }
 
     .projet {
-      background-color: var(--couleur-galerie-fond); /* Fond blanc */
-      border: 1px solid var(--couleur-galerie-bordure); /* Bordure noire */
+      background-color: var(--couleur-galerie-fond-projets);
+      border: 3px solid var(--couleur-galerie-bordure); /* Bordure noire */
       padding: var(--espacement);
       border-radius: 0.5rem;
 

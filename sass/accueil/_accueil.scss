@@ -1,0 +1,73 @@
+section.debut_accueil {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  // Image par défaut pour le mobile
+  background-image: url("images/sortie-vr/sortie-vr4.jpg");
+  background-size: cover;
+  background-position: center;
+
+  // Image pour les tablettes
+  @media (min-width: 768px) and (max-width: 1024px) {
+    background-image: url("images/sortie-vr/sortie-vr2.jpg");
+  }
+
+  // Image pour les ordinateurs
+  @media (min-width: 1025px) {
+    background-image: url("images/sortie-vr/sortie-vr7.jpg");
+  }
+
+  // Pour centrer le texte dans le div
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; /* Réduit le padding pour mobiles */
+
+    // Cercle avec fond transparent
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 40vw; /* Utilise vw pour un ajustement dynamique */
+    height: 40vw; /* Hauteur égale à la largeur pour maintenir le cercle */
+    max-width: 22rem; /* Largeur maximale pour éviter qu'il ne soit trop grand */
+    max-height: 22rem; /* Hauteur maximale pour éviter qu'il ne soit trop grand */
+    padding: 0; /* Pas de padding interne pour garder la forme circulaire */
+
+    h1,
+    h2 {
+      color: var(--couleur-text-accueil-intro);
+      font-weight: bold;
+      text-shadow: none;
+      margin: 0;
+      font-size: 5vw; /* Taille de police adaptative */
+    }
+  }
+
+  // Ajustements pour tablettes
+  @media (min-width: 768px) and (max-width: 1024px) {
+    div {
+      width: 30vw; /* Ajustement pour tablettes */
+      height: 30vw; /* Ajustement pour tablettes */
+      h1,
+      h2 {
+        font-size: 4vw; /* Taille de police adaptative pour tablettes */
+      }
+    }
+  }
+
+  // Ajustements pour ordinateurs
+  @media (min-width: 1025px) {
+    div {
+      width: 20vw; /* Ajustement pour ordinateurs */
+      height: 20vw; /* Ajustement pour ordinateurs */
+      h1,
+      h2 {
+        font-size: 2.5rem; /* Taille de police fixe pour ordinateurs */
+      }
+    }
+  }
+}

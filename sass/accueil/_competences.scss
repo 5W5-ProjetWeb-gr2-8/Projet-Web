@@ -1,7 +1,7 @@
 // Feuille de style pour la section des compétences
 
 section.competences {
-  background-color: lightblue;
+  background-color: var(--couleur-competences-fond);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -58,10 +58,9 @@ section.competences {
     // Carrousel d'exemples
     .competence-content {
       // background-color: red; /*TEMPORAIRE*/
-    //   display: flex;
+      //   display: flex;
       justify-content: space-between;
       align-items: center;
-
 
       display: none;
       padding: 1rem;
@@ -74,9 +73,9 @@ section.competences {
 
     // Quand on clique sur la compétence : elle se déplie
     &.active .competence-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

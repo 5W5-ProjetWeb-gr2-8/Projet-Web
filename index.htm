@@ -9,31 +9,39 @@
   </head>
   <body>
     <div class="global">
+      <!-- Menu ///////////////////////////////////////////////////////////////////////// -->
       <nav class="menu">
         <div class="menu_contenu">
           <p class="menu_titre">
             <img class="logo_img" src="images/logo_TIM.png" alt="" />
           </p>
-          <ul>
+          <p class="inscription">Inscription</p>
+          <button class="menu_hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="menu_liste">
             <li><a href="#">Galerie</a></li>
             <li><a href="#">Cours</a></li>
             <li><a href="#">Carrière</a></li>
             <li><a href="#">Personnel</a></li>
             <li><a href="#">Contacter</a></li>
           </ul>
-          <p>Inscription</p>
         </div>
       </nav>
+
+      <!-- Main //////////////////////////////////////////////////////////////////////// -->
       <main class="principal">
-        <section class="section_accueil">
+        <section class="debut_accueil">
           <div>
-            <h1>En-tête H1</h1>
-            <h2>Sous-titre</h2>
+            <h1>TIM</h1>
+            <h2>Bienvenue</h2>
           </div>
-          <img src="https://placehold.co/600x400?text=Image+Accueil" alt="" />
         </section>
+
         <!-- Section suivante (programme) -->
-        <section style="background-color: blue; height: 5vh">
+        <section style="background-color: #a5a5a5; height: 15vh">
           <p style="color: white">
             section suivante (programme) Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Provident aliquid quisquam animi possimus dolores
@@ -469,18 +477,18 @@
       <div class="projets-container">
         <article class="projet">
           <img src="images/lacryma.png" alt="Projet Lacryma" />
-          <h3>Projet 1</h3>
-          <p>Description du projet 1.</p>
+          <h3>Lacryma</h3>
+          <p>Description du projet Lacryma</p>
         </article>
         <article class="projet">
           <img src="images/triptyque.png" alt="Projet Triptyque" />
-          <h3>Projet 2</h3>
-          <p>Description du projet 2.</p>
+          <h3>Triptyque</h3>
+          <p>Description de Triptyque</p>
         </article>
         <article class="projet">
           <img src="images/inserxion.png" alt="Inserxion" />
-          <h3>Projet 3</h3>
-          <p>Description du projet 3.</p>
+          <h3>Inserxion</h3>
+          <p>Description de Inserxion</p>
         </article>
       </div>
     </section>
@@ -555,6 +563,7 @@
     </footer>
 
     <!-- Inclure le fichier JavaScript -->
+    <script src="js/menu-burger.js"></script>
     <script src="js/competences.js"></script>
     <script src="js/faq.js"></script>
   </body>

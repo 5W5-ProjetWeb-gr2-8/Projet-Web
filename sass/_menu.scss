@@ -2,53 +2,119 @@
 
 // Conteneur du menu
 nav.menu {
-  // Affichage/Structure
   position: sticky;
   display: flex;
   align-items: center;
   top: 0;
-  height: /* VARIABLE hauteur du menu*/ 10vh;
-  padding: /* VARIABLE padding X*/ 0 4%;
+  height: 10vh;
+  padding: 0 4%;
   z-index: 100;
-  //
-  background-color: /* VARIABLE couleur de fond*/ #000;
-  color: /* VARIABLE couleur de texte*/ #fff;
+  background-color: #000; // Couleur de fond
+  color: #fff; // Couleur de texte
+
   .logo_img {
     width: 4rem;
+    margin-right: 1rem; // Espacement entre le logo et le titre
   }
 
   // Contenu de la boîte
   div.menu_contenu {
     display: flex;
     width: 100%;
-
-    // Bouton Inscription
-    p {
-      padding: 2rem 0;
-      color: white;
-      width: 20%;
-      text-align: center;
-    }
+    justify-content: space-between; // Pour aligner le contenu
 
     // Titre du menu
     p.menu_titre {
-      width: 50%;
-      padding-left: 2%;
-      text-align: unset;
+      display: flex;
+      align-items: center;
+      padding-left: 0;
+      text-align: left;
+      width: auto;
     }
 
     // Onglets de navigation
-    ul {
+    .menu_liste {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-around;
       list-style: none;
-      width: 30%;
+      width: auto;
+      justify-content: space-around;
+
       // Liens vers les onglets
       a {
         color: white;
+        padding: 1rem;
       }
+    }
+
+    // Bouton Inscription
+    .inscription {
+      padding: 2rem 0;
+      color: white;
+      width: auto;
+      text-align: center;
+      margin-right: 2.5rem; // Espacement entre le bouton inscription et le hamburger
+    }
+
+    // Menu hamburger
+    .menu_hamburger {
+      display: none; // Cacher par défaut
+      flex-direction: column;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      right: 4%;
+      top: 50%;
+      transform: translateY(-50%);
+
+      span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 4px 0;
+      }
+    }
+  }
+
+  // Styles pour mobile
+  @media (max-width: 768px) {
+    div.menu_contenu {
+      .menu_liste {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 99;
+
+        &.active {
+          display: flex;
+        }
+
+        a {
+          padding: 1rem;
+        }
+      }
+
+      .menu_hamburger {
+        display: flex; // Afficher le bouton hamburger
+      }
+
+      // Placer Inscription à gauche du hamburger
+      .inscription {
+        order: 1; // S'assure que le bouton Inscription vient avant le hamburger
+      }
+    }
+  }
+
+  // Styles pour tablettes et ordinateurs
+  @media (min-width: 769px) {
+    .menu_hamburger {
+      display: none;
     }
   }
 }
