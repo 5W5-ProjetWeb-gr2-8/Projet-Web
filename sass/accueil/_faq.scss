@@ -39,11 +39,11 @@
           gap: var(--espacement);
 
           .question {
-            background-color: var(--couleur-blanc); /* Fond blanc par défaut */
-            color: var(--couleur-principale); /* Texte en bleu par défaut */
+            background-color: var(--couleur-galerie-fond-projets);
+            color: var(--couleur-texte2);
             padding: 1rem;
             border-radius: 0.5rem;
-            border: 1px solid var(--couleur-principale); /* Bordure bleue par défaut */
+            border: 3px solid var(--couleur-border);
             cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease,
               box-shadow 0.3s ease;
@@ -52,18 +52,18 @@
               background-color: var(
                 --couleur-principale
               ); /* Fond bleu au hover */
-              color: var(--couleur-blanc); /* Texte en blanc au hover */
+              color: var(--couleur-texte2); /* Texte en blanc au hover */
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre au hover */
             }
           }
         }
 
         .boite-reponse {
-          background-color: var(--couleur-blanc);
+          background-color: var(--couleur-galerie-fond-projets);
           padding: var(--espacement);
-          border: 1px solid var(--couleur-principale);
+          border: 1px solid var(--couleur-border);
           font-size: var(--taille-police);
-          color: var(--couleur-texte);
+          color: var(--couleur-texte2);
           flex: 1; /* La boîte de réponse prend aussi de l'espace */
 
           .question-affichee {
@@ -93,26 +93,26 @@
       }
 
       .contact-info {
-        background-color: var(--couleur-blanc);
+        background-color: var(--couleur-galerie-fond-projets);
         padding: 0.5rem; /* Réduire le padding pour rendre la boîte plus petite */
-        border: 1px solid var(--couleur-principale);
+        border: 3px solid var(--couleur-border);
         border-radius: 0.5rem;
-        font-size: var(
-          --taille-police
-        ); /* Assurez-vous que la taille de police soit cohérente */
+        font-size: var(--taille-police);
         p {
+          color: var(--couleur-texte2);
           padding: 0rem;
           margin: 0rem;
         }
       }
 
       .inscription-section {
-        background-color: var(--couleur-blanc);
+        background-color: var(--couleur-galerie-fond-projets);
         padding: var(--espacement);
-        border: 1px solid var(--couleur-principale);
+        border: 3px solid var(--couleur-border);
         border-radius: 0.5rem;
 
         h3 {
+          color: var(--couleur-texte2);
           margin: 0 0 0.5rem;
         }
 
@@ -120,7 +120,7 @@
           width: 100%;
           padding: 0.5rem;
           margin-bottom: 0.5rem;
-          border: 1px solid var(--couleur-principale);
+          border: 3px solid var(--couleur-border);
           border-radius: 0.25rem;
         }
 
@@ -128,7 +128,7 @@
           width: 100%;
           padding: 0.5rem;
           background-color: var(--couleur-principale);
-          color: var(--couleur-blanc);
+          color: var(--couleur-texte2);
           border: none;
           border-radius: 0.25rem;
           cursor: pointer;
