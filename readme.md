@@ -13,6 +13,7 @@
 - Github-Project : https://github.com/orgs/5W5-ProjetWeb-gr2-8/projects/1/views/1
 - Github-Pages : https://5w5-projetweb-gr2-8.github.io/Projet-Web/
 - Rétrospective des sprints : https://docs.google.com/document/d/1ilOf2Hd4iXGQVV4QpaYAFZCKRbSjiakHHSVZHKBq9fo/edit?usp=sharing
+- Google Sheets : https://docs.google.com/spreadsheets/d/1MKHwlGtTq866kSIoNbwqgRkKheFhtRM3zZKFppvqXG0/edit?usp=sharing
 
 ## Description du projet :
 
