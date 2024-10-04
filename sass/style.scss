@@ -32,11 +32,13 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* ////////////////////////////////////////// */
 @import "menu";
 @import "footer";
+@import "cours";
+@import "faq";
 
 /* ////////////////////////////////////////// */
 /* Accueil                                    */
 /* ////////////////////////////////////////// */
 @import "accueil/accueil";
 @import "accueil/galerie";
-@import "accueil/faq";
+
 @import "accueil/competences";

@@ -5,14 +5,6 @@
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Importations Polices -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&family=SUSE:wght@100..800&display=swap""
-      rel="stylesheet"
-    />
-    <!-- //////////////////// -->
     <title>theme TIM</title>
   </head>
   <body>
@@ -30,8 +22,8 @@
             <span></span>
           </button>
           <ul class="menu_liste">
-            <li><a href="galerie.htm">Galerie</a></li>
-            <li><a href="cours.htm">Cours</a></li>
+            <li><a href="#">Galerie</a></li>
+            <li><a href="#">Cours</a></li>
             <li><a href="#">Carrière</a></li>
             <li><a href="#">Personnel</a></li>
             <li><a href="#">Contacter</a></li>
@@ -59,8 +51,21 @@
         </section>
         <!-- Compétences ///////////////////////////////////////////////////////////////////// -->
         <section class="competences">
+      
           <div class="competence-item">
             <div class="competence-header">
+              <!-- Button ouverture fermeture -->
+              <button>
+                <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <ellipse ry="30" rx="30" cy="31.25" cx="31.25" stroke-width="2.5" stroke="#00000" fill="#00000" />
+                      <ellipse ry="30" rx="30" class="circle" cy="31.25" cx="31.25" stroke-width="2.5" stroke="red"
+                        fill="transparent" />
+                      <line class="x-symbol" x1="16.25" y1="16.25" x2="46.25" y2="46.25" stroke="#2D22A8" stroke-width="2.5" />
+                      <line class="x-symbol" x1="46.25" y1="16.25" x2="16.25" y2="46.25" stroke="#2D22A8" stroke-width="2.5" />
+                    </g>
+                </svg>
+            </button> 
               <!-- Logo de la compétence -->
               <div class="logo">
                 <svg
@@ -570,7 +575,7 @@
       <div class="footer-droite">Crédits</div>
     </footer>
 
-    <!-- Inclure les fichiers JavaScript -->
+    <!-- Inclure le fichier JavaScript -->
     <script src="js/menu-burger.js"></script>
     <script src="js/competences.js"></script>
     <script src="js/faq.js"></script>

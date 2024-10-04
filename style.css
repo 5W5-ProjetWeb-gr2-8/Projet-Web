@@ -357,113 +357,166 @@ footer .footer-droite {
   }
 }
 
-/* ////////////////////////////////////////// */
-/* Accueil                                    */
-/* ////////////////////////////////////////// */
-section.debut_accueil {
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-image: url("images/sortie-vr/sortie-vr4.jpg");
-  background-size: cover;
-  background-position: center;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  section.debut_accueil {
-    background-image: url("images/sortie-vr/sortie-vr5.jpg");
-  }
-}
-@media (min-width: 1025px) {
-  section.debut_accueil {
-    background-image: url("images/sortie-vr/sortie-vr7.jpg");
-  }
-}
-section.debut_accueil div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem; /* Réduit le padding pour mobiles */
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 50%;
-  width: 40vw; /* Utilise vw pour un ajustement dynamique */
-  height: 40vw; /* Hauteur égale à la largeur pour maintenir le cercle */
-  max-width: 22rem; /* Largeur maximale pour éviter qu'il ne soit trop grand */
-  max-height: 22rem; /* Hauteur maximale pour éviter qu'il ne soit trop grand */
-  padding: 0; /* Pas de padding interne pour garder la forme circulaire */
-}
-section.debut_accueil div h1,
-section.debut_accueil div h2 {
-  color: var(--couleur-text-accueil-intro);
+/* Styles de base pour tous les écrans */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-size: 5vw; /* Taille de police adaptative */
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  section.debut_accueil div {
-    width: 30vw; /* Ajustement pour tablettes */
-    height: 30vw; /* Ajustement pour tablettes */
-  }
-  section.debut_accueil div h1,
-  section.debut_accueil div h2 {
-    font-size: 4vw; /* Taille de police adaptative pour tablettes */
-  }
-}
-@media (min-width: 1025px) {
-  section.debut_accueil div {
-    width: 20vw; /* Ajustement pour ordinateurs */
-    height: 20vw; /* Ajustement pour ordinateurs */
-  }
-  section.debut_accueil div h1,
-  section.debut_accueil div h2 {
-    font-size: 2.5rem; /* Taille de police fixe pour ordinateurs */
-  }
+  padding: 0;
+  background-color: #f8f9fa;
 }
 
-.galerie-projets {
-  background-color: var(--couleur-galerie-fond); /* Fond blanc */
-  padding: var(--espacement);
-  text-align: center;
-}
-.galerie-projets .galerie-titre {
-  color: var(--couleur-galerie-texte); /* Texte noir */
-  font-size: var(--taille-police-grande);
-  margin-bottom: var(--espacement);
-}
-.galerie-projets .projets-container {
+.menu_contenu {
   display: flex;
-  flex-direction: column;
-  gap: var(--espacement);
-}
-@media (min-width: 768px) {
-  .galerie-projets .projets-container {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-.galerie-projets .projets-container .projet {
-  background-color: var(--couleur-galerie-fond-projets);
-  border: 3px solid var(--couleur-galerie-bordure); /* Bordure noire */
-  padding: var(--espacement);
-  border-radius: 0.5rem;
-}
-.galerie-projets .projets-container .projet img {
-  width: 100%;
-  max-width: 300px; /* Taille moyenne */
-  height: auto; /* Maintient la proportion de l'image */
-  border-radius: 0.5rem;
-  margin-bottom: var(--espacement);
-  object-fit: cover; /* Assure que l'image remplisse bien le cadre */
-}
-.galerie-projets .projets-container .projet h3 {
-  color: var(--couleur-galerie-texte); /* Titre en noir */
-  margin-bottom: 0.5rem;
-}
-.galerie-projets .projets-container .projet p {
-  color: var(--couleur-galerie-texte); /* Texte en noir */
+  justify-content: space-between;
+  align-items: center;
 }
 
+.menu_titre img {
+  width: 120px;
+}
+
+.menu_liste {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu_liste a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.competences-section {
+  padding: 20px;
+  background-color: #e9ecef;
+}
+
+.competences-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.competence {
+  flex: 1 1 150px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.competence:hover {
+  transform: scale(1.05);
+}
+
+.cours-section {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.cours-box {
+  border: 1px solid #dee2e6;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cours-header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-plus {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btn-plus:hover {
+  background-color: #0056b3;
+}
+
+.cours-details {
+  padding: 20px;
+  display: none;
+  background-color: #f1f1f1;
+}
+
+.logo {
+  width: 120px;
+}
+
+/* Styles pour mobile */
+@media (max-width: 768px) {
+  .menu_contenu {
+    flex-direction: column;
+  }
+  .menu_liste {
+    display: none;
+    flex-direction: column;
+  }
+  .menu_hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .menu_hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+  }
+  .competences-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cours-box {
+    width: 100%;
+  }
+}
+/* Styles pour tablette */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu_contenu {
+    flex-direction: row;
+  }
+  .menu_liste {
+    display: flex;
+  }
+  .competences-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .cours-box {
+    width: 48%;
+  }
+}
+/* Styles pour grand écran */
+@media (min-width: 1025px) {
+  .menu_liste {
+    display: flex;
+  }
+  .competences-container {
+    justify-content: space-between;
+  }
+  .cours-box {
+    width: 30%;
+  }
+}
 .faq-section {
   background-color: var(--couleur-fond-gris);
   padding: var(--espacement);
@@ -605,6 +658,115 @@ section.debut_accueil div h2 {
   }
 }
 
+/* ////////////////////////////////////////// */
+/* Accueil                                    */
+/* ////////////////////////////////////////// */
+section.debut_accueil {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("images/sortie-vr/sortie-vr4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  section.debut_accueil {
+    background-image: url("images/sortie-vr/sortie-vr5.jpg");
+  }
+}
+@media (min-width: 1025px) {
+  section.debut_accueil {
+    background-image: url("images/sortie-vr/sortie-vr7.jpg");
+  }
+}
+section.debut_accueil div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; /* Réduit le padding pour mobiles */
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 40vw; /* Utilise vw pour un ajustement dynamique */
+  height: 40vw; /* Hauteur égale à la largeur pour maintenir le cercle */
+  max-width: 22rem; /* Largeur maximale pour éviter qu'il ne soit trop grand */
+  max-height: 22rem; /* Hauteur maximale pour éviter qu'il ne soit trop grand */
+  padding: 0; /* Pas de padding interne pour garder la forme circulaire */
+}
+section.debut_accueil div h1,
+section.debut_accueil div h2 {
+  color: var(--couleur-text-accueil-intro);
+  font-weight: bold;
+  text-shadow: none;
+  margin: 0;
+  font-size: 5vw; /* Taille de police adaptative */
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  section.debut_accueil div {
+    width: 30vw; /* Ajustement pour tablettes */
+    height: 30vw; /* Ajustement pour tablettes */
+  }
+  section.debut_accueil div h1,
+  section.debut_accueil div h2 {
+    font-size: 4vw; /* Taille de police adaptative pour tablettes */
+  }
+}
+@media (min-width: 1025px) {
+  section.debut_accueil div {
+    width: 20vw; /* Ajustement pour ordinateurs */
+    height: 20vw; /* Ajustement pour ordinateurs */
+  }
+  section.debut_accueil div h1,
+  section.debut_accueil div h2 {
+    font-size: 2.5rem; /* Taille de police fixe pour ordinateurs */
+  }
+}
+
+.galerie-projets {
+  background-color: var(--couleur-galerie-fond); /* Fond blanc */
+  padding: var(--espacement);
+  text-align: center;
+}
+.galerie-projets .galerie-titre {
+  color: var(--couleur-galerie-texte); /* Texte noir */
+  font-size: var(--taille-police-grande);
+  margin-bottom: var(--espacement);
+}
+.galerie-projets .projets-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacement);
+}
+@media (min-width: 768px) {
+  .galerie-projets .projets-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.galerie-projets .projets-container .projet {
+  background-color: var(--couleur-galerie-fond-projets);
+  border: 3px solid var(--couleur-galerie-bordure); /* Bordure noire */
+  padding: var(--espacement);
+  border-radius: 0.5rem;
+}
+.galerie-projets .projets-container .projet img {
+  width: 100%;
+  max-width: 300px; /* Taille moyenne */
+  height: auto; /* Maintient la proportion de l'image */
+  border-radius: 0.5rem;
+  margin-bottom: var(--espacement);
+  object-fit: cover; /* Assure que l'image remplisse bien le cadre */
+}
+.galerie-projets .projets-container .projet h3 {
+  color: var(--couleur-galerie-texte); /* Titre en noir */
+  margin-bottom: 0.5rem;
+}
+.galerie-projets .projets-container .projet p {
+  color: var(--couleur-galerie-texte); /* Texte en noir */
+}
+
 section.competences {
   background-color: var(--couleur-competences-fond);
   text-align: center;
@@ -615,6 +777,30 @@ section.competences {
   padding: 4%;
   border-top: 5px solid black;
   border-bottom: 5px solid black;
+}
+section.competences button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+section.competences .svg_1 {
+  width: 125px;
+  height: 125px;
+}
+section.competences .circle {
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition: all 1s ease;
+}
+section.competences button:hover .circle {
+  stroke-dashoffset: 0;
+}
+section.competences .x-symbol {
+  transition: stroke 0.3s ease;
+}
+section.competences button:hover .x-symbol {
+  stroke: blue;
 }
 section.competences div.competence-item {
   background-color: grey;
