@@ -550,6 +550,30 @@ section.competences {
   border-top: 5px solid black;
   border-bottom: 5px solid black;
 }
+section.competences button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+section.competences .svg_1 {
+  width: 125px;
+  height: 125px;
+}
+section.competences .circle {
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition: all 1s ease;
+}
+section.competences button:hover .circle {
+  stroke-dashoffset: 0;
+}
+section.competences .x-symbol {
+  transition: stroke 0.3s ease;
+}
+section.competences button:hover .x-symbol {
+  stroke: blue;
+}
 section.competences div.competence-item {
   background-color: grey;
   width: 80%;
