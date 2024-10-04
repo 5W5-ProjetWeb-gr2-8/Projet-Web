@@ -8,17 +8,57 @@ section.competences {
   justify-content: center;
   align-items: center;
 
-  padding: /* VARIABLE padding X*/ 4%;
+  padding:
+    /* VARIABLE padding X*/
+    4%;
   border-top: 5px solid black;
   border-bottom: 5px solid black;
 
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .svg_1 {
+    width: 125px;
+    height: 125px;
+  }
+
+  .circle {
+    stroke-dasharray: 377;
+    stroke-dashoffset: 377;
+    transition: all 1s ease;
+  }
+
+  button:hover .circle {
+    stroke-dashoffset: 0;
+  }
+
+  .x-symbol {
+    transition: stroke 0.3s ease;
+  }
+
+  button:hover .x-symbol {
+    stroke: blue;
+  }
+
   // Boite contenant une carte de compétence
   div.competence-item {
-    background-color: /* VARIABLE */ grey;
-    width: /* VARIABLE */ 80%;
+    background-color:
+      /* VARIABLE */
+      grey;
+    width:
+      /* VARIABLE */
+      80%;
     // height: /* VARIABLE */ 80%;
-    padding: /* VARIABLE */ 50px 20px;
-    border-radius: /* VARIABLE border-radius */ 0.5rem;
+    padding:
+      /* VARIABLE */
+      50px 20px;
+    border-radius:
+      /* VARIABLE border-radius */
+      0.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
     border: 2px solid black;
@@ -29,12 +69,14 @@ section.competences {
       display: flex;
       align-items: center;
       cursor: pointer;
-      font-size: /* VARIABLE font-size*/ 1.5rem;
+      font-size:
+        /* VARIABLE font-size*/
+        1.5rem;
       background-color: #e0e0e0;
       border-radius: 0.5rem;
 
-      .logo {
-      }
+      .logo {}
+
       // Informations des compétences
       .info {
         // padding: 0 10px;
@@ -66,6 +108,7 @@ section.competences {
       padding: 1rem;
       font-size: 1.2rem;
       line-height: 1.6;
+
       img {
         border-radius: 12px;
       }
