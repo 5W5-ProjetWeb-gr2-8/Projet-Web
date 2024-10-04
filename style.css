@@ -43,10 +43,75 @@ $color5: #9b59b6; // Violet
   --couleur-galerie-texte: white;
   --couleur-galerie-bordure: #000000;
   --espacement: 1.5rem;
+  --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
+}
+
+:root {
+  --police_titres: "Plus Jakarta Sans", system-ui;
+  --poid_titres: 800;
+  --style_titres: normal;
+  --police_textes: "Roboto", system-ui;
+  --poid_textes: 400;
+  --style_textes: normal;
   --taille-police: 1.2rem;
   --taille-police-grande: 1.5rem;
   --taille-police-petite: 1rem;
-  --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
+}
+
+.roboto .light {
+  font-family: "Roboto", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+.roboto .regular {
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.roboto .medium {
+  font-family: "Roboto", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+.roboto .bold {
+  font-family: "Roboto", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+.roboto .black {
+  font-family: "Roboto", system-ui;
+  font-weight: 900;
+  font-style: normal;
+}
+.roboto .thin-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 100;
+  font-style: italic;
+}
+.roboto .light-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 300;
+  font-style: italic;
+}
+.roboto .regular-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: italic;
+}
+.roboto .medium-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 500;
+  font-style: italic;
+}
+.roboto .bold-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 700;
+  font-style: italic;
+}
+.roboto .black-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 900;
+  font-style: italic;
 }
 
 /* ////////////////////////////////////////// */
@@ -76,9 +141,10 @@ h6 {
 }
 
 h1 {
+  font-family: var(--police_titres);
   font-size: clamp(1.875rem, -1.25rem + 10vw, 5.625rem);
   text-shadow: 3px 5px 6px var(--_couleur-ombrage);
-  font-weight: bold;
+  font-weight: var(--poid_titres);
   letter-spacing: -3px;
 }
 
@@ -93,7 +159,9 @@ h3 {
 }
 
 p {
+  font-family: var(--police_textes);
   font-size: clamp(1rem, 0.4792rem + 1.6667vw, 1.2rem);
+  font-weight: var(--poid_textes);
   line-height: 1.8rem;
 }
 
@@ -329,8 +397,6 @@ section.debut_accueil div {
 section.debut_accueil div h1,
 section.debut_accueil div h2 {
   color: var(--couleur-text-accueil-intro);
-  font-weight: bold;
-  text-shadow: none;
   margin: 0;
   font-size: 5vw; /* Taille de police adaptative */
 }

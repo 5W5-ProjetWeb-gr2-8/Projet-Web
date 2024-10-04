@@ -16,9 +16,10 @@ h6 {
 }
 
 h1 {
+  font-family: var(--police_titres);
   font-size: clamp(1.875rem, -1.25rem + 10vw, 5.625rem);
   text-shadow: 3px 5px 6px var(--_couleur-ombrage);
-  font-weight: bold;
+  font-weight: var(--poid_titres);
   letter-spacing: -3px;
 }
 
@@ -41,7 +42,9 @@ h6 {
 }
 
 p {
+  font-family: var(--police_textes);
   font-size: clamp(1rem, 0.4792rem + 1.6667vw, 1.2rem);
+  font-weight: var(--poid_textes);
   line-height: 1.8rem;
 }
 
