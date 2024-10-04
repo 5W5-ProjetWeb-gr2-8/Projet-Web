@@ -1,12 +1,12 @@
-function toggleCours() {
-  const details = document.querySelector(".cours-details");
-  const btn = document.querySelector(".btn-plus");
+// Fonction pour naviguer vers les cours correspondant
+function goToCours(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
 
-  if (details.style.display === "none" || details.style.display === "") {
-    details.style.display = "block";
-    btn.textContent = "-";
-  } else {
-    details.style.display = "none";
-    btn.textContent = "+";
-  }
+// Fonction pour afficher ou cacher les détails du cours
+function toggleCours(btn) {
+  const coursDetails = btn.parentNode.nextElementSibling;
+  const isVisible = coursDetails.style.display === "block";
+  coursDetails.style.display = isVisible ? "none" : "block";
+  btn.textContent = isVisible ? "+" : "-";
 }
