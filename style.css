@@ -289,11 +289,43 @@ footer .footer-droite {
   }
 }
 
+/* Palette de couleurs monochrome */
+:root {
+  --gris-clair: #f0f0f0;
+  --gris-moyen: #b0b0b0;
+  --gris-fonce: #505050;
+  --noir: #202020;
+  /* Couleurs des boutons */
+  --rouge: #ff4b5c;
+  --orange: #ff8c42;
+  --jaune: #ffd700;
+  --bleu: #4b7bec;
+}
+
 /* Styles généraux */
 body {
   font-family: Arial, sans-serif;
+  background-color: var(--gris-clair);
+  color: var(--gris-fonce);
+  margin: 0;
+  padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: var(--noir);
+}
+
+/* Menu */
+.menu {
+  background-color: var(--noir);
+  padding: 10px;
+}
+
+.menu_liste a {
+  color: var(--gris-clair);
+}
+
+/* Section des compétences */
 .competences-container {
   display: flex;
   justify-content: center;
@@ -304,12 +336,20 @@ body {
 
 .competence {
   padding: 20px;
-  color: white;
   text-align: center;
   border-radius: 5px;
   width: 150px;
+  color: var(--gris-clair);
+  background-color: var(--gris-fonce);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.competence:hover {
+  transform: scale(1.1);
+  background-color: var(--gris-moyen);
+}
+
+/* Section des cours */
 .cours-section {
   display: flex;
   justify-content: center;
@@ -318,20 +358,41 @@ body {
 
 .cours-box {
   width: 300px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gris-moyen);
   border-radius: 8px;
+  background-color: var(--gris-clair);
   padding: 10px;
-  transition: height 0.3s ease;
+  transition: height 0.3s ease, background-color 0.3s ease;
 }
 
 .cours-header {
   display: flex;
   justify-content: space-between;
+  color: var(--noir);
 }
 
 .cours-details {
   display: none;
   margin-top: 10px;
+  color: var(--gris-fonce);
+}
+
+.btn-plus {
+  background-color: var(--bleu);
+  color: var(--gris-clair);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-plus:hover {
+  background-color: var(--orange);
+}
+
+.cours-box:hover {
+  background-color: var(--gris-moyen);
 }
 
 /* Responsiveness */
@@ -340,6 +401,14 @@ body {
     flex-direction: column;
   }
 }
+/* Footer */
+footer {
+  background-color: var(--noir);
+  color: var(--gris-clair);
+  padding: 20px;
+  text-align: center;
+}
+
 .faq-section {
   background-color: var(--couleur-fond-gris);
   padding: var(--espacement);
