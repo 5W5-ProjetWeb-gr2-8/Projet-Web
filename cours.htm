@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compétences et Cours</title>
+  </head>
+  <body>
+    <!-- Menu ///////////////////////////////////////////////////////////////////////// -->
+    <nav class="menu">
+      <div class="menu_contenu">
+        <p class="menu_titre">
+          <img class="logo_img" src="images/logo_TIM.png" alt="" />
+        </p>
+        <p class="inscription">Inscription</p>
+        <button class="menu_hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu_liste">
+          <li><a href="galerie.htm">Galerie</a></li>
+          <li><a href="cours.htm">Cours</a></li>
+          <li><a href="#">Carrière</a></li>
+          <li><a href="#">Personnel</a></li>
+          <li><a href="#">Contacter</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Section des compétences ////////////////////////////////////////////////////////////////////////-->
+    <section class="competences-section">
+      <div class="competences-container">
+        <div class="competence" style="background-color: #f94144">HTML</div>
+        <div class="competence" style="background-color: #f3722c">CSS</div>
+        <div class="competence" style="background-color: #f8961e">
+          JavaScript
+        </div>
+        <div class="competence" style="background-color: #f9c74f">React</div>
+      </div>
+    </section>
+
+    <!-- Section des cours ////////////////////////////////////////////////////////////////////////-->
+    <section class="cours-section">
+      <div class="cours-box">
+        <div class="cours-header">
+          <span class="cours-nom">Développement Web</span>
+          <span class="cours-code">TIM1234</span>
+          <button class="btn-plus" onclick="toggleCours()">+</button>
+        </div>
+        <div class="cours-details">
+          <p>Description détaillée du cours...</p>
+          <p>Heures : 60 heures</p>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ //////////////////////////////////////////////////////////////////////// -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <!-- Section gauche avec le logo et les questions -->
+        <div class="left-section">
+          <div class="logo-faq">
+            <img
+              src="images/logo_college.jpg"
+              alt="Logo Collège de Maisonneuve"
+            />
+          </div>
+          <div class="questions-et-reponse">
+            <!-- Questions dans les boîtes bleues -->
+            <div class="questions">
+              <button class="question" data-question="question1">
+                Question 1
+              </button>
+              <button class="question" data-question="question2">
+                Question 2
+              </button>
+              <button class="question" data-question="question3">
+                Question 3
+              </button>
+              <button class="question" data-question="question4">
+                Question 4
+              </button>
+              <button class="question" data-question="question5">
+                Question 5
+              </button>
+            </div>
+
+            <!-- Boîte de réponse blanche -->
+            <div id="boite-reponse" class="boite-reponse">
+              <div class="question-affichee">Sélectionnez une question</div>
+              <div class="reponse-affichee">La réponse s'affichera ici.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section droite avec les logos et contact -->
+        <div class="right-section">
+          <div class="social-media">
+            <a href="https://www.linkedin.com" target="_blank">
+              <img src="images/logo_linkedIn.png" alt="LinkedIn" />
+            </a>
+            <a href="https://www.behance.net" target="_blank">
+              <img src="images/logo_behance.jpg" alt="Behance" />
+            </a>
+          </div>
+          <div class="contact-info">
+            <p>Téléphone : (514) 254-7131</p>
+            <p>Adresse : 3800 Sherbrooke ST E</p>
+          </div>
+          <div class="inscription-section">
+            <h3>Inscription</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer ////////////////////////////////////////////////////////////////// -->
+    <footer>
+      <div class="footer-gauche">
+        <img class="logo" src="images/logo_TIM.png" alt="Logo TIM" />
+        <div class="copyright">© 2024 Collège de Maisonneuve</div>
+      </div>
+      <div class="footer-droite">Crédits</div>
+    </footer>
+
+    <!-- Inclure le fichier JavaScript -->
+    <script src="js/cours.js"></script>
+  </body>
+</html>
