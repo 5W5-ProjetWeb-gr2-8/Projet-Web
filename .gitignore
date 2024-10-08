@@ -6,5 +6,3 @@
 # # // Ne pas ignorer les fichiers .gitignore et readme.md à la racine
 # !.gitignore
 # !readme.md
-style.css
-style.css.map
