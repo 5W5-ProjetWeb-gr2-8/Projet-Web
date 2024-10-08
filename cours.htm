@@ -8,11 +8,14 @@
     <title>Compétences et Cours</title>
   </head>
   <body>
-    <!-- Menu -->
+    <!-- Menu ///////////////////////////////////////////////////////////////////////// -->
     <nav class="menu">
       <div class="menu_contenu">
         <p class="menu_titre">
-          <img class="logo_img" src="images/logo_TIM.png" alt="" />
+          <a href="index.htm">
+            <!-- Lien vers la page d'accueil -->
+            <img class="logo_img" src="images/logo_TIM.png" alt="Logo TIM" />
+          </a>
         </p>
         <p class="inscription">Inscription</p>
         <button class="menu_hamburger">
@@ -33,10 +36,34 @@
     <!-- Section des compétences -->
     <section class="competences-section">
       <div class="competences-container">
-        <div class="competence" style="background-color: #f94144" onclick="goToCours('html')">HTML</div>
-        <div class="competence" style="background-color: #f3722c" onclick="goToCours('css')">CSS</div>
-        <div class="competence" style="background-color: #f8961e" onclick="goToCours('js')">JavaScript</div>
-        <div class="competence" style="background-color: #f9c74f" onclick="goToCours('react')">React</div>
+        <div
+          class="competence"
+          style="background-color: #f94144"
+          onclick="goToCours('html')"
+        >
+          HTML
+        </div>
+        <div
+          class="competence"
+          style="background-color: #f3722c"
+          onclick="goToCours('css')"
+        >
+          CSS
+        </div>
+        <div
+          class="competence"
+          style="background-color: #f8961e"
+          onclick="goToCours('js')"
+        >
+          JavaScript
+        </div>
+        <div
+          class="competence"
+          style="background-color: #f9c74f"
+          onclick="goToCours('react')"
+        >
+          React
+        </div>
       </div>
     </section>
 
@@ -61,7 +88,9 @@
           <button class="btn-plus" onclick="toggleCours(this)">+</button>
         </div>
         <div class="cours-details">
-          <p>Maîtrisez les styles CSS pour des designs modernes et adaptatifs.</p>
+          <p>
+            Maîtrisez les styles CSS pour des designs modernes et adaptatifs.
+          </p>
           <p>Heures : 50 heures</p>
         </div>
       </div>
