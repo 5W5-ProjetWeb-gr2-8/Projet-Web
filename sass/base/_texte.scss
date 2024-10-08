@@ -76,15 +76,3 @@ blockquote::first-letter {
   font-weight: bold;
   color: var(--_couleur-blockquote-first-letter);
 }
-
-// Appliquer les couleurs aux éléments HTML
-@include applique-couleur(h1, $color1);
-@include applique-couleur(h2, $color2);
-@include applique-couleur(h3, $color3);
-@include applique-couleur(h4, $color4);
-@include applique-couleur(h5, $color5);
-@include applique-couleur(h6, $color1);
-@include applique-couleur(p, $color2);
-@include applique-couleur(ul, $color3);
-@include applique-couleur(ol, $color4);
-@include applique-couleur(figure, $color5);

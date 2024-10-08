@@ -1,19 +1,4 @@
-/*
-$color1: #3498db; // Bleu
-$color2: #e74c3c; // Rouge
-$color3: #2ecc71; // Vert
-$color4: #f1c40f; // Jaune
-$color5: #9b59b6; // Violet
-*/
-
 :root {
-  // temporaire
-  --color1: #3498db; // Bleu
-  --color2: black; // Noir
-  --color3: black; // Noir
-  --color4: #f1c40f; // Jaune
-  --color5: #9b59b6; // Violet
-  // ------------------------------------------------
   --couleur-fond: black;
   --couleur-principale: #757575;
   --couleur-border: black;
@@ -21,6 +6,11 @@ $color5: #9b59b6; // Violet
   --couleur-texte2: white;
   --couleur-blanc: #ffffff;
   --couleur-fond-gris: #a5a5a5; // Fond gris pour la FAQ
+  --couleur-fond-cours-detail: #404040;
+  --couleur-bouton-fond-cours-detail: #6c757d;
+  --couleur-bouton-fond-cours-detail-hover: #5a6268;
+  --couleur-fond-cours: #545050;
+  --couleur-cours-border: #707070;
   --couleur-text-accueil-intro: white;
   --couleur-competences-fond: #7f7f7f;
   --couleur-galerie-fond: #7f7f7f;
@@ -29,16 +19,4 @@ $color5: #9b59b6; // Violet
   --couleur-galerie-bordure: #000000;
   --espacement: 1.5rem;
   --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
-}
-
-$color1: --color1;
-$color2: --color2;
-$color3: --color3;
-$color4: --color4;
-$color5: --color5;
-
-@mixin applique-couleur($elements, $color) {
-  #{$elements} {
-    color: var(#{$color});
-  }
 }
