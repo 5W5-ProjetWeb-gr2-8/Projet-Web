@@ -769,7 +769,7 @@ section.competences .x-symbol {
   transition: stroke 0.3s ease;
 }
 section.competences button:hover .x-symbol {
-  stroke: blue;
+  stroke: rgb(232, 14, 14);
 }
 section.competences div.competence-item {
   background-color: grey;
@@ -779,6 +779,15 @@ section.competences div.competence-item {
   margin-bottom: 1rem;
   padding: 1rem;
   border: 2px solid black;
+}
+section.competences div.competence-item .competence-header {
+  position: relative;
+}
+section.competences div.competence-item .top-right-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 2%;
 }
 section.competences div.competence-item .competence-header {
   display: flex;

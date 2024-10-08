@@ -41,7 +41,7 @@ section.competences {
   }
 
   button:hover .x-symbol {
-    stroke: blue;
+    stroke: rgb(232, 14, 14);
   }
 
   // Boite contenant une carte de compétence
@@ -62,7 +62,18 @@ section.competences {
     margin-bottom: 1rem;
     padding: 1rem;
     border: 2px solid black;
+
     // position: relative;
+    .competence-header {
+      position: relative;
+    }
+
+    .top-right-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 2%;
+    }
 
     // Entête de la compétence
     .competence-header {
