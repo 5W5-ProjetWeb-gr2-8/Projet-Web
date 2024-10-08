@@ -17,20 +17,20 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* Variables css                              */
 /* ////////////////////////////////////////// */
 :root {
-  --couleur-fond: black;
   --couleur-principale: #757575;
-  --couleur-border: black;
-  --couleur-texte: black;
-  --couleur-texte2: white;
-  --couleur-blanc: #ffffff;
+  --couleur-fond: black;
   --couleur-fond-gris: #a5a5a5;
   --couleur-fond-cours-detail: #404040;
   --couleur-bouton-fond-cours-detail: #6c757d;
   --couleur-bouton-fond-cours-detail-hover: #5a6268;
   --couleur-fond-cours: #545050;
-  --couleur-cours-border: #707070;
-  --couleur-text-accueil-intro: white;
   --couleur-competences-fond: #7f7f7f;
+  --couleur-border: black;
+  --couleur-texte: black;
+  --couleur-texte2: white;
+  --couleur-text-accueil-intro: white;
+  --couleur-blanc: #ffffff;
+  --couleur-cours-border: #707070;
   --couleur-galerie-fond: #7f7f7f;
   --couleur-galerie-fond-projets: rgb(79, 79, 79);
   --couleur-galerie-texte: white;
@@ -733,6 +733,12 @@ section.debut_accueil div h2 {
 }
 .galerie-projets .projets-container .projet p {
   color: var(--couleur-galerie-texte); /* Texte en noir */
+}
+
+.presPro {
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte2);
+  height: 45vh;
 }
 
 section.competences {

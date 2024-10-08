@@ -1,22 +1,30 @@
+// Feuille de style pour les Variables de couleur //
 :root {
-  --couleur-fond: black;
   --couleur-principale: #757575;
-  --couleur-border: black;
-  --couleur-texte: black;
-  --couleur-texte2: white;
-  --couleur-blanc: #ffffff;
+
+  --couleur-fond: black;
   --couleur-fond-gris: #a5a5a5; // Fond gris pour la FAQ
   --couleur-fond-cours-detail: #404040;
   --couleur-bouton-fond-cours-detail: #6c757d;
   --couleur-bouton-fond-cours-detail-hover: #5a6268;
   --couleur-fond-cours: #545050;
-  --couleur-cours-border: #707070;
-  --couleur-text-accueil-intro: white;
   --couleur-competences-fond: #7f7f7f;
+
+  
+  --couleur-border: black;
+  --couleur-texte: black;
+  --couleur-texte2: white;
+  --couleur-text-accueil-intro: white;
+  
+  --couleur-blanc: #ffffff;
+  
+  --couleur-cours-border: #707070;
+
   --couleur-galerie-fond: #7f7f7f;
   --couleur-galerie-fond-projets: rgb(79, 79, 79);
   --couleur-galerie-texte: white;
   --couleur-galerie-bordure: #000000;
-  --espacement: 1.5rem;
+
+  --espacement: 1.5rem; // ?
   --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
 }
