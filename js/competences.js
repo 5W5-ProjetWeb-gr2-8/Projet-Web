@@ -10,16 +10,18 @@
 //   });
 // });
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector("section.competences button");
-  const competenceItem = document.querySelector(".competence-item");
+  const buttons = document.querySelectorAll("section.competences button");
+  const competenceItems = document.querySelectorAll(".competence-item");
 
-  if (button && competenceItem) {
-    button.addEventListener("click", () => {
-      competenceItem.classList.toggle("active");
+  if (buttons.length > 0 && competenceItems.length > 0) {
+    buttons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        competenceItems[index].classList.toggle("active");
+      });
     });
   } else {
-    console.error('Element with class "button" or "competence-item" not found.');
+    console.error('Elements with class "button" or "competence-item" not found.');
   }
 });
+
