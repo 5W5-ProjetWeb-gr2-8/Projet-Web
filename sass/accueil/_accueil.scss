@@ -1,3 +1,9 @@
+/* 
+  Feuille de style 
+  de la première section 
+  de la page d'accueil 
+*/
+
 section.debut_accueil {
   height: 80vh;
   display: flex;
@@ -5,69 +11,49 @@ section.debut_accueil {
   align-items: center;
   text-align: center;
 
-  // Image par défaut pour le mobile
+  // Image de fond par défaut pour le mobile
   background-image: url("images/sortie-vr/sortie-vr4.jpg");
   background-size: cover;
   background-position: center;
 
-  // Image pour les tablettes
+  // Image de fond pour les tablettes
   @media (min-width: 768px) and (max-width: 1024px) {
     background-image: url("images/sortie-vr/sortie-vr5.jpg");
   }
 
-  // Image pour les ordinateurs
+  // Image de fond pour les ordinateurs
   @media (min-width: 1025px) {
     background-image: url("images/sortie-vr/sortie-vr7.jpg");
   }
 
-  // Pour centrer le texte dans le div
   div {
+    // Pour centrer le texte dans le div
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem; /* Réduit le padding pour mobiles */
 
     // Cercle avec fond transparent
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* variable à changer */
     border-radius: 50%;
-    width: 40vw; /* Utilise vw pour un ajustement dynamique */
-    height: 40vw; /* Hauteur égale à la largeur pour maintenir le cercle */
-    max-width: 22rem; /* Largeur maximale pour éviter qu'il ne soit trop grand */
-    max-height: 22rem; /* Hauteur maximale pour éviter qu'il ne soit trop grand */
-    padding: 0; /* Pas de padding interne pour garder la forme circulaire */
+    /* Utilise vw pour un ajustement dynamique */
+    width: 60vw;
+    max-width: 32rem;
+    min-width: 15rem;
+    height: 60vw;
+    /* Hauteur égale à la largeur pour maintenir le cercle */
+    max-height: 32rem;
+    min-height: 15rem;
+    /* Retire le padding pour garder le cercle */
+    padding: 0;
 
+    // Titre et sur-titre
     h1,
-    h2 {
-      color: var(--couleur-text-accueil-intro);
-      // font-weight: bold;
-      // text-shadow: none;
-      margin: 0;
-      font-size: 5vw; /* Taille de police adaptative */
+    h6 {
+      color: var(--couleur-text-accueil-intro); /* variable à changer */
     }
-  }
-
-  // Ajustements pour tablettes
-  @media (min-width: 768px) and (max-width: 1024px) {
-    div {
-      width: 30vw; /* Ajustement pour tablettes */
-      height: 30vw; /* Ajustement pour tablettes */
-      h1,
-      h2 {
-        font-size: 4vw; /* Taille de police adaptative pour tablettes */
-      }
-    }
-  }
-
-  // Ajustements pour ordinateurs
-  @media (min-width: 1025px) {
-    div {
-      width: 20vw; /* Ajustement pour ordinateurs */
-      height: 20vw; /* Ajustement pour ordinateurs */
-      h1,
-      h2 {
-        font-size: 2.5rem; /* Taille de police fixe pour ordinateurs */
-      }
+    h1 {
+      font-size: clamp(2.244rem, 1.93rem + 1.569vw, 45px); // pour cap a 48px
     }
   }
 }

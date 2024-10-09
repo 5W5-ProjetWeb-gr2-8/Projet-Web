@@ -5,7 +5,7 @@
   // Titre
   --police_titres: "Plus Jakarta Sans", system-ui; // version Émile
   // --police_titres: "SUSE", system-ui; // version Janne
-  --poid_titres: 800;
+  --poid_titres: 700;
   --style_titres: normal;
 
   // Textes
@@ -22,9 +22,7 @@
 
 //* Exemples de classe *//
 
-
 //// Quicksand ////
-
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 300 to 700
 
@@ -37,7 +35,6 @@
 
 
 //// Suse //// (substitut de typoGraphica)
-
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 800
 
@@ -50,7 +47,6 @@
 
 
 //// Jakarta-sans //// (substitut de Coolvetica)
-
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 200 to 800
 
@@ -61,71 +57,13 @@
 //   font-style: normal;
 // }
 
-//// Roboto //// plier pour réduire
-.roboto {
-  .light {
-    font-family: "Roboto", system-ui;
-    font-weight: 300;
-    font-style: normal;
-  }
 
-  .regular {
-    font-family: "Roboto", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
+//// Roboto //// 
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 900
 
-  .medium {
-    font-family: "Roboto", system-ui;
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  .bold {
-    font-family: "Roboto", system-ui;
-    font-weight: 700;
-    font-style: normal;
-  }
-
-  .black {
-    font-family: "Roboto", system-ui;
-    font-weight: 900;
-    font-style: normal;
-  }
-
-  .thin-italic {
-    font-family: "Roboto", system-ui;
-    font-weight: 100;
-    font-style: italic;
-  }
-
-  .light-italic {
-    font-family: "Roboto", system-ui;
-    font-weight: 300;
-    font-style: italic;
-  }
-
-  .regular-italic {
-    font-family: "Roboto", system-ui;
-    font-weight: 400;
-    font-style: italic;
-  }
-
-  .medium-italic {
-    font-family: "Roboto", system-ui;
-    font-weight: 500;
-    font-style: italic;
-  }
-
-  .bold-italic {
-    font-family: "Roboto", system-ui;
-    font-weight: 700;
-    font-style: italic;
-  }
-
-  .black-italic {
-    font-family: "Roboto", system-ui;
-    font-weight: 900;
-    font-style: italic;
-  }
-}
+// .roboto-<uniquifier> {
+//   font-family: "Roboto", system-ui;
+//   font-weight: <weight>;
+//   font-style: normal/italic;
+// }

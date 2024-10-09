@@ -41,7 +41,7 @@ Ce thème a été développé dans le cadre du cours 4W4
 
 :root {
   --police_titres: "Plus Jakarta Sans", system-ui;
-  --poid_titres: 800;
+  --poid_titres: 700;
   --style_titres: normal;
   --police_textes: "Roboto", system-ui;
   --poid_textes: 400;
@@ -49,62 +49,6 @@ Ce thème a été développé dans le cadre du cours 4W4
   --taille-police: 1.2rem;
   --taille-police-grande: 1.5rem;
   --taille-police-petite: 1rem;
-}
-
-.roboto .light {
-  font-family: "Roboto", system-ui;
-  font-weight: 300;
-  font-style: normal;
-}
-.roboto .regular {
-  font-family: "Roboto", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-.roboto .medium {
-  font-family: "Roboto", system-ui;
-  font-weight: 500;
-  font-style: normal;
-}
-.roboto .bold {
-  font-family: "Roboto", system-ui;
-  font-weight: 700;
-  font-style: normal;
-}
-.roboto .black {
-  font-family: "Roboto", system-ui;
-  font-weight: 900;
-  font-style: normal;
-}
-.roboto .thin-italic {
-  font-family: "Roboto", system-ui;
-  font-weight: 100;
-  font-style: italic;
-}
-.roboto .light-italic {
-  font-family: "Roboto", system-ui;
-  font-weight: 300;
-  font-style: italic;
-}
-.roboto .regular-italic {
-  font-family: "Roboto", system-ui;
-  font-weight: 400;
-  font-style: italic;
-}
-.roboto .medium-italic {
-  font-family: "Roboto", system-ui;
-  font-weight: 500;
-  font-style: italic;
-}
-.roboto .bold-italic {
-  font-family: "Roboto", system-ui;
-  font-weight: 700;
-  font-style: italic;
-}
-.roboto .black-italic {
-  font-family: "Roboto", system-ui;
-  font-weight: 900;
-  font-style: italic;
 }
 
 /* ////////////////////////////////////////// */
@@ -122,6 +66,9 @@ Sélecteur textuel de base
 https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiI5MDBweCIsIm1pbkZvbnRTaXplIjoiMTZweCIsIm1heEZvbnRTaXplIjoiNDhweCJ9
 
+* site utilisé pour les tailles de polices *
+https://dkwebsolutions.co.uk/our-tools/css-clamp-generator/#:~:text=If%20a%20website%20has%20font%20H1%20to%20H6%20and%20body
+
 */
 h1,
 h2,
@@ -129,31 +76,40 @@ h3,
 h4,
 h5,
 h6 {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  font-family: var(--police_titres);
+  font-weight: var(--poid_titres);
 }
 
 h1 {
-  font-family: var(--police_titres);
-  font-size: clamp(1.875rem, -1.25rem + 10vw, 5.625rem);
-  text-shadow: 3px 5px 6px var(--_couleur-ombrage);
-  font-weight: var(--poid_titres);
+  font-size: clamp(2.244rem, 1.93rem + 1.569vw, 3.813rem);
   letter-spacing: -3px;
 }
 
 h2 {
-  font-size: clamp(1.5625rem, -0.2604rem + 5.8333vw, 3.75rem);
-  font-weight: bold;
+  font-size: clamp(1.875rem, 1.65rem + 1.125vw, 3rem);
 }
 
 h3 {
-  font-size: clamp(1.4375rem, 0.0313rem + 4.5vw, 2.125rem);
-  font-weight: bold;
+  font-size: clamp(1.625rem, 1.462rem + 0.813vw, 2.438rem);
+}
+
+h4 {
+  font-size: clamp(1.381rem, 1.27rem + 0.557vw, 1.938rem);
+}
+
+h5 {
+  font-size: clamp(1.2rem, 1.127rem + 0.363vw, 1.563rem);
+}
+
+h6 {
+  font-size: clamp(1.044rem, 1.003rem + 0.206vw, 1.25rem);
 }
 
 p {
+  font-size: clamp(1rem, 0.9546rem + 0.227vw, 1.1rem);
   font-family: var(--police_textes);
-  font-size: clamp(1rem, 0.4792rem + 1.6667vw, 1.2rem);
   font-weight: var(--poid_textes);
   line-height: 1.8rem;
 }
@@ -600,6 +556,11 @@ body {
 /* ////////////////////////////////////////// */
 /* Accueil                                    */
 /* ////////////////////////////////////////// */
+/* 
+  Feuille de style 
+  de la première section 
+  de la page d'accueil 
+*/
 section.debut_accueil {
   height: 80vh;
   display: flex;
@@ -625,40 +586,25 @@ section.debut_accueil div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem; /* Réduit le padding pour mobiles */
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7); /* variable à changer */
   border-radius: 50%;
-  width: 40vw; /* Utilise vw pour un ajustement dynamique */
-  height: 40vw; /* Hauteur égale à la largeur pour maintenir le cercle */
-  max-width: 22rem; /* Largeur maximale pour éviter qu'il ne soit trop grand */
-  max-height: 22rem; /* Hauteur maximale pour éviter qu'il ne soit trop grand */
-  padding: 0; /* Pas de padding interne pour garder la forme circulaire */
+  /* Utilise vw pour un ajustement dynamique */
+  width: 60vw;
+  max-width: 32rem;
+  min-width: 15rem;
+  height: 60vw;
+  /* Hauteur égale à la largeur pour maintenir le cercle */
+  max-height: 32rem;
+  min-height: 15rem;
+  /* Retire le padding pour garder le cercle */
+  padding: 0;
 }
 section.debut_accueil div h1,
-section.debut_accueil div h2 {
-  color: var(--couleur-text-accueil-intro);
-  margin: 0;
-  font-size: 5vw; /* Taille de police adaptative */
+section.debut_accueil div h6 {
+  color: var(--couleur-text-accueil-intro); /* variable à changer */
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  section.debut_accueil div {
-    width: 30vw; /* Ajustement pour tablettes */
-    height: 30vw; /* Ajustement pour tablettes */
-  }
-  section.debut_accueil div h1,
-  section.debut_accueil div h2 {
-    font-size: 4vw; /* Taille de police adaptative pour tablettes */
-  }
-}
-@media (min-width: 1025px) {
-  section.debut_accueil div {
-    width: 20vw; /* Ajustement pour ordinateurs */
-    height: 20vw; /* Ajustement pour ordinateurs */
-  }
-  section.debut_accueil div h1,
-  section.debut_accueil div h2 {
-    font-size: 2.5rem; /* Taille de police fixe pour ordinateurs */
-  }
+section.debut_accueil div h1 {
+  font-size: clamp(2.244rem, 1.93rem + 1.569vw, 45px);
 }
 
 .galerie-projets {
