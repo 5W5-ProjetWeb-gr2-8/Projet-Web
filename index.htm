@@ -35,7 +35,7 @@
           <ul class="menu_liste">
             <li><a href="galerie.htm">Galerie</a></li>
             <li><a href="cours.htm">Cours</a></li>
-            <li><a href="#">Carrière</a></li>
+            <li><a href="#">Projet</a></li>
             <li><a href="#">Personnel</a></li>
             <li><a href="#">Contacter</a></li>
           </ul>
@@ -54,11 +54,13 @@
 
         <!-- Présentation Programme -->
         <section class="presPro">
+          <h2>C'est quoi le <span>Multimédia ?</span></h2>
           <p>
-            section suivante (programme) Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Provident aliquid quisquam animi possimus dolores
-            libero vitae consectetur quo similique alias, ducimus nostrum, neque
-            architecto vel est? Ratione doloremque recusandae dolor!.
+            C'est l'ensemble des techniques et des produits qui permettent l'utilisation 
+            simultanée et interactive de plusieurs modes de représentation de 
+            l'information (textes, sons, images fixes ou animées).
+            La technique est parfaite pour devenir un connaisseur du multimédia.
+            Le programme est un mélange de créativité et  de logique ...
           </p>
         </section>
         <!-- Compétences ///////////////////////////////////////////////////////////////////// -->
@@ -617,23 +619,47 @@
     </div>
     <!-- Galerie de Projets ////////////////////////////////////////////////////////////// -->
     <section class="galerie-projets">
-      <h2 class="galerie-titre">Top 3 des meilleurs projets TIM</h2>
-      <div class="projets-container">
-        <article class="projet">
-          <img src="images/lacryma.png" alt="Projet Lacryma" />
-          <h3>Lacryma</h3>
-          <p>Description du projet Lacryma</p>
-        </article>
-        <article class="projet">
-          <img src="images/triptyque.png" alt="Projet Triptyque" />
-          <h3>Triptyque</h3>
-          <p>Description de Triptyque</p>
-        </article>
-        <article class="projet">
-          <img src="images/inserxion.png" alt="Inserxion" />
-          <h3>Inserxion</h3>
-          <p>Description de Inserxion</p>
-        </article>
+      <h2 class="galerie-titre">Projets étudiants</h2>
+      <h3 id="titre-projet" class="titre-projet">Titre du projet</h3>
+      <!-- Ajout du titre du projet -->
+      <div class="carrousel-container">
+        <div class="fleche gauche" onclick="changerImage(-1)">&#9664;</div>
+        <!-- Flèche gauche -->
+        <div class="carrousel">
+          <div class="carrousel-item">
+            <img
+              src="images/projets-etudiants/lacryma.png"
+              alt="Projet Lacryma"
+            />
+          </div>
+          <div class="carrousel-item">
+            <img
+              src="images/projets-etudiants/triptyque.png"
+              alt="Projet Triptyque"
+            />
+          </div>
+          <div class="carrousel-item">
+            <img
+              src="images/projets-etudiants/inserxion.png"
+              alt="Projet Inserxion"
+            />
+          </div>
+          <div class="carrousel-item">
+            <img src="images/projets-etudiants/rv_projet.jpg" alt="Projet RV" />
+          </div>
+          <div class="carrousel-item">
+            <img src="images/projets-etudiants/dystopie_chronique.png" alt="Projet Dystopie chronique" />
+          </div>
+        </div>
+        <div class="fleche droite" onclick="changerImage(1)">&#9654;</div>
+        <!-- Flèche droite -->
+      </div>
+      <div class="indications">
+        <span class="indication" onclick="montrerImage(0)"></span>
+        <span class="indication" onclick="montrerImage(1)"></span>
+        <span class="indication" onclick="montrerImage(2)"></span>
+        <span class="indication" onclick="montrerImage(3)"></span>
+        <span class="indication" onclick="montrerImage(4)"></span>
       </div>
     </section>
 
@@ -717,5 +743,6 @@
     <script src="js/menu-burger.js"></script>
     <script src="js/competences.js"></script>
     <script src="js/faq.js"></script>
+    <script src="js/projets-carrousel­.js"></script>
   </body>
 </html>

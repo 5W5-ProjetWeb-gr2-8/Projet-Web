@@ -9,38 +9,89 @@
     margin-bottom: var(--espacement);
   }
 
-  .projets-container {
+  .titre-projet {
+    color: var(--couleur-texte2);
+  }
+
+  .carrousel-container {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    gap: var(--espacement);
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto; /* Centre horizontalement */
+    margin-bottom: var(--espacement);
+    height: 400px; /* Hauteur par défaut pour mobile/tablette */
+    min-width: 300px; /* Largeur minimum */
+    width: 80%; /* Largeur par défaut */
+    background-color: #f5f5f5; /* Couleur de fond du rectangle */
+    border-radius: 10px; /* Coins arrondis du rectangle */
+    overflow: hidden; /* Masquer tout ce qui dépasse du rectangle */
 
     @media (min-width: 768px) {
-      flex-direction: row;
-      justify-content: space-around;
+      width: 60%; /* Largeur pour tablette */
     }
 
-    .projet {
-      background-color: var(--couleur-galerie-fond-projets);
-      border: 3px solid var(--couleur-galerie-bordure); /* Bordure noire */
-      padding: var(--espacement);
-      border-radius: 0.5rem;
+    @media (min-width: 1024px) {
+      width: 50%; /* Largeur pour ordinateur */
+      height: 500px; /* Hauteur augmentée pour ordinateur */
+    }
 
-      img {
-        width: 100%;
-        max-width: 300px; /* Taille moyenne */
-        height: auto; /* Maintient la proportion de l'image */
-        border-radius: 0.5rem;
-        margin-bottom: var(--espacement);
-        object-fit: cover; /* Assure que l'image remplisse bien le cadre */
+    .carrousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+
+      .carrousel-item {
+        min-width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Remplir tout l'espace du rectangle */
+        }
+      }
+    }
+
+    .fleche {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      font-size: 2rem;
+      color: #dbb2ab; /* Couleur des flèches */
+      cursor: pointer;
+      z-index: 10;
+
+      &.gauche {
+        left: 10px;
       }
 
-      h3 {
-        color: var(--couleur-galerie-texte); /* Titre en noir */
-        margin-bottom: 0.5rem;
+      &.droite {
+        right: 10px;
       }
+    }
+  }
 
-      p {
-        color: var(--couleur-galerie-texte); /* Texte en noir */
+  .indications {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Ajout d'un gap entre les rectangles */
+    margin-top: var(--espacement-petit);
+
+    .indication {
+      width: 35px; /* Augmentation de la largeur des rectangles */
+      height: 12px; /* Augmentation de la hauteur des rectangles */
+      background-color: #707070; /* Couleur des rectangles */
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &.active {
+        background-color: #dbb2ab; /* Couleur de l'indicateur actif */
       }
     }
   }
