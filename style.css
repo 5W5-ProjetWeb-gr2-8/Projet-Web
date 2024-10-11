@@ -265,36 +265,7 @@ footer .footer-droite {
   }
 }
 
-/* Styles de base pour tous les écrans */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f9fa;
-}
-
-.menu_contenu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu_titre img {
-  width: 120px;
-}
-
-.menu_liste {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.menu_liste a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-
+/* Style pour la page cours.htm */
 .competences-section {
   padding: 20px;
   background-color: #e9ecef;
@@ -377,72 +348,6 @@ body {
   color: var(--couleur-blanc); /* Texte blanc */
 }
 
-.logo {
-  width: 120px;
-}
-
-/* Styles pour mobile */
-@media (max-width: 768px) {
-  .menu_contenu {
-    flex-direction: column;
-  }
-  .menu_liste {
-    display: none;
-    flex-direction: column;
-  }
-  .menu_hamburger {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  .menu_hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-  }
-  .competence {
-    width: 10rem; /* Réduire la taille sur mobile */
-    height: 3rem;
-  }
-  .competences-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .cours-box {
-    width: 100%;
-  }
-}
-/* Styles pour tablette */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .menu_contenu {
-    flex-direction: row;
-  }
-  .menu_liste {
-    display: flex;
-  }
-  .competences-container {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .cours-box {
-    width: 48%;
-  }
-}
-/* Styles pour grand écran */
-@media (min-width: 1025px) {
-  .menu_liste {
-    display: flex;
-  }
-  .competences-container {
-    justify-content: space-between;
-  }
-  .cours-box {
-    width: 30%;
-  }
-}
 .faq-section {
   background-color: var(--couleur-fond-gris);
   padding: var(--espacement);
