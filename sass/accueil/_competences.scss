@@ -9,8 +9,7 @@ section.competences {
   align-items: center;
 
   padding:
-    /* VARIABLE padding X*/
-    4%;
+    /* VARIABLE padding X*/ 4%;
   border-top: 5px solid black;
   border-bottom: 5px solid black;
 
@@ -47,21 +46,17 @@ section.competences {
   // Boite contenant une carte de compétence
   div.competence-item {
     background-color:
-      /* VARIABLE */
-      grey;
+      /* VARIABLE */ var(--couleur-fond);
     width:
-      /* VARIABLE */
-      80%;
+      /* VARIABLE */ 80%;
     // height: /* VARIABLE */ 80%;
     padding:
-      /* VARIABLE */
-      50px 20px;
+      /* VARIABLE */ 50px 20px;
     border-radius:
-      /* VARIABLE border-radius */
-      0.5rem;
+      /* VARIABLE border-radius */ 0.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    border: 2px solid black;
+    border: 5px solid var(--couleur-video);
 
     // position: relative;
     .competence-header {
@@ -81,16 +76,19 @@ section.competences {
       align-items: center;
       cursor: pointer;
       font-size:
-        /* VARIABLE font-size*/
-        1.5rem;
-      background-color: #e0e0e0;
+        /* VARIABLE font-size*/ 1.5rem;
+      color: white;
+      background-color: var(--couleur-fond);
       border-radius: 0.5rem;
 
-      .logo {}
+      .logo h3 {
+        margin-left: 1rem;
+        white-space: nowrap;
+      }
 
       // Informations des compétences
       .info {
-        // padding: 0 10px;
+        padding: 0 25%;
 
         // Outils utilisés dans le cours
         .outils {
