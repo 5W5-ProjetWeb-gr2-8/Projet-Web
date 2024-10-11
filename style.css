@@ -37,6 +37,11 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-galerie-bordure: #000000;
   --espacement: 1.5rem;
   --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
+  --couleur-web: #3ce36a;
+  --couleur-jeux: #00bae2;
+  --couleur-3d: #ff8709;
+  --couleur-design: #e920ad;
+  --couleur-video: #9d95ff;
 }
 
 :root {
@@ -661,13 +666,13 @@ section.competences button:hover .x-symbol {
   stroke: rgb(232, 14, 14);
 }
 section.competences div.competence-item {
-  background-color: grey;
+  background-color: var(--couleur-fond);
   width: 80%;
   padding: 50px 20px;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  border: 2px solid black;
+  border: 5px solid var(--couleur-video);
 }
 section.competences div.competence-item .competence-header {
   position: relative;
@@ -683,8 +688,16 @@ section.competences div.competence-item .competence-header {
   align-items: center;
   cursor: pointer;
   font-size: 1.5rem;
-  background-color: #e0e0e0;
+  color: white;
+  background-color: var(--couleur-fond);
   border-radius: 0.5rem;
+}
+section.competences div.competence-item .competence-header .logo h3 {
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+section.competences div.competence-item .competence-header .info {
+  padding: 0 25%;
 }
 section.competences div.competence-item .competence-header .info .outils {
   display: flex;
