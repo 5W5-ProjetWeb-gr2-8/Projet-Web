@@ -1,17 +1,17 @@
 footer {
-  background-color: #000;
-  color: #fff;
+  background-color: #000; /* variable à changer*/
+  color: #fff; /* variable à changer*/
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
   padding: 20px;
   flex-wrap: wrap;
 
   // Adaptation pour mobile
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-  }
+  // @media (max-width: 768px) {
+  //   flex-direction: column;
+  //   text-align: center;
+  // }
 
   .footer-gauche {
     display: flex;
@@ -21,11 +21,6 @@ footer {
     .logo {
       width: 4rem;
       margin-right: 1rem;
-    }
-
-    // Message copyright
-    .copyright {
-      font-size: 14px;
     }
   }
 

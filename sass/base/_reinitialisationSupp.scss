@@ -5,3 +5,10 @@
     padding: 0;
     margin: 0;
 }
+
+// reset les styles des boutons de base
+button {
+    background: unset;
+    border: unset;
+    cursor: pointer;
+}

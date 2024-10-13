@@ -17,9 +17,9 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* Variables css                              */
 /* ////////////////////////////////////////// */
 :root {
-  --couleur-principale: #cfcfcf;
   --couleur-fond: black;
-  --couleur-fond-gris: #3b3b3b;
+  --couleur-fond-gris: #2b2b2b;
+  --couleur-principale: #cfcfcf;
   --couleur-fond-cours-detail: #404040;
   --couleur-bouton-fond-cours-detail: #6c757d;
   --couleur-bouton-fond-cours-detail-hover: #5a6268;
@@ -65,8 +65,14 @@ Ce thème a été développé dans le cadre du cours 4W4
   margin: 0;
 }
 
+button {
+  background: unset;
+  border: unset;
+  cursor: pointer;
+}
+
 /*
-Sélecteur textuel de base
+Sélecteurs textuels de base
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiI5MDBweCIsIm1pbkZvbnRTaXplIjoiMTZweCIsIm1heEZvbnRTaXplIjoiNDhweCJ9
@@ -121,6 +127,12 @@ p {
 
 a {
   text-decoration: none;
+}
+
+button {
+  font-size: clamp(1rem, 0.9546rem + 0.227vw, 1.1rem); /* même taille que les p */
+  font-family: var(--police_textes);
+  font-weight: var(--poid_textes);
 }
 
 .noSelect {
@@ -236,19 +248,13 @@ nav.menu div.menu_contenu .menu_hamburger span {
 }
 
 footer {
-  background-color: #000;
-  color: #fff;
+  background-color: #000; /* variable à changer*/
+  color: #fff; /* variable à changer*/
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   flex-wrap: wrap;
-}
-@media (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 footer .footer-gauche {
   display: flex;
@@ -257,9 +263,6 @@ footer .footer-gauche {
 footer .footer-gauche .logo {
   width: 4rem;
   margin-right: 1rem;
-}
-footer .footer-gauche .copyright {
-  font-size: 14px;
 }
 footer .footer-droite {
   font-size: 14px;
@@ -354,124 +357,67 @@ footer .footer-droite {
 }
 
 .faq-section {
-  background-color: var(--couleur-fond-gris);
+  background-color: var(--couleur-fond-gris); /* variable à changer */
   padding: var(--espacement);
-  color: var(--couleur-texte2);
+  color: var(--couleur-texte2); /* variable à changer */
 }
-.faq-section .faq-container {
+.faq-section .questions-et-reponse {
   display: flex;
   flex-direction: column;
   gap: var(--espacement);
+  margin-bottom: var(--espacement);
 }
-.faq-section .faq-container .top-section {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacement);
-}
-@media (min-width: 769px) {
-  .faq-section .faq-container .top-section {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.faq-section .faq-container .top-section .logo-social {
-  display: flex;
-  align-items: center;
-  gap: var(--espacement);
-}
-.faq-section .faq-container .top-section .logo-social .logo-faq img {
-  max-width: 3rem;
-}
-.faq-section .faq-container .top-section .logo-social .social-media {
-  display: flex;
-  gap: 1rem;
-}
-.faq-section .faq-container .top-section .logo-social .social-media img {
-  width: var(--taille-icone);
-  height: var(--taille-icone);
-}
-.faq-section .faq-container .top-section .contact-info {
-  text-align: left;
-}
-@media (min-width: 769px) {
-  .faq-section .faq-container .top-section .contact-info {
-    text-align: right;
-  }
-}
-.faq-section .faq-container .top-section .contact-info p {
-  margin: 0;
-  color: var(--couleur-texte2);
-}
-.faq-section .faq-container .questions-et-reponse {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacement);
-}
-@media (min-width: 769px) {
-  .faq-section .faq-container .questions-et-reponse {
+@media (min-width: 768px) {
+  .faq-section .questions-et-reponse {
     flex-direction: row;
     justify-content: space-between;
   }
 }
-.faq-section .faq-container .questions-et-reponse .questions {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacement);
-}
-.faq-section .faq-container .questions-et-reponse .questions .question {
-  background: none;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  font-size: 1rem;
+.faq-section .questions-et-reponse .questions .question {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  color: var(--couleur-texte2);
+  padding: 0.8rem;
+  color: var(--couleur-texte2); /* variable à changer */
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.faq-section .faq-container .questions-et-reponse .questions .question:hover {
-  color: var(--couleur-principale);
+.faq-section .questions-et-reponse .questions .question:hover {
+  color: var(--couleur-principale); /* variable à changer */
   transform: translateX(10px);
 }
-.faq-section .faq-container .questions-et-reponse .questions .question .icone-fleche {
+.faq-section .questions-et-reponse .questions .question .icone-fleche {
   font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
-.faq-section .faq-container .questions-et-reponse .questions .question:hover .icone-fleche {
+.faq-section .questions-et-reponse .questions .question:hover .icone-fleche {
   transform: translateX(5px);
 }
-.faq-section .faq-container .questions-et-reponse .boite-reponse {
-  background-color: var(--couleur-galerie-fond-projets);
+.faq-section .questions-et-reponse .boite-reponse {
+  background-color: var(--couleur-galerie-fond-projets); /* variable à changer */
   padding: var(--espacement);
-  border: 1px solid var(--couleur-border);
+  border: 1px solid var(--couleur-border); /* variable à changer */
   flex: 1;
 }
-.faq-section .faq-container .questions-et-reponse .boite-reponse .question-affichee {
-  font-weight: bold;
+.faq-section .contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacement);
+  align-items: flex-start;
 }
-.faq-section .faq-container .questions-et-reponse .boite-reponse .reponse-affichee {
-  margin-top: 0.5rem;
-}
-.faq-section .faq-container .inscription-section {
-  background-color: var(--couleur-galerie-fond-projets);
-  padding: var(--espacement);
-  border-radius: 0.5rem;
-  border: 3px solid var(--couleur-border);
-}
-.faq-section .faq-container .inscription-section h3 {
-  margin: 0;
-  color: var(--couleur-texte2);
-}
-@media (max-width: 768px) {
-  .faq-section .top-section {
-    align-items: flex-start;
+@media (min-width: 768px) {
+  .faq-section .contact {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  .faq-section .questions-et-reponse .boite-reponse {
-    text-align: center;
-  }
+}
+.faq-section .contact .social-media {
+  display: flex;
+  gap: 1rem;
+}
+.faq-section .contact .social-media img {
+  width: var(--taille-icone);
+  height: var(--taille-icone);
 }
 
 /* ////////////////////////////////////////// */

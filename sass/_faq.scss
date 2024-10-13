@@ -1,138 +1,75 @@
 .faq-section {
-  background-color: var(--couleur-fond-gris);
+  background-color: var(--couleur-fond-gris); /* variable à changer */
   padding: var(--espacement);
-  color: var(--couleur-texte2);
+  color: var(--couleur-texte2); /* variable à changer */
 
-  .faq-container {
+  .questions-et-reponse {
     display: flex;
     flex-direction: column;
     gap: var(--espacement);
+    margin-bottom: var(--espacement);
 
-    .top-section {
-      display: flex;
-      flex-direction: column;
-      gap: var(--espacement);
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-      @media (min-width: 769px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .logo-social {
+    .questions {
+      // prompts
+      .question {
         display: flex;
         align-items: center;
-        gap: var(--espacement);
+        gap: 1rem;
+        padding: 0.8rem;
+        color: var(--couleur-texte2); /* variable à changer */
+        transition: color 0.3s ease, transform 0.3s ease;
 
-        .logo-faq img {
-          max-width: 3rem;
+        &:hover {
+          color: var(--couleur-principale); /* variable à changer */
+          transform: translateX(10px);
         }
 
-        .social-media {
-          display: flex;
-          gap: 1rem;
-          img {
-            width: var(--taille-icone);
-            height: var(--taille-icone);
-          }
-        }
-      }
-
-      .contact-info {
-        text-align: left;
-
-        @media (min-width: 769px) {
-          text-align: right;
+        .icone-fleche {
+          font-size: 1.2rem;
+          transition: transform 0.3s ease;
         }
 
-        p {
-          margin: 0;
-          color: var(--couleur-texte2);
+        &:hover .icone-fleche {
+          transform: translateX(5px);
         }
       }
     }
 
-    .questions-et-reponse {
-      display: flex;
-      flex-direction: column;
-      gap: var(--espacement);
-
-      @media (min-width: 769px) {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      .questions {
-        display: flex;
-        flex-direction: column;
-        gap: var(--espacement);
-
-        .question {
-          background: none;
-          border: none;
-          text-align: left;
-          cursor: pointer;
-          font-size: 1rem;
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          padding: 1rem;
-          color: var(--couleur-texte2);
-          transition: color 0.3s ease, transform 0.3s ease;
-
-          &:hover {
-            color: var(--couleur-principale);
-            transform: translateX(10px);
-          }
-
-          .icone-fleche {
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-          }
-
-          &:hover .icone-fleche {
-            transform: translateX(5px);
-          }
-        }
-      }
-
-      .boite-reponse {
-        background-color: var(--couleur-galerie-fond-projets);
-        padding: var(--espacement);
-        border: 1px solid var(--couleur-border);
-        flex: 1;
-
-        .question-affichee {
-          font-weight: bold;
-        }
-
-        .reponse-affichee {
-          margin-top: 0.5rem;
-        }
-      }
-    }
-
-    .inscription-section {
-      background-color: var(--couleur-galerie-fond-projets);
+    // boite qui affiche les réponse une à une
+    .boite-reponse {
+      background-color: var(--couleur-galerie-fond-projets); /* variable à changer */
       padding: var(--espacement);
-      border-radius: 0.5rem;
-      border: 3px solid var(--couleur-border);
-
-      h3 {
-        margin: 0;
-        color: var(--couleur-texte2);
-      }
+      border: 1px solid var(--couleur-border); /* variable à changer */
+      flex: 1;
     }
   }
 
-  @media (max-width: 768px) {
-    .top-section {
-      align-items: flex-start;
+  .contact {
+    // mobile
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacement);
+    align-items: flex-start;
+
+    // tablette et desktop
+    @media (min-width: 768px) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
     }
 
-    .questions-et-reponse {
-      .boite-reponse {
-        text-align: center;
+    // icones
+    .social-media {
+      display: flex;
+      gap: 1rem;
+      img {
+        width: var(--taille-icone);
+        height: var(--taille-icone);
       }
     }
   }

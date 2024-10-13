@@ -1,5 +1,5 @@
 /*
-Sélecteur textuel de base
+Sélecteurs textuels de base
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiI5MDBweCIsIm1pbkZvbnRTaXplIjoiMTZweCIsIm1heEZvbnRTaXplIjoiNDhweCJ9
@@ -24,9 +24,6 @@ h6 {
 h1 {
   // H1 35.9px to 61px (2.244rem to 3.813rem)
   font-size: clamp(2.244rem, 1.93rem + 1.569vw, 3.813rem);
-  // font-size: clamp(1.875rem, -1.25rem + 10vw, 5.625rem);
-  // font-family: var(--police_titres);
-  // font-weight: var(--poid_titres);
   // text-shadow: 3px 5px 6px var(--_couleur-ombrage); // couleur ombrage est pas définie
   letter-spacing: -3px;
 }
@@ -71,12 +68,15 @@ a {
   text-decoration: none;
 }
 
+button {
+  font-size: clamp(1rem, 0.9546rem + 0.227vw, 1.1rem); /* même taille que les p */
+  font-family: var(--police_textes);
+  font-weight: var(--poid_textes);
+}
+
 // Classe pour empêcher la sélection
 .noSelect {
   user-select: none;
-}
-
-hr {
 }
 
 blockquote {
