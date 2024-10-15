@@ -1,35 +1,35 @@
+/* Feuille de style pour le footer des pages du site */
+
 footer {
-  background-color: #000; /* variable à changer*/
-  color: #fff; /* variable à changer*/
+  background-color: #000; /* variable à changer */
+  color: #fff; /* variable à changer */
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
   flex-wrap: wrap;
 
-  // Adaptation pour mobile
-  // @media (max-width: 768px) {
-  //   flex-direction: column;
-  //   text-align: center;
-  // }
-
+  // partie gauche du footer
   .footer-gauche {
     display: flex;
-    align-items: center; // Centrer verticalement le logo et le copyright
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: var(--espacement);
+    text-align: center;
 
     // Logo TIM
     .logo {
       width: 4rem;
-      margin-right: 1rem;
     }
   }
 
-  .footer-droite {
-    font-size: 14px;
-
-    // Adaptation pour mobile et tablette
-    @media (max-width: 768px) {
-      margin-top: 10px;
+  // Inscription
+  a {
+    color: #bbb; /* variable à changer */
+    margin: 5px auto; // centre le texte pour mobile
+    @media (min-width: 768px) {
+      // pas centré sur tablette et plus large
+      margin: unset;
     }
   }
 }

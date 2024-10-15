@@ -127,6 +127,7 @@ p {
 
 a {
   text-decoration: none;
+  font-family: var(--police_textes); /* variable à changer */
 }
 
 button {
@@ -241,15 +242,16 @@ nav.menu div.menu_contenu .menu_hamburger span {
     order: 1;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   nav.menu .menu_hamburger {
     display: none;
   }
 }
 
+/* Feuille de style pour le footer des pages du site */
 footer {
-  background-color: #000; /* variable à changer*/
-  color: #fff; /* variable à changer*/
+  background-color: #000; /* variable à changer */
+  color: #fff; /* variable à changer */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -259,17 +261,20 @@ footer {
 footer .footer-gauche {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
+  gap: var(--espacement);
+  text-align: center;
 }
 footer .footer-gauche .logo {
   width: 4rem;
-  margin-right: 1rem;
 }
-footer .footer-droite {
-  font-size: 14px;
+footer a {
+  color: #bbb; /* variable à changer */
+  margin: 5px auto;
 }
-@media (max-width: 768px) {
-  footer .footer-droite {
-    margin-top: 10px;
+@media (min-width: 768px) {
+  footer a {
+    margin: unset;
   }
 }
 
@@ -361,6 +366,11 @@ footer .footer-droite {
   padding: var(--espacement);
   color: var(--couleur-texte2); /* variable à changer */
 }
+@media (min-width: 1024px) {
+  .faq-section {
+    display: flex;
+  }
+}
 .faq-section .questions-et-reponse {
   display: flex;
   flex-direction: column;
@@ -371,6 +381,14 @@ footer .footer-droite {
   .faq-section .questions-et-reponse {
     flex-direction: row;
     justify-content: space-between;
+    flex-grow: 3;
+    clip-path: polygon(95% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+  }
+}
+@media (min-width: 1024px) {
+  .faq-section .questions-et-reponse {
+    margin-bottom: unset;
+    background-color: red;
   }
 }
 .faq-section .questions-et-reponse .questions .question {
@@ -393,10 +411,15 @@ footer .footer-droite {
   transform: translateX(5px);
 }
 .faq-section .questions-et-reponse .boite-reponse {
-  background-color: var(--couleur-galerie-fond-projets); /* variable à changer */
+  background-color: var(--couleur-galerie-fond-projets); /*variable à changer*/
   padding: var(--espacement);
-  border: 1px solid var(--couleur-border); /* variable à changer */
   flex: 1;
+}
+@media (min-width: 1024px) {
+  .faq-section .questions-et-reponse .boite-reponse {
+    border-left: 3px solid var(--couleur-border); /* variable à changer */
+    background-color: unset;
+  }
 }
 .faq-section .contact {
   display: flex;
@@ -409,6 +432,16 @@ footer .footer-droite {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .faq-section .contact {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 25%, 18% 0%);
+    background-color: blue;
   }
 }
 .faq-section .contact .social-media {

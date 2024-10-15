@@ -66,6 +66,7 @@ p {
 // Formatage par défaut des <a>
 a {
   text-decoration: none;
+  font-family: var(--police_textes); /* variable à changer */
 }
 
 button {
