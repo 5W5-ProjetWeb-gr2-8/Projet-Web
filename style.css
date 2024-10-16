@@ -17,6 +17,11 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* Variables css                              */
 /* ////////////////////////////////////////// */
 :root {
+  --couleur-web: #3ce36a;
+  --couleur-jeux: #00bae2;
+  --couleur-3d: #ff8709;
+  --couleur-design: #e920ad;
+  --couleur-video: #9d95ff;
   --couleur-fond: black;
   --couleur-fond-gris: #2b2b2b;
   --couleur-principale: #cfcfcf;
@@ -25,23 +30,18 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-bouton-fond-cours-detail-hover: #5a6268;
   --couleur-fond-cours: #545050;
   --couleur-competences-fond: #3b3b3b;
-  --couleur-border: black;
+  --couleur-border: #606060;
   --couleur-texte: black;
   --couleur-texte2: white;
   --couleur-text-accueil-intro: white;
   --couleur-blanc: #ffffff;
   --couleur-cours-border: #707070;
   --couleur-galerie-fond: #3b3b3b;
-  --couleur-galerie-fond-projets: rgb(79, 79, 79);
+  --couleur-galerie-fond-projets: #4F4F4F;
   --couleur-galerie-texte: white;
   --couleur-galerie-bordure: #000000;
   --espacement: 1.5rem;
   --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
-  --couleur-web: #3ce36a;
-  --couleur-jeux: #00bae2;
-  --couleur-3d: #ff8709;
-  --couleur-design: #e920ad;
-  --couleur-video: #9d95ff;
 }
 
 :root {
@@ -69,6 +69,11 @@ button {
   background: unset;
   border: unset;
   cursor: pointer;
+}
+
+/* Feuille de style pour les styles généraux */
+body {
+  background-color: black; /* variable à changer */
 }
 
 /*
@@ -128,6 +133,7 @@ p {
 a {
   text-decoration: none;
   font-family: var(--police_textes); /* variable à changer */
+  font-weight: var(--poid_titres);
 }
 
 button {
@@ -253,10 +259,15 @@ footer {
   background-color: #000; /* variable à changer */
   color: #fff; /* variable à changer */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  footer {
+    justify-content: space-between;
+  }
 }
 footer .footer-gauche {
   display: flex;
@@ -269,7 +280,7 @@ footer .footer-gauche .logo {
   width: 4rem;
 }
 footer a {
-  color: #bbb; /* variable à changer */
+  color: #fff; /* variable à changer */
   margin: 5px auto;
 }
 @media (min-width: 768px) {
@@ -368,36 +379,45 @@ footer a {
 }
 @media (min-width: 1024px) {
   .faq-section {
+    padding: unset;
     display: flex;
   }
 }
 .faq-section .questions-et-reponse {
   display: flex;
   flex-direction: column;
-  gap: var(--espacement);
   margin-bottom: var(--espacement);
 }
 @media (min-width: 768px) {
   .faq-section .questions-et-reponse {
     flex-direction: row;
     justify-content: space-between;
-    flex-grow: 3;
     clip-path: polygon(95% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
   }
 }
 @media (min-width: 1024px) {
   .faq-section .questions-et-reponse {
     margin-bottom: unset;
-    background-color: red;
+    flex-grow: 3;
+  }
+}
+.faq-section .questions-et-reponse .questions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem;
+}
+@media (min-width: 1024px) {
+  .faq-section .questions-et-reponse .questions {
+    flex-grow: 1;
   }
 }
 .faq-section .questions-et-reponse .questions .question {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.8rem;
   color: var(--couleur-texte2); /* variable à changer */
   transition: color 0.3s ease, transform 0.3s ease;
+  flex-grow: 1;
 }
 .faq-section .questions-et-reponse .questions .question:hover {
   color: var(--couleur-principale); /* variable à changer */
@@ -413,11 +433,11 @@ footer a {
 .faq-section .questions-et-reponse .boite-reponse {
   background-color: var(--couleur-galerie-fond-projets); /*variable à changer*/
   padding: var(--espacement);
-  flex: 1;
 }
 @media (min-width: 1024px) {
   .faq-section .questions-et-reponse .boite-reponse {
-    border-left: 3px solid var(--couleur-border); /* variable à changer */
+    flex-grow: 2;
+    border-left: 1px solid var(--couleur-border); /* variable à changer */
     background-color: unset;
   }
 }
@@ -439,9 +459,8 @@ footer a {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    flex-grow: 1;
-    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 25%, 18% 0%);
-    background-color: blue;
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 25%, 15% 0%);
+    width: 25%;
   }
 }
 .faq-section .contact .social-media {

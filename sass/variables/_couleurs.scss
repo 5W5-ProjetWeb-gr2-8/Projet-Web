@@ -12,13 +12,14 @@ $couleur-paletteJanne3: #99d7db;
 $couleur-paletteJanne4: #cce5ff;
 $couleur-paletteJanne5: #e0e4e8;
 
-// Test //
-@mixin palette($couleur) {
-  color: $color;
-}
-
 :root {
-  //
+  /////////////// COULEUR DES COURS //////////////////////////////
+  --couleur-web: #3ce36a;
+  --couleur-jeux: #00bae2;
+  --couleur-3d: #ff8709;
+  --couleur-design: #e920ad;
+  --couleur-video: #9d95ff;
+  /////////////// COULEUR DES SECTIONS ///////////////////////////
   --couleur-fond: black;
   --couleur-fond-gris: #2b2b2b; // Fond gris pour la FAQ
   --couleur-principale: #cfcfcf; //FAQ
@@ -28,7 +29,8 @@ $couleur-paletteJanne5: #e0e4e8;
   --couleur-fond-cours: #545050;
   --couleur-competences-fond: #3b3b3b;
 
-  --couleur-border: black;
+  // --couleur-border: black;
+  --couleur-border: #606060;
   --couleur-texte: black;
   --couleur-texte2: white;
   --couleur-text-accueil-intro: white;
@@ -38,17 +40,11 @@ $couleur-paletteJanne5: #e0e4e8;
   --couleur-cours-border: #707070;
 
   --couleur-galerie-fond: #3b3b3b;
-  --couleur-galerie-fond-projets: rgb(79, 79, 79);
+  --couleur-galerie-fond-projets: #4F4F4F;
   --couleur-galerie-texte: white;
   --couleur-galerie-bordure: #000000;
 
+  /////////////// AUTRES VARIABLE UTILES ////////////////////////////
   --espacement: 1.5rem; // Espace utilisé pour padding et margin
   --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
-  
-  /////////////// COULEUR PAR COURS//////////////////////////////
-  --couleur-web: #3ce36a;
-  --couleur-jeux: #00bae2;
-  --couleur-3d: #ff8709;
-  --couleur-design: #e920ad;
-  --couleur-video: #9d95ff;
 }

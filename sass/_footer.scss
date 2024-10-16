@@ -1,13 +1,20 @@
 /* Feuille de style pour le footer des pages du site */
 
 footer {
+  // background-color: #949191; /* variable à changer */
   background-color: #000; /* variable à changer */
+  // color: #000; /* variable à changer */
   color: #fff; /* variable à changer */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    // pas centré sur tablette et plus large
+    justify-content: space-between;
+  }
 
   // partie gauche du footer
   .footer-gauche {
@@ -25,7 +32,8 @@ footer {
 
   // Inscription
   a {
-    color: #bbb; /* variable à changer */
+    // color: #000; /* variable à changer */
+    color: #fff; /* variable à changer */
     margin: 5px auto; // centre le texte pour mobile
     @media (min-width: 768px) {
       // pas centré sur tablette et plus large
