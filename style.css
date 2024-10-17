@@ -11,7 +11,7 @@ Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-gr2
-Ce thème a été développé dans le cadre du cours 4W4
+Ce thème a été développé dans le cadre du cours 5W5
 */
 /* ////////////////////////////////////////// */
 /* Variables css                              */
@@ -37,7 +37,7 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-blanc: #ffffff;
   --couleur-cours-border: #707070;
   --couleur-galerie-fond: #3b3b3b;
-  --couleur-galerie-fond-projets: #4F4F4F;
+  --couleur-galerie-fond-projets: #4f4f4f;
   --couleur-galerie-texte: white;
   --couleur-galerie-bordure: #000000;
   --espacement: 1.5rem;
@@ -137,7 +137,11 @@ a {
 }
 
 button {
-  font-size: clamp(1rem, 0.9546rem + 0.227vw, 1.1rem); /* même taille que les p */
+  font-size: clamp(
+    1rem,
+    0.9546rem + 0.227vw,
+    1.1rem
+  ); /* même taille que les p */
   font-family: var(--police_textes);
   font-weight: var(--poid_textes);
 }
@@ -362,13 +366,17 @@ footer a {
 }
 
 .btn-plus:hover {
-  background-color: var(--couleur-bouton-fond-cours-detail-hover); /* Bouton gris plus foncé au survol */
+  background-color: var(
+    --couleur-bouton-fond-cours-detail-hover
+  ); /* Bouton gris plus foncé au survol */
 }
 
 .cours-details {
   padding: 20px;
   display: none;
-  background-color: var(--couleur-fond-cours-detail); /* Fond légèrement plus clair pour les détails */
+  background-color: var(
+    --couleur-fond-cours-detail
+  ); /* Fond légèrement plus clair pour les détails */
   color: var(--couleur-blanc); /* Texte blanc */
 }
 
@@ -702,7 +710,12 @@ section.competences div.competence-item .competence-header .info .outils {
   justify-content: space-around;
   align-items: center;
 }
-section.competences div.competence-item .competence-header .info .outils .outil {
+section.competences
+  div.competence-item
+  .competence-header
+  .info
+  .outils
+  .outil {
   display: flex;
   align-items: center;
 }
@@ -721,4 +734,4 @@ section.competences div.competence-item.active .competence-content {
   display: flex;
   justify-content: center;
   align-items: center;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
