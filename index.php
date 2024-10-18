@@ -359,38 +359,42 @@
             </section>
         </main>
     </div>
-    <!-- Galerie de Projets ////////////////////////////////////////////////////////////// -->
+    <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
     <section class="galerie-projets">
         <h2 class="galerie-titre">Projets étudiants</h2>
         <h3 id="titre-projet" class="titre-projet">Titre du projet</h3>
         <div class="carrousel-container">
             <div class="fleche gauche" onclick="changerImage(-1)">&#9664;</div>
+            <!-- Flèche gauche -->
             <div class="carrousel">
                 <?php
-                // Boucle pour afficher les projets
-                $args = array('post_type' => 'projet', 'posts_per_page' => 5);
-                $projets = new WP_Query($args);
-                if ($projets->have_posts()):
-                    while ($projets->have_posts()):
-                        $projets->the_post();
-                        ?>
-                        <div class="carrousel-item">
-                            <?php if (has_post_thumbnail()): ?>
-                                <?php the_post_thumbnail('medium'); ?>
-                            <?php endif; ?>
-                            <h3>
-                                <?php the_title(); ?>
-                            </h3>
-                        </div>
-                        <?php
-                    endwhile;
-                    wp_reset_postdata();
-                endif;
-                ?>
+                // Tableau des IDs des images depuis la bibliothèque de médias
+                $projets_ids = array(64, 66, 63, 65, 62); // IDs réels des images
+                $i = 0;
+                foreach ($projets_ids as $projet_id):
+                    // Récupérer l'URL de l'image
+                    $image_url = wp_get_attachment_url($projet_id);
+                    // Récupérer le titre et l'attribut alt de l'image
+                    $image_alt = get_post_meta($projet_id, '_wp_attachment_image_alt', true);
+                    $image_title = get_the_title($projet_id);
+                    ?>
+                    <div class="carrousel-item">
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>"
+                            title="<?php echo esc_attr($image_title); ?>" />
+                    </div>
+                <?php endforeach; ?>
             </div>
             <div class="fleche droite" onclick="changerImage(1)">&#9654;</div>
+            <!-- Flèche droite -->
+        </div>
+        <div class="indications">
+            <?php for ($i = 0; $i < count($projets_ids); $i++): ?>
+                <span class="indication" onclick="montrerImage(<?php echo $i; ?>)"></span>
+            <?php endfor; ?>
         </div>
     </section>
+
+
 
     <!-- FAQ //////////////////////////////////////////////////////////////////////// -->
     <section class="faq-section">
