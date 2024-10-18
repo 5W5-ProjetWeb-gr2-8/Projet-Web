@@ -44,11 +44,8 @@
         <main class="principal">
             <section class="debut_accueil">
                 <div>
-                    <h6>582.A1 TIM</h6>
+                    <h6><?php bloginfo('description'); ?></h6>
                     <h1><?php bloginfo('name'); ?></h1>
-                    <h1>
-                        <?php bloginfo('description'); ?>
-                    </h1>
                 </div>
             </section>
 
