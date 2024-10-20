@@ -10,6 +10,8 @@
 
 ## Liens
 
+- Site Wordpress : https://gftnth00.mywhc.ca/tim52/
+- Wordpress admin : https://gftnth00.mywhc.ca/tim52/wp-admin/users.php
 - Github-Project : https://github.com/orgs/5W5-ProjetWeb-gr2-8/projects/1/views/1
 - Github-Pages : https://5w5-projetweb-gr2-8.github.io/Projet-Web/
 - Rétrospective des sprints : https://docs.google.com/document/d/1ilOf2Hd4iXGQVV4QpaYAFZCKRbSjiakHHSVZHKBq9fo/edit?usp=sharing
@@ -40,3 +42,13 @@ Le projet consiste à créer une page web pour le programme **TIM** du Collège 
 - Effectuer des tests utilisateurs pour recueillir des retours et ajuster les fonctionnalités en conséquence.
 - Améliorer l'expérience utilisateur en fonction des résultats des tests.
 - Optimiser les éléments visuels et interactifs pour assurer une meilleure fluidité et réactivité.
+
+## Sprint 3 :
+
+- Débuter WordPress.
+- Configurer les paramètres généraux.
+- Création de thème WordPress
+- Créer les fichiers nécessaires (header.php, footer.php, etc.).
+- Conversion du contenu (Transférer le contenu de index.htm vers WordPress. PHP)
+- Ajouter des menus personnalisés avec wp_nav_menu().
+- Ajouter des fonctionnalités via functions.php.
