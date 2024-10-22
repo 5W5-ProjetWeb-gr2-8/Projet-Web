@@ -31,14 +31,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <!-- Marche pas <?php
-                    // wp_nav_menu(array(
-                    //     'theme_location' => 'menu-principal',
-                    //     'container' => false,
-                    //     'menu_class' => 'menu_liste',
-                    //     'fallback_cb' => false
-                    // ));
-                    ?> -->
+                    <!-- Menu principal -->
                     <?php wp_nav_menu(array("menu" => "menu-principal")); ?>
                 </div>
             </nav>
