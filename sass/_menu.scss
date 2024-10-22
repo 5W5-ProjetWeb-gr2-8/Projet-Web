@@ -7,8 +7,8 @@ nav.menu {
   height: 10vh;
   padding: 0 4%;
   z-index: 100;
-  background-color: #000; // Couleur de fond
-  color: #fff; // Couleur de texte
+  background-color: var(--couleur-fond-accueil);
+  color: var(--couleur-texte-fonce);
 
   .logo_img {
     width: 4rem;
@@ -40,7 +40,7 @@ nav.menu {
 
       // Liens vers les onglets
       a {
-        color: white;
+        color: var(--couleur-texte-pale);
         padding: 1rem;
       }
     }
@@ -48,7 +48,7 @@ nav.menu {
     // Bouton Inscription
     .inscription {
       padding: 2rem 0;
-      color: white;
+      color: var(--couleur-texte-fonce);
       width: auto;
       text-align: center;
       margin-right: 2.5rem; // Espacement entre le bouton inscription et le hamburger

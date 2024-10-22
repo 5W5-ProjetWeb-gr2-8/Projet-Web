@@ -5,5 +5,5 @@ html {
 }
 
 body {
-    background-color: black; /* variable à changer */ // match la couleur du footer et du menu 
+    background-color: var(--couleur-fond-accueil); // match la couleur du footer et du menu 
 }

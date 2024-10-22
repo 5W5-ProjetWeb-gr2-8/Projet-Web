@@ -11,7 +11,7 @@ Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-gr2
-Ce thème a été développé dans le cadre du cours 5W5
+Ce thème a été développé dans le cadre du cours 4W4
 */
 /* ////////////////////////////////////////// */
 /* Variables css                              */
@@ -22,8 +22,9 @@ Ce thème a été développé dans le cadre du cours 5W5
   --couleur-3d: #ff8709;
   --couleur-design: #e920ad;
   --couleur-video: #9d95ff;
-  --couleur-fond: black;
-  --couleur-fond-gris: #2b2b2b;
+  --couleur-fond-accueil: #d3cfcf;
+  --couleur-fond: #000000;
+  --couleur-fond-gris: #949191;
   --couleur-principale: #cfcfcf;
   --couleur-fond-cours-detail: #404040;
   --couleur-bouton-fond-cours-detail: #6c757d;
@@ -31,13 +32,11 @@ Ce thème a été développé dans le cadre du cours 5W5
   --couleur-fond-cours: #545050;
   --couleur-competences-fond: #3b3b3b;
   --couleur-border: #606060;
-  --couleur-texte: black;
-  --couleur-texte2: white;
-  --couleur-text-accueil-intro: white;
-  --couleur-blanc: #ffffff;
+  --couleur-texte-fonce: #000000;
+  --couleur-texte-pale: #ffffff;
   --couleur-cours-border: #707070;
   --couleur-galerie-fond: #3b3b3b;
-  --couleur-galerie-fond-projets: #4f4f4f;
+  --couleur-galerie-fond-projets: #4F4F4F;
   --couleur-galerie-texte: white;
   --couleur-galerie-bordure: #000000;
   --espacement: 1.5rem;
@@ -73,7 +72,7 @@ button {
 
 /* Feuille de style pour les styles généraux */
 body {
-  background-color: black; /* variable à changer */
+  background-color: var(--couleur-fond-accueil);
 }
 
 /*
@@ -137,11 +136,7 @@ a {
 }
 
 button {
-  font-size: clamp(
-    1rem,
-    0.9546rem + 0.227vw,
-    1.1rem
-  ); /* même taille que les p */
+  font-size: clamp(1rem, 0.9546rem + 0.227vw, 1.1rem); /* même taille que les p */
   font-family: var(--police_textes);
   font-weight: var(--poid_textes);
 }
@@ -174,8 +169,8 @@ nav.menu {
   height: 10vh;
   padding: 0 4%;
   z-index: 100;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--couleur-fond-accueil);
+  color: var(--couleur-texte-fonce);
 }
 nav.menu .logo_img {
   width: 4rem;
@@ -201,12 +196,12 @@ nav.menu div.menu_contenu .menu_liste {
   justify-content: space-around;
 }
 nav.menu div.menu_contenu .menu_liste a {
-  color: white;
+  color: var(--couleur-texte-pale);
   padding: 1rem;
 }
 nav.menu div.menu_contenu .inscription {
   padding: 2rem 0;
-  color: white;
+  color: var(--couleur-texte-fonce);
   width: auto;
   text-align: center;
   margin-right: 2.5rem;
@@ -260,8 +255,8 @@ nav.menu div.menu_contenu .menu_hamburger span {
 
 /* Feuille de style pour le footer des pages du site */
 footer {
-  background-color: #000; /* variable à changer */
-  color: #fff; /* variable à changer */
+  background-color: var(--couleur-fond-accueil);
+  color: var(--couleur-texte-fonce);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -284,7 +279,7 @@ footer .footer-gauche .logo {
   width: 4rem;
 }
 footer a {
-  color: #fff; /* variable à changer */
+  color: var(--couleur-texte-fonce);
   margin: 5px auto;
 }
 @media (min-width: 768px) {
@@ -343,11 +338,11 @@ footer a {
   overflow: hidden;
   width: 100%; /* Pleine largeur sur mobile */
   max-width: 400px; /* Largeur maximale sur plus grands écrans */
-  color: var(--couleur-texte2);
+  color: var(--couleur-texte-pale);
 }
 
 .cours-header {
-  background-color: var(--couleur-fond); /* Fond noir */
+  background-color: var(--couleur-fond);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -358,7 +353,7 @@ footer a {
 
 .btn-plus {
   background-color: var(--couleur-bouton-fond-cours-detail); /* Bouton gris */
-  color: var(--couleur-blanc);
+  color: var(--couleur-texte-pale);
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -366,24 +361,20 @@ footer a {
 }
 
 .btn-plus:hover {
-  background-color: var(
-    --couleur-bouton-fond-cours-detail-hover
-  ); /* Bouton gris plus foncé au survol */
+  background-color: var(--couleur-bouton-fond-cours-detail-hover); /* Bouton gris plus foncé au survol */
 }
 
 .cours-details {
   padding: 20px;
   display: none;
-  background-color: var(
-    --couleur-fond-cours-detail
-  ); /* Fond légèrement plus clair pour les détails */
-  color: var(--couleur-blanc); /* Texte blanc */
+  background-color: var(--couleur-fond-cours-detail); /* Fond légèrement plus clair pour les détails */
+  color: var(--couleur-texte-pale);
 }
 
 .faq-section {
-  background-color: var(--couleur-fond-gris); /* variable à changer */
+  background-color: var(--couleur-fond-gris);
   padding: var(--espacement);
-  color: var(--couleur-texte2); /* variable à changer */
+  color: var(--couleur-texte-pale);
 }
 @media (min-width: 1024px) {
   .faq-section {
@@ -423,7 +414,7 @@ footer a {
   }
 }
 .faq-section .questions-et-reponse .questions .question {
-  color: var(--couleur-texte2); /* variable à changer */
+  color: var(--couleur-texte-pale); /* variable à changer */
   transition: color 0.3s ease, transform 0.3s ease;
   flex-grow: 1;
 }
@@ -528,7 +519,7 @@ section.debut_accueil div {
 }
 section.debut_accueil div h1,
 section.debut_accueil div h6 {
-  color: var(--couleur-text-accueil-intro); /* variable à changer */
+  color: var(--couleur-texte-pale);
 }
 section.debut_accueil div h1 {
   font-size: clamp(2.244rem, 1.93rem + 1.569vw, 45px);
@@ -545,7 +536,7 @@ section.debut_accueil div h1 {
   margin-bottom: var(--espacement);
 }
 .galerie-projets .titre-projet {
-  color: var(--couleur-texte2);
+  color: var(--couleur-texte-pale);
 }
 .galerie-projets .carrousel-container {
   position: relative;
@@ -625,7 +616,7 @@ section.debut_accueil div h1 {
 
 .presPro {
   background-color: var(--couleur-fond);
-  color: var(--couleur-texte2);
+  color: var(--couleur-texte-pale);
   padding: 2vh 10%; /* variable à changer */
 }
 .presPro h2 {
@@ -710,12 +701,7 @@ section.competences div.competence-item .competence-header .info .outils {
   justify-content: space-around;
   align-items: center;
 }
-section.competences
-  div.competence-item
-  .competence-header
-  .info
-  .outils
-  .outil {
+section.competences div.competence-item .competence-header .info .outils .outil {
   display: flex;
   align-items: center;
 }
@@ -734,4 +720,4 @@ section.competences div.competence-item.active .competence-content {
   display: flex;
   justify-content: center;
   align-items: center;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

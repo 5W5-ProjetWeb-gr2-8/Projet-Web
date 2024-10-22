@@ -1,10 +1,8 @@
 /* Feuille de style pour le footer des pages du site */
 
 footer {
-  // background-color: #949191; /* variable à changer */
-  background-color: #000; /* variable à changer */
-  // color: #000; /* variable à changer */
-  color: #fff; /* variable à changer */
+  background-color: var(--couleur-fond-accueil);
+  color: var(--couleur-texte-fonce);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,8 +30,7 @@ footer {
 
   // Inscription
   a {
-    // color: #000; /* variable à changer */
-    color: #fff; /* variable à changer */
+    color: var(--couleur-texte-fonce); 
     margin: 5px auto; // centre le texte pour mobile
     @media (min-width: 768px) {
       // pas centré sur tablette et plus large
