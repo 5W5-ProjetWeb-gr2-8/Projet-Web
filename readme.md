@@ -38,6 +38,8 @@ Le projet consiste à créer une page web pour le programme **TIM** du Collège 
 
 ## Sprint 2 :
 
+Le sprint a pour objectif de continuer à travailler sur les plans et prototypes déjà en place. Nous allons faire des tests avec des utilisateurs pour obtenir leurs avis et ajuster les fonctionnalités en fonction de leurs retours. Nous chercherons aussi à améliorer l'expérience utilisateur et à rendre les éléments visuels et interactifs plus fluides et réactifs.
+
 - Poursuivre le développement des plans et prototypes actuels.
 - Effectuer des tests utilisateurs pour recueillir des retours et ajuster les fonctionnalités en conséquence.
 - Améliorer l'expérience utilisateur en fonction des résultats des tests.
@@ -46,8 +48,6 @@ Le projet consiste à créer une page web pour le programme **TIM** du Collège 
 ## Sprint 3 :
 
 Continuer de développer et personnaliser le thème WordPress en configurant les paramètres généraux, en avancants les fichiers footer.php, header.php functions.php, etc.... Ajouter des menus personnalisés et transformé le code htm en php wordpress.
-
-# Liste des tâches:
 
 - Continuer le thème Wordpress
 - Configurer les paramètres généraux.
