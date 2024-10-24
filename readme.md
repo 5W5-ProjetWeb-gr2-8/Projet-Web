@@ -45,4 +45,13 @@ Le projet consiste à créer une page web pour le programme **TIM** du Collège 
 
 ## Sprint 3 :
 
-Développer et personnaliser le thème WordPress en configurant les paramètres généraux, en créant les fichiers nécessaires (footer.php, header.php etc...) et en intégrant le contenu. Aussi, ajouter des fichiers comme functions.php, des menus personnalisés et transformé le code htm en php wordpress.
+Continuer de développer et personnaliser le thème WordPress en configurant les paramètres généraux, en avancants les fichiers footer.php, header.php functions.php, etc.... Ajouter des menus personnalisés et transformé le code htm en php wordpress.
+
+# Liste des tâches:
+
+- Continuer le thème Wordpress
+- Configurer les paramètres généraux.
+- Continuer les fichiers header.php, footer.php, functions.php etc...
+- Conversion du contenu (Transférer le contenu de index.htm vers WordPress. PHP)
+- Ajouter des menus personnalisés avec wp_nav_menu().
+- Ajouter des fonctionnalités via functions.php.
