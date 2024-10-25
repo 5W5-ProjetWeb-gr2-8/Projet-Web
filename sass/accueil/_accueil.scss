@@ -50,7 +50,7 @@ section.debut_accueil {
     // Titre et sur-titre
     h1,
     h6 {
-      color: var(--couleur-text-accueil-intro); /* variable à changer */
+      color: var(--couleur-texte-pale);
     }
     h1 {
       font-size: clamp(2.244rem, 1.93rem + 1.569vw, 45px); // pour cap a 48px

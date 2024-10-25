@@ -50,11 +50,11 @@
   overflow: hidden;
   width: 100%; /* Pleine largeur sur mobile */
   max-width: 400px; /* Largeur maximale sur plus grands écrans */
-  color: var(--couleur-texte2);
+  color: var(--couleur-texte-pale);
 }
 
 .cours-header {
-  background-color: var(--couleur-fond); /* Fond noir */
+  background-color: var(--couleur-fond);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -65,7 +65,7 @@
 
 .btn-plus {
   background-color: var(--couleur-bouton-fond-cours-detail); /* Bouton gris */
-  color: var(--couleur-blanc);
+  color: var(--couleur-texte-pale);
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -84,5 +84,5 @@
   background-color: var(
     --couleur-fond-cours-detail
   ); /* Fond légèrement plus clair pour les détails */
-  color: var(--couleur-blanc); /* Texte blanc */
+  color: var(--couleur-texte-pale);
 }

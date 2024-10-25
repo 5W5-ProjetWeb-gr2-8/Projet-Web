@@ -1,9 +1,7 @@
 .faq-section {
-  background-color: var(--couleur-fond-gris); /* variable à changer */
-  // background-color: #949191; /* variable à changer */
+  background-color: var(--couleur-fond-gris);
   padding: var(--espacement);
-  color: var(--couleur-texte2); /* variable à changer */
-  // color: black; /* variable à changer */
+  color: var(--couleur-texte-pale);
   @media (min-width: 1024px) {
     padding: unset;
     display: flex;
@@ -39,7 +37,7 @@
       }
       // prompts
       .question {
-        color: var(--couleur-texte2); /* variable à changer */
+        color: var(--couleur-texte-pale); /* variable à changer */
         // color: black; /* variable à changer */
         transition: color 0.3s ease, transform 0.3s ease;
         flex-grow: 1;
