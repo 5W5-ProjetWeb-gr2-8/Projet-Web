@@ -395,24 +395,35 @@ get_header();
     <div class="contact">
         <!-- Réseaux sociaux -->
         <div class="social-media">
+            <?php
+            // ID des images de la médiathèque WordPress
+            $college_image_id = 52;  
+            $linkedin_image_id = 53; 
+            $behance_image_id = 51;  
+            ?>
+
             <!-- Site collège -->
             <a href="https://www.cmaisonneuve.qc.ca/" target="_blank">
-                <img src="images/logo_college.jpg" alt="Logo Collège de Maisonneuve" />
+                <?php echo wp_get_attachment_image($college_image_id, 'full', false, array('alt' => 'Logo Collège de Maisonneuve')); ?>
             </a>
+
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/tim-coll%C3%A8ge-de-maisonneuve-9407b7131/">
-                <img src="images/logo_linkedIn.png" alt="LinkedIn" />
+            <a href="https://www.linkedin.com/in/tim-coll%C3%A8ge-de-maisonneuve-9407b7131/" target="_blank">
+                <?php echo wp_get_attachment_image($linkedin_image_id, 'full', false, array('alt' => 'LinkedIn')); ?>
             </a>
+
             <!-- Behance -->
             <a href="https://www.behance.net/departement_tim" target="_blank">
-                <img src="images/logo_behance.jpg" alt="Behance" />
+                <?php echo wp_get_attachment_image(789, 'full', false, array('alt' => 'Behance')); ?>
             </a>
         </div>
-        <!-- Infos -->
-        <div class="contact-info">
-            <p>Téléphone : (514) 254 7131</p>
-            <p>Adresse : 3800 Sherbrooke E.</p>
-        </div>
+    </div>
+
+    <!-- Infos -->
+    <div class="contact-info">
+        <p>Téléphone : (514) 254 7131</p>
+        <p>Adresse : 3800 Sherbrooke E.</p>
+    </div>
     </div>
 </section>
 <!-- Affiche le footer -->
