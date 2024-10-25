@@ -3,7 +3,7 @@
 // C'est les filtres de compétences de la page cours.htm //
 .competences-section {
   padding: 20px;
-  background-color: #e9ecef;
+  background-color: var(--couleur-fond-gris);
 }
 
 .competences-container {
@@ -43,14 +43,56 @@
   flex-wrap: wrap;
   margin: 0 auto;
 }
-
 .cours-box {
-  border: 3px solid var(--couleur-cours-border);
+  background-color: #2b2b2b;
+  display: flex;
+  flex-direction: row;
   border-radius: 8px;
   overflow: hidden;
   width: 100%; /* Pleine largeur sur mobile */
-  max-width: 400px; /* Largeur maximale sur plus grands écrans */
+  max-width: 70%;
   color: var(--couleur-texte2);
+}
+.nomDuCours {
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cours-boxes {
+  margin: 1rem auto;
+  border: 5px solid var(--couleur-bordur-design);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 50%; /* Largeur maximale sur plus grands écrans */
+  color: var(--couleur-texte2);
+  .tempParCours ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .leCours {
+    background-color: #ff92de;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .logicielIcon li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  h2,
+  h4,
+  h5,
+  h5,
+  h6 {
+    color: black;
+  }
 }
 
 .cours-header {
