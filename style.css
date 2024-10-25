@@ -255,7 +255,7 @@ nav.menu div.menu_contenu .menu_hamburger span {
 
 /* Feuille de style pour le footer des pages du site */
 footer {
-  background-color: var(--couleur-fond-accueil);
+  background-color: var(--couleur-fond-gris);
   color: var(--couleur-texte-fonce);
   display: flex;
   justify-content: center;
@@ -277,6 +277,7 @@ footer .footer-gauche {
 }
 footer .footer-gauche .logo {
   width: 4rem;
+  height: 2rem;
 }
 footer a {
   color: var(--couleur-texte-fonce);
@@ -372,13 +373,13 @@ footer a {
 }
 
 .faq-section {
-  background-color: var(--couleur-fond-gris);
+  background-color: var(--couleur-fond-accueil);
   padding: var(--espacement);
-  color: var(--couleur-texte-pale);
+  color: var(--couleur-texte-fonce);
 }
 @media (min-width: 1024px) {
   .faq-section {
-    padding: unset;
+    padding: var(--espacement);
     display: flex;
   }
 }
@@ -397,7 +398,7 @@ footer a {
 @media (min-width: 1024px) {
   .faq-section .questions-et-reponse {
     margin-bottom: unset;
-    flex-grow: 3;
+    flex-basis: 75%;
   }
 }
 .faq-section .questions-et-reponse .questions {
@@ -410,16 +411,18 @@ footer a {
 }
 @media (min-width: 1024px) {
   .faq-section .questions-et-reponse .questions {
-    flex-grow: 1;
+    flex-basis: 50%;
   }
 }
 .faq-section .questions-et-reponse .questions .question {
-  color: var(--couleur-texte-pale); /* variable à changer */
   transition: color 0.3s ease, transform 0.3s ease;
-  flex-grow: 1;
+}
+@media (min-width: 768px) {
+  .faq-section .questions-et-reponse .questions .question {
+    flex-basis: 50%;
+  }
 }
 .faq-section .questions-et-reponse .questions .question:hover {
-  color: var(--couleur-principale); /* variable à changer */
   transform: translateX(10px);
 }
 .faq-section .questions-et-reponse .questions .question .icone-fleche {
@@ -433,9 +436,14 @@ footer a {
   background-color: var(--couleur-galerie-fond-projets); /*variable à changer*/
   padding: var(--espacement);
 }
+@media (min-width: 768px) {
+  .faq-section .questions-et-reponse .boite-reponse {
+    flex-basis: 50%;
+  }
+}
 @media (min-width: 1024px) {
   .faq-section .questions-et-reponse .boite-reponse {
-    flex-grow: 2;
+    flex-basis: 50%;
     border-left: 1px solid var(--couleur-border); /* variable à changer */
     background-color: unset;
   }
@@ -459,7 +467,7 @@ footer a {
     flex-direction: column;
     justify-content: center;
     clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 25%, 15% 0%);
-    width: 25%;
+    flex-basis: 25%;
   }
 }
 .faq-section .contact .social-media {
@@ -469,6 +477,12 @@ footer a {
 .faq-section .contact .social-media img {
   width: var(--taille-icone);
   height: var(--taille-icone);
+}
+
+.titre_FAQ {
+  margin-left: var(--espacement);
+  padding-top: var(--espacement);
+  padding-left: var(--espacement);
 }
 
 /* ////////////////////////////////////////// */
