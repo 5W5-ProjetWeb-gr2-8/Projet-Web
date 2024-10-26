@@ -1,12 +1,14 @@
 /* Style pour la page cours.htm */
 
 // C'est les filtres de compétences de la page cours.htm //
-.competences-section, .session-container  {
+.competences-section,
+.session-container {
   padding: 20px;
   background-color: var(--couleur-fond-gris);
 }
 
-.competences-container, .session-container {
+.competences-container,
+.session-container {
   display: flex;
   justify-content: center; /* Centrage horizontal */
   flex-wrap: wrap;
@@ -15,7 +17,7 @@
   // margin: 0 auto; /* Centrage sur toute la page */
 }
 
-.competence{
+.competence {
   width: 10rem; /* Largeur fixe */
   height: 2.5rem; /* Hauteur fixe */
   padding: 20px;
@@ -30,7 +32,7 @@
   justify-content: center; /* Centrage horizontal du texte */
 }
 
-.session{
+.session {
   width: 8rem;
   height: 2.5rem;
   padding: 10px;
@@ -51,13 +53,14 @@
   color: white;
   transition: all 0.5s ease-in-out;
 }
-.session:active{
+.session:active {
   background-color: rgb(0, 0, 0);
   color: white;
   transform: scale(1.1);
 }
 
-.competence:hover, .session:hover{
+.competence:hover,
+.session:hover {
   transform: scale(1.1);
 }
 
@@ -77,13 +80,8 @@
   border-radius: 8px;
   overflow: hidden;
   width: 100%; /* Pleine largeur sur mobile */
-<<<<<<< HEAD
-  max-width: 400px; /* Largeur maximale sur plus grands écrans */
-  color: var(--couleur-texte-pale);
-=======
   max-width: 70%;
   color: var(--couleur-texte2);
->>>>>>> Mika
 }
 .nomDuCours {
   display: flex;

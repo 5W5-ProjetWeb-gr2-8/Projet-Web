@@ -22,15 +22,10 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-3d: #ff8709;
   --couleur-design: #e920ad;
   --couleur-video: #9d95ff;
-<<<<<<< HEAD
+  --couleur-bordur-design: #57003d;
   --couleur-fond-accueil: #d3cfcf;
   --couleur-fond: #000000;
   --couleur-fond-gris: #949191;
-=======
-  --couleur-bordur-design: #57003d;
-  --couleur-fond: black;
-  --couleur-fond-gris: #2b2b2b;
->>>>>>> Mika
   --couleur-principale: #cfcfcf;
   --couleur-fond-cours-detail: #404040;
   --couleur-bouton-fond-cours-detail: #6c757d;
@@ -42,7 +37,7 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-texte-pale: #ffffff;
   --couleur-cours-border: #707070;
   --couleur-galerie-fond: #3b3b3b;
-  --couleur-galerie-fond-projets: #4F4F4F;
+  --couleur-galerie-fond-projets: #4f4f4f;
   --couleur-galerie-texte: white;
   --couleur-galerie-bordure: #000000;
   --espacement: 1.5rem;
@@ -296,12 +291,14 @@ footer a {
 }
 
 /* Style pour la page cours.htm */
-.competences-section, .session-container {
+.competences-section,
+.session-container {
   padding: 20px;
   background-color: var(--couleur-fond-gris);
 }
 
-.competences-container, .session-container {
+.competences-container,
+.session-container {
   display: flex;
   justify-content: center; /* Centrage horizontal */
   flex-wrap: wrap;
@@ -352,7 +349,8 @@ footer a {
   transform: scale(1.1);
 }
 
-.competence:hover, .session:hover {
+.competence:hover,
+.session:hover {
   transform: scale(1.1);
 }
 
@@ -373,13 +371,8 @@ footer a {
   border-radius: 8px;
   overflow: hidden;
   width: 100%; /* Pleine largeur sur mobile */
-<<<<<<< HEAD
-  max-width: 400px; /* Largeur maximale sur plus grands écrans */
-  color: var(--couleur-texte-pale);
-=======
   max-width: 70%;
   color: var(--couleur-texte2);
->>>>>>> Mika
 }
 
 .nomDuCours {
@@ -451,7 +444,6 @@ footer a {
   padding: 20px;
   display: none;
   background-color: var(--couleur-fond-cours-detail); /* Fond légèrement plus clair pour les détails */
-<<<<<<< HEAD
   color: var(--couleur-texte-pale);
 }
 
@@ -464,9 +456,6 @@ footer a {
 .logo-social img {
   width: var(--taille-icone);
   height: var(--taille-icone);
-=======
-  color: var(--couleur-blanc); /* Texte blanc */
->>>>>>> Mika
 }
 
 .faq-section {
@@ -836,8 +825,6 @@ section.competences div.competence-item.active .competence-content {
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
-=======
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   section.competences {
@@ -854,5 +841,4 @@ section.competences div.competence-item.active .competence-content {
   section.competences .competence-item p {
     margin-left: -2rem; /* Ensure no extra margin */
   }
->>>>>>> Mika
 }/*# sourceMappingURL=style.css.map */
