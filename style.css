@@ -175,6 +175,7 @@ nav.menu {
 }
 nav.menu .logo_img {
   width: 4rem;
+  height: 2rem;
 }
 nav.menu div.menu_contenu {
   display: flex;
