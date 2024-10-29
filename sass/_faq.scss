@@ -1,16 +1,15 @@
 .faq-section {
-  background-color: var(--couleur-fond-gris);
+  background-color: var(--couleur-fond-accueil);
   padding: var(--espacement);
-  color: var(--couleur-texte-pale);
+  color: var(--couleur-texte-fonce);
   @media (min-width: 1024px) {
-    padding: unset;
+    padding:  var(--espacement);
     display: flex;
   }
 
   .questions-et-reponse {
     display: flex;
     flex-direction: column;
-    // gap: var(--espacement);
     margin-bottom: var(--espacement);
     
     @media (min-width: 768px) {
@@ -20,7 +19,7 @@
     }
     @media (min-width: 1024px) {
       margin-bottom: unset;
-      flex-grow: 3;
+      flex-basis: 75%;
       // background-color: #707070; /* variable à changer */
       // background-color: #d3cfcf; /* variable à changer */
     }
@@ -33,17 +32,20 @@
       gap: 1rem;
       padding: 0.8rem;
       @media (min-width: 1024px) {
-        flex-grow: 1;
+        flex-basis: 50%;
       }
       // prompts
       .question {
-        color: var(--couleur-texte-pale); /* variable à changer */
+        //color: var(--couleur-texte-pale); /* variable à changer */
         // color: black; /* variable à changer */
         transition: color 0.3s ease, transform 0.3s ease;
-        flex-grow: 1;
+        
+        @media (min-width: 768px) {
+          flex-basis: 50%;
+        }
 
         &:hover {
-          color: var(--couleur-principale); /* variable à changer */
+          //color: var(--couleur-principale); /* variable à changer */
           transform: translateX(10px);
         }
 
@@ -62,9 +64,13 @@
     .boite-reponse {
       background-color: var(--couleur-galerie-fond-projets); /*variable à changer*/
       padding: var(--espacement);
+
+      @media (min-width: 768px) {
+        flex-basis: 50%;
+      }
+
       @media (min-width: 1024px) { 
-        flex-grow: 2;
-        // width: 50%;
+        flex-basis: 50%;
         border-left: 1px solid var(--couleur-border); /* variable à changer */
         background-color: unset;
       }
@@ -92,8 +98,7 @@
       clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 25%, 15% 0%);
       // background-color: #707070; /* Variable à changer */
       // background-color: #d3cfcf; /* Variable à changer */
-      // flex-grow: 1;
-      width: 25%;
+      flex-basis: 25%;
     }
 
     // icones
@@ -106,4 +111,11 @@
       }
     }
   }
+}
+
+// À RÉPARER
+.titre_FAQ {
+  margin-left: var(--espacement);
+  padding-top: var(--espacement);
+  padding-left: var(--espacement);
 }

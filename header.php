@@ -21,18 +21,19 @@
                     <p class="menu_titre">
                         <a href="<?php echo esc_url(home_url('/')); ?>">
                             <!-- Lien vers la page d'accueil -->
-                            <img class="logo_img" src="<?php echo get_template_directory_uri(); ?>/images/logo_TIM.png"
+                            <img class="logo_img"
+                                src="<?php echo get_template_directory_uri(); ?>/images/logo_TIM_fixed.png"
                                 alt="Logo TIM" />
                         </a>
                     </p>
                     <p class="inscription">Inscription</p>
-                    <button class="menu_hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+
+                    <button id="menu-burger-wordpress" aria-label="Menu">
+                        &#9776; <!-- Icône burger -->
                     </button>
                     <!-- Menu principal -->
                     <?php wp_nav_menu(array("menu" => "menu-principal")); ?>
+
                 </div>
             </nav>
         </header>
