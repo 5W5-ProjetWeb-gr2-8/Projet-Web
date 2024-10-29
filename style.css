@@ -30,7 +30,6 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-bouton-fond-cours-detail: #6c757d;
   --couleur-bouton-fond-cours-detail-hover: #5a6268;
   --couleur-fond-cours: #545050;
-  --couleur-competences-fond: #3b3b3b;
   --couleur-cours-border: #707070;
   --couleur-galerie-fond: #3b3b3b;
   --couleur-galerie-fond-projets: #4f4f4f;
@@ -727,77 +726,62 @@ section.debut_accueil div h1 {
 }
 
 section.competences {
-  background-color: var(--couleur-competences-fond);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 4%;
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
+  padding: var(--espacement);
+  background-color: var(--couleur-fond);
+  color: var(--couleur-video);
 }
-section.competences button {
-  background-color: transparent;
-  border: none;
+section.competences div.competence-item {
+  margin: 0 auto;
+  padding: var(--espacement);
+  border: 5px solid var(--couleur-video);
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  width: 100%; /* variable à changer */
+}
+@media (min-width: 1025px) {
+  section.competences div.competence-item {
+    width: 80%; /* variable à changer */
+  }
+}
+section.competences div.competence-item .top-right-button {
+  position: absolute;
+  top: -1.5rem; /* variable à changer */
+  right: -1.5rem; /* variable à changer */
+  margin-bottom: 2rem;
   cursor: pointer;
-  padding: 0;
 }
-section.competences .svg_1 {
-  width: 125px;
-  height: 125px;
+section.competences div.competence-item .top-right-button .svg_1 {
+  width: 75px;
+  height: 75px;
 }
-section.competences .circle {
+section.competences div.competence-item .top-right-button .circle {
   stroke-dasharray: 377;
   stroke-dashoffset: 377;
   transition: all 1s ease;
 }
-section.competences button:hover .circle {
+section.competences div.competence-item .top-right-button:hover .circle {
   stroke-dashoffset: 0;
 }
-section.competences .x-symbol {
+section.competences div.competence-item .top-right-button .x-symbol {
   transition: stroke 0.3s ease;
 }
-section.competences button:hover .x-symbol {
+section.competences div.competence-item .top-right-button:hover .x-symbol {
   stroke: rgb(232, 14, 14);
-}
-section.competences div.competence-item {
-  background-color: var(--couleur-fond);
-  width: 80%;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 5px solid var(--couleur-video);
-  box-sizing: border-box;
-}
-section.competences div.competence-item .competence-header {
-  position: relative;
-}
-section.competences div.competence-item .top-right-button {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  margin-bottom: 2rem;
 }
 section.competences div.competence-item .competence-header {
   display: flex;
+  position: relative; /* pour le bouton */
   flex-direction: row;
   align-items: center;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: white;
-  background-color: var(--couleur-fond);
   border-radius: 0.5rem;
+  gap: var(--espacement);
 }
-section.competences div.competence-item .competence-header .logo h3 {
-  margin-left: 1rem;
+section.competences div.competence-item .competence-header .logo {
+  text-align: center;
   white-space: nowrap;
 }
 section.competences div.competence-item .competence-header .info {
   box-sizing: border-box;
-}
-section.competences div.competence-item .competence-header .info p {
-  margin-left: -2rem; /* Ensure no extra margin */
 }
 section.competences div.competence-item .competence-header .info .outils {
   display: flex;
@@ -824,22 +808,6 @@ section.competences div.competence-item.active .competence-content {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  section.competences {
-    /* Adjust 768px to your mobile breakpoint */
-  }
-  section.competences .competence-header {
-    display: flex;
-    flex-direction: column;
-  }
-  section.competences div.competence-item {
-    background-color: var(--couleur-fond);
-    width: 100%;
-  }
-  section.competences .competence-item p {
-    margin-left: -2rem; /* Ensure no extra margin */
-  }
 }
 /* ////////////////////////////////////////// */
 /* Wordpress                                  */
