@@ -361,11 +361,6 @@ get_header();
 <?php include 'faq.php'; ?>
 
 
-<!-- Infos -->
-<div class="contact-info">
-    <p>Téléphone : (514) 254 7131</p>
-    <p>Adresse : 3800 Sherbrooke E.</p>
-</div>
 </div>
 </section>
 <!-- Affiche le footer -->

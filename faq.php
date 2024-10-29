@@ -36,9 +36,9 @@
         <div class="social-media">
             <?php
             // ID des images de la médiathèque WordPress
-            $college_image_id = 52;  
-            $linkedin_image_id = 53; 
-            $behance_image_id = 51;  
+            $college_image_id = 52;
+            $linkedin_image_id = 53;
+            $behance_image_id = 51;
             ?>
 
             <!-- Site collège -->
@@ -55,5 +55,10 @@
             <a href="https://www.behance.net/departement_tim" target="_blank">
                 <?php echo wp_get_attachment_image($behance_image_id, 'full', false, array('alt' => 'Behance')); ?>
             </a>
+        </div>
+        <!-- Infos -->
+        <div class="contact-info">
+            <p>Téléphone : (514) 254 7131</p>
+            <p>Adresse : 3800 Sherbrooke E.</p>
         </div>
     </div>
