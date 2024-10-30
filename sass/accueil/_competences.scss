@@ -2,20 +2,20 @@
 section.competences {
   padding: var(--espacement);
   background-color: var(--couleur-fond);
-  color: var(--couleur-video);
+  color: var(--couleur-texte-pale);
 
   // Boite contenant une carte de compétence
   div.competence-item {
+    background-color: var(--couleur-competence-fond);
     margin: 0 auto;
     padding: var(--espacement);
-    border: 5px solid var(--couleur-video);
+    // border: 5px solid var(--couleur-video);
     margin-bottom: 1rem;
     border-radius: 0.5rem;
     width: 100%; /* variable à changer */
     @media (min-width: 1025px) {
       width: 80%; /* variable à changer */
     }
-    // @media (min-width: 1025px) {}
 
     // Bouton ouvrir/fermer
     .top-right-button {
@@ -58,10 +58,32 @@ section.competences {
       border-radius: 0.5rem;
       gap: var(--espacement);
 
-      // nom de la compétence
+      // nom et logo
       .logo {
         text-align: center;
         white-space: nowrap;
+
+        .contour {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          border-radius: 50%;
+          height: 110px;
+          width: 110px;
+          min-width: 110px;
+          min-width: 150px;
+          min-height: 150px;
+          //
+          background-color: var(--couleur-video-fond);
+          border: 5px solid var(--couleur-video-bordure);
+
+          rect {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
 
       // Informations des compétences
