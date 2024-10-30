@@ -572,6 +572,49 @@ footer a {
   padding-left: var(--espacement);
 }
 
+.section_galerie {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 2rem;
+  padding: 10px;
+}
+.section_galerie .conteneur_projet {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.section_galerie .conteneur_projet .projet_galerie {
+  width: 80%;
+  height: 15rem;
+  border-radius: 16px;
+  position: relative;
+}
+.section_galerie .conteneur_projet .projet_galerie .projet_image {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/projets-etudiants/triptyque.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+}
+.section_galerie .conteneur_projet .projet_galerie .projet_filtre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  opacity: 50%;
+  border-radius: 16px;
+}
+
+.galerie_projet {
+  background-color: black;
+}
+.galerie_projet .titre_galerie {
+  font-weight: bold;
+}
+
 /* ////////////////////////////////////////// */
 /* Accueil                                    */
 /* ////////////////////////////////////////// */
