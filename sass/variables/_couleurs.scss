@@ -19,8 +19,7 @@ $couleur-paletteJanne5: #e0e4e8;
   --couleur-3d: #ff8709;
   --couleur-design: #e920ad;
   --couleur-video: #9d95ff;
-  /////////////// COULEUR DES COURS //////////////////////////////
-  --couleur-bordur-design: #57003d;
+  
   /////////////// COULEUR DES SECTIONS ///////////////////////////
   --couleur-fond-accueil: #d3cfcf; // Fond du menu, footer et html/body
   --couleur-fond: #000000; // Fond noir utilisé en arrière plan
@@ -30,11 +29,6 @@ $couleur-paletteJanne5: #e0e4e8;
   --couleur-bouton-fond-cours-detail: #6c757d;
   --couleur-bouton-fond-cours-detail-hover: #5a6268;
   --couleur-fond-cours: #545050;
-  --couleur-competences-fond: #3b3b3b;
-
-  --couleur-border: #606060;
-  --couleur-texte-fonce: #000000;
-  --couleur-texte-pale: #ffffff;
 
   --couleur-cours-border: #707070;
 
@@ -45,5 +39,7 @@ $couleur-paletteJanne5: #e0e4e8;
 
   /////////////// AUTRES VARIABLE UTILES ////////////////////////////
   --espacement: 1.5rem; // Espace utilisé pour padding et margin
+  // --centreX: 10%; // Espace utilisé pour centrer horizontalement
+  // --centreY: 2vh; // Espace utilisé pour centrer verticalement
   --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
 }
