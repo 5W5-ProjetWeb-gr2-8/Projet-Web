@@ -359,7 +359,8 @@ get_header();
 
 <!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
 
-<?php include 'template-faq.php'; ?>
+<?php get_template_part('template', 'faq'); ?>
+
 
 
 </div>

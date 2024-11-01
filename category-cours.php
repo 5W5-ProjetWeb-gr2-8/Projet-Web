@@ -96,7 +96,7 @@ get_header();
 </section>
 
 <!-- FAQ //////////////////////////////////////////////////////////////////////// -->
-<?php include 'template-faq.php'; ?>
+<?php get_template_part('template', 'faq'); ?>
 
 <!-- Affiche le footer -->
 <?php get_footer() ?>
