@@ -155,11 +155,7 @@ a {
 }
 
 button {
-  font-size: clamp(
-    1rem,
-    0.9546rem + 0.227vw,
-    1.1rem
-  ); /* même taille que les p */
+  font-size: clamp(1rem, 0.9546rem + 0.227vw, 1.1rem); /* même taille que les p */
   font-family: var(--police_textes);
   font-weight: var(--poid_textes);
 }
@@ -252,6 +248,7 @@ nav.menu div.menu_contenu .menu_hamburger span {
     display: none;
     flex-direction: column;
     width: 100%;
+    height: 30vh;
     position: absolute;
     top: 10vh;
     left: 0;
@@ -497,17 +494,13 @@ footer a {
 }
 
 .btn-plus:hover {
-  background-color: var(
-    --couleur-bouton-fond-cours-detail-hover
-  ); /* Bouton gris plus foncé au survol */
+  background-color: var(--couleur-bouton-fond-cours-detail-hover); /* Bouton gris plus foncé au survol */
 }
 
 .cours-details {
   padding: 20px;
   display: none;
-  background-color: var(
-    --couleur-fond-cours-detail
-  ); /* Fond légèrement plus clair pour les détails */
+  background-color: var(--couleur-fond-cours-detail); /* Fond légèrement plus clair pour les détails */
   color: var(--couleur-texte-pale);
 }
 
@@ -520,6 +513,30 @@ footer a {
 .logo-social img {
   width: var(--taille-icone);
   height: var(--taille-icone);
+}
+
+.menu_liste li {
+  position: relative;
+}
+
+.menu_liste li:hover::before {
+  background-color: #548cc4;
+}
+
+.menu_liste li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  right: 0;
+  bottom: -10px;
+  z-index: -1;
+  transition: background-color 0.5s;
+  border-radius: 8px;
+}
+
+.menu_liste li:nth-child(6) {
+  font-size: var(--taille-police-grande);
 }
 
 .faq-section .titre_FAQ {
@@ -580,21 +597,11 @@ footer a {
 .faq-section .faq-contenu .questions-et-reponse .questions .question:hover {
   transform: translateX(10px);
 }
-.faq-section
-  .faq-contenu
-  .questions-et-reponse
-  .questions
-  .question
-  .icone-fleche {
+.faq-section .faq-contenu .questions-et-reponse .questions .question .icone-fleche {
   font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
-.faq-section
-  .faq-contenu
-  .questions-et-reponse
-  .questions
-  .question:hover
-  .icone-fleche {
+.faq-section .faq-contenu .questions-et-reponse .questions .question:hover .icone-fleche {
   transform: translateX(5px);
 }
 .faq-section .faq-contenu .questions-et-reponse .boite-reponse {
@@ -927,12 +934,7 @@ section.competences div.competence-item .competence-header .info .outils {
   justify-content: space-around;
   align-items: center;
 }
-section.competences
-  div.competence-item
-  .competence-header
-  .info
-  .outils
-  .outil {
+section.competences div.competence-item .competence-header .info .outils .outil {
   display: flex;
   align-items: center;
 }
@@ -1031,4 +1033,4 @@ section.competences div.competence-item.active .competence-content {
 
 .menu-menu-principal-container.active .menu {
   display: flex;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
