@@ -200,3 +200,27 @@
     height: var(--taille-icone);
   }
 }
+
+
+.menu_liste li{
+  position: relative;
+}
+.menu_liste li:hover::before{
+  background-color:#548cc4;
+}
+.menu_liste li::before{
+  content: "";
+  // color: var(--couleur-bordur-video);
+  position:absolute;
+  left: 0;
+  top: -10px;
+  right: 0;
+  bottom: -10px;
+  z-index: -1;
+  transition: background-color 0.5s;
+  border-radius: 8px;
+  // opacity: 0;
+}
+.menu_liste li:nth-child(6){
+  font-size: var(--taille-police-grande);
+}
