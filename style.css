@@ -594,20 +594,37 @@ footer a {
 
 .section_galerie {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 50% 50%;
   row-gap: 2rem;
   padding: 10px;
+}
+@media (min-width: 744px) {
+  .section_galerie {
+    grid-template-columns: 33% 33% 33%;
+  }
 }
 .section_galerie .conteneur_projet {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  align-items: center;
+  height: clamp(10rem, 10.984vw + 7.4256rem, 25rem);
 }
 .section_galerie .conteneur_projet .projet_galerie {
   width: 80%;
-  height: 15rem;
+  height: 90%;
   border-radius: 16px;
   position: relative;
+  box-shadow: 0px 0px 0px 0px hsl(0, 0%, 61%);
+  transition: width 0.5s, height 0.5s, box-shadow 0.5s;
+}
+.section_galerie .conteneur_projet .projet_galerie:hover {
+  width: 89%;
+  height: 100%;
+  box-shadow: 20px 15px 45px -12px hsl(0, 0%, 61%);
+}
+.section_galerie .conteneur_projet .projet_galerie:hover .projet_filtre {
+  opacity: 0%;
 }
 .section_galerie .conteneur_projet .projet_galerie .projet_image {
   width: 100%;
@@ -615,6 +632,7 @@ footer a {
   background-image: url("images/projets-etudiants/triptyque.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left 50% top 65%;
   border-radius: 16px;
 }
 .section_galerie .conteneur_projet .projet_galerie .projet_filtre {
@@ -623,9 +641,24 @@ footer a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: red;
   opacity: 50%;
   border-radius: 16px;
+  transition: opacity 0.75s;
+}
+.section_galerie .conteneur_projet .projet_galerie .pro_filtre_web {
+  background-color: #25CF56;
+}
+.section_galerie .conteneur_projet .projet_galerie .pro_filtre_jeu {
+  background-color: #25AFCF;
+}
+.section_galerie .conteneur_projet .projet_galerie .pro_filtre_3d {
+  background-color: #FFCA92;
+}
+.section_galerie .conteneur_projet .projet_galerie .pro_filtre_video {
+  background-color: #9B92FF;
+}
+.section_galerie .conteneur_projet .projet_galerie .pro_filtre_ui {
+  background-color: #FF92DE;
 }
 
 .galerie_projet {
