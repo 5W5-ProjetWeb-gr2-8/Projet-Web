@@ -1022,7 +1022,7 @@ section.competences div.competence-item.active .competence-content {
     display: block;
     position: absolute;
     right: 4%;
-    top: 0.9rem;
+    top: 2.4rem;
   }
 }
 @media (min-width: 769px) {
