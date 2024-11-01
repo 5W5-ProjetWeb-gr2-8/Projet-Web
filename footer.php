@@ -7,7 +7,10 @@
         ?>
 
         <!-- Logo TIM -->
-        <?php echo wp_get_attachment_image($logo_tim_id, 'full', false, array('class' => 'logo', 'alt' => 'Logo TIM')); ?>
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+            <?php echo wp_get_attachment_image($logo_tim_id, 'full', false, array('class' => 'logo', 'alt' => 'Logo TIM')); ?>
+        </a>
+
 
         <!-- Copyright -->
         <p>© <?php echo date('Y'); ?> Collège de Maisonneuve</p>

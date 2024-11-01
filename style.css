@@ -155,11 +155,7 @@ a {
 }
 
 button {
-  font-size: clamp(
-    1rem,
-    0.9546rem + 0.227vw,
-    1.1rem
-  ); /* même taille que les p */
+  font-size: clamp(1rem, 0.9546rem + 0.227vw, 1.1rem); /* même taille que les p */
   font-family: var(--police_textes);
   font-weight: var(--poid_textes);
 }
@@ -497,17 +493,13 @@ footer a {
 }
 
 .btn-plus:hover {
-  background-color: var(
-    --couleur-bouton-fond-cours-detail-hover
-  ); /* Bouton gris plus foncé au survol */
+  background-color: var(--couleur-bouton-fond-cours-detail-hover); /* Bouton gris plus foncé au survol */
 }
 
 .cours-details {
   padding: 20px;
   display: none;
-  background-color: var(
-    --couleur-fond-cours-detail
-  ); /* Fond légèrement plus clair pour les détails */
+  background-color: var(--couleur-fond-cours-detail); /* Fond légèrement plus clair pour les détails */
   color: var(--couleur-texte-pale);
 }
 
@@ -580,21 +572,11 @@ footer a {
 .faq-section .faq-contenu .questions-et-reponse .questions .question:hover {
   transform: translateX(10px);
 }
-.faq-section
-  .faq-contenu
-  .questions-et-reponse
-  .questions
-  .question
-  .icone-fleche {
+.faq-section .faq-contenu .questions-et-reponse .questions .question .icone-fleche {
   font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
-.faq-section
-  .faq-contenu
-  .questions-et-reponse
-  .questions
-  .question:hover
-  .icone-fleche {
+.faq-section .faq-contenu .questions-et-reponse .questions .question:hover .icone-fleche {
   transform: translateX(5px);
 }
 .faq-section .faq-contenu .questions-et-reponse .boite-reponse {
@@ -927,12 +909,7 @@ section.competences div.competence-item .competence-header .info .outils {
   justify-content: space-around;
   align-items: center;
 }
-section.competences
-  div.competence-item
-  .competence-header
-  .info
-  .outils
-  .outil {
+section.competences div.competence-item .competence-header .info .outils .outil {
   display: flex;
   align-items: center;
 }
@@ -1020,7 +997,7 @@ section.competences div.competence-item.active .competence-content {
     display: block;
     position: absolute;
     right: 4%;
-    top: 0.9rem;
+    top: 2.4rem;
   }
 }
 @media (min-width: 769px) {
@@ -1031,4 +1008,4 @@ section.competences div.competence-item.active .competence-content {
 
 .menu-menu-principal-container.active .menu {
   display: flex;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
