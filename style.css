@@ -802,7 +802,7 @@ section.competences div.competence-item {
   padding: var(--espacement);
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  width: 100%; /* variable à changer */
+  width: 100%; /* variable à changer --> espacement que le main prend*/
 }
 @media (min-width: 1025px) {
   section.competences div.competence-item {
@@ -837,45 +837,95 @@ section.competences div.competence-item .top-right-button:hover .x-symbol {
 section.competences div.competence-item .competence-header {
   display: flex;
   position: relative; /* pour le bouton */
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   border-radius: 0.5rem;
   gap: var(--espacement);
 }
+@media (min-width: 768px) {
+  section.competences div.competence-item .competence-header {
+    flex-direction: row;
+  }
+}
 section.competences div.competence-item .competence-header .logo {
-  text-align: center;
-  white-space: nowrap;
+  display: flex;
+  column-gap: var(--espacement);
+  align-items: center;
+  flex-direction: row-reverse;
+}
+@media (min-width: 768px) {
+  section.competences div.competence-item .competence-header .logo {
+    flex-direction: column;
+    text-align: center;
+    white-space: nowrap;
+  }
 }
 section.competences div.competence-item .competence-header .logo .contour {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
   border-radius: 50%;
-  height: 110px;
-  width: 110px;
-  min-width: 110px;
-  min-width: 150px;
-  min-height: 150px;
-  background-color: var(--couleur-video-fond);
-  border: 5px solid var(--couleur-video-bordure);
+  border: solid 7px;
+  height: 120px;
+  width: 120px;
+}
+@media (min-width: 768px) {
+  section.competences div.competence-item .competence-header .logo .contour {
+    width: 150px;
+    height: 150px;
+  }
 }
 section.competences div.competence-item .competence-header .logo .contour rect {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+section.competences div.competence-item .competence-header .logo .contour#video {
+  background-color: var(--couleur-video-fond);
+  border-color: var(--couleur-video-bordure);
+}
+section.competences div.competence-item .competence-header .logo .contour#_3d {
+  background-color: var(--couleur-3d-fond);
+  border-color: var(--couleur-3d-bordure);
+}
+section.competences div.competence-item .competence-header .logo .contour#web {
+  background-color: var(--couleur-web-fond);
+  border-color: var(--couleur-web-bordure);
+}
 section.competences div.competence-item .competence-header .info {
   box-sizing: border-box;
 }
+section.competences div.competence-item .competence-header .info > p {
+  margin-bottom: var(--espacement);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  section.competences div.competence-item .competence-header .info > p {
+    text-align: unset;
+  }
+}
 section.competences div.competence-item .competence-header .info .outils {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  column-gap: var(--espacement);
   align-items: center;
+}
+@media (min-width: 768px) {
+  section.competences div.competence-item .competence-header .info .outils {
+    justify-content: unset;
+  }
 }
 section.competences div.competence-item .competence-header .info .outils .outil {
   display: flex;
+  gap: 1rem;
   align-items: center;
+  text-wrap: nowrap;
+}
+section.competences div.competence-item .competence-header .info .outils .outil svg {
+  height: var(--taille-icone);
+  width: var(--taille-icone);
+  fill: white;
 }
 section.competences div.competence-item .competence-content {
   justify-content: space-between;
@@ -894,6 +944,7 @@ section.competences div.competence-item.active .competence-content {
   justify-content: center;
   align-items: center;
 }
+
 /* ////////////////////////////////////////// */
 /* Wordpress                                  */
 /* ////////////////////////////////////////// */
