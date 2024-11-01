@@ -1,3 +1,78 @@
+.galerie_projet{
+    background-color: black;
+    
+    .titre_galerie{
+        font-weight: bold;
+    }
+    
+    
+    .conteneur_section_filtres{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+}
+
+
+.section_filtres{
+    width: 90%;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    p,
+    .filtre{
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-align: center;
+
+        font-family: var(--police_titres);
+    }
+
+    .les_filtres{
+        color: black;
+        display: flex;
+        flex-flow: nowrap row;
+        flex: 0 1 80%;
+        justify-content: space-between;
+        align-items: center;
+
+        .conteneur_filtre{
+            input{
+                display: none;
+            }
+            input:checked~.filtre{
+                background-color: black;
+                color: #929292;
+                border: 1px solid #929292;
+            }
+
+
+            .filtre{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                width: 5rem;
+                padding: 0.75rem 5rem;
+                border-radius: 30px;
+                border: 1px solid rgba(0, 0, 0, 0);
+                transition: background-color 0.5s, color 0.5s, border 0.5s;
+    
+                &:hover{
+                    color: white;
+                    background-color: black;
+                }
+            }
+        }
+
+    }
+}
+
+
 .section_galerie{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -51,32 +126,28 @@
                 border-radius: 16px;
                 transition: opacity 0.75s;
             }
-
-            .pro_filtre_web{
-                background-color: #25CF56;
-            }
-            .pro_filtre_jeu{
-                background-color: #25AFCF;
-            }
-            .pro_filtre_3d{
-                background-color: #FFCA92;
-            }
-            .pro_filtre_video{
-                background-color: #9B92FF;
-            }
-            .pro_filtre_ui{
-                background-color: #FF92DE;
-            }
         }
     }
 }
 
 
-
-.galerie_projet{
-    background-color: black;
-
-    .titre_galerie{
-        font-weight: bold;
-    }
+.pro_filtre_web
+,.filtre_web{
+    background-color: #25CF56;
+}
+.pro_filtre_jeu
+,.filtre_jeu{
+    background-color: #25AFCF;
+}
+.pro_filtre_3d
+,.filtre_3d{
+    background-color: #FFCA92;
+}
+.pro_filtre_video
+,.filtre_video{
+    background-color: #9B92FF;
+}
+.pro_filtre_ui
+,.filtre_ui{
+    background-color: #FF92DE;
 }

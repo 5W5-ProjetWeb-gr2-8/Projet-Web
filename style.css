@@ -592,6 +592,66 @@ footer a {
   height: var(--taille-icone);
 }
 
+.galerie_projet {
+  background-color: black;
+}
+.galerie_projet .titre_galerie {
+  font-weight: bold;
+}
+.galerie_projet .conteneur_section_filtres {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.section_filtres {
+  width: 90%;
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.section_filtres p,
+.section_filtres .filtre {
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: var(--police_titres);
+}
+.section_filtres .les_filtres {
+  color: black;
+  display: flex;
+  flex-flow: nowrap row;
+  flex: 0 1 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+.section_filtres .les_filtres .conteneur_filtre input {
+  display: none;
+}
+.section_filtres .les_filtres .conteneur_filtre input:checked ~ .filtre {
+  background-color: black;
+  color: #929292;
+  border: 1px solid #929292;
+}
+.section_filtres .les_filtres .conteneur_filtre .filtre {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  padding: 0.75rem 5rem;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+.section_filtres .les_filtres .conteneur_filtre .filtre:hover {
+  color: white;
+  background-color: black;
+}
+
 .section_galerie {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -645,27 +705,30 @@ footer a {
   border-radius: 16px;
   transition: opacity 0.75s;
 }
-.section_galerie .conteneur_projet .projet_galerie .pro_filtre_web {
+
+.pro_filtre_web,
+.filtre_web {
   background-color: #25CF56;
 }
-.section_galerie .conteneur_projet .projet_galerie .pro_filtre_jeu {
+
+.pro_filtre_jeu,
+.filtre_jeu {
   background-color: #25AFCF;
 }
-.section_galerie .conteneur_projet .projet_galerie .pro_filtre_3d {
+
+.pro_filtre_3d,
+.filtre_3d {
   background-color: #FFCA92;
 }
-.section_galerie .conteneur_projet .projet_galerie .pro_filtre_video {
+
+.pro_filtre_video,
+.filtre_video {
   background-color: #9B92FF;
 }
-.section_galerie .conteneur_projet .projet_galerie .pro_filtre_ui {
-  background-color: #FF92DE;
-}
 
-.galerie_projet {
-  background-color: black;
-}
-.galerie_projet .titre_galerie {
-  font-weight: bold;
+.pro_filtre_ui,
+.filtre_ui {
+  background-color: #FF92DE;
 }
 
 /* ////////////////////////////////////////// */
