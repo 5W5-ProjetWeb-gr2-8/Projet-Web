@@ -3,7 +3,7 @@
     <div class="footer-gauche">
         <?php
         // ID de l'image de la médiathèque pour le logo TIM
-        $logo_tim_id = 41;
+        $logo_tim_id = 89;
         ?>
 
         <!-- Logo TIM -->

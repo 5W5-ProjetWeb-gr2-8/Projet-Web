@@ -14,6 +14,11 @@ function toggleCours(btn) {
 // Fonction pour afficher ou cacher les détails du cours de session choisie.
 document.querySelectorAll(".session").forEach((session) => {
   session.addEventListener("click", () => {
+
+    // Remove "active" class from all sessions
+    document.querySelectorAll(".session").forEach((session) => {
+      session.classList.remove("active");
+    })
     // toggle Active class
     session.classList.toggle("active");
   });

@@ -1,98 +1,94 @@
 // Feuille de style pour la section des compétences
-
 section.competences {
-  background-color: var(--couleur-competences-fond);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding:
-    /* VARIABLE padding X*/ 4%;
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
-
-  button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
-
-  .svg_1 {
-    width: 125px;
-    height: 125px;
-  }
-
-  .circle {
-    stroke-dasharray: 377;
-    stroke-dashoffset: 377;
-    transition: all 1s ease;
-  }
-
-  button:hover .circle {
-    stroke-dashoffset: 0;
-  }
-
-  .x-symbol {
-    transition: stroke 0.3s ease;
-  }
-
-  button:hover .x-symbol {
-    stroke: rgb(232, 14, 14);
-  }
+  padding: var(--espacement);
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte-pale);
 
   // Boite contenant une carte de compétence
   div.competence-item {
-    background-color:
-      /* VARIABLE */ var(--couleur-fond);
-    width:
-      /* VARIABLE */ 80%;
-    // height: /* VARIABLE */ 80%;
-    // padding:
-    //   /* VARIABLE */ 50px 20px;
-    border-radius:
-      /* VARIABLE border-radius */ 0.5rem;
+    background-color: var(--couleur-competence-fond);
+    margin: 0 auto;
+    padding: var(--espacement);
+    // border: 5px solid var(--couleur-video);
     margin-bottom: 1rem;
-    padding: 1rem;
-    border: 5px solid var(--couleur-video);
-    box-sizing: border-box;
-    // position: relative;
-    .competence-header {
-      position: relative;
+    border-radius: 0.5rem;
+    width: 100%; /* variable à changer */
+    @media (min-width: 1025px) {
+      width: 80%; /* variable à changer */
     }
+
+    // Bouton ouvrir/fermer
     .top-right-button {
       position: absolute;
-      top: 5%;
-      right: 5%;
+      top: -1.5rem; /* variable à changer */
+      right: -1.5rem; /* variable à changer */
       margin-bottom: 2rem;
+      cursor: pointer;
+
+      .svg_1 {
+        width: 75px;
+        height: 75px;
+      }
+    
+      .circle {
+        stroke-dasharray: 377;
+        stroke-dashoffset: 377;
+        transition: all 1s ease;
+      }
+    
+      &:hover .circle {
+        stroke-dashoffset: 0;
+      }
+    
+      .x-symbol {
+        transition: stroke 0.3s ease;
+      }
+    
+      &:hover .x-symbol {
+        stroke: rgb(232, 14, 14);
+      }
     }
 
-    // Entête de la compétence
+    // Entête de la compétence // Partie visible en tout temps
     .competence-header {
       display: flex;
+      position: relative; /* pour le bouton */
       flex-direction: row;
       align-items: center;
-      cursor: pointer;
-      font-size:
-        /* VARIABLE font-size*/ 1.5rem;
-      color: white;
-      background-color: var(--couleur-fond);
       border-radius: 0.5rem;
+      gap: var(--espacement);
 
-      .logo h3 {
-        margin-left: 1rem;
+      // nom et logo
+      .logo {
+        text-align: center;
         white-space: nowrap;
+
+        .contour {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: white;
+          border-radius: 50%;
+          height: 110px;
+          width: 110px;
+          min-width: 110px;
+          min-width: 150px;
+          min-height: 150px;
+          //
+          background-color: var(--couleur-video-fond);
+          border: 5px solid var(--couleur-video-bordure);
+
+          rect {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
 
       // Informations des compétences
       .info {
         box-sizing: border-box;
-        // margin-left: -2rem;
-        p {
-          margin-left: -2rem; /* Ensure no extra margin */
-        }
         // Outils utilisés dans le cours
         .outils {
           display: flex;
@@ -135,22 +131,9 @@ section.competences {
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    .competence-header {
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Adjust 768px to your mobile breakpoint */
-    div.competence-item {
-      background-color:
-      /* VARIABLE */ var(--couleur-fond);
-      width:
-      /* VARIABLE */ 100%;
-    }
-    .competence-item p {
-      margin-left: -2rem; /* Ensure no extra margin */
-    }
-  }
-  @media (max-height: 768px) {
+    // .competence-header {
+    //   display: flex;
+    //   flex-direction: column;
+    // }
   }
 }

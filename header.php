@@ -19,12 +19,16 @@
             <nav class="menu">
                 <div class="menu_contenu">
                     <p class="menu_titre">
+                        <?php
+                        // img wordpress du logo
+                        $image_id = 89;
+                        ?>
+
                         <a href="<?php echo esc_url(home_url('/')); ?>">
                             <!-- Lien vers la page d'accueil -->
-                            <img class="logo_img"
-                                src="<?php echo get_template_directory_uri(); ?>/images/logo_TIM_fixed.png"
-                                alt="Logo TIM" />
+                            <?php echo wp_get_attachment_image($image_id, 'full', false, array('class' => 'logo_img', 'alt' => 'Logo TIM')); ?>
                         </a>
+
                     </p>
                     <p class="inscription">Inscription</p>
 

@@ -14,39 +14,59 @@ $couleur-paletteJanne5: #e0e4e8;
 
 :root {
   /////////////// COULEUR DES COURS //////////////////////////////
-  --couleur-web: #92ffb1;
-  --couleur-jeux: #92ebff;
+  --couleur-web-fond: #92ffb1;
+  --couleur-web-bordure: #005719;
+  --couleur-web: #3ce36a;
+  --couleur-web2: #94d4a6;
+  --couleur-web3: #22a848;
+  //
+  --couleur-jeux-fond: #92ebff;
+  --couleur-jeux-bordure: #004757;
+  --couleur-jeux: #00bae2;
+  --couleur-jeux2: #94c8d4;
+  --couleur-jeux3: #228fa8;
+  //
+  --couleur-3d-fond: #ffca92;
+  --couleur-3d-bordure: #572d00;
   --couleur-3d: #ff8709;
-  --couleur-design: #ff92de;
-  --couleur-video: #9b92ff;
-  /////////////// COULEUR DES BORDURES DES COURS //////////////////////////////
-  --couleur-bordur-video: #070057;
-  --couleur-bordur-design: #57003d;
-  --couleur-bordur-jeux: #004757;
-  --couleur-bordur-web: #005719;
+  --couleur-3d2: #d4b594;
+  --couleur-3d3: #a86722;
+  //
+  --couleur-design-fond: #ff92de;
+  --couleur-design-bordure: #57003d;
+  --couleur-design: #e920ad;
+  --couleur-design2: #d494c1;
+  --couleur-design3: #a82280;
+  //
+  --couleur-video-fond: #9b92ff;
+  --couleur-video-bordure: #070057;
+  --couleur-video: #9d95ff;
+  --couleur-video2: #9994d4;
+  --couleur-video3: #2d22a8;
+
   /////////////// COULEUR DES SECTIONS ///////////////////////////
+  /// accueil
   --couleur-fond-accueil: #d3cfcf; // Fond du menu, footer et html/body
   --couleur-fond: #000000; // Fond noir utilisé en arrière plan
   --couleur-fond-gris: #949191; // Fond gris pour la FAQ
   --couleur-principale: #cfcfcf; //FAQ boite à réponse
+  /// cours
   --couleur-fond-cours-detail: #404040;
   --couleur-bouton-fond-cours-detail: #6c757d;
   --couleur-bouton-fond-cours-detail-hover: #5a6268;
   --couleur-fond-cours: #545050;
-  --couleur-competences-fond: #3b3b3b;
-
-  --couleur-border: #606060;
-  --couleur-texte-fonce: #000000;
-  --couleur-texte-pale: #ffffff;
-
   --couleur-cours-border: #707070;
-
+  /// galerie
   --couleur-galerie-fond: #3b3b3b;
   --couleur-galerie-fond-projets: #4f4f4f;
   --couleur-galerie-texte: white;
   --couleur-galerie-bordure: #000000;
+  /// compétences
+  --couleur-competence-fond: #2b2b2b;
 
   /////////////// AUTRES VARIABLE UTILES ////////////////////////////
   --espacement: 1.5rem; // Espace utilisé pour padding et margin
   --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
+  // --centreX: 10%; // Espace utilisé pour centrer horizontalement
+  // --centreY: 2vh; // Espace utilisé pour centrer verticalement
 }

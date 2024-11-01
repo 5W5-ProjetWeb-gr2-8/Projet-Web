@@ -17,15 +17,31 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* Variables css                              */
 /* ////////////////////////////////////////// */
 :root {
-  --couleur-web: #92ffb1;
-  --couleur-jeux: #92ebff;
+  --couleur-web-fond: #92ffb1;
+  --couleur-web-bordure: #005719;
+  --couleur-web: #3ce36a;
+  --couleur-web2: #94d4a6;
+  --couleur-web3: #22a848;
+  --couleur-jeux-fond: #92ebff;
+  --couleur-jeux-bordure: #004757;
+  --couleur-jeux: #00bae2;
+  --couleur-jeux2: #94c8d4;
+  --couleur-jeux3: #228fa8;
+  --couleur-3d-fond: #ffca92;
+  --couleur-3d-bordure: #572d00;
   --couleur-3d: #ff8709;
-  --couleur-design: #ff92de;
-  --couleur-video: #9b92ff;
-  --couleur-bordur-video: #070057;
-  --couleur-bordur-design: #57003d;
-  --couleur-bordur-jeux: #004757;
-  --couleur-bordur-web: #005719;
+  --couleur-3d2: #d4b594;
+  --couleur-3d3: #a86722;
+  --couleur-design-fond: #ff92de;
+  --couleur-design-bordure: #57003d;
+  --couleur-design: #e920ad;
+  --couleur-design2: #d494c1;
+  --couleur-design3: #a82280;
+  --couleur-video-fond: #9b92ff;
+  --couleur-video-bordure: #070057;
+  --couleur-video: #9d95ff;
+  --couleur-video2: #9994d4;
+  --couleur-video3: #2d22a8;
   --couleur-fond-accueil: #d3cfcf;
   --couleur-fond: #000000;
   --couleur-fond-gris: #949191;
@@ -34,20 +50,19 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-bouton-fond-cours-detail: #6c757d;
   --couleur-bouton-fond-cours-detail-hover: #5a6268;
   --couleur-fond-cours: #545050;
-  --couleur-competences-fond: #3b3b3b;
-  --couleur-border: #606060;
-  --couleur-texte-fonce: #000000;
-  --couleur-texte-pale: #ffffff;
   --couleur-cours-border: #707070;
   --couleur-galerie-fond: #3b3b3b;
   --couleur-galerie-fond-projets: #4f4f4f;
   --couleur-galerie-texte: white;
   --couleur-galerie-bordure: #000000;
+  --couleur-competence-fond: #2b2b2b;
   --espacement: 1.5rem;
   --taille-icone: 2rem; /* Taille uniforme pour toutes les icônes */
 }
 
 :root {
+  --couleur-texte-fonce: #000000;
+  --couleur-texte-pale: #ffffff;
   --police_titres: "Plus Jakarta Sans", system-ui;
   --poid_titres: 700;
   --style_titres: normal;
@@ -140,7 +155,11 @@ a {
 }
 
 button {
-  font-size: clamp(1rem, 0.9546rem + 0.227vw, 1.1rem); /* même taille que les p */
+  font-size: clamp(
+    1rem,
+    0.9546rem + 0.227vw,
+    1.1rem
+  ); /* même taille que les p */
   font-family: var(--police_textes);
   font-weight: var(--poid_textes);
 }
@@ -178,6 +197,7 @@ nav.menu {
 }
 nav.menu .logo_img {
   width: 4rem;
+  height: 2rem;
 }
 nav.menu div.menu_contenu {
   display: flex;
@@ -333,6 +353,7 @@ footer a {
   border-radius: 10px;
   text-align: center;
   font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   display: flex; /* Flexbox pour centrer le texte */
@@ -346,7 +367,7 @@ footer a {
   transition: all 0.5s ease-in-out;
 }
 
-.session:active {
+.session.active {
   background-color: rgb(0, 0, 0);
   color: white;
   transform: scale(1.1);
@@ -388,8 +409,8 @@ footer a {
 
 .cours-boxes {
   margin: 1rem auto;
-  border: 8px solid var(--couleur-bordur-design);
-  border-radius: 16px;
+  border: 5px solid var(--couleur-fond-gris); /* variable à changer */
+  border-radius: 8px;
   overflow: hidden;
   width: 100%;
   max-width: 50%; /* Largeur maximale sur plus grands écrans */
@@ -476,13 +497,17 @@ footer a {
 }
 
 .btn-plus:hover {
-  background-color: var(--couleur-bouton-fond-cours-detail-hover); /* Bouton gris plus foncé au survol */
+  background-color: var(
+    --couleur-bouton-fond-cours-detail-hover
+  ); /* Bouton gris plus foncé au survol */
 }
 
 .cours-details {
   padding: 20px;
   display: none;
-  background-color: var(--couleur-fond-cours-detail); /* Fond légèrement plus clair pour les détails */
+  background-color: var(
+    --couleur-fond-cours-detail
+  ); /* Fond légèrement plus clair pour les détails */
   color: var(--couleur-texte-pale);
 }
 
@@ -497,36 +522,41 @@ footer a {
   height: var(--taille-icone);
 }
 
-.faq-section {
+.faq-section .titre_FAQ {
+  margin-left: var(--espacement);
+  padding-top: var(--espacement);
+  padding-left: var(--espacement);
+}
+.faq-section .faq-contenu {
   background-color: var(--couleur-fond-accueil);
   padding: var(--espacement);
   color: var(--couleur-texte-fonce);
 }
 @media (min-width: 1024px) {
-  .faq-section {
+  .faq-section .faq-contenu {
     padding: var(--espacement);
     display: flex;
   }
 }
-.faq-section .questions-et-reponse {
+.faq-section .faq-contenu .questions-et-reponse {
   display: flex;
   flex-direction: column;
   margin-bottom: var(--espacement);
 }
 @media (min-width: 768px) {
-  .faq-section .questions-et-reponse {
+  .faq-section .faq-contenu .questions-et-reponse {
     flex-direction: row;
     justify-content: space-between;
     clip-path: polygon(95% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
   }
 }
 @media (min-width: 1024px) {
-  .faq-section .questions-et-reponse {
+  .faq-section .faq-contenu .questions-et-reponse {
     margin-bottom: unset;
     flex-basis: 75%;
   }
 }
-.faq-section .questions-et-reponse .questions {
+.faq-section .faq-contenu .questions-et-reponse .questions {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -535,59 +565,71 @@ footer a {
   padding: 0.8rem;
 }
 @media (min-width: 1024px) {
-  .faq-section .questions-et-reponse .questions {
+  .faq-section .faq-contenu .questions-et-reponse .questions {
     flex-basis: 50%;
   }
 }
-.faq-section .questions-et-reponse .questions .question {
+.faq-section .faq-contenu .questions-et-reponse .questions .question {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 @media (min-width: 768px) {
-  .faq-section .questions-et-reponse .questions .question {
+  .faq-section .faq-contenu .questions-et-reponse .questions .question {
     flex-basis: 50%;
   }
 }
-.faq-section .questions-et-reponse .questions .question:hover {
+.faq-section .faq-contenu .questions-et-reponse .questions .question:hover {
   transform: translateX(10px);
 }
-.faq-section .questions-et-reponse .questions .question .icone-fleche {
+.faq-section
+  .faq-contenu
+  .questions-et-reponse
+  .questions
+  .question
+  .icone-fleche {
   font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
-.faq-section .questions-et-reponse .questions .question:hover .icone-fleche {
+.faq-section
+  .faq-contenu
+  .questions-et-reponse
+  .questions
+  .question:hover
+  .icone-fleche {
   transform: translateX(5px);
 }
-.faq-section .questions-et-reponse .boite-reponse {
+.faq-section .faq-contenu .questions-et-reponse .boite-reponse {
   background-color: var(--couleur-galerie-fond-projets); /*variable à changer*/
+  color: var(--couleur-texte-pale);
   padding: var(--espacement);
 }
 @media (min-width: 768px) {
-  .faq-section .questions-et-reponse .boite-reponse {
+  .faq-section .faq-contenu .questions-et-reponse .boite-reponse {
     flex-basis: 50%;
   }
 }
 @media (min-width: 1024px) {
-  .faq-section .questions-et-reponse .boite-reponse {
+  .faq-section .faq-contenu .questions-et-reponse .boite-reponse {
+    color: unset;
     flex-basis: 50%;
-    border-left: 1px solid var(--couleur-border); /* variable à changer */
+    border-left: 1px solid var(--couleur-fond-gris);
     background-color: unset;
   }
 }
-.faq-section .contact {
+.faq-section .faq-contenu .contact {
   display: flex;
   flex-direction: column;
   gap: var(--espacement);
   align-items: flex-start;
 }
 @media (min-width: 768px) {
-  .faq-section .contact {
+  .faq-section .faq-contenu .contact {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 @media (min-width: 1024px) {
-  .faq-section .contact {
+  .faq-section .faq-contenu .contact {
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -595,19 +637,56 @@ footer a {
     flex-basis: 25%;
   }
 }
-.faq-section .contact .social-media {
+.faq-section .faq-contenu .contact .social-media {
   display: flex;
   gap: 1rem;
 }
-.faq-section .contact .social-media img {
+.faq-section .faq-contenu .contact .social-media img {
   width: var(--taille-icone);
   height: var(--taille-icone);
 }
 
-.titre_FAQ {
-  margin-left: var(--espacement);
-  padding-top: var(--espacement);
-  padding-left: var(--espacement);
+.section_galerie {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 2rem;
+  padding: 10px;
+}
+.section_galerie .conteneur_projet {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.section_galerie .conteneur_projet .projet_galerie {
+  width: 80%;
+  height: 15rem;
+  border-radius: 16px;
+  position: relative;
+}
+.section_galerie .conteneur_projet .projet_galerie .projet_image {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/projets-etudiants/triptyque.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+}
+.section_galerie .conteneur_projet .projet_galerie .projet_filtre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  opacity: 50%;
+  border-radius: 16px;
+}
+
+.galerie_projet {
+  background-color: black;
+}
+.galerie_projet .titre_galerie {
+  font-weight: bold;
 }
 
 /* ////////////////////////////////////////// */
@@ -767,84 +846,93 @@ section.debut_accueil div h1 {
 }
 
 section.competences {
-  background-color: var(--couleur-competences-fond);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 4%;
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
+  padding: var(--espacement);
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte-pale);
 }
-section.competences button {
-  background-color: transparent;
-  border: none;
+section.competences div.competence-item {
+  background-color: var(--couleur-competence-fond);
+  margin: 0 auto;
+  padding: var(--espacement);
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  width: 100%; /* variable à changer */
+}
+@media (min-width: 1025px) {
+  section.competences div.competence-item {
+    width: 80%; /* variable à changer */
+  }
+}
+section.competences div.competence-item .top-right-button {
+  position: absolute;
+  top: -1.5rem; /* variable à changer */
+  right: -1.5rem; /* variable à changer */
+  margin-bottom: 2rem;
   cursor: pointer;
-  padding: 0;
 }
-section.competences .svg_1 {
-  width: 125px;
-  height: 125px;
+section.competences div.competence-item .top-right-button .svg_1 {
+  width: 75px;
+  height: 75px;
 }
-section.competences .circle {
+section.competences div.competence-item .top-right-button .circle {
   stroke-dasharray: 377;
   stroke-dashoffset: 377;
   transition: all 1s ease;
 }
-section.competences button:hover .circle {
+section.competences div.competence-item .top-right-button:hover .circle {
   stroke-dashoffset: 0;
 }
-section.competences .x-symbol {
+section.competences div.competence-item .top-right-button .x-symbol {
   transition: stroke 0.3s ease;
 }
-section.competences button:hover .x-symbol {
+section.competences div.competence-item .top-right-button:hover .x-symbol {
   stroke: rgb(232, 14, 14);
-}
-section.competences div.competence-item {
-  background-color: var(--couleur-fond);
-  width: 80%;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 5px solid var(--couleur-video);
-  box-sizing: border-box;
-}
-section.competences div.competence-item .competence-header {
-  position: relative;
-}
-section.competences div.competence-item .top-right-button {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  margin-bottom: 2rem;
 }
 section.competences div.competence-item .competence-header {
   display: flex;
+  position: relative; /* pour le bouton */
   flex-direction: row;
   align-items: center;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: white;
-  background-color: var(--couleur-fond);
   border-radius: 0.5rem;
+  gap: var(--espacement);
 }
-section.competences div.competence-item .competence-header .logo h3 {
-  margin-left: 1rem;
+section.competences div.competence-item .competence-header .logo {
+  text-align: center;
   white-space: nowrap;
+}
+section.competences div.competence-item .competence-header .logo .contour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;
+  min-width: 110px;
+  min-width: 150px;
+  min-height: 150px;
+  background-color: var(--couleur-video-fond);
+  border: 5px solid var(--couleur-video-bordure);
+}
+section.competences div.competence-item .competence-header .logo .contour rect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 section.competences div.competence-item .competence-header .info {
   box-sizing: border-box;
-}
-section.competences div.competence-item .competence-header .info p {
-  margin-left: -2rem; /* Ensure no extra margin */
 }
 section.competences div.competence-item .competence-header .info .outils {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-section.competences div.competence-item .competence-header .info .outils .outil {
+section.competences
+  div.competence-item
+  .competence-header
+  .info
+  .outils
+  .outil {
   display: flex;
   align-items: center;
 }
@@ -864,22 +952,6 @@ section.competences div.competence-item.active .competence-content {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  section.competences {
-    /* Adjust 768px to your mobile breakpoint */
-  }
-  section.competences .competence-header {
-    display: flex;
-    flex-direction: column;
-  }
-  section.competences div.competence-item {
-    background-color: var(--couleur-fond);
-    width: 100%;
-  }
-  section.competences .competence-item p {
-    margin-left: -2rem; /* Ensure no extra margin */
-  }
 }
 /* ////////////////////////////////////////// */
 /* Wordpress                                  */
@@ -959,4 +1031,4 @@ section.competences div.competence-item.active .competence-content {
 
 .menu-menu-principal-container.active .menu {
   display: flex;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
