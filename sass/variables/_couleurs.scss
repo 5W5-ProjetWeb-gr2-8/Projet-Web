@@ -14,13 +14,16 @@ $couleur-paletteJanne5: #e0e4e8;
 
 :root {
   /////////////// COULEUR DES COURS //////////////////////////////
-  --couleur-web: #3ce36a;
-  --couleur-jeux: #00bae2;
+  --couleur-web: #92ffb1;
+  --couleur-jeux: #92ebff;
   --couleur-3d: #ff8709;
-  --couleur-design: #e920ad;
-  --couleur-video: #9d95ff;
-  /////////////// COULEUR DES COURS //////////////////////////////
+  --couleur-design: #ff92de;
+  --couleur-video: #9b92ff;
+  /////////////// COULEUR DES BORDURES DES COURS //////////////////////////////
+  --couleur-bordur-video: #070057;
   --couleur-bordur-design: #57003d;
+  --couleur-bordur-jeux: #004757;
+  --couleur-bordur-web: #005719;
   /////////////// COULEUR DES SECTIONS ///////////////////////////
   --couleur-fond-accueil: #d3cfcf; // Fond du menu, footer et html/body
   --couleur-fond: #000000; // Fond noir utilisé en arrière plan
