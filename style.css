@@ -613,10 +613,20 @@ footer a {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+@media (min-width: 375px) and (max-width: 1000px) {
+  .section_filtres {
+    flex-flow: column nowrap;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .section_filtres .titre_section_filtre {
+    align-self: flex-start;
+  }
+}
 .section_filtres p,
 .section_filtres .filtre {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 0.7323vw + 1.3284rem, 2.5rem);
   text-align: center;
   font-family: var(--police_titres);
 }
@@ -627,6 +637,12 @@ footer a {
   flex: 0 1 80%;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 375px) and (max-width: 1000px) {
+  .section_filtres .les_filtres {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 }
 .section_filtres .les_filtres .conteneur_filtre input {
   display: none;
@@ -650,6 +666,14 @@ footer a {
 .section_filtres .les_filtres .conteneur_filtre .filtre:hover {
   color: white;
   background-color: black;
+}
+@media (min-width: 375px) and (max-width: 1000px) {
+  .section_filtres .les_filtres .conteneur_filtre .filtre {
+    width: 3rem;
+    padding: 0.5rem 4rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+  }
 }
 
 .section_galerie {
