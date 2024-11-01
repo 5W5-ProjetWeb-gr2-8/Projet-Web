@@ -358,7 +358,8 @@ get_header();
 </section>
 
 <!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
-<?php include 'faq.php'; ?>
+
+<?php include 'template-faq.php'; ?>
 
 
 </div>

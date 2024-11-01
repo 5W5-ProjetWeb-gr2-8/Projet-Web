@@ -29,21 +29,21 @@ section.competences {
         width: 75px;
         height: 75px;
       }
-    
+
       .circle {
         stroke-dasharray: 377;
         stroke-dashoffset: 377;
         transition: all 1s ease;
       }
-    
+
       &:hover .circle {
         stroke-dashoffset: 0;
       }
-    
+
       .x-symbol {
         transition: stroke 0.3s ease;
       }
-    
+
       &:hover .x-symbol {
         stroke: rgb(232, 14, 14);
       }

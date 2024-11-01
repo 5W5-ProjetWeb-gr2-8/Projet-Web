@@ -409,8 +409,8 @@ footer a {
 
 .cours-boxes {
   margin: 1rem auto;
-  border: 5px solid var(--couleur-fond-gris); /* variable à changer */
-  border-radius: 8px;
+  border: 8px solid var(--couleur-bordur-design);
+  border-radius: 16px;
   overflow: hidden;
   width: 100%;
   max-width: 50%; /* Largeur maximale sur plus grands écrans */

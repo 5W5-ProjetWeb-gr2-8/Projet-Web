@@ -31,7 +31,7 @@ footer {
 
   // Inscription
   a {
-    color: var(--couleur-texte-fonce); 
+    color: var(--couleur-texte-fonce);
     margin: 5px auto; // centre le texte pour mobile
     @media (min-width: 768px) {
       // pas centré sur tablette et plus large

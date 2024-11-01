@@ -1,9 +1,10 @@
 /* Feuille de style pour les styles généraux */
 
 html {
-
 }
 
 body {
-    background-color: var(--couleur-fond-accueil); // match la couleur du footer et du menu 
+  background-color: var(
+    --couleur-fond-accueil
+  ); // match la couleur du footer et du menu
 }

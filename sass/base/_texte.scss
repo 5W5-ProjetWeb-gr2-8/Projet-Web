@@ -71,7 +71,11 @@ a {
 }
 
 button {
-  font-size: clamp(1rem, 0.9546rem + 0.227vw, 1.1rem); /* même taille que les p */
+  font-size: clamp(
+    1rem,
+    0.9546rem + 0.227vw,
+    1.1rem
+  ); /* même taille que les p */
   font-family: var(--police_textes);
   font-weight: var(--poid_textes);
 }
