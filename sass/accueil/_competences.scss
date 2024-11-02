@@ -9,10 +9,9 @@ section.competences {
     background-color: var(--couleur-competence-fond);
     margin: 0 auto;
     padding: var(--espacement);
-    // border: 5px solid var(--couleur-video);
     margin-bottom: 1rem;
     border-radius: 0.5rem;
-    width: 100%; /* variable à changer */
+    width: 100%; /* variable à changer --> espacement que le main prend*/
     @media (min-width: 1025px) {
       width: 80%; /* variable à changer */
     }
@@ -53,53 +52,98 @@ section.competences {
     .competence-header {
       display: flex;
       position: relative; /* pour le bouton */
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
+      @media (min-width: 768px) {
+        flex-direction: row;
+        // align-items: flex-start;
+      }
       border-radius: 0.5rem;
       gap: var(--espacement);
 
       // nom et logo
       .logo {
-        text-align: center;
-        white-space: nowrap;
+        display: flex;
+        column-gap: var(--espacement);
+        align-items: center;
+        flex-direction: row-reverse;
+        @media (min-width: 768px) {
+          flex-direction: column;
+          text-align: center;
+          white-space: nowrap;
+        }
 
+        // cercle
         .contour {
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: white;
           border-radius: 50%;
-          height: 110px;
-          width: 110px;
-          min-width: 110px;
-          min-width: 150px;
-          min-height: 150px;
-          //
-          background-color: var(--couleur-video-fond);
-          border: 5px solid var(--couleur-video-bordure);
-
+          border: solid 7px;
+          height: 120px;
+          width: 120px;
+          @media (min-width: 768px) {
+            width: 150px;
+            height: 150px;
+          }
+          // rectangle invisible entourant le svg
           rect {
             display: flex;
             justify-content: center;
             align-items: center;
           }
         }
+
+        // couleur selon les compétence
+        .contour#video {
+          background-color: var(--couleur-video-fond);
+          border-color: var(--couleur-video-bordure);
+        }
+        .contour#_3d {
+          background-color: var(--couleur-3d-fond);
+          border-color: var(--couleur-3d-bordure);
+        }
+        .contour#web {
+          background-color: var(--couleur-web-fond);
+          border-color: var(--couleur-web-bordure);
+        }
       }
 
       // Informations des compétences
       .info {
         box-sizing: border-box;
-        // Outils utilisés dans le cours
+        // texte descriptif
+        &>p {
+          margin-bottom: var(--espacement);
+          text-align: center;
+          @media (min-width: 768px) {
+            text-align: unset;
+          }
+        }
+        // Outils/Logiciels utilisés dans le cours
         .outils {
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-around;
+          @media (min-width: 768px) {
+            justify-content: unset;
+          }
+          column-gap: var(--espacement);
           align-items: center;
 
           // Icone et un outil
           .outil {
             display: flex;
-            // justify-content: center;
+            gap: 1rem;
             align-items: center;
+            text-wrap: nowrap;
+            
+            // icone
+            svg {
+              height: var(--taille-icone);
+              width: var(--taille-icone);
+              fill: white;
+            }
           }
         }
       }
@@ -128,12 +172,5 @@ section.competences {
       justify-content: center;
       align-items: center;
     }
-  }
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    // .competence-header {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
   }
 }
