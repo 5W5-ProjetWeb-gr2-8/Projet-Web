@@ -56,58 +56,89 @@
         <!-- Présentation Programme -->
         <section class="presPro galerie_projet">
           <h2 class="titre_galerie">Galerie projets étudiants</h2>
+          <div class="conteneur_section_filtres">
+            <div class="section_filtres">
+              <p class="titre_section_filtre">Filtre:</p>
+              <div class="les_filtres">
+
+                <div class="conteneur_filtre">
+                  <input type="checkbox" id="UI/UX">
+                  <label for="UI/UX" class="filtre filtre_ui">UI/UX</label>
+                </div>
+                <div class="conteneur_filtre">
+                  <input type="checkbox" id="WEB">
+                  <label for="WEB" class="filtre filtre_web">WEB</label>
+                </div>
+                <div class="conteneur_filtre">
+                  <input type="checkbox" id="3D">
+                  <label for="3D" class="filtre filtre_3d">3D</label>
+                </div>
+                <div class="conteneur_filtre">
+                  <input type="checkbox" id="JEU">
+                  <label for="JEU" class="filtre filtre_jeu">JEU</label>
+                </div>
+                <div class="conteneur_filtre">
+                  <input type="checkbox" id="VIDEO">
+                  <label for="VIDEO" class="filtre filtre_video">VIDEO</label>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="section_galerie">
             <div class="conteneur_projet">
               <div class="projet_galerie">
                 <p class="projet_image">
-                <p class="projet_filtre">
+                <p class="projet_filtre pro_filtre_web">
               </div>
             </div>
             <div class="conteneur_projet">
               <div class="projet_galerie">
                 <p class="projet_image">
-                <p class="projet_filtre">
+                <p class="projet_filtre pro_filtre_jeu">
               </div>
             </div>
             <div class="conteneur_projet">
               <div class="projet_galerie">
                 <p class="projet_image">
-                <p class="projet_filtre">
+                <p class="projet_filtre pro_filtre_3d">
               </div>
             </div>
             <div class="conteneur_projet">
               <div class="projet_galerie">
                 <p class="projet_image">
-                <p class="projet_filtre">
+                <p class="projet_filtre pro_filtre_ui">
               </div>
             </div>
             <div class="conteneur_projet">
               <div class="projet_galerie">
                 <p class="projet_image">
-                <p class="projet_filtre">
+                <p class="projet_filtre pro_filtre_video">
               </div>
             </div>
             <div class="conteneur_projet">
               <div class="projet_galerie">
                 <p class="projet_image">
-                <p class="projet_filtre">
+                <p class="projet_filtre pro_filtre_ui">
               </div>
             </div>
             <div class="conteneur_projet">
               <div class="projet_galerie">
                 <p class="projet_image">
-                <p class="projet_filtre">
+                <p class="projet_filtre pro_filtre_video">
               </div>
             </div>
             <div class="conteneur_projet">
               <div class="projet_galerie">
                 <p class="projet_image">
-                <p class="projet_filtre">
+                <p class="projet_filtre pro_filtre_ui">
               </div>
             </div>
           </div>
           </p>
         </section>
+
+
+        
 
 
 
@@ -126,70 +157,73 @@
 
     <!-- FAQ //////////////////////////////////////////////////////////////////////// -->
     <section class="faq-section">
-      <!-- Section des questions -->
-      <div class="questions-et-reponse">
-        <!-- Questions -->
-        <div class="questions">
-          <button class="question" data-question="question1">
-            <span class="icone-fleche">→</span> Qu'est-ce que le TIM ?
-          </button>
-          <button class="question" data-question="question2">
-            <span class="icone-fleche">→</span> Quels logiciels utilise-t-on en
-            TIMS ?
-          </button>
-          <button class="question" data-question="question3">
-            <span class="icone-fleche">→</span> Apprend-on à créer des jeux
-            vidéo en TIMS ?
-          </button>
-          <button class="question" data-question="question4">
-            <span class="icone-fleche">→</span> Est-ce que je vais apprendre à
-            coder ?
-          </button>
-          <button class="question" data-question="question5">
-            <span class="icone-fleche">→</span> Est-ce que TIMS forme à la
-            création 3D ?
-          </button>
+      <!-- Titre -->
+      <h3 class="titre_FAQ">FAQ Lorem ipsum dolor sit.</h3>
+      <main class="faq-contenu">
+        <!-- Section des questions -->
+        <div class="questions-et-reponse">
+          <!-- Questions -->
+          <div class="questions">
+            <button class="question" data-question="question1">
+              <span class="icone-fleche">→</span> Qu'est-ce que le TIM ?
+            </button>
+            <button class="question" data-question="question2">
+              <span class="icone-fleche">→</span> Quels logiciels utilise-t-on en
+              TIMS ?
+            </button>
+            <button class="question" data-question="question3">
+              <span class="icone-fleche">→</span> Apprend-on à créer des jeux
+              vidéo en TIMS ?
+            </button>
+            <button class="question" data-question="question4">
+              <span class="icone-fleche">→</span> Est-ce que je vais apprendre à
+              coder ?
+            </button>
+            <button class="question" data-question="question5">
+              <span class="icone-fleche">→</span> Est-ce que TIMS forme à la
+              création 3D ?
+            </button>
+          </div>
+          <!-- Boîte de réponse blanche -->
+          <div id="boite-reponse" class="boite-reponse">
+            <h6 class="reponse-affichee">La réponse s'affichera ici.</h6>
+          </div>
         </div>
-        <!-- Boîte de réponse blanche -->
-        <div id="boite-reponse" class="boite-reponse">
-          <h6 class="reponse-affichee">La réponse s'affichera ici.</h6>
+        <!-- Contacts -->
+        <div class="contact">
+          <!-- Réseaux sociaux -->
+          <div class="social-media">
+            <!-- Site collège -->
+            <a href="https://www.cmaisonneuve.qc.ca/" target="_blank">
+              <img
+                src="images/logo_college.jpg"
+                alt="Logo Collège de Maisonneuve"
+              />
+            </a>
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/tim-coll%C3%A8ge-de-maisonneuve-9407b7131/"
+            >
+              <img src="images/logo_linkedIn.png" alt="LinkedIn" />
+            </a>
+            <!-- Behance -->
+            <a href="https://www.behance.net/departement_tim" target="_blank">
+              <img src="images/logo_behance.jpg" alt="Behance" />
+            </a>
+          </div>
+          <!-- Infos -->
+          <div class="contact-info">
+            <p>Téléphone : (514) 254 7131</p>
+            <p>Adresse : 3800 Sherbrooke E.</p>
+          </div>
         </div>
-      </div>
-
-      <!-- Contacts -->
-      <div class="contact">
-        <!-- Réseaux sociaux -->
-        <div class="social-media">
-          <!-- Site collège -->
-          <a href="https://www.cmaisonneuve.qc.ca/" target="_blank">
-            <img
-              src="images/logo_college.jpg"
-              alt="Logo Collège de Maisonneuve"
-            />
-          </a>
-          <!-- LinkedIn -->
-          <a
-            href="https://www.linkedin.com/in/tim-coll%C3%A8ge-de-maisonneuve-9407b7131/"
-          >
-            <img src="images/logo_linkedIn.png" alt="LinkedIn" />
-          </a>
-          <!-- Behance -->
-          <a href="https://www.behance.net/departement_tim" target="_blank">
-            <img src="images/logo_behance.jpg" alt="Behance" />
-          </a>
-        </div>
-        <!-- Infos -->
-        <div class="contact-info">
-          <p>Téléphone : (514) 254 7131</p>
-          <p>Adresse : 3800 Sherbrooke E.</p>
-        </div>
-      </div>
+      </main>
     </section>
 
     <!-- Footer ////////////////////////////////////////////////////////////////// -->
     <footer>
       <div class="footer-gauche">
-        <img class="logo" src="images/logo_TIM.png" alt="Logo TIM" />
+        <img class="logo" src="images/logo_TIM_fixed.png" alt="Logo TIM" />
         <p>© 2024 Collège de Maisonneuve</p>
       </div>
       <a href="#">Inscription</a>

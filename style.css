@@ -653,22 +653,123 @@ footer a {
   height: var(--taille-icone);
 }
 
+.galerie_projet {
+  background-color: black;
+}
+.galerie_projet .titre_galerie {
+  font-weight: bold;
+}
+.galerie_projet .conteneur_section_filtres {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.section_filtres {
+  width: 90%;
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 375px) and (max-width: 1000px) {
+  .section_filtres {
+    flex-flow: column nowrap;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .section_filtres .titre_section_filtre {
+    align-self: flex-start;
+  }
+}
+.section_filtres p,
+.section_filtres .filtre {
+  font-weight: bold;
+  font-size: clamp(1.5rem, 0.7323vw + 1.3284rem, 2.5rem);
+  text-align: center;
+  font-family: var(--police_titres);
+}
+.section_filtres .les_filtres {
+  color: black;
+  display: flex;
+  flex-flow: nowrap row;
+  flex: 0 1 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 375px) and (max-width: 1000px) {
+  .section_filtres .les_filtres {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+}
+.section_filtres .les_filtres .conteneur_filtre input {
+  display: none;
+}
+.section_filtres .les_filtres .conteneur_filtre input:checked ~ .filtre {
+  background-color: black;
+  color: #929292;
+  border: 1px solid #929292;
+}
+.section_filtres .les_filtres .conteneur_filtre .filtre {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  padding: 0.75rem 5rem;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+.section_filtres .les_filtres .conteneur_filtre .filtre:hover {
+  color: white;
+  background-color: black;
+}
+@media (min-width: 375px) and (max-width: 1000px) {
+  .section_filtres .les_filtres .conteneur_filtre .filtre {
+    width: 3rem;
+    padding: 0.5rem 4rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+  }
+}
+
 .section_galerie {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 50% 50%;
   row-gap: 2rem;
   padding: 10px;
+}
+@media (min-width: 744px) {
+  .section_galerie {
+    grid-template-columns: 33% 33% 33%;
+  }
 }
 .section_galerie .conteneur_projet {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  align-items: center;
+  height: clamp(10rem, 10.984vw + 7.4256rem, 25rem);
 }
 .section_galerie .conteneur_projet .projet_galerie {
   width: 80%;
-  height: 15rem;
+  height: 90%;
   border-radius: 16px;
   position: relative;
+  box-shadow: 0px 0px 0px 0px hsl(0, 0%, 61%);
+  transition: width 0.5s, height 0.5s, box-shadow 0.5s;
+}
+.section_galerie .conteneur_projet .projet_galerie:hover {
+  width: 89%;
+  height: 100%;
+  box-shadow: 20px 15px 45px -12px hsl(0, 0%, 61%);
+}
+.section_galerie .conteneur_projet .projet_galerie:hover .projet_filtre {
+  opacity: 0%;
 }
 .section_galerie .conteneur_projet .projet_galerie .projet_image {
   width: 100%;
@@ -676,6 +777,7 @@ footer a {
   background-image: url("images/projets-etudiants/triptyque.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left 50% top 65%;
   border-radius: 16px;
 }
 .section_galerie .conteneur_projet .projet_galerie .projet_filtre {
@@ -684,16 +786,34 @@ footer a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: red;
   opacity: 50%;
   border-radius: 16px;
+  transition: opacity 0.75s;
 }
 
-.galerie_projet {
-  background-color: black;
+.pro_filtre_web,
+.filtre_web {
+  background-color: #25CF56;
 }
-.galerie_projet .titre_galerie {
-  font-weight: bold;
+
+.pro_filtre_jeu,
+.filtre_jeu {
+  background-color: #25AFCF;
+}
+
+.pro_filtre_3d,
+.filtre_3d {
+  background-color: #FFCA92;
+}
+
+.pro_filtre_video,
+.filtre_video {
+  background-color: #9B92FF;
+}
+
+.pro_filtre_ui,
+.filtre_ui {
+  background-color: #FF92DE;
 }
 
 /* ////////////////////////////////////////// */
