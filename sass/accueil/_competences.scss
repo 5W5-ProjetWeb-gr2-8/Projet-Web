@@ -65,6 +65,8 @@ section.competences {
       .logo {
         display: flex;
         column-gap: var(--espacement);
+        row-gap: 0.5rem;
+        flex-basis: 25%;
         align-items: center;
         flex-direction: row-reverse;
         @media (min-width: 768px) {
@@ -107,11 +109,20 @@ section.competences {
           background-color: var(--couleur-web-fond);
           border-color: var(--couleur-web-bordure);
         }
+        .contour#design {
+          background-color: var(--couleur-design-fond);
+          border-color: var(--couleur-design-bordure);
+        }
+        .contour#jeux {
+          background-color: var(--couleur-jeux-fond);
+          border-color: var(--couleur-jeux-bordure);
+        }
       }
 
       // Informations des compétences
       .info {
         box-sizing: border-box;
+        flex-basis: 70%;
         // texte descriptif
         &>p {
           margin-bottom: var(--espacement);

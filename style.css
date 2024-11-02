@@ -1120,6 +1120,8 @@ section.competences div.competence-item .competence-header {
 section.competences div.competence-item .competence-header .logo {
   display: flex;
   column-gap: var(--espacement);
+  row-gap: 0.5rem;
+  flex-basis: 25%;
   align-items: center;
   flex-direction: row-reverse;
 }
@@ -1162,8 +1164,17 @@ section.competences div.competence-item .competence-header .logo .contour#web {
   background-color: var(--couleur-web-fond);
   border-color: var(--couleur-web-bordure);
 }
+section.competences div.competence-item .competence-header .logo .contour#design {
+  background-color: var(--couleur-design-fond);
+  border-color: var(--couleur-design-bordure);
+}
+section.competences div.competence-item .competence-header .logo .contour#jeux {
+  background-color: var(--couleur-jeux-fond);
+  border-color: var(--couleur-jeux-bordure);
+}
 section.competences div.competence-item .competence-header .info {
   box-sizing: border-box;
+  flex-basis: 70%;
 }
 section.competences div.competence-item .competence-header .info > p {
   margin-bottom: var(--espacement);
@@ -1180,6 +1191,11 @@ section.competences div.competence-item .competence-header .info .outils {
   justify-content: space-around;
   column-gap: var(--espacement);
   align-items: center;
+}
+@media (min-width: 768px) {
+  section.competences div.competence-item .competence-header .info .outils {
+    justify-content: unset;
+  }
 }
 section.competences div.competence-item .competence-header .info .outils .outil {
   display: flex;
