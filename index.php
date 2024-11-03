@@ -1,6 +1,9 @@
 <?php
 // Appelle le fichier header.php
 get_header();
+// Importe et décode le fichier svg.json 
+$svgJson = file_get_contents(__DIR__ . '/js/svg.json');
+$svg = json_decode($svgJson, true);
 ?>
 
 <!-- Main //////////////////////////////////////////////////////////////////////// -->
@@ -25,300 +28,608 @@ get_header();
     </section>
     <!-- Compétences ///////////////////////////////////////////////////////////////////// -->
     <section class="competences">
-        <div class="competence-item">
+          <!-- Une compétence -->
+          <div class="competence-item">
             <div class="competence-header">
-                <!-- button Ouverture et fermeture -->
-                <button class="top-right-button">
-                    <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <ellipse ry="30" rx="30" cy="31.25" cx="31.25" stroke-width="2.5" stroke="#00000"
-                                fill="transparent" />
-                            <ellipse ry="30" rx="30" class="circle" cy="31.25" cx="31.25" stroke-width="2.5"
-                                stroke="red" fill="transparent" />
-                            <line class="x-symbol" x1="16.25" y1="16.25" x2="46.25" y2="46.25" stroke="green"
-                                stroke-width="3.5" />
-                            <line class="x-symbol" x1="46.25" y1="16.25" x2="16.25" y2="46.25" stroke="green"
-                                stroke-width="3.5" />
-                        </g>
-                    </svg>
-                </button>
-                <!-- Logo de la compétence -->
-                <div class="logo">
-                    <h3>Audio Visuel</h3>
-                    <svg width="250px" height="250px" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M12.7864 9.74996L10.9999 6.17701L9.21345 9.74996H12.7864ZM7.3291 10.1646L10.3291 4.16455H11.6707L14.6707 10.1646L13.9999 11.25H7.99992L7.3291 10.1646ZM12.75 13.5L13.5 12.75H19.5L20.25 13.5V19.5L19.5 20.25H13.5L12.75 19.5V13.5ZM18.75 14.25H14.25V18.75H18.75V14.25ZM7.5 12.75C5.42893 12.75 3.75 14.4289 3.75 16.5C3.75 18.571 5.42893 20.25 7.5 20.25C9.57107 20.25 11.25 18.571 11.25 16.5C11.25 14.4289 9.57107 12.75 7.5 12.75ZM5.25 16.5C5.25 15.2573 6.25736 14.25 7.5 14.25C8.74264 14.25 9.75 15.2573 9.75 16.5C9.75 17.7426 8.74264 18.75 7.5 18.75C6.25736 18.75 5.25 17.7426 5.25 16.5Z"
-                            fill="#080341" />
-                    </svg>
+              <!-- button Ouverture et fermeture -->
+              <button class="top-right-button">
+                <!-- L'animation fonctionne pas avec la référence -->
+                <!-- <?= $svg["x"]; ?> -->
+                <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <ellipse
+                      ry="30"
+                      rx="30"
+                      cy="31.25"
+                      cx="31.25"
+                      stroke-width="2.5"
+                      stroke="#00000"
+                      fill="transparent"
+                    />
+                    <ellipse
+                      ry="30"
+                      rx="30"
+                      class="circle"
+                      cy="31.25"
+                      cx="31.25"
+                      stroke-width="2.5"
+                      stroke="red"
+                      fill="transparent"
+                    />
+                    <line
+                      class="x-symbol"
+                      x1="16.25"
+                      y1="16.25"
+                      x2="46.25"
+                      y2="46.25"
+                      stroke="green"
+                      stroke-width="3.5"
+                    />
+                    <line
+                      class="x-symbol"
+                      x1="46.25"
+                      y1="16.25"
+                      x2="16.25"
+                      y2="46.25"
+                      stroke="green"
+                      stroke-width="3.5"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <!-- Logo de la compétence -->
+              <div class="logo">
+                <!-- nom -->
+                <h3>Montage</h3>
+                <!-- cercle contour -->
+                 <div class="contour" id="video">
+                <!-- icone -->
+                <?= $svg["video"]; ?>
+                 </div>
+              </div>
+              <!-- Informations sur la compétence-->
+              <div class="info">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloremque tempore alias recusandae qui quaerat nihil dolorem
+                  sint eligendi possimus ex?
+                </p>
+                <div class="outils">
+                  <div class="outil">
+                    <!-- Logo premiere pro -->
+                    <?= $svg["premiere"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>Premiere Pro</h6>
+                  </div>
+                  <div class="outil">
+                    <!-- Logo Audition -->
+                    <?= $svg["audition"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>Audition</h6>
+                  </div>
                 </div>
-                <!-- Informations sur la compétence-->
-                <div class="info">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Doloremque tempore alias recusandae qui quaerat nihil dolorem
-                        sint eligendi possimus ex?
-                    </p>
-                    <div class="outils">
-                        <div class="outil">
-                            <!-- PlaceHolder -->
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" role="img"
-                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="placeholderIconTitle"
-                                stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"
-                                fill="none" color="#000000">
-                                <title id="placeholderIconTitle">Placeholder</title>
-                                <rect width="18" height="18" x="3" y="3" />
-                                <path stroke-linecap="round" d="M21 21L3 3 21 21zM21 3L3 21 21 3z" />
-                            </svg>
-                            <p>Technologies</p>
-                        </div>
-                        <div class="outil">
-                            <!-- PlaceHolder -->
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" role="img"
-                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="placeholderIconTitle"
-                                stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"
-                                fill="none" color="#000000">
-                                <title id="placeholderIconTitle">Placeholder</title>
-                                <rect width="18" height="18" x="3" y="3" />
-                                <path stroke-linecap="round" d="M21 21L3 3 21 21zM21 3L3 21 21 3z" />
-                            </svg>
-                            <p>Logiciels</p>
-                        </div>
-                        <div class="outil">
-                            <!-- PlaceHolder -->
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" role="img"
-                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="placeholderIconTitle"
-                                stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"
-                                fill="none" color="#000000">
-                                <title id="placeholderIconTitle">Placeholder</title>
-                                <rect width="18" height="18" x="3" y="3" />
-                                <path stroke-linecap="round" d="M21 21L3 3 21 21zM21 3L3 21 21 3z" />
-                            </svg>
-                            <p>Concepts</p>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <!-- Exemples liés à la compétence -->
+            <!-- Partie dépliable -->
             <div class="competence-content">
-                <!-- Flèche gauche -->
-                <div>
-                    <img src="https://placehold.co/50x75?text=<" alt="" />
-                </div>
-                <article>
-                    <img src="https://placehold.co/250x250?text=Image+Accueil" alt="" />
-                    <legend>Légende</legend>
-                </article>
-                <article>
-                    <img src="https://placehold.co/250x250?text=Image+Accueil" alt="" />
-                    <legend>Légende</legend>
-                </article>
-                <article>
-                    <img src="https://placehold.co/250x250?text=Image+Accueil" alt="" />
-                    <legend>Légende</legend>
-                </article>
-                <!-- Flèche droite -->
-                <div>
-                    <img src="https://placehold.co/50x75?text=>" alt="" />
-                </div>
+              <!-- Flèche gauche -->
+              <div>
+                <img src="https://placehold.co/50x75?text=<" alt="" />
+              </div>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- Flèche droite -->
+              <div>
+                <img src="https://placehold.co/50x75?text=>" alt="" />
+              </div>
             </div>
-        </div>
-        <div class="competence-item">
+          </div>
+          <!-- Une compétence -->
+          <div class="competence-item">
             <div class="competence-header">
-                <!-- button Ouverture et fermeture -->
-                <button class="top-right-button">
-                    <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <ellipse ry="30" rx="30" cy="31.25" cx="31.25" stroke-width="2.5" stroke="#00000"
-                                fill="transparent" />
-                            <ellipse ry="30" rx="30" class="circle" cy="31.25" cx="31.25" stroke-width="2.5"
-                                stroke="red" fill="transparent" />
-                            <line class="x-symbol" x1="16.25" y1="16.25" x2="46.25" y2="46.25" stroke="green"
-                                stroke-width="3.5" />
-                            <line class="x-symbol" x1="46.25" y1="16.25" x2="16.25" y2="46.25" stroke="green"
-                                stroke-width="3.5" />
-                        </g>
-                    </svg>
-                </button>
-                <!-- Logo de la compétence -->
-                <div class="logo">
-                    <h3>Audio Visuel</h3>
-                    <svg width="250px" height="250px" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M12.7864 9.74996L10.9999 6.17701L9.21345 9.74996H12.7864ZM7.3291 10.1646L10.3291 4.16455H11.6707L14.6707 10.1646L13.9999 11.25H7.99992L7.3291 10.1646ZM12.75 13.5L13.5 12.75H19.5L20.25 13.5V19.5L19.5 20.25H13.5L12.75 19.5V13.5ZM18.75 14.25H14.25V18.75H18.75V14.25ZM7.5 12.75C5.42893 12.75 3.75 14.4289 3.75 16.5C3.75 18.571 5.42893 20.25 7.5 20.25C9.57107 20.25 11.25 18.571 11.25 16.5C11.25 14.4289 9.57107 12.75 7.5 12.75ZM5.25 16.5C5.25 15.2573 6.25736 14.25 7.5 14.25C8.74264 14.25 9.75 15.2573 9.75 16.5C9.75 17.7426 8.74264 18.75 7.5 18.75C6.25736 18.75 5.25 17.7426 5.25 16.5Z"
-                            fill="#080341" />
-                    </svg>
+              <!-- button Ouverture et fermeture -->
+              <button class="top-right-button">
+                <!-- <?= $svg["x"]; ?> -->
+                <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <ellipse
+                      ry="30"
+                      rx="30"
+                      cy="31.25"
+                      cx="31.25"
+                      stroke-width="2.5"
+                      stroke="#00000"
+                      fill="transparent"
+                    />
+                    <ellipse
+                      ry="30"
+                      rx="30"
+                      class="circle"
+                      cy="31.25"
+                      cx="31.25"
+                      stroke-width="2.5"
+                      stroke="red"
+                      fill="transparent"
+                    />
+                    <line
+                      class="x-symbol"
+                      x1="16.25"
+                      y1="16.25"
+                      x2="46.25"
+                      y2="46.25"
+                      stroke="green"
+                      stroke-width="3.5"
+                    />
+                    <line
+                      class="x-symbol"
+                      x1="46.25"
+                      y1="16.25"
+                      x2="16.25"
+                      y2="46.25"
+                      stroke="green"
+                      stroke-width="3.5"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <!-- Logo de la compétence -->
+              <div class="logo">
+                <!-- nom -->
+                <h3>Création</h3>
+                <!-- cercle contour -->
+                <div class="contour" id="_3d">
+                    <!-- icone -->
+                    <!-- Importé depuis figma -->
+                    <?= $svg["_3d"]; ?>  
                 </div>
-                <!-- Informations sur la compétence-->
-                <div class="info">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Doloremque tempore alias recusandae qui quaerat nihil dolorem
-                        sint eligendi possimus ex?
-                    </p>
-                    <div class="outils">
-                        <div class="outil">
-                            <!-- PlaceHolder -->
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" role="img"
-                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="placeholderIconTitle"
-                                stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"
-                                fill="none" color="#000000">
-                                <title id="placeholderIconTitle">Placeholder</title>
-                                <rect width="18" height="18" x="3" y="3" />
-                                <path stroke-linecap="round" d="M21 21L3 3 21 21zM21 3L3 21 21 3z" />
-                            </svg>
-                            <p>Technologies</p>
-                        </div>
-                        <div class="outil">
-                            <!-- PlaceHolder -->
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" role="img"
-                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="placeholderIconTitle"
-                                stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"
-                                fill="none" color="#000000">
-                                <title id="placeholderIconTitle">Placeholder</title>
-                                <rect width="18" height="18" x="3" y="3" />
-                                <path stroke-linecap="round" d="M21 21L3 3 21 21zM21 3L3 21 21 3z" />
-                            </svg>
-                            <p>Logiciels</p>
-                        </div>
-                        <div class="outil">
-                            <!-- PlaceHolder -->
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" role="img"
-                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="placeholderIconTitle"
-                                stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"
-                                fill="none" color="#000000">
-                                <title id="placeholderIconTitle">Placeholder</title>
-                                <rect width="18" height="18" x="3" y="3" />
-                                <path stroke-linecap="round" d="M21 21L3 3 21 21zM21 3L3 21 21 3z" />
-                            </svg>
-                            <p>Concepts</p>
-                        </div>
-                    </div>
+              </div>
+              <!-- Informations sur la compétence-->
+              <div class="info">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloremque tempore alias recusandae qui quaerat nihil dolorem
+                  sint eligendi possimus ex?
+                </p>
+                <div class="outils">
+                  <div class="outil">
+                    <!-- Logo photoshop -->
+                    <?= $svg["photoshop"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>Photoshop</h6>
+                  </div>
+                  <div class="outil">
+                    <!-- Logo Illustrator -->
+                    <?= $svg["illustrator"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>Illustrator</h6>
+                  </div>
+                  <div class="outil">
+                    <!-- Logo Maya -->
+                    <?= $svg["maya"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>Maya</h6>
+                  </div>
                 </div>
+              </div>
             </div>
-            <!-- Exemples liés à la compétence -->
+            <!-- Partie dépliable -->
             <div class="competence-content">
-                <!-- Flèche gauche -->
-                <div>
-                    <img src="https://placehold.co/50x75?text=<" alt="" />
-                </div>
-                <article>
-                    <img src="https://placehold.co/250x250?text=Image+Accueil" alt="" />
-                    <legend>Légende</legend>
-                </article>
-                <article>
-                    <img src="https://placehold.co/250x250?text=Image+Accueil" alt="" />
-                    <legend>Légende</legend>
-                </article>
-                <article>
-                    <img src="https://placehold.co/250x250?text=Image+Accueil" alt="" />
-                    <legend>Légende</legend>
-                </article>
-                <!-- Flèche droite -->
-                <div>
-                    <img src="https://placehold.co/50x75?text=>" alt="" />
-                </div>
+              <!-- Flèche gauche -->
+              <div>
+                <img src="https://placehold.co/50x75?text=<" alt="" />
+              </div>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- Flèche droite -->
+              <div>
+                <img src="https://placehold.co/50x75?text=>" alt="" />
+              </div>
             </div>
-        </div>
-        <div class="competence-item">
+          </div>
+          <!-- Une compétence -->
+          <div class="competence-item">
             <div class="competence-header">
-                <!-- button Ouverture et fermeture -->
-                <button class="top-right-button">
-                    <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <ellipse ry="30" rx="30" cy="31.25" cx="31.25" stroke-width="2.5" stroke="#00000"
-                                fill="transparent" />
-                            <ellipse ry="30" rx="30" class="circle" cy="31.25" cx="31.25" stroke-width="2.5"
-                                stroke="red" fill="transparent" />
-                            <line class="x-symbol" x1="16.25" y1="16.25" x2="46.25" y2="46.25" stroke="green"
-                                stroke-width="3.5" />
-                            <line class="x-symbol" x1="46.25" y1="16.25" x2="16.25" y2="46.25" stroke="green"
-                                stroke-width="3.5" />
-                        </g>
-                    </svg>
-                </button>
-                <!-- Logo de la compétence -->
-                <div class="logo">
-                    <h3>Audio Visuel</h3>
-                    <svg width="250px" height="250px" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M12.7864 9.74996L10.9999 6.17701L9.21345 9.74996H12.7864ZM7.3291 10.1646L10.3291 4.16455H11.6707L14.6707 10.1646L13.9999 11.25H7.99992L7.3291 10.1646ZM12.75 13.5L13.5 12.75H19.5L20.25 13.5V19.5L19.5 20.25H13.5L12.75 19.5V13.5ZM18.75 14.25H14.25V18.75H18.75V14.25ZM7.5 12.75C5.42893 12.75 3.75 14.4289 3.75 16.5C3.75 18.571 5.42893 20.25 7.5 20.25C9.57107 20.25 11.25 18.571 11.25 16.5C11.25 14.4289 9.57107 12.75 7.5 12.75ZM5.25 16.5C5.25 15.2573 6.25736 14.25 7.5 14.25C8.74264 14.25 9.75 15.2573 9.75 16.5C9.75 17.7426 8.74264 18.75 7.5 18.75C6.25736 18.75 5.25 17.7426 5.25 16.5Z"
-                            fill="#080341" />
-                    </svg>
+              <!-- button Ouverture et fermeture -->
+              <button class="top-right-button">
+                <!-- <?= $svg["x"]; ?> -->
+                <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <ellipse
+                      ry="30"
+                      rx="30"
+                      cy="31.25"
+                      cx="31.25"
+                      stroke-width="2.5"
+                      stroke="#00000"
+                      fill="transparent"
+                    />
+                    <ellipse
+                      ry="30"
+                      rx="30"
+                      class="circle"
+                      cy="31.25"
+                      cx="31.25"
+                      stroke-width="2.5"
+                      stroke="red"
+                      fill="transparent"
+                    />
+                    <line
+                      class="x-symbol"
+                      x1="16.25"
+                      y1="16.25"
+                      x2="46.25"
+                      y2="46.25"
+                      stroke="green"
+                      stroke-width="3.5"
+                    />
+                    <line
+                      class="x-symbol"
+                      x1="46.25"
+                      y1="16.25"
+                      x2="16.25"
+                      y2="46.25"
+                      stroke="green"
+                      stroke-width="3.5"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <!-- Logo de la compétence -->
+              <div class="logo">
+                <!-- nom -->
+                <h3>Programmation</h3>
+                <!-- cercle contour -->
+                <div class="contour" id="web">
+                    <!-- icone -->
+                    <!-- Importé depuis figma -->
+                    <?= $svg["web"]; ?>
                 </div>
-                <!-- Informations sur la compétence-->
-                <div class="info">
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Doloremque tempore alias recusandae qui quaerat nihil dolorem
-                        sint eligendi possimus ex?
-                    </p>
-                    <div class="outils">
-                        <div class="outil">
-                            <!-- PlaceHolder -->
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" role="img"
-                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="placeholderIconTitle"
-                                stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"
-                                fill="none" color="#000000">
-                                <title id="placeholderIconTitle">Placeholder</title>
-                                <rect width="18" height="18" x="3" y="3" />
-                                <path stroke-linecap="round" d="M21 21L3 3 21 21zM21 3L3 21 21 3z" />
-                            </svg>
-                            <p>Technologies</p>
-                        </div>
-                        <div class="outil">
-                            <!-- PlaceHolder -->
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" role="img"
-                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="placeholderIconTitle"
-                                stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"
-                                fill="none" color="#000000">
-                                <title id="placeholderIconTitle">Placeholder</title>
-                                <rect width="18" height="18" x="3" y="3" />
-                                <path stroke-linecap="round" d="M21 21L3 3 21 21zM21 3L3 21 21 3z" />
-                            </svg>
-                            <p>Logiciels</p>
-                        </div>
-                        <div class="outil">
-                            <!-- PlaceHolder -->
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" role="img"
-                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="placeholderIconTitle"
-                                stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter"
-                                fill="none" color="#000000">
-                                <title id="placeholderIconTitle">Placeholder</title>
-                                <rect width="18" height="18" x="3" y="3" />
-                                <path stroke-linecap="round" d="M21 21L3 3 21 21zM21 3L3 21 21 3z" />
-                            </svg>
-                            <p>Concepts</p>
-                        </div>
-                    </div>
+              </div>
+              <!-- Informations sur la compétence-->
+              <div class="info">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloremque tempore alias recusandae qui quaerat nihil dolorem
+                  sint eligendi possimus ex?
+                </p>
+                <div class="outils">
+                  <div class="outil">
+                    <!-- Logo html -->
+                    <?= $svg["html"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>HTML</h6>
+                  </div>
+                  <div class="outil">
+                    <!-- Logo css -->
+                    <?= $svg["css"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>CSS</h6>
+                  </div>
+                  <div class="outil">
+                    <!-- Logo javascript -->
+                    <?= $svg["javascript"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>JavaScript</h6>
+                  </div>
+                  <div class="outil">
+                    <!-- Logo wordpress -->
+                    <?= $svg["wordpress"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>WordPress</h6>
+                  </div>
                 </div>
+              </div>
             </div>
-            <!-- Exemples liés à la compétence -->
+            <!-- Partie dépliable -->
             <div class="competence-content">
-                <!-- Flèche gauche -->
-                <div>
-                    <img src="https://placehold.co/50x75?text=<" alt="" />
-                </div>
-                <article>
-                    <img src="https://placehold.co/250x250?text=Image+Accueil" alt="" />
-                    <legend>Légende</legend>
-                </article>
-                <article>
-                    <img src="https://placehold.co/250x250?text=Image+Accueil" alt="" />
-                    <legend>Légende</legend>
-                </article>
-                <article>
-                    <img src="https://placehold.co/250x250?text=Image+Accueil" alt="" />
-                    <legend>Légende</legend>
-                </article>
-                <!-- Flèche droite -->
-                <div>
-                    <img src="https://placehold.co/50x75?text=>" alt="" />
-                </div>
+              <!-- Flèche gauche -->
+              <div>
+                <img src="https://placehold.co/50x75?text=<" alt="" />
+              </div>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- Flèche droite -->
+              <div>
+                <img src="https://placehold.co/50x75?text=>" alt="" />
+              </div>
             </div>
-        </div>
+          </div>
+          <!-- Une compétence -->
+          <div class="competence-item">
+            <div class="competence-header">
+              <!-- button Ouverture et fermeture -->
+              <button class="top-right-button">
+                <!-- <?= $svg["x"]; ?> -->
+                <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <ellipse
+                      ry="30"
+                      rx="30"
+                      cy="31.25"
+                      cx="31.25"
+                      stroke-width="2.5"
+                      stroke="#00000"
+                      fill="transparent"
+                    />
+                    <ellipse
+                      ry="30"
+                      rx="30"
+                      class="circle"
+                      cy="31.25"
+                      cx="31.25"
+                      stroke-width="2.5"
+                      stroke="red"
+                      fill="transparent"
+                    />
+                    <line
+                      class="x-symbol"
+                      x1="16.25"
+                      y1="16.25"
+                      x2="46.25"
+                      y2="46.25"
+                      stroke="green"
+                      stroke-width="3.5"
+                    />
+                    <line
+                      class="x-symbol"
+                      x1="46.25"
+                      y1="16.25"
+                      x2="16.25"
+                      y2="46.25"
+                      stroke="green"
+                      stroke-width="3.5"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <!-- Logo de la compétence -->
+              <div class="logo">
+                <!-- nom -->
+                <h3>Design</h3>
+                <!-- cercle contour -->
+                <div class="contour" id="design">
+                    <!-- icone -->
+                    <!-- Importé depuis figma -->
+                    <?= $svg["design"]; ?>                  
+                </div>
+              </div>
+              <!-- Informations sur la compétence-->
+              <div class="info">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloremque tempore alias recusandae qui quaerat nihil dolorem
+                  sint eligendi possimus ex?
+                </p>
+                <div class="outils">
+                  <div class="outil">
+                    <!-- Logo figma -->
+                    <?= $svg["figma"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>Figma</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Partie dépliable -->
+            <div class="competence-content">
+              <!-- Flèche gauche -->
+              <div>
+                <img src="https://placehold.co/50x75?text=<" alt="" />
+              </div>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- Flèche droite -->
+              <div>
+                <img src="https://placehold.co/50x75?text=>" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- Une compétence -->
+          <div class="competence-item">
+            <div class="competence-header">
+              <!-- button Ouverture et fermeture -->
+              <button class="top-right-button">
+                <!-- <?= $svg["x"]; ?> -->
+                <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <ellipse
+                      ry="30"
+                      rx="30"
+                      cy="31.25"
+                      cx="31.25"
+                      stroke-width="2.5"
+                      stroke="#00000"
+                      fill="transparent"
+                    />
+                    <ellipse
+                      ry="30"
+                      rx="30"
+                      class="circle"
+                      cy="31.25"
+                      cx="31.25"
+                      stroke-width="2.5"
+                      stroke="red"
+                      fill="transparent"
+                    />
+                    <line
+                      class="x-symbol"
+                      x1="16.25"
+                      y1="16.25"
+                      x2="46.25"
+                      y2="46.25"
+                      stroke="green"
+                      stroke-width="3.5"
+                    />
+                    <line
+                      class="x-symbol"
+                      x1="46.25"
+                      y1="16.25"
+                      x2="16.25"
+                      y2="46.25"
+                      stroke="green"
+                      stroke-width="3.5"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <!-- Logo de la compétence -->
+              <div class="logo">
+                <!-- nom -->
+                <h3>Intégration</h3>
+                <!-- cercle contour -->
+                <div class="contour" id="jeux">
+                  <!-- icone -->
+                  <!-- Importé depuis figma -->
+                  <?= $svg["jeux"]; ?>                                    
+                </div>
+              </div>
+              <!-- Informations sur la compétence-->
+              <div class="info">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Doloremque tempore alias recusandae qui quaerat nihil dolorem
+                  sint eligendi possimus ex?
+                </p>
+                <div class="outils">
+                  <div class="outil">
+                    <!-- Logo unity -->
+                    <?= $svg["unity"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>Unity</h6>
+                  </div>
+                  <div class="outil">
+                    <!-- Logo c# -->
+                    <?= $svg["csharp"]; ?>
+                    <!-- nom logiciel -->
+                    <h6>C Sharp</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Partie dépliable -->
+            <div class="competence-content">
+              <!-- Flèche gauche -->
+              <div>
+                <img src="https://placehold.co/50x75?text=<" alt="" />
+              </div>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- // -->
+              <article>
+                <img
+                  src="https://placehold.co/250x250?text=Image+Accueil"
+                  alt=""
+                />
+                <legend>Légende</legend>
+              </article>
+              <!-- Flèche droite -->
+              <div>
+                <img src="https://placehold.co/50x75?text=>" alt="" />
+              </div>
+            </div>
+          </div>
     </section>
 </main>
 </div>
