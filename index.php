@@ -4,6 +4,10 @@ get_header();
 // Importe et décode le fichier svg.json 
 $svgJson = file_get_contents(__DIR__ . '/js/svg.json');
 $svg = json_decode($svgJson, true);
+// Importe et décode le fichier texte.json 
+$texteJson = file_get_contents(__DIR__ . '/js/texte.json');
+$texte = json_decode($texteJson, true);
+$_comp = $texte["competences"];
 ?>
 
 <!-- Main //////////////////////////////////////////////////////////////////////// -->
@@ -28,10 +32,13 @@ $svg = json_decode($svgJson, true);
     </section>
     <!-- Compétences ///////////////////////////////////////////////////////////////////// -->
     <section class="competences">
+        <?php foreach($_comp as $nomComp => $comp) :?>
           <!-- Une compétence -->
           <div class="competence-item">
+            <!-- Partie non pliable -->
             <div class="competence-header">
               <!-- button Ouverture et fermeture -->
+
               <button class="top-right-button">
                 <!-- L'animation fonctionne pas avec la référence -->
                 <!-- <?= $svg["x"]; ?> -->
@@ -80,517 +87,27 @@ $svg = json_decode($svgJson, true);
               <!-- Logo de la compétence -->
               <div class="logo">
                 <!-- nom -->
-                <h3>Montage</h3>
+                <h3><?= $comp["nom"]; ?></h3>
                 <!-- cercle contour -->
-                 <div class="contour" id="video">
-                <!-- icone -->
-                <?= $svg["video"]; ?>
-                 </div>
-              </div>
-              <!-- Informations sur la compétence-->
-              <div class="info">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Doloremque tempore alias recusandae qui quaerat nihil dolorem
-                  sint eligendi possimus ex?
-                </p>
-                <div class="outils">
-                  <div class="outil">
-                    <!-- Logo premiere pro -->
-                    <?= $svg["premiere"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>Premiere Pro</h6>
-                  </div>
-                  <div class="outil">
-                    <!-- Logo Audition -->
-                    <?= $svg["audition"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>Audition</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Partie dépliable -->
-            <div class="competence-content">
-              <!-- Flèche gauche -->
-              <div>
-                <img src="https://placehold.co/50x75?text=<" alt="" />
-              </div>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- Flèche droite -->
-              <div>
-                <img src="https://placehold.co/50x75?text=>" alt="" />
-              </div>
-            </div>
-          </div>
-          <!-- Une compétence -->
-          <div class="competence-item">
-            <div class="competence-header">
-              <!-- button Ouverture et fermeture -->
-              <button class="top-right-button">
-                <!-- <?= $svg["x"]; ?> -->
-                <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
-                  <g>
-                    <ellipse
-                      ry="30"
-                      rx="30"
-                      cy="31.25"
-                      cx="31.25"
-                      stroke-width="2.5"
-                      stroke="#00000"
-                      fill="transparent"
-                    />
-                    <ellipse
-                      ry="30"
-                      rx="30"
-                      class="circle"
-                      cy="31.25"
-                      cx="31.25"
-                      stroke-width="2.5"
-                      stroke="red"
-                      fill="transparent"
-                    />
-                    <line
-                      class="x-symbol"
-                      x1="16.25"
-                      y1="16.25"
-                      x2="46.25"
-                      y2="46.25"
-                      stroke="green"
-                      stroke-width="3.5"
-                    />
-                    <line
-                      class="x-symbol"
-                      x1="46.25"
-                      y1="16.25"
-                      x2="16.25"
-                      y2="46.25"
-                      stroke="green"
-                      stroke-width="3.5"
-                    />
-                  </g>
-                </svg>
-              </button>
-              <!-- Logo de la compétence -->
-              <div class="logo">
-                <!-- nom -->
-                <h3>Création</h3>
-                <!-- cercle contour -->
-                <div class="contour" id="_3d">
-                    <!-- icone -->
-                    <!-- Importé depuis figma -->
-                    <?= $svg["_3d"]; ?>  
-                </div>
-              </div>
-              <!-- Informations sur la compétence-->
-              <div class="info">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Doloremque tempore alias recusandae qui quaerat nihil dolorem
-                  sint eligendi possimus ex?
-                </p>
-                <div class="outils">
-                  <div class="outil">
-                    <!-- Logo photoshop -->
-                    <?= $svg["photoshop"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>Photoshop</h6>
-                  </div>
-                  <div class="outil">
-                    <!-- Logo Illustrator -->
-                    <?= $svg["illustrator"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>Illustrator</h6>
-                  </div>
-                  <div class="outil">
-                    <!-- Logo Maya -->
-                    <?= $svg["maya"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>Maya</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Partie dépliable -->
-            <div class="competence-content">
-              <!-- Flèche gauche -->
-              <div>
-                <img src="https://placehold.co/50x75?text=<" alt="" />
-              </div>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- Flèche droite -->
-              <div>
-                <img src="https://placehold.co/50x75?text=>" alt="" />
-              </div>
-            </div>
-          </div>
-          <!-- Une compétence -->
-          <div class="competence-item">
-            <div class="competence-header">
-              <!-- button Ouverture et fermeture -->
-              <button class="top-right-button">
-                <!-- <?= $svg["x"]; ?> -->
-                <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
-                  <g>
-                    <ellipse
-                      ry="30"
-                      rx="30"
-                      cy="31.25"
-                      cx="31.25"
-                      stroke-width="2.5"
-                      stroke="#00000"
-                      fill="transparent"
-                    />
-                    <ellipse
-                      ry="30"
-                      rx="30"
-                      class="circle"
-                      cy="31.25"
-                      cx="31.25"
-                      stroke-width="2.5"
-                      stroke="red"
-                      fill="transparent"
-                    />
-                    <line
-                      class="x-symbol"
-                      x1="16.25"
-                      y1="16.25"
-                      x2="46.25"
-                      y2="46.25"
-                      stroke="green"
-                      stroke-width="3.5"
-                    />
-                    <line
-                      class="x-symbol"
-                      x1="46.25"
-                      y1="16.25"
-                      x2="16.25"
-                      y2="46.25"
-                      stroke="green"
-                      stroke-width="3.5"
-                    />
-                  </g>
-                </svg>
-              </button>
-              <!-- Logo de la compétence -->
-              <div class="logo">
-                <!-- nom -->
-                <h3>Programmation</h3>
-                <!-- cercle contour -->
-                <div class="contour" id="web">
-                    <!-- icone -->
-                    <!-- Importé depuis figma -->
-                    <?= $svg["web"]; ?>
-                </div>
-              </div>
-              <!-- Informations sur la compétence-->
-              <div class="info">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Doloremque tempore alias recusandae qui quaerat nihil dolorem
-                  sint eligendi possimus ex?
-                </p>
-                <div class="outils">
-                  <div class="outil">
-                    <!-- Logo html -->
-                    <?= $svg["html"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>HTML</h6>
-                  </div>
-                  <div class="outil">
-                    <!-- Logo css -->
-                    <?= $svg["css"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>CSS</h6>
-                  </div>
-                  <div class="outil">
-                    <!-- Logo javascript -->
-                    <?= $svg["javascript"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>JavaScript</h6>
-                  </div>
-                  <div class="outil">
-                    <!-- Logo wordpress -->
-                    <?= $svg["wordpress"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>WordPress</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Partie dépliable -->
-            <div class="competence-content">
-              <!-- Flèche gauche -->
-              <div>
-                <img src="https://placehold.co/50x75?text=<" alt="" />
-              </div>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- Flèche droite -->
-              <div>
-                <img src="https://placehold.co/50x75?text=>" alt="" />
-              </div>
-            </div>
-          </div>
-          <!-- Une compétence -->
-          <div class="competence-item">
-            <div class="competence-header">
-              <!-- button Ouverture et fermeture -->
-              <button class="top-right-button">
-                <!-- <?= $svg["x"]; ?> -->
-                <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
-                  <g>
-                    <ellipse
-                      ry="30"
-                      rx="30"
-                      cy="31.25"
-                      cx="31.25"
-                      stroke-width="2.5"
-                      stroke="#00000"
-                      fill="transparent"
-                    />
-                    <ellipse
-                      ry="30"
-                      rx="30"
-                      class="circle"
-                      cy="31.25"
-                      cx="31.25"
-                      stroke-width="2.5"
-                      stroke="red"
-                      fill="transparent"
-                    />
-                    <line
-                      class="x-symbol"
-                      x1="16.25"
-                      y1="16.25"
-                      x2="46.25"
-                      y2="46.25"
-                      stroke="green"
-                      stroke-width="3.5"
-                    />
-                    <line
-                      class="x-symbol"
-                      x1="46.25"
-                      y1="16.25"
-                      x2="16.25"
-                      y2="46.25"
-                      stroke="green"
-                      stroke-width="3.5"
-                    />
-                  </g>
-                </svg>
-              </button>
-              <!-- Logo de la compétence -->
-              <div class="logo">
-                <!-- nom -->
-                <h3>Design</h3>
-                <!-- cercle contour -->
-                <div class="contour" id="design">
-                    <!-- icone -->
-                    <!-- Importé depuis figma -->
-                    <?= $svg["design"]; ?>                  
-                </div>
-              </div>
-              <!-- Informations sur la compétence-->
-              <div class="info">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Doloremque tempore alias recusandae qui quaerat nihil dolorem
-                  sint eligendi possimus ex?
-                </p>
-                <div class="outils">
-                  <div class="outil">
-                    <!-- Logo figma -->
-                    <?= $svg["figma"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>Figma</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Partie dépliable -->
-            <div class="competence-content">
-              <!-- Flèche gauche -->
-              <div>
-                <img src="https://placehold.co/50x75?text=<" alt="" />
-              </div>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- Flèche droite -->
-              <div>
-                <img src="https://placehold.co/50x75?text=>" alt="" />
-              </div>
-            </div>
-          </div>
-          <!-- Une compétence -->
-          <div class="competence-item">
-            <div class="competence-header">
-              <!-- button Ouverture et fermeture -->
-              <button class="top-right-button">
-                <!-- <?= $svg["x"]; ?> -->
-                <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
-                  <g>
-                    <ellipse
-                      ry="30"
-                      rx="30"
-                      cy="31.25"
-                      cx="31.25"
-                      stroke-width="2.5"
-                      stroke="#00000"
-                      fill="transparent"
-                    />
-                    <ellipse
-                      ry="30"
-                      rx="30"
-                      class="circle"
-                      cy="31.25"
-                      cx="31.25"
-                      stroke-width="2.5"
-                      stroke="red"
-                      fill="transparent"
-                    />
-                    <line
-                      class="x-symbol"
-                      x1="16.25"
-                      y1="16.25"
-                      x2="46.25"
-                      y2="46.25"
-                      stroke="green"
-                      stroke-width="3.5"
-                    />
-                    <line
-                      class="x-symbol"
-                      x1="46.25"
-                      y1="16.25"
-                      x2="16.25"
-                      y2="46.25"
-                      stroke="green"
-                      stroke-width="3.5"
-                    />
-                  </g>
-                </svg>
-              </button>
-              <!-- Logo de la compétence -->
-              <div class="logo">
-                <!-- nom -->
-                <h3>Intégration</h3>
-                <!-- cercle contour -->
-                <div class="contour" id="jeux">
+                <div class="contour" id="<?= $nomComp; ?>">
                   <!-- icone -->
-                  <!-- Importé depuis figma -->
-                  <?= $svg["jeux"]; ?>                                    
+                  <?= $svg[$nomComp]; ?>
                 </div>
               </div>
               <!-- Informations sur la compétence-->
               <div class="info">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Doloremque tempore alias recusandae qui quaerat nihil dolorem
-                  sint eligendi possimus ex?
-                </p>
+                <!-- description -->
+                <p><?= $comp["desc"]; ?></p>
+                <!-- Outils -->
                 <div class="outils">
-                  <div class="outil">
-                    <!-- Logo unity -->
-                    <?= $svg["unity"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>Unity</h6>
-                  </div>
-                  <div class="outil">
-                    <!-- Logo c# -->
-                    <?= $svg["csharp"]; ?>
-                    <!-- nom logiciel -->
-                    <h6>C Sharp</h6>
-                  </div>
+                  <?php foreach($comp["outils"] as $outil) : ?>
+                    <div class="outil">
+                      <!-- Logo logiciel -->
+                      <?= $svg[$comp["svg"][$outil]]; ?>
+                      <!-- Nom logiciel -->
+                      <h6><?= $outil; ?></h6>
+                    </div>
+                  <?php endforeach ?>
                 </div>
               </div>
             </div>
@@ -630,6 +147,7 @@ $svg = json_decode($svgJson, true);
               </div>
             </div>
           </div>
+        <?php endforeach ?>
     </section>
 </main>
 </div>
