@@ -100,12 +100,12 @@ $_comp = $texte["competences"];
                 <p><?= $comp["desc"]; ?></p>
                 <!-- Outils -->
                 <div class="outils">
-                  <?php foreach($comp["outils"] as $outil) : ?>
+                <?php foreach($comp["outils"] as $nomOutil => $outil) : ?>
                     <div class="outil">
                       <!-- Logo logiciel -->
-                      <?= $svg[$comp["svg"][$outil]]; ?>
+                      <?= $svg[$outil]; ?>
                       <!-- Nom logiciel -->
-                      <h6><?= $outil; ?></h6>
+                      <h6><?= $nomOutil; ?></h6>
                     </div>
                   <?php endforeach ?>
                 </div>

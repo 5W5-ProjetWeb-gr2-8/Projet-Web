@@ -3,8 +3,7 @@
         "video": {
             "nom": "Montage",
             "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque tempore alias recusandae qui quaerat nihil dolorem sint eligendi possimus ex?",
-            "outils": ["Premiere Pro", "Audition"],
-            "svg": {
+            "outils": {
                 "Premiere Pro": "premiere",
                 "Audition": "audition"
             }
@@ -12,16 +11,14 @@
         "design": {
             "nom": "Design",
             "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque tempore alias recusandae qui quaerat nihil dolorem sint eligendi possimus ex?",
-            "outils": ["Figma"],
-            "svg": {
+            "outils": {
                 "Figma": "figma"
             }
         },
         "jeux": {
             "nom": "Intégration",
             "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque tempore alias recusandae qui quaerat nihil dolorem sint eligendi possimus ex?",
-            "outils": ["Unity", "C Sharp"],
-            "svg": {
+            "outils": {
                 "Unity": "unity",
                 "C Sharp": "csharp"
             }
@@ -29,8 +26,7 @@
         "web": {
             "nom": "Programmation",
             "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque tempore alias recusandae qui quaerat nihil dolorem sint eligendi possimus ex?",
-            "outils": ["Html", "Css", "JavaScript", "WordPress"],
-            "svg": {
+            "outils": {
                 "Html": "html",
                 "JavaScript": "javascript",
                 "Css": "css",
@@ -40,8 +36,7 @@
         "_3d": {
             "nom": "Création",
             "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque tempore alias recusandae qui quaerat nihil dolorem sint eligendi possimus ex?",
-            "outils": ["Photoshop", "Illustrator", "Maya"],
-            "svg": {
+            "outils": {
                 "Photoshop": "photoshop",
                 "Illustrator": "illustrator",
                 "Maya": "maya"
