@@ -1209,16 +1209,25 @@ section.competences div.competence-item .competence-header .info .outils .outil 
   fill: white;
 }
 section.competences div.competence-item .competence-content {
+  display: relative;
   justify-content: space-between;
   align-items: center;
   display: none;
-  padding: 1rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
+  padding: var(--espacement);
   overflow: hidden;
+  column-gap: var(--espacement);
 }
-section.competences div.competence-item .competence-content img {
-  border-radius: 12px;
+section.competences div.competence-item .competence-content article .miniature {
+  height: 225px; /* variable à changer */
+  width: 400px; /* variable à changer */
+  border: black solid 1px;
+}
+section.competences div.competence-item .competence-content article .miniature img {
+  height: 100%;
+}
+section.competences div.competence-item .competence-content article .miniature h4 {
+  margin-top: var(--espacement);
+  text-align: center;
 }
 section.competences div.competence-item.active .competence-content {
   display: flex;

@@ -124,7 +124,7 @@ section.competences {
         box-sizing: border-box;
         flex-basis: 70%;
         // texte descriptif
-        &>p {
+        & > p {
           margin-bottom: var(--espacement);
           text-align: center;
           @media (min-width: 768px) {
@@ -148,7 +148,7 @@ section.competences {
             gap: 1rem;
             align-items: center;
             text-wrap: nowrap;
-            
+
             // icone
             svg {
               height: var(--taille-icone);
@@ -163,20 +163,38 @@ section.competences {
     // Carrousel d'exemples
     .competence-content {
       // background-color: red; /*TEMPORAIRE*/
-      //   display: flex;
+      display: relative;
       justify-content: space-between;
       align-items: center;
 
       display: none;
-      padding: 1rem;
-      font-size: 1.2rem;
-      line-height: 1.6;
+      padding: var(--espacement);
       overflow: hidden;
-      img {
-        border-radius: 12px;
+      column-gap: var(--espacement);
+
+      .flecheGauche {}
+
+      article {
+        .miniature {
+          height: 225px; /* variable à changer */
+          width: 400px; /* variable à changer */
+          border: black solid 1px;
+          img {
+            height: 100%;
+            // object-fit: cover;
+          }
+
+          h4 {
+            margin-top: var(--espacement);
+            text-align: center;
+          }
+        }
+
+        img {
+          // border-radius: 12px;
+        }
       }
     }
-
     // Quand on clique sur la compétence : elle se déplie
     &.active .competence-content {
       display: flex;
