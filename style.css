@@ -892,29 +892,118 @@ button.btn-cours:focus {
   transition: opacity 0.75s;
 }
 
-.pro_filtre_web,
+.gal_proj_web,
 .filtre_web {
   background-color: #25CF56;
 }
 
-.pro_filtre_jeu,
+.gal_proj_jeu,
 .filtre_jeu {
   background-color: #25AFCF;
 }
 
-.pro_filtre_3d,
+.gal_proj_3d,
 .filtre_3d {
   background-color: #FFCA92;
 }
 
-.pro_filtre_video,
+.gal_proj_video,
 .filtre_video {
   background-color: #9B92FF;
 }
 
-.pro_filtre_ui,
+.gal_proj_ui,
 .filtre_ui {
   background-color: #FF92DE;
+}
+
+#projet_specifique {
+  padding: 2vh 0%;
+}
+#projet_specifique .fond_projet {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  background-color: #2B2B2B;
+}
+#projet_specifique .fond_projet .titre_projet {
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+#projet_specifique .fond_projet .infos_projet {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.1rem 1rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet {
+  margin-top: 1rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.1rem 1rem;
+  font-weight: bold;
+}
+#projet_specifique .fond_projet .infos_projet .auteurs_projet {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#projet_specifique .fond_projet .infos_projet .auteurs_projet .auteur {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0;
+}
+#projet_specifique .fond_projet .desc_projet {
+  max-width: 95vw;
+}
+#projet_specifique .fond_projet .desc_projet .desc {
+  font-weight: bold;
+}
+#projet_specifique .projet_3d {
+  background-color: #FFCA92;
+  border: 7px solid #572D00;
+  color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+}
+#projet_specifique .projet_web {
+  background-color: #25CF56;
+  border: 1px solid #005719;
+}
+#projet_specifique .projet_video {
+  background-color: #9B92FF;
+  border: 1px solid #070057;
+}
+#projet_specifique .projet_ui {
+  background-color: #FF92DE;
+  border: 1px solid #57003D;
+}
+#projet_specifique .projet_jeu {
+  background-color: #25AFCF;
+  border: 7px solid #004657;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 /* ////////////////////////////////////////// */

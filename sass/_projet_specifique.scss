@@ -1,0 +1,103 @@
+#projet_specifique{
+    padding: 2vh 0%;
+    
+    .fond_projet{
+        display: flex;
+        flex-flow: column  nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100vw;
+        background-color: #2B2B2B;
+
+        .titre_projet{
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+
+        .infos_projet{
+            display: flex;
+            flex-flow: column nowrap;
+            
+            .infos_specifiques{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                .type_projet{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0.1rem 1rem;
+
+                    .les_types{
+                        display: flex;
+                        justify-content: space-around;
+                        flex-flow: row nowrap;
+                    }
+
+                }
+
+                .cours_projet{
+                    margin-top: 1rem;
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0.1rem 1rem;
+
+                    font-weight: bold;
+                }
+            }
+
+            .auteurs_projet{
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .auteur{
+                    text-align: center;
+                    margin-top: 1rem;
+                    padding: 0;
+                }
+            }
+
+        }
+
+        .desc_projet{
+            max-width: 95vw;
+            .desc{
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .projet_3d{
+        background-color: #FFCA92;
+        border: 7px solid #572D00;
+        color: black;
+        border-radius: 1rem;
+        padding: 1rem;
+        font-weight: bold;
+    }
+    
+    .projet_web{
+        background-color: #25CF56;
+        border: 1px solid #005719;
+    }
+    .projet_video{
+        background-color: #9B92FF;
+        border: 1px solid #070057;
+    }
+    .projet_ui{
+        background-color: #FF92DE;
+        border: 1px solid #57003D;
+    }
+    .projet_jeu{
+        background-color: #25AFCF;
+        border: 7px solid #004657;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+}
