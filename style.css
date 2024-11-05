@@ -17,7 +17,6 @@ Ce thème a été développé dans le cadre du cours 4W4
 /* Variables css                              */
 /* ////////////////////////////////////////// */
 :root {
-  --couleur-noir: black;
   --couleur-web-fond: #92ffb1;
   --couleur-web-bordure: #005719;
   --couleur-web: #3ce36a;
@@ -260,7 +259,7 @@ nav.menu div.menu_contenu .menu_hamburger span {
     position: absolute;
     top: 10vh;
     left: 0;
-    background-color: var(--couleur-noir);
+    background-color: var(--couleur-fond);
     z-index: 99;
   }
   nav.menu div.menu_contenu .menu_liste.active {
@@ -1284,7 +1283,7 @@ section.competences div.competence-item.active .competence-content {
 }
 .menu-menu-principal-container .menu li a {
   text-decoration: none;
-  color: var(--couleur-noir);
+  color: var(--couleur-fond);
   font-weight: bold;
   padding: 0.5rem 1rem;
   transition: color 0.3s;
@@ -1296,7 +1295,7 @@ section.competences div.competence-item.active .competence-content {
   .menu-menu-principal-container .menu {
     display: none;
     flex-direction: column;
-    background-color: var(--couleur-noir);
+    background-color: var(--couleur-fond);
     position: absolute;
     width: 100%;
     left: 0;
