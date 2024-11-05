@@ -87,7 +87,7 @@ nav.menu {
         position: absolute;
         top: 10vh;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: var(--couleur-noir);
         z-index: 99;
 
         &.active {
