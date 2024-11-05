@@ -34,7 +34,6 @@
                         </a>
 
                     </p>
-                    <p class="inscription">Inscription</p>
 
                     <button id="menu-burger-wordpress" aria-label="Menu">
                         &#9776; <!-- Icône burger -->
