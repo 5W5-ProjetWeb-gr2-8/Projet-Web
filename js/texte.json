@@ -7,6 +7,11 @@
                 "Premiere Pro": "premiere",
                 "Audition": "audition",
                 "After Effects": "aftereffects"
+            },
+            "projets": {
+                "Disparu dans le vent": "src/miniature",
+                "Disparu dans le vent2": "src/miniature",
+                "Disparu dans le vent3": "src/miniature"
             }
         },
         "design": {
@@ -14,6 +19,11 @@
             "desc": "Précédemment avec le logiciel Adobe XD, mais désormais avec Figma, l'étudiant apprend à concevoir des expériences interactives en plaçant les besoins de l'utilisateur au coeur de ses créations. Il réalisera notamment un prototype accompagné d'un petit blog pour montrer ses avancements et réaliser des tests utilisateurs pour améliorer sa maquette selon la rétrospective reçue lors des tests.",
             "outils": {
                 "Figma": "figma"
+            },
+            "projets": {
+                "Disparu dans le vent": "src/miniature",
+                "Disparu dans le vent2": "src/miniature",
+                "Disparu dans le vent3": "src/miniature"
             }
         },
         "jeux": {
@@ -22,6 +32,11 @@
             "outils": {
                 "Unity": "unity",
                 "C Sharp": "csharp"
+            },
+            "projets": {
+                "Disparu dans le vent": "src/miniature",
+                "Disparu dans le vent2": "src/miniature",
+                "Disparu dans le vent3": "src/miniature"
             }
         },
         "web": {
@@ -32,6 +47,11 @@
                 "JavaScript": "javascript",
                 "Css": "css",
                 "WordPress": "wordpress"
+            },
+            "projets": {
+                "Disparu dans le vent": "src/miniature",
+                "Disparu dans le vent2": "src/miniature",
+                "Disparu dans le vent3": "src/miniature"
             }
         },
         "_3d": {
@@ -41,7 +61,13 @@
                 "Photoshop": "photoshop",
                 "Illustrator": "illustrator",
                 "Maya": "maya"
+            },
+            "projets": {
+                "Disparu dans le vent": "src/miniature",
+                "Disparu dans le vent2": "src/miniature",
+                "Disparu dans le vent3": "src/miniature"
             }
         }
-    }
+    },
+    "prespro": "C'est l'ensemble des techniques et des produits qui permettent l'utilisation simultanée et interactive de plusieurs modes de représentation de l'information (textes, sons, images fixes ou animées). La technique d'intégration multimédia (TIM) du Collège  de Maisonneuve est parfaite pour devenir un connaisseur du multimédia. Elle forme des spécialistes en conception, développement  et intégration de contenus numériques interactifs. Les diplômés  maîtrisent la création d'expériences utilisateur engageantes sur  des plateformes variées, incluant sites web, jeux vidéo et autres  plateformes numériques. Le programme encourage une approche  interdisciplinaire, où créativité et logique se rencontrent pour  répondre aux besoins d'un marché en constante évolution."
 }

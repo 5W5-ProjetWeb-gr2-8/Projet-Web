@@ -18,17 +18,10 @@ $_comp = $texte["competences"];
             <h1><?php bloginfo('name'); ?></h1>
         </div>
     </section>
-
     <!-- Présentation Programme -->
     <section class="presPro">
         <h2>C'est quoi le <span>Multimédia ?</span></h2>
-        <p>
-            C'est l'ensemble des techniques et des produits qui permettent
-            l'utilisation simultanée et interactive de plusieurs modes de
-            représentation de l'information (textes, sons, images fixes ou
-            animées). La technique est parfaite pour devenir un connaisseur du
-            multimédia. Le programme est un mélange de créativité et de logique...
-        </p>
+        <p><?= $texte["prespro"]; ?></p>
     </section>
     <!-- Compétences ///////////////////////////////////////////////////////////////////// -->
     <section class="competences">
@@ -38,7 +31,6 @@ $_comp = $texte["competences"];
             <!-- Partie non pliable -->
             <div class="competence-header">
               <!-- button Ouverture et fermeture -->
-
               <button class="top-right-button">
                 <!-- L'animation fonctionne pas avec la référence -->
                 <!-- <?= $svg["x"]; ?> -->
@@ -114,43 +106,45 @@ $_comp = $texte["competences"];
             <!-- Partie dépliable -->
             <div class="competence-content">
               <!-- Flèche gauche -->
-              <div>
-                <img src="https://placehold.co/50x75?text=<" alt="" />
+              <div class="flecheGauche">
+                &#9664;
               </div>
-              <!-- // -->
+              <!-- un projet -->
               <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
+                <!-- image du projet -->
+                <div class="miniature inactif">
+                  <img src="images/projets-etudiants/dystopie_chronique.png" alt="image projet">
+                </div>
+                <!-- nom ou type du projet -->
+                <h4><?= $comp["projets"]["Disparu dans le vent"]; ?></h4>
               </article>
-              <!-- // -->
+              <!-- un projet -->
               <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
+                <!-- image du projet -->
+                <div class="miniature">
+                  <img src="images/projets-etudiants/dystopie_chronique.png" alt="image projet">
+                </div>
+                <!-- nom ou type du projet -->
+                <h4>Chroniques Dystopiques</h4>
               </article>
-              <!-- // -->
+              <!-- un projet -->
               <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
+                <!-- image du projet -->
+                <div class="miniature inactif">
+                  <img src="images/projets-etudiants/dystopie_chronique.png" alt="image projet">
+                </div>
+                <!-- nom ou type du projet -->
+                <h4>Chroniques Dystopiques</h4>
               </article>
               <!-- Flèche droite -->
-              <div>
-                <img src="https://placehold.co/50x75?text=>" alt="" />
+              <div class="flecheDroite">
+                &#9654;
               </div>
             </div>
           </div>
         <?php endforeach ?>
     </section>
 </main>
-</div>
 <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
 <section class="galerie-projets">
     <h2 class="galerie-titre">Projets étudiants</h2>
