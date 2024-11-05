@@ -186,6 +186,8 @@ $_comp = $texte["competences"];
     </div>
 </section>
 
+<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode ?>
+
 <!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
 
 <?php get_template_part('template', 'faq'); ?>
