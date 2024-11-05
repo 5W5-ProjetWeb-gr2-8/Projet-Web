@@ -68,7 +68,7 @@ section.competences {
         row-gap: 0.5rem;
         flex-basis: 25%;
         align-items: center;
-        flex-direction: row-reverse;
+        flex-direction: column-reverse;
         @media (min-width: 768px) {
           flex-direction: column;
           text-align: center;
@@ -160,38 +160,76 @@ section.competences {
       }
     }
 
-    // Carrousel d'exemples
+    // Carrousel d'exemples de projet
     .competence-content {
-      // background-color: red; /*TEMPORAIRE*/
-      display: relative;
+      position: relative; // pour les flèches
       justify-content: space-between;
       align-items: center;
-
-      display: none;
+      display: none; // change avec le bouton X
       padding: var(--espacement);
       overflow: hidden;
       column-gap: var(--espacement);
 
-      .flecheGauche {}
+      // flèches du carrousel
+      .flecheGauche,
+      .flecheDroite {
+        position: absolute;
+        border: none;
+        // centre verticalement
+        transform: translateY(-50%);
+        font-size: var(--h3);
+        color: #dbb2ab; /* variable à changer */
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      .flecheGauche {
+        left: 10px;
+      }
+      .flecheDroite {
+        right: 10px;
+      }
 
       article {
         .miniature {
           height: 225px; /* variable à changer */
           width: 400px; /* variable à changer */
-          border: black solid 1px;
+          position: relative;
+
+          &.inactif {
+            // height: 171px;
+            // width: 304px;
+            &::after {
+              content: "";
+              position: absolute;
+              background-color: rgba(0, 0, 0, 0.7);
+              top: 0;
+              left: 0;
+              right: -2px; //jsp pk cest pas 0px
+              bottom: 0;
+          }
+
+          //// Javascript à voir ////
+          // &.actif::after {
+          //   content: "";
+          //   position: absolute;
+          //   top: 0;
+          //   left: 0;
+          //   right: -2px; //jsp pk cest pas 0px
+          //   bottom: 0;
+          //   background-color: rgba(0, 0, 0, 0);
+          // }
+
+          }
           img {
             height: 100%;
             // object-fit: cover;
           }
-
-          h4 {
-            margin-top: var(--espacement);
-            text-align: center;
-          }
         }
 
-        img {
-          // border-radius: 12px;
+        h4 {
+          margin-top: var(--espacement);
+          text-align: center;
         }
       }
     }
