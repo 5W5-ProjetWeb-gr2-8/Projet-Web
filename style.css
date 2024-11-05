@@ -764,20 +764,27 @@ button.btn-cours:focus {
 .section_filtres {
   width: 90%;
   display: flex;
-  flex-flow: nowrap row;
+  flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-@media (min-width: 375px) and (max-width: 1000px) {
+.section_filtres .titre_section_filtre {
+  align-self: flex-start;
+}
+@media (min-width: 1001px) {
   .section_filtres {
-    flex-flow: column nowrap;
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
+}
+@media (min-width: 1240px) {
+  .section_filtres {
+    flex-flow: nowrap row;
+  }
   .section_filtres .titre_section_filtre {
-    align-self: flex-start;
+    align-self: center;
   }
 }
 .section_filtres p,
@@ -790,15 +797,15 @@ button.btn-cours:focus {
 .section_filtres .les_filtres {
   color: black;
   display: flex;
-  flex-flow: nowrap row;
+  flex-flow: row wrap;
   flex: 0 1 80%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
-@media (min-width: 375px) and (max-width: 1000px) {
+@media (min-width: 1001px) {
   .section_filtres .les_filtres {
-    flex-flow: row wrap;
-    justify-content: space-around;
+    flex-flow: nowrap row;
+    justify-content: space-between;
   }
 }
 .section_filtres .les_filtres .conteneur_filtre input {
@@ -814,9 +821,10 @@ button.btn-cours:focus {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  width: 5rem;
-  padding: 0.75rem 5rem;
-  border-radius: 30px;
+  width: clamp(3rem, 1.4645vw + 2.6568rem, 5rem);
+  padding: clamp(0.5rem, 0.1831vw + 0.4571rem, 0.75rem) clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
+  border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
+  margin-top: 1rem;
   border: 1px solid rgba(0, 0, 0, 0);
   transition: background-color 0.5s, color 0.5s, border 0.5s;
 }
@@ -824,12 +832,9 @@ button.btn-cours:focus {
   color: white;
   background-color: black;
 }
-@media (min-width: 375px) and (max-width: 1000px) {
+@media (min-width: 1240px) {
   .section_filtres .les_filtres .conteneur_filtre .filtre {
-    width: 3rem;
-    padding: 0.5rem 4rem;
-    border-radius: 20px;
-    margin-top: 1rem;
+    margin-top: 0rem;
   }
 }
 
