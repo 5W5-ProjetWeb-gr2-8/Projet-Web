@@ -1186,7 +1186,6 @@ section.competences div.competence-item .competence-header .info {
 }
 section.competences div.competence-item .competence-header .info > p {
   margin-bottom: var(--espacement);
-  text-align: center;
 }
 @media (min-width: 768px) {
   section.competences div.competence-item .competence-header .info > p {
@@ -1196,7 +1195,6 @@ section.competences div.competence-item .competence-header .info > p {
 section.competences div.competence-item .competence-header .info .outils {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   column-gap: var(--espacement);
   align-items: center;
 }
@@ -1298,7 +1296,7 @@ section.competences div.competence-item.active .competence-content {
   .menu-menu-principal-container .menu {
     display: none;
     flex-direction: column;
-    background-color: #333;
+    background-color: var(--couleur-noir);
     position: absolute;
     width: 100%;
     left: 0;

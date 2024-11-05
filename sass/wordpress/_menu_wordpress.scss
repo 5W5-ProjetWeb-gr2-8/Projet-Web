@@ -29,7 +29,7 @@
     @media (max-width: 768px) {
       display: none; // Masquer le menu par défaut
       flex-direction: column; // Alignement vertical
-      background-color: #333; // Fond gris
+      background-color: var(--couleur-noir);
       position: absolute;
       width: 100%; // Prendre toute la largeur
       left: 0; // Alignement à gauche
