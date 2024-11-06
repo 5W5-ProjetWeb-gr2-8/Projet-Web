@@ -9,9 +9,9 @@
                 "After Effects": "aftereffects"
             },
             "projets": {
-                "Disparu dans le vent": "src/miniature",
-                "Disparu dans le vent2": "src/miniature",
-                "Disparu dans le vent3": "src/miniature"
+                "Chroniques Dystopiques": "dystopie_chronique.png",
+                "Inserxion": "inserxion.png",
+                "Lacryma": "lacryma.jpg"
             }
         },
         "design": {
@@ -21,9 +21,9 @@
                 "Figma": "figma"
             },
             "projets": {
-                "Disparu dans le vent": "src/miniature",
-                "Disparu dans le vent2": "src/miniature",
-                "Disparu dans le vent3": "src/miniature"
+                "Chroniques Dystopiques": "dystopie_chronique.png",
+                "Inserxion": "inserxion.png",
+                "Lacryma": "lacryma.jpg"
             }
         },
         "jeux": {
@@ -34,9 +34,9 @@
                 "C Sharp": "csharp"
             },
             "projets": {
-                "Disparu dans le vent": "src/miniature",
-                "Disparu dans le vent2": "src/miniature",
-                "Disparu dans le vent3": "src/miniature"
+                "Chroniques Dystopiques": "dystopie_chronique.png",
+                "Inserxion": "inserxion.png",
+                "Lacryma": "lacryma.jpg"
             }
         },
         "web": {
@@ -49,9 +49,9 @@
                 "WordPress": "wordpress"
             },
             "projets": {
-                "Disparu dans le vent": "src/miniature",
-                "Disparu dans le vent2": "src/miniature",
-                "Disparu dans le vent3": "src/miniature"
+                "Chroniques Dystopiques": "dystopie_chronique.png",
+                "Inserxion": "inserxion.png",
+                "Lacryma": "lacryma.jpg"
             }
         },
         "_3d": {
@@ -63,9 +63,9 @@
                 "Maya": "maya"
             },
             "projets": {
-                "Disparu dans le vent": "src/miniature",
-                "Disparu dans le vent2": "src/miniature",
-                "Disparu dans le vent3": "src/miniature"
+                "Chroniques Dystopiques": "dystopie_chronique.png",
+                "Inserxion": "inserxion.png",
+                "Lacryma": "lacryma.jpg"
             }
         }
     },

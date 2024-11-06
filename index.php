@@ -109,33 +109,19 @@ $_comp = $texte["competences"];
               <div class="flecheGauche">
                 &#9664;
               </div>
-              <!-- un projet -->
-              <article>
-                <!-- image du projet -->
-                <div class="miniature inactif">
-                  <img src="images/projets-etudiants/dystopie_chronique.png" alt="image projet">
-                </div>
-                <!-- nom ou type du projet -->
-                <h4><?= $comp["projets"]["Disparu dans le vent"]; ?></h4>
-              </article>
-              <!-- un projet -->
-              <article>
-                <!-- image du projet -->
-                <div class="miniature">
-                  <img src="images/projets-etudiants/dystopie_chronique.png" alt="image projet">
-                </div>
-                <!-- nom ou type du projet -->
-                <h4>Chroniques Dystopiques</h4>
-              </article>
-              <!-- un projet -->
-              <article>
-                <!-- image du projet -->
-                <div class="miniature inactif">
-                  <img src="images/projets-etudiants/dystopie_chronique.png" alt="image projet">
-                </div>
-                <!-- nom ou type du projet -->
-                <h4>Chroniques Dystopiques</h4>
-              </article>
+              <!-- Boucle qui affiche tous les projets -->
+              <?php foreach($comp["projets"] as $projet=>$srcProj) :?>
+                <!-- un projet -->
+                <article>
+                  <!-- image du projet -->
+                  <div class="miniature inactif">
+                    <!-- wordpress refuse d'afficher les fichiers locaux -->
+                    <img src="<?=(__DIR__ . 'images/projets-etudiants/' . $srcProj); ?>" alt="<?= $projet; ?>">
+                  </div>
+                  <!-- nom ou type du projet -->
+                  <h4><?= $projet; ?></h4>
+                </article>
+              <?php endforeach ?>
               <!-- Flèche droite -->
               <div class="flecheDroite">
                 &#9654;
