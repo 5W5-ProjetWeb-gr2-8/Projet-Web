@@ -1092,6 +1092,7 @@ section.competences div.competence-item .top-right-button {
   right: -1.5rem; /* variable à changer */
   margin-bottom: 2rem;
   cursor: pointer;
+  rotate: 45deg;
 }
 section.competences div.competence-item .top-right-button .svg_1 {
   width: 75px;
