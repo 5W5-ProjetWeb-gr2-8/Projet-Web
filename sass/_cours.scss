@@ -284,7 +284,9 @@ button.btn-cours:focus {
   position: relative;
 }
 .menu_liste li:hover::before{
-  background-color:#548cc4;
+  background-color: var(--couleur-fond);
+  transform: scale(1);
+
 }
 .menu_liste li::before{
   content: "";
@@ -295,8 +297,9 @@ button.btn-cours:focus {
   right: 0;
   bottom: -10px;
   z-index: -1;
-  transition: background-color 0.5s;
+  transition: all 0.7s;
   border-radius: 8px;
+  transform: scale(0);
   // opacity: 0;
 }
 .menu_liste li:nth-child(6){
