@@ -766,20 +766,27 @@ button.btn-cours:focus {
 .section_filtres {
   width: 90%;
   display: flex;
-  flex-flow: nowrap row;
+  flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-@media (min-width: 375px) and (max-width: 1000px) {
+.section_filtres .titre_section_filtre {
+  align-self: flex-start;
+}
+@media (min-width: 1001px) {
   .section_filtres {
-    flex-flow: column nowrap;
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
+}
+@media (min-width: 1240px) {
+  .section_filtres {
+    flex-flow: nowrap row;
+  }
   .section_filtres .titre_section_filtre {
-    align-self: flex-start;
+    align-self: center;
   }
 }
 .section_filtres p,
@@ -792,15 +799,15 @@ button.btn-cours:focus {
 .section_filtres .les_filtres {
   color: black;
   display: flex;
-  flex-flow: nowrap row;
+  flex-flow: row wrap;
   flex: 0 1 80%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
-@media (min-width: 375px) and (max-width: 1000px) {
+@media (min-width: 1001px) {
   .section_filtres .les_filtres {
-    flex-flow: row wrap;
-    justify-content: space-around;
+    flex-flow: nowrap row;
+    justify-content: space-between;
   }
 }
 .section_filtres .les_filtres .conteneur_filtre input {
@@ -816,9 +823,10 @@ button.btn-cours:focus {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  width: 5rem;
-  padding: 0.75rem 5rem;
-  border-radius: 30px;
+  width: clamp(3rem, 1.4645vw + 2.6568rem, 5rem);
+  padding: clamp(0.5rem, 0.1831vw + 0.4571rem, 0.75rem) clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
+  border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
+  margin-top: 1rem;
   border: 1px solid rgba(0, 0, 0, 0);
   transition: background-color 0.5s, color 0.5s, border 0.5s;
 }
@@ -826,12 +834,9 @@ button.btn-cours:focus {
   color: white;
   background-color: black;
 }
-@media (min-width: 375px) and (max-width: 1000px) {
+@media (min-width: 1240px) {
   .section_filtres .les_filtres .conteneur_filtre .filtre {
-    width: 3rem;
-    padding: 0.5rem 4rem;
-    border-radius: 20px;
-    margin-top: 1rem;
+    margin-top: 0rem;
   }
 }
 
@@ -889,99 +894,118 @@ button.btn-cours:focus {
   transition: opacity 0.75s;
 }
 
-.pro_filtre_web,
+.gal_proj_web,
 .filtre_web {
   background-color: #25CF56;
 }
 
-.pro_filtre_jeu,
+.gal_proj_jeu,
 .filtre_jeu {
   background-color: #25AFCF;
 }
 
-.pro_filtre_3d,
+.gal_proj_3d,
 .filtre_3d {
   background-color: #FFCA92;
 }
 
-.pro_filtre_video,
+.gal_proj_video,
 .filtre_video {
   background-color: #9B92FF;
 }
 
-.pro_filtre_ui,
+.gal_proj_ui,
 .filtre_ui {
   background-color: #FF92DE;
 }
 
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#projet_specifique {
+  padding: 2vh 0%;
 }
-
-.intro-carr {
-  width: 1200px;
+#projet_specifique .fond_projet {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  background-color: #2B2B2B;
+}
+#projet_specifique .fond_projet .titre_projet {
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+#projet_specifique .fond_projet .infos_projet {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-h3 {
-  font-size: var(--taille-police-grande);
-  font-weight: bold;
-  color: #000;
-  margin-left: 30px;
-}
-
-.ligne-intro {
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  margin-top: 10px;
-}
-
-.intro-paragraphe {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.description-intro {
-  width: 70%;
-  margin-left: 30px;
-  font-size: 1.2em;
-  color: #000;
-}
-
-.trois-cat {
-  height: 70px;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.trois-cat h5 {
-  width: 200px;
-  height: 40px;
-  background-color: rgb(176, 176, 176);
-  color: #000;
-  font-size: var(--taille-police);
-  font-weight: var(--poid_textes);
-  display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  cursor: pointer;
 }
-
-.trois-cat h5:hover {
-  background-color: #000;
-  color: #fff;
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.1rem 1rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet {
+  margin-top: 1rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.1rem 1rem;
+  font-weight: bold;
+}
+#projet_specifique .fond_projet .infos_projet .auteurs_projet {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#projet_specifique .fond_projet .infos_projet .auteurs_projet .auteur {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0;
+}
+#projet_specifique .fond_projet .desc_projet {
+  max-width: 95vw;
+}
+#projet_specifique .fond_projet .desc_projet .desc {
+  font-weight: bold;
+}
+#projet_specifique .projet_3d {
+  background-color: #FFCA92;
+  border: 7px solid #572D00;
+  color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+}
+#projet_specifique .projet_web {
+  background-color: #25CF56;
+  border: 1px solid #005719;
+}
+#projet_specifique .projet_video {
+  background-color: #9B92FF;
+  border: 1px solid #070057;
+}
+#projet_specifique .projet_ui {
+  background-color: #FF92DE;
+  border: 1px solid #57003D;
+}
+#projet_specifique .projet_jeu {
+  background-color: #25AFCF;
+  border: 7px solid #004657;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 /* ////////////////////////////////////////// */
