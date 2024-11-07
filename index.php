@@ -110,13 +110,28 @@ $_comp = $texte["competences"];
                 &#9664;
               </div>
               <!-- Boucle qui affiche tous les projets -->
-              <?php foreach($comp["projets"] as $projet=>$srcProj) :?>
+              <?php
+                // Tableau d'IDs des images depuis la bibliothèque de médias
+                $projets_ids = array(64, 66, 63, 65, 62);
+                foreach($comp["projets"] as $projet=>$srcProj) :
+              ?>
                 <!-- un projet -->
                 <article>
                   <!-- image du projet -->
                   <div class="miniature inactif">
-                    <!-- wordpress refuse d'afficher les fichiers locaux -->
-                    <img src="<?=(__DIR__ . 'images/projets-etudiants/' . $srcProj); ?>" alt="<?= $projet; ?>">
+                    <?php
+                      /////////
+                      // Récupérer l'URL, le titre, et l'attribut alt de l'image
+                      /////////
+                      // Utiliser des images 16:9 directement dans 
+                      // la médiathèque de wordpress puis mettre 
+                      // leur id dans le fichier json au bon endroit.
+                      /////////
+                      $image_url = wp_get_attachment_url($srcProj);
+                      $image_alt = get_post_meta($srcProj, '_wp_attachment_image_alt', true);
+                      $image_title = get_the_title($srcProj);
+                    ?>
+                    <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr($image_alt); ?>" title="<?= esc_attr($image_title); ?>" />
                   </div>
                   <!-- nom ou type du projet -->
                   <h4><?= $projet; ?></h4>
