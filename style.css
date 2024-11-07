@@ -1008,7 +1008,7 @@ button.btn-cours:focus {
   padding: 1rem;
 }
 
-main {
+main.carriere {
   width: 100%;
   display: flex;
   justify-content: center;
