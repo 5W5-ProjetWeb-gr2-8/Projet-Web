@@ -23,7 +23,7 @@ section.competences {
       right: -1.5rem; /* variable à changer */
       margin-bottom: 2rem;
       cursor: pointer;
-
+      rotate: 45deg;
       .svg_1 {
         width: 75px;
         height: 75px;
@@ -41,9 +41,10 @@ section.competences {
 
       .x-symbol {
         transition: stroke 0.3s ease;
+      
       }
 
-      &:hover .x-symbol {
+      &:hover .x-symbol  {
         stroke: rgb(232, 14, 14);
       }
     }
