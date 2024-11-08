@@ -22,11 +22,13 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-web: #3ce36a;
   --couleur-web2: #94d4a6;
   --couleur-web3: #22a848;
+  --couleur-web4: #25cf56;
   --couleur-jeux-fond: #92ebff;
   --couleur-jeux-bordure: #004757;
   --couleur-jeux: #00bae2;
   --couleur-jeux2: #94c8d4;
   --couleur-jeux3: #228fa8;
+  --couleur-jeux4: #25afcf;
   --couleur-3d-fond: #ffca92;
   --couleur-3d-bordure: #572d00;
   --couleur-3d: #ff8709;
@@ -752,51 +754,50 @@ button.btn-cours:focus {
 }
 
 .galerie_projet {
-  background-color: black;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte-pale);
+  padding: 2vh 10%; /* variable à changer */
 }
-.galerie_projet .titre_galerie {
-  font-weight: bold;
+.galerie_projet h2 {
+  margin: 30px 0; /* variable à changer */
 }
 .galerie_projet .conteneur_section_filtres {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
-
-.section_filtres {
+.galerie_projet .section_filtres {
   width: 90%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: var(--espacement);
+  margin-bottom: var(--espacement);
 }
-.section_filtres .titre_section_filtre {
+.galerie_projet .section_filtres .titre_section_filtre {
   align-self: flex-start;
 }
 @media (min-width: 1001px) {
-  .section_filtres {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  .galerie_projet .section_filtres {
+    margin-top: var(--espacement);
+    margin-bottom: var(--espacement);
   }
 }
 @media (min-width: 1240px) {
-  .section_filtres {
+  .galerie_projet .section_filtres {
     flex-flow: nowrap row;
   }
-  .section_filtres .titre_section_filtre {
+  .galerie_projet .section_filtres .titre_section_filtre {
     align-self: center;
   }
 }
-.section_filtres p,
-.section_filtres .filtre {
-  font-weight: bold;
-  font-size: clamp(1.5rem, 0.7323vw + 1.3284rem, 2.5rem);
+.galerie_projet .section_filtres p,
+.galerie_projet .section_filtres .filtre {
   text-align: center;
   font-family: var(--police_titres);
 }
-.section_filtres .les_filtres {
+.galerie_projet .section_filtres .les_filtres {
   color: black;
   display: flex;
   flex-flow: row wrap;
@@ -805,20 +806,20 @@ button.btn-cours:focus {
   align-items: center;
 }
 @media (min-width: 1001px) {
-  .section_filtres .les_filtres {
+  .galerie_projet .section_filtres .les_filtres {
     flex-flow: nowrap row;
     justify-content: space-between;
   }
 }
-.section_filtres .les_filtres .conteneur_filtre input {
+.galerie_projet .section_filtres .les_filtres .conteneur_filtre input {
   display: none;
 }
-.section_filtres .les_filtres .conteneur_filtre input:checked ~ .filtre {
+.galerie_projet .section_filtres .les_filtres .conteneur_filtre input:checked ~ .filtre {
   background-color: black;
   color: #929292;
   border: 1px solid #929292;
 }
-.section_filtres .les_filtres .conteneur_filtre .filtre {
+.galerie_projet .section_filtres .les_filtres .conteneur_filtre .filtre {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -826,39 +827,38 @@ button.btn-cours:focus {
   width: clamp(3rem, 1.4645vw + 2.6568rem, 5rem);
   padding: clamp(0.5rem, 0.1831vw + 0.4571rem, 0.75rem) clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
   border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
-  margin-top: 1rem;
+  margin-top: var(--espacement);
   border: 1px solid rgba(0, 0, 0, 0);
   transition: background-color 0.5s, color 0.5s, border 0.5s;
 }
-.section_filtres .les_filtres .conteneur_filtre .filtre:hover {
+.galerie_projet .section_filtres .les_filtres .conteneur_filtre .filtre:hover {
   color: white;
   background-color: black;
 }
 @media (min-width: 1240px) {
-  .section_filtres .les_filtres .conteneur_filtre .filtre {
+  .galerie_projet .section_filtres .les_filtres .conteneur_filtre .filtre {
     margin-top: 0rem;
   }
 }
-
-.section_galerie {
+.galerie_projet .section_galerie {
   display: grid;
   grid-template-columns: 50% 50%;
   row-gap: 2rem;
   padding: 10px;
 }
 @media (min-width: 744px) {
-  .section_galerie {
+  .galerie_projet .section_galerie {
     grid-template-columns: 33% 33% 33%;
   }
 }
-.section_galerie .conteneur_projet {
+.galerie_projet .section_galerie .conteneur_projet {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   height: clamp(10rem, 10.984vw + 7.4256rem, 25rem);
 }
-.section_galerie .conteneur_projet .projet_galerie {
+.galerie_projet .section_galerie .conteneur_projet .projet_galerie {
   width: 80%;
   height: 90%;
   border-radius: 16px;
@@ -866,15 +866,15 @@ button.btn-cours:focus {
   box-shadow: 0px 0px 0px 0px hsl(0, 0%, 61%);
   transition: width 0.5s, height 0.5s, box-shadow 0.5s;
 }
-.section_galerie .conteneur_projet .projet_galerie:hover {
+.galerie_projet .section_galerie .conteneur_projet .projet_galerie:hover {
   width: 89%;
   height: 100%;
   box-shadow: 20px 15px 45px -12px hsl(0, 0%, 61%);
 }
-.section_galerie .conteneur_projet .projet_galerie:hover .projet_filtre {
+.galerie_projet .section_galerie .conteneur_projet .projet_galerie:hover .projet_filtre {
   opacity: 0%;
 }
-.section_galerie .conteneur_projet .projet_galerie .projet_image {
+.galerie_projet .section_galerie .conteneur_projet .projet_galerie .projet_image {
   width: 100%;
   height: 100%;
   background-image: url("images/projets-etudiants/triptyque.png");
@@ -883,7 +883,7 @@ button.btn-cours:focus {
   background-position: left 50% top 65%;
   border-radius: 16px;
 }
-.section_galerie .conteneur_projet .projet_galerie .projet_filtre {
+.galerie_projet .section_galerie .conteneur_projet .projet_galerie .projet_filtre {
   position: absolute;
   top: 0;
   left: 0;
@@ -893,30 +893,25 @@ button.btn-cours:focus {
   border-radius: 16px;
   transition: opacity 0.75s;
 }
-
-.gal_proj_web,
-.filtre_web {
-  background-color: #25CF56;
+.galerie_projet .gal_proj_web,
+.galerie_projet .filtre_web {
+  background-color: var(--couleur-web4);
 }
-
-.gal_proj_jeu,
-.filtre_jeu {
-  background-color: #25AFCF;
+.galerie_projet .gal_proj_jeu,
+.galerie_projet .filtre_jeu {
+  background-color: var(--couleur-jeux4);
 }
-
-.gal_proj_3d,
-.filtre_3d {
-  background-color: #FFCA92;
+.galerie_projet .gal_proj_3d,
+.galerie_projet .filtre_3d {
+  background-color: var(--couleur-3d-fond);
 }
-
-.gal_proj_video,
-.filtre_video {
-  background-color: #9B92FF;
+.galerie_projet .gal_proj_video,
+.galerie_projet .filtre_video {
+  background-color: var(--couleur-video-fond);
 }
-
-.gal_proj_ui,
-.filtre_ui {
-  background-color: #FF92DE;
+.galerie_projet .gal_proj_ui,
+.galerie_projet .filtre_ui {
+  background-color: var(--couleur-design-fond);
 }
 
 #projet_specifique {
@@ -1415,7 +1410,7 @@ section.competences div.competence-item .competence-content article .miniature.i
   background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   left: 0;
-  right: -2px;
+  right: 0px;
   bottom: 0;
 }
 section.competences div.competence-item .competence-content article .miniature img {

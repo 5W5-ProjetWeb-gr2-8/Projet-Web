@@ -9,9 +9,9 @@
                 "After Effects": "aftereffects"
             },
             "projets": {
-                "Chroniques Dystopiques": "62",
-                "Inserxion": "63",
-                "Lacryma": "64"
+                "Disparu dans le vent": "191",
+                "R'lyeh": "206",
+                "Souffle Court": "207"
             }
         },
         "design": {
@@ -21,9 +21,9 @@
                 "Figma": "figma"
             },
             "projets": {
-                "Disparu dans le vent": "src/miniature",
-                "Disparu dans le vent2": "src/miniature",
-                "Disparu dans le vent3": "src/miniature"
+                "Carolyn's gift": "201",
+                "Jeu DIvertioz": "202",
+                "Tortue de Mer": "195"
             }
         },
         "jeux": {
@@ -34,9 +34,9 @@
                 "C Sharp": "csharp"
             },
             "projets": {
-                "Disparu dans le vent": "src/miniature",
-                "Disparu dans le vent2": "src/miniature",
-                "Disparu dans le vent3": "src/miniature"
+                "Triptyque": "199",
+                "Chroniques Dystopiques": "62",
+                "Lights Out": "203"
             }
         },
         "web": {
@@ -49,9 +49,9 @@
                 "WordPress": "wordpress"
             },
             "projets": {
-                "Disparu dans le vent": "src/miniature",
-                "Disparu dans le vent2": "src/miniature",
-                "Disparu dans le vent3": "src/miniature"
+                "Jean-Seb et Eric": "200",
+                "Disques Beatnick": "208",
+                "Ami-fer": "209"
             }
         },
         "_3d": {
@@ -63,9 +63,9 @@
                 "Maya": "maya"
             },
             "projets": {
-                "Disparu dans le vent": "src/miniature",
-                "Disparu dans le vent2": "src/miniature",
-                "Disparu dans le vent3": "src/miniature"
+                "Lacryma": "64",
+                "Anachronique": "205",
+                "Un nouveau monde": "204"
             }
         }
     },

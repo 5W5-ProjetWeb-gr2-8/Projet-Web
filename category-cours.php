@@ -3,9 +3,6 @@
 get_header();
 ?>
 
-<!-- Section des compétences -->
-<section class="competences-section"></section>
-
 <!-- Section SESSION 1 - 6  -->
 <section class="session1-6">
     <div class="session-container">
@@ -86,8 +83,8 @@ get_header();
 <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
 <?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets ?>
 
-<!-- FAQ //////////////////////////////////////////////////////////////////////// -->
-<?php get_template_part('template', 'faq'); ?>
+<!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
+<?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq ?>
 
 <!-- Affiche le footer -->
 <?php get_footer() ?>
