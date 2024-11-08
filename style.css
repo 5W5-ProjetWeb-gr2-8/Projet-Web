@@ -1408,7 +1408,7 @@ section.competences div.competence-item .competence-content article .miniature.i
   background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   left: 0;
-  right: -2px;
+  right: 0px;
   bottom: 0;
 }
 section.competences div.competence-item .competence-content article .miniature img {
