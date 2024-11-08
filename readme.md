@@ -55,3 +55,15 @@ Continuer de développer et personnaliser le thème WordPress en configurant les
 - Conversion du contenu (Transférer le contenu de index.htm vers WordPress. PHP)
 - Ajouter des menus personnalisés avec wp_nav_menu().
 - Ajouter des fonctionnalités via functions.php.
+
+## Sprint 4 :
+
+Compléter le design et le contenu du site pour offrir une bonne expérience aux utilisateurs avec des informations claires.
+
+- Finaliser les animations.
+- Assurer la réactivité du site pour tous les formats.
+- Finaliser la page "Cours".
+- Ajouter le contenu fourni par chaque membre.
+- Peaufiner le texte manquant.
+- Finaliser la page "Stage".
+- Finaliser les interactions
