@@ -150,12 +150,7 @@ $_comp = $texte["competences"];
 <?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets ?>
 
 <!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
-
 <?php get_template_part('template', 'faq'); ?>
 
-
-
-</div>
-</section>
 <!-- Affiche le footer -->
 <?php get_footer() ?>

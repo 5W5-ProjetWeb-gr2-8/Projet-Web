@@ -3,9 +3,6 @@
 get_header();
 ?>
 
-<!-- Section des compétences -->
-<section class="competences-section"></section>
-
 <!-- Section SESSION 1 - 6  -->
 <section class="session1-6">
     <div class="session-container">
