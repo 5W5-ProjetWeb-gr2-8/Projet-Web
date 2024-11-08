@@ -1,7 +1,7 @@
 <!-- FAQ //////////////////////////////////////////////////////////////////////// -->
 <section class="faq-section">
     <!-- Titre -->
-    <h3 class="titre_FAQ">FAQ Lorem ipsum dolor sit.</h3>
+    <h3 class="titre_FAQ">Foire aux questions</h3>
     <div class="faq-contenu">
         <!-- Section des questions -->
         <div class="questions-et-reponse">

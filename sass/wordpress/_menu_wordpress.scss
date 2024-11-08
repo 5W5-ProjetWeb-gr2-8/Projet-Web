@@ -14,7 +14,7 @@
 
       a {
         text-decoration: none;
-        color: #333; // Couleur du texte par défaut
+        color: var(--couleur-fond); // Couleur du texte par défaut
         font-weight: bold;
         padding: 0.5rem 1rem;
         transition: color 0.3s;
@@ -29,7 +29,7 @@
     @media (max-width: 768px) {
       display: none; // Masquer le menu par défaut
       flex-direction: column; // Alignement vertical
-      background-color: #333; // Fond gris
+      background-color: var(--couleur-fond);
       position: absolute;
       width: 100%; // Prendre toute la largeur
       left: 0; // Alignement à gauche

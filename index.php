@@ -18,17 +18,10 @@ $_comp = $texte["competences"];
             <h1><?php bloginfo('name'); ?></h1>
         </div>
     </section>
-
     <!-- Présentation Programme -->
     <section class="presPro">
         <h2>C'est quoi le <span>Multimédia ?</span></h2>
-        <p>
-            C'est l'ensemble des techniques et des produits qui permettent
-            l'utilisation simultanée et interactive de plusieurs modes de
-            représentation de l'information (textes, sons, images fixes ou
-            animées). La technique est parfaite pour devenir un connaisseur du
-            multimédia. Le programme est un mélange de créativité et de logique...
-        </p>
+        <p><?= $texte["prespro"]; ?></p>
     </section>
     <!-- Compétences ///////////////////////////////////////////////////////////////////// -->
     <section class="competences">
@@ -38,7 +31,6 @@ $_comp = $texte["competences"];
             <!-- Partie non pliable -->
             <div class="competence-header">
               <!-- button Ouverture et fermeture -->
-
               <button class="top-right-button">
                 <!-- L'animation fonctionne pas avec la référence -->
                 <!-- <?= $svg["x"]; ?> -->
@@ -114,79 +106,48 @@ $_comp = $texte["competences"];
             <!-- Partie dépliable -->
             <div class="competence-content">
               <!-- Flèche gauche -->
-              <div>
-                <img src="https://placehold.co/50x75?text=<" alt="" />
+              <div class="flecheGauche">
+                &#9664;
               </div>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
-              <!-- // -->
-              <article>
-                <img
-                  src="https://placehold.co/250x250?text=Image+Accueil"
-                  alt=""
-                />
-                <legend>Légende</legend>
-              </article>
+              <!-- Boucle qui affiche tous les projets -->
+              <?php
+                // Tableau d'IDs des images depuis la bibliothèque de médias
+                $projets_ids = array(64, 66, 63, 65, 62);
+                foreach($comp["projets"] as $projet=>$srcProj) :
+              ?>
+                <!-- un projet -->
+                <article>
+                  <!-- image du projet -->
+                  <div class="miniature inactif">
+                    <?php
+                      /////////
+                      // Récupérer l'URL, le titre, et l'attribut alt de l'image
+                      /////////
+                      // Utiliser des images 16:9 directement dans 
+                      // la médiathèque de wordpress puis mettre 
+                      // leur id dans le fichier json au bon endroit.
+                      /////////
+                      $image_url = wp_get_attachment_url($srcProj);
+                      $image_alt = get_post_meta($srcProj, '_wp_attachment_image_alt', true);
+                      $image_title = get_the_title($srcProj);
+                    ?>
+                    <img src="<?= esc_url($image_url); ?>" alt="<?= esc_attr($image_alt); ?>" title="<?= esc_attr($image_title); ?>" />
+                  </div>
+                  <!-- nom ou type du projet -->
+                  <h4><?= $projet; ?></h4>
+                </article>
+              <?php endforeach ?>
               <!-- Flèche droite -->
-              <div>
-                <img src="https://placehold.co/50x75?text=>" alt="" />
+              <div class="flecheDroite">
+                &#9654;
               </div>
             </div>
           </div>
         <?php endforeach ?>
     </section>
 </main>
-</div>
 <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
-<section class="galerie-projets">
-    <h2 class="galerie-titre">Projets étudiants</h2>
-    <h3 id="titre-projet" class="titre-projet">Titre du projet</h3>
-    <div class="carrousel-container">
-        <div class="fleche gauche" onclick="changerImage(-1)">&#9664;</div>
-        <!-- Flèche gauche -->
-        <div class="carrousel">
-            <?php
-            // Tableau des IDs des images depuis la bibliothèque de médias
-            $projets_ids = array(64, 66, 63, 65, 62); // IDs réels des images
-            $i = 0;
-            foreach ($projets_ids as $projet_id):
-                // Récupérer l'URL de l'image
-                $image_url = wp_get_attachment_url($projet_id);
-                // Récupérer le titre et l'attribut alt de l'image
-                $image_alt = get_post_meta($projet_id, '_wp_attachment_image_alt', true);
-                $image_title = get_the_title($projet_id);
-                ?>
-                <div class="carrousel-item">
-                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>"
-                        title="<?php echo esc_attr($image_title); ?>" />
-                </div>
-            <?php endforeach; ?>
-        </div>
-        <div class="fleche droite" onclick="changerImage(1)">&#9654;</div>
-        <!-- Flèche droite -->
-    </div>
-    <div class="indications">
-        <?php for ($i = 0; $i < count($projets_ids); $i++): ?>
-            <span class="indication" onclick="montrerImage(<?php echo $i; ?>)"></span>
-        <?php endfor; ?>
-    </div>
-</section>
-
-<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode ?>
+<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets ?>
 
 <!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
 

@@ -44,6 +44,7 @@ nav.menu {
         color: var(--couleur-texte-pale);
         padding: 1rem;
       }
+
     }
 
     // Bouton Inscription
@@ -87,7 +88,7 @@ nav.menu {
         position: absolute;
         top: 10vh;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: var(--couleur-fond);
         z-index: 99;
 
         &.active {

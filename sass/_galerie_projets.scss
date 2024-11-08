@@ -17,20 +17,26 @@
 .section_filtres{
     width: 90%;
     display: flex;
-    flex-flow: nowrap row;
+    flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
 
+    .titre_section_filtre{
+        align-self: flex-start;
+    }
 
-    @media(min-width: 375px) and (max-width: 1000px){
-        flex-flow: column nowrap;
+    @media(min-width: 1001px){
         margin-top: 3rem;
         margin-bottom: 3rem;
+    }
+
+    @media(min-width: 1240px){
+        flex-flow: nowrap row;
 
         .titre_section_filtre{
-            align-self: flex-start;
+            align-self: center;
         }
     }
 
@@ -46,14 +52,14 @@
     .les_filtres{
         color: black;
         display: flex;
-        flex-flow: nowrap row;
+        flex-flow: row wrap;
         flex: 0 1 80%;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
-        @media(min-width: 375px) and (max-width: 1000px){
-            flex-flow: row wrap;
-            justify-content: space-around;
+        @media(min-width: 1001px){
+            flex-flow: nowrap row;
+            justify-content: space-between;
         }
 
         .conteneur_filtre{
@@ -72,9 +78,10 @@
                 flex-flow: row nowrap;
                 justify-content: center;
                 align-items: center;
-                width: 5rem;
-                padding: 0.75rem 5rem;
-                border-radius: 30px;
+                width: clamp(3rem, 1.4645vw + 2.6568rem, 5rem);
+                padding: clamp(.5rem, .1831vw + .4571rem, .75rem) clamp(4rem, .7323vw + 3.8284rem, 5rem);
+                border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
+                margin-top: 1rem;
                 border: 1px solid rgba(0, 0, 0, 0);
                 transition: background-color 0.5s, color 0.5s, border 0.5s;
     
@@ -83,11 +90,9 @@
                     background-color: black;
                 }
 
-                @media(min-width: 375px) and (max-width: 1000px){
-                    width: 3rem;
-                    padding: 0.5rem 4rem;
-                    border-radius: 20px;
-                    margin-top: 1rem;
+
+                @media(min-width: 1240px){
+                    margin-top: 0rem;
                 }
             }
         }
@@ -154,23 +159,23 @@
 }
 
 
-.pro_filtre_web
+.gal_proj_web
 ,.filtre_web{
     background-color: #25CF56;
 }
-.pro_filtre_jeu
+.gal_proj_jeu
 ,.filtre_jeu{
     background-color: #25AFCF;
 }
-.pro_filtre_3d
+.gal_proj_3d
 ,.filtre_3d{
     background-color: #FFCA92;
 }
-.pro_filtre_video
+.gal_proj_video
 ,.filtre_video{
     background-color: #9B92FF;
 }
-.pro_filtre_ui
+.gal_proj_ui
 ,.filtre_ui{
     background-color: #FF92DE;
 }

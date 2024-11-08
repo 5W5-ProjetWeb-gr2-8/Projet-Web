@@ -2,45 +2,72 @@
     "competences": {
         "video": {
             "nom": "Montage",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque tempore alias recusandae qui quaerat nihil dolorem sint eligendi possimus ex?",
+            "desc": "L'étudiant apprend à utiliser les périphériques associés au traitement du son et de la vidéo et à exploiter de façon créative les fonctions des logiciels de traitement vidéo et sonore. Il développe aussi sa capacité à utiliser des techniques d'effets spéciaux visuels : animations graphiques, initiation à l'environnement 3D, caméras et lumières virtuelles, composition numérique et techniques d'écran vert.",
             "outils": {
                 "Premiere Pro": "premiere",
-                "Audition": "audition"
+                "Audition": "audition",
+                "After Effects": "aftereffects"
+            },
+            "projets": {
+                "Chroniques Dystopiques": "62",
+                "Inserxion": "63",
+                "Lacryma": "64"
             }
         },
         "design": {
             "nom": "Design",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque tempore alias recusandae qui quaerat nihil dolorem sint eligendi possimus ex?",
+            "desc": "Précédemment avec le logiciel Adobe XD, mais désormais avec Figma, l'étudiant apprend à concevoir des expériences interactives en plaçant les besoins de l'utilisateur au coeur de ses créations. Il réalisera notamment un prototype accompagné d'un petit blog pour montrer ses avancements et réaliser des tests utilisateurs pour améliorer sa maquette selon la rétrospective reçue lors des tests.",
             "outils": {
                 "Figma": "figma"
+            },
+            "projets": {
+                "Disparu dans le vent": "src/miniature",
+                "Disparu dans le vent2": "src/miniature",
+                "Disparu dans le vent3": "src/miniature"
             }
         },
         "jeux": {
             "nom": "Intégration",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque tempore alias recusandae qui quaerat nihil dolorem sint eligendi possimus ex?",
+            "desc": "Cette compétence est développée majoritairement lors de la seconde année de formation, une fois que l'étudiant a acquis de bonnes connaissances de base et peut maintenant assembler et intégrer le fruit de ses apprentissages dans Unity, par exemple, pour créer des jeux vidéos originaux.",
             "outils": {
                 "Unity": "unity",
                 "C Sharp": "csharp"
+            },
+            "projets": {
+                "Disparu dans le vent": "src/miniature",
+                "Disparu dans le vent2": "src/miniature",
+                "Disparu dans le vent3": "src/miniature"
             }
         },
         "web": {
             "nom": "Programmation",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque tempore alias recusandae qui quaerat nihil dolorem sint eligendi possimus ex?",
+            "desc": "Les étudiants en TIM suivent 5 cours de web (1W1 à 5W5) leur permettant d'apprendre graduellement la programmation web (front-end). Ils verront plusieurs technologies et techniques leur permettant de créer, modifier et adapter les pages web à leur guise. En passant par le design de la maquette, le formatage de base, la programmation dynamique et l'organisation d'une base de données. Les étudiants essaieront plusieurs supports comme WordPress et un cours optionnel de React.",
             "outils": {
                 "Html": "html",
                 "JavaScript": "javascript",
                 "Css": "css",
                 "WordPress": "wordpress"
+            },
+            "projets": {
+                "Disparu dans le vent": "src/miniature",
+                "Disparu dans le vent2": "src/miniature",
+                "Disparu dans le vent3": "src/miniature"
             }
         },
         "_3d": {
             "nom": "Création",
-            "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque tempore alias recusandae qui quaerat nihil dolorem sint eligendi possimus ex?",
+            "desc": "Au cours de sa formation, l'étudiant sera amené, dans plusieurs cours à créer ses propres médias pour ensuite les utiliser dans ses projets complexes et/ou en équipe de production. Des exemples de médias créés sont des images, des photos, de la typographie, des illustrations, des sons, des objets 3D et bien plus encore!",
             "outils": {
                 "Photoshop": "photoshop",
                 "Illustrator": "illustrator",
                 "Maya": "maya"
+            },
+            "projets": {
+                "Disparu dans le vent": "src/miniature",
+                "Disparu dans le vent2": "src/miniature",
+                "Disparu dans le vent3": "src/miniature"
             }
         }
-    }
+    },
+    "prespro": "C'est l'ensemble des techniques et des produits qui permettent l'utilisation simultanée et interactive de plusieurs modes de représentation de l'information (textes, sons, images fixes ou animées). La technique d'intégration multimédia (TIM) du Collège  de Maisonneuve est parfaite pour devenir un connaisseur du multimédia. Elle forme des spécialistes en conception, développement  et intégration de contenus numériques interactifs. Les diplômés  maîtrisent la création d'expériences utilisateur engageantes sur  des plateformes variées, incluant sites web, jeux vidéo et autres  plateformes numériques. Le programme encourage une approche  interdisciplinaire, où créativité et logique se rencontrent pour  répondre aux besoins d'un marché en constante évolution."
 }

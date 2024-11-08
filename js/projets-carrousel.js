@@ -4,7 +4,13 @@ const indications = document.querySelectorAll(".indication");
 const titreProjet = document.getElementById("titre-projet"); // Sélectionne l'élément titre
 
 // Tableau des titres de projets
-const titres = ["Lacryma", "Triptyque", "Inserxion", "Réalité virtuelle", "Dystopie chronique"];
+const titres = [
+  "Lacryma",
+  "Triptyque",
+  "Inserxion",
+  "Réalité virtuelle",
+  "Dystopie chronique",
+];
 
 function afficherImage(index) {
   items.forEach((item, i) => {
