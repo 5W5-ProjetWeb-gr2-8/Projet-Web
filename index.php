@@ -121,9 +121,5 @@ $_comp = $texte["competences"];
 <!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
 <?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq ?>
 
-
-
-</div>
-</section>
 <!-- Affiche le footer -->
 <?php get_footer() ?>
