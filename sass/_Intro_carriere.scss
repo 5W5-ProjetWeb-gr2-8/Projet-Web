@@ -1,58 +1,57 @@
-main.carriere{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.intro-carr{
+main.carriere {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .intro-carr {
     width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 50px;
-}
+  }
 
-h3{
+  h3 {
     font-size: var(--taille-police-grande);
     font-weight: bold;
     color: #000;
     margin-left: 30px;
-}
+  }
 
-.ligne-intro{
+  .ligne-intro {
     width: 100%;
     height: 1px;
     background-color: #000;
     margin-top: 10px;
-}
-.intro-paragraphe{
+  }
+  .intro-paragraphe {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
-}
+  }
 
-.description-intro{
+  .description-intro {
     width: 70%;
     margin-left: 30px;
     font-size: 1.2em;
     color: #000;
-}
-.trois-cat{
+  }
+  .trois-cat {
     height: 70px;
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
     text-align: center;
-}
-.trois-cat h5{
+  }
+  .trois-cat h5 {
     width: 200px;
     height: 40px;
     background-color: rgb(176, 176, 176);
     color: #000;
     font-size: var(--taille-police);
-    font-weight: var( --poid_textes);
+    font-weight: var(--poid_textes);
 
     display: flex;
     justify-content: center;
@@ -60,9 +59,9 @@ h3{
 
     border-radius: 50px;
     cursor: pointer;
-
-}
-.trois-cat h5:hover{
+  }
+  .trois-cat h5:hover {
     background-color: #000;
     color: #fff;
+  }
 }

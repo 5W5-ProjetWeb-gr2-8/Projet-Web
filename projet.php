@@ -1,3 +1,10 @@
+<?php
+    /**
+     * Template name: Conference
+     * 
+     */
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
