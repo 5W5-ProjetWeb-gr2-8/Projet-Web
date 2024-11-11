@@ -8,6 +8,8 @@
         align-items: center;
         width: 100vw;
         background-color: #2B2B2B;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
 
         .titre_projet{
             font-weight: bold;
@@ -45,8 +47,11 @@
                     flex-direction: column;
                     align-items: center;
                     padding: 0.1rem 1rem;
+                    p{
+                        text-align: center;
+                        font-weight: bold;
 
-                    font-weight: bold;
+                    }
                 }
             }
 
@@ -56,10 +61,18 @@
                 flex-direction: column;
                 align-items: center;
 
-                .auteur{
-                    text-align: center;
-                    margin-top: 1rem;
-                    padding: 0;
+                .les_auteurs{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .auteur{
+                        width: 75%;
+                        text-align: center;
+                        margin-top: 1rem;
+                        // padding: 1.25rem;
+                        font-size: 1.25rem;
+                    }
                 }
             }
 
@@ -71,13 +84,30 @@
                 font-weight: bold;
             }
         }
+        
+        .img_projet{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-        .img{
-            width: 5rem;
-            height: 5rem;
-            background-image: url("images/projets-etudiants/triptyque.png");
-            background-repeat: no-repeat;
-            background-size: cover;
+
+            .img{
+                max-width: 95%;
+                height: auto;
+                border-radius: 30px;
+            }
+
+            a{
+                color: white;
+                font-weight: bold;
+                font-size: 0.75rem;
+                max-width: 80%;
+            }
+        }
+
+        .desc_projet,
+        .img_projet{
+            margin-top: var(--espacement);
         }
     }
     

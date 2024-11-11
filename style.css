@@ -924,6 +924,8 @@ button.btn-cours:focus {
   align-items: center;
   width: 100vw;
   background-color: #2B2B2B;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 #projet_specifique .fond_projet .titre_projet {
   font-weight: bold;
@@ -957,6 +959,9 @@ button.btn-cours:focus {
   flex-direction: column;
   align-items: center;
   padding: 0.1rem 1rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet p {
+  text-align: center;
   font-weight: bold;
 }
 #projet_specifique .fond_projet .infos_projet .auteurs_projet {
@@ -965,10 +970,16 @@ button.btn-cours:focus {
   flex-direction: column;
   align-items: center;
 }
-#projet_specifique .fond_projet .infos_projet .auteurs_projet .auteur {
+#projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs .auteur {
+  width: 75%;
   text-align: center;
   margin-top: 1rem;
-  padding: 0;
+  font-size: 1.25rem;
 }
 #projet_specifique .fond_projet .desc_projet {
   max-width: 95vw;
@@ -976,12 +987,25 @@ button.btn-cours:focus {
 #projet_specifique .fond_projet .desc_projet .desc {
   font-weight: bold;
 }
-#projet_specifique .fond_projet .img {
-  width: 5rem;
-  height: 5rem;
-  background-image: url("images/projets-etudiants/triptyque.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+#projet_specifique .fond_projet .img_projet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#projet_specifique .fond_projet .img_projet .img {
+  max-width: 95%;
+  height: auto;
+  border-radius: 30px;
+}
+#projet_specifique .fond_projet .img_projet a {
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  max-width: 80%;
+}
+#projet_specifique .fond_projet .desc_projet,
+#projet_specifique .fond_projet .img_projet {
+  margin-top: var(--espacement);
 }
 #projet_specifique .projet_3d {
   background-color: #FFCA92;
