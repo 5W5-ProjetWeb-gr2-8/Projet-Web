@@ -138,6 +138,7 @@
                     align-items: flex-end;
                 }
                 @media (min-width: 1024px){
+                    margin-top: 0rem;
                     align-items: flex-start;
                 }
 
@@ -151,7 +152,7 @@
                     }
                     
                     @media (min-width: 1024px){
-                        width: 40em;
+                        width: clamp(25rem, 2.2781rem + 35.503vw, 40rem);
                         justify-content: space-between;
                         flex-direction: row;
                         flex-wrap: wrap;
@@ -169,6 +170,7 @@
                         @media (min-width: 1024px){
                             height: 6rem;
                             width: 49%;
+                            font-size: clamp(0.75rem, 0.3713rem + 0.5917vw, 1rem);
                         }
                     }
 

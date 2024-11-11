@@ -1060,6 +1060,7 @@ button.btn-cours:focus {
 }
 @media (min-width: 1024px) {
   #projet_specifique .fond_projet .infos_projet .auteurs_projet {
+    margin-top: 0rem;
     align-items: flex-start;
   }
 }
@@ -1075,7 +1076,7 @@ button.btn-cours:focus {
 }
 @media (min-width: 1024px) {
   #projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs {
-    width: 40em;
+    width: clamp(25rem, 2.2781rem + 35.503vw, 40rem);
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1094,6 +1095,7 @@ button.btn-cours:focus {
   #projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs .auteur {
     height: 6rem;
     width: 49%;
+    font-size: clamp(0.75rem, 0.3713rem + 0.5917vw, 1rem);
   }
 }
 #projet_specifique .fond_projet .desc_projet {
