@@ -33,16 +33,7 @@ $_comp = $texte["competences"];
           <!-- button Ouverture et fermeture -->
           <button class="top-right-button">
             <!-- L'animation fonctionne pas avec la référence -->
-            <!-- <?= $svg["x"]; ?> -->
-            <svg class="svg_1" xmlns="http://www.w3.org/2000/svg">
-              <g>
-                <ellipse ry="30" rx="30" cy="31.25" cx="31.25" stroke-width="2.5" stroke="#00000" fill="transparent" />
-                <ellipse ry="30" rx="30" class="circle" cy="31.25" cx="31.25" stroke-width="2.5" stroke="red"
-                  fill="transparent" />
-                <line class="x-symbol" x1="16.25" y1="16.25" x2="46.25" y2="46.25" stroke="green" stroke-width="3.5" />
-                <line class="x-symbol" x1="46.25" y1="16.25" x2="16.25" y2="46.25" stroke="green" stroke-width="3.5" />
-              </g>
-            </svg>
+            <?= $svg["x"]; ?>
           </button>
           <!-- Logo de la compétence -->
           <div class="logo">
