@@ -20,8 +20,22 @@ document.addEventListener("DOMContentLoaded", () => {
         competenceItems[index].classList.toggle("active");
       });
     });
+
+    for (const competence of competenceItems) {
+      const itemsImages = competence.querySelectorAll(".item img");
+      const flechesGauche = competence.querySelectorAll(".flecheGauche");
+      const flechesDroite = competence.querySelectorAll(".flecheDroite");
+      for (let i = 0; i < itemsImages.length; i++) {
+        itemsImages[i].parentElement.classList.toggle("inactif");
+        if(i>2) {
+          console.log(itemsImages[i].className);
+          itemsImages[i].parentElement.classList.toggle("inactif");
+        }
+      }
+    }
   } else {
-    console.error('Elements with class "button" or "competence-item" not found.');
+    console.error(
+      'Elements with class "button" or "competence-item" not found.'
+    );
   }
 });
-

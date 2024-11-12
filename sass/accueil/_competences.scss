@@ -41,10 +41,9 @@ section.competences {
 
       .x-symbol {
         transition: stroke 0.3s ease;
-      
       }
 
-      &:hover .x-symbol  {
+      &:hover .x-symbol {
         stroke: rgb(232, 14, 14);
       }
     }
@@ -207,17 +206,6 @@ section.competences {
               right: 0px;
               bottom: 0;
             }
-
-            //// Javascript à voir ////
-            // &.actif::after {
-            //   content: "";
-            //   position: absolute;
-            //   top: 0;
-            //   left: 0;
-            //   right: -2px; //jsp pk cest pas 0px
-            //   bottom: 0;
-            //   background-color: rgba(0, 0, 0, 0);
-            // }
           }
           img {
             height: 100%;
