@@ -1004,6 +1004,10 @@ button.btn-cours:focus {
     align-self: flex-start;
   }
 }
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .type svg {
+  width: 3rem;
+  height: auto;
+}
 #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types {
   width: 100%;
   display: flex;
@@ -1014,6 +1018,36 @@ button.btn-cours:focus {
   #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types {
     margin-top: 0.5rem;
   }
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_web {
+  background-color: #25CF56;
+  border: 7px solid #005719;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_jeu {
+  background-color: #25AFCF;
+  border: 7px solid #004657;
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_3d {
+  background-color: #FFCA92;
+  border: 7px solid #572D00;
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_ui {
+  background-color: #FF92DE;
+  border: 7px solid #57003D;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_video {
+  background-color: #9B92FF;
+  border: 7px solid #070057;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 #projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet {
   margin-top: 1rem;
@@ -1139,21 +1173,37 @@ button.btn-cours:focus {
 }
 #projet_specifique .projet_web {
   background-color: #25CF56;
-  border: 1px solid #005719;
+  border: 7px solid #005719;
+  color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
 }
 #projet_specifique .projet_video {
   background-color: #9B92FF;
-  border: 1px solid #070057;
+  border: 7px solid #070057;
+  color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
 }
 #projet_specifique .projet_ui {
   background-color: #FF92DE;
-  border: 1px solid #57003D;
+  border: 7px solid #57003D;
+  color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
 }
 #projet_specifique .projet_jeu {
   background-color: #25AFCF;
   border: 7px solid #004657;
   border-radius: 1rem;
   padding: 1rem;
+  color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
 }
 
 main.carriere {
