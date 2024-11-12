@@ -2,10 +2,13 @@
   background-color: var(--couleur-fond);
   color: var(--couleur-texte-pale);
   padding: 2vh 10%; /* variable à changer */
-
+  
   h2 {
     // titre de la page
     margin: 30px 0; /* variable à changer */
+  }
+  .titre_galerie{
+    font-weight: bold;
   }
 
   .conteneur_section_filtres {
@@ -25,6 +28,8 @@
 
     .titre_section_filtre {
       align-self: flex-start;
+      font-weight: bold;
+      font-size: clamp(1rem, .7143vw + .8571rem, 1.5rem);
     }
 
     @media (min-width: 1001px) {
@@ -78,12 +83,14 @@
           align-items: center;
           width: clamp(3rem, 1.4645vw + 2.6568rem, 5rem);
           padding: clamp(0.5rem, 0.1831vw + 0.4571rem, 0.75rem)
-            clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
+          clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
           border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
           margin-top: var(--espacement);
           border: 1px solid rgba(0, 0, 0, 0);
+          font-weight: bold;
+          font-size: clamp(1rem, .7143vw + .8571rem, 1.5rem);
           transition: background-color 0.5s, color 0.5s, border 0.5s;
-
+          
           &:hover {
             color: white;
             background-color: black;
@@ -112,45 +119,54 @@
       justify-content: center;
       align-items: center;
       height: clamp(10rem, 10.984vw + 7.4256rem, 25rem);
+      
+      .lien_projet{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-      .projet_galerie {
-        width: 80%;
-        height: 90%;
-        border-radius: 16px;
-        position: relative;
-        box-shadow: 0px 0px 0px 0px hsl(0, 0%, 61%);
-        transition: width 0.5s, height 0.5s, box-shadow 0.5s;
-
-        &:hover {
-          width: 89%;
-          height: 100%;
-          box-shadow: 20px 15px 45px -12px hsl(0, 0%, 61%);
+        .projet_galerie {
+          width: 80%;
+          height: 90%;
+          border-radius: 16px;
+          position: relative;
+          box-shadow: 0px 0px 0px 0px hsl(0, 0%, 61%);
+          transition: width 0.5s, height 0.5s, box-shadow 0.5s;
+  
+          &:hover {
+            width: 89%;
+            height: 100%;
+            box-shadow: 20px 15px 45px -12px hsl(0, 0%, 61%);
+            .projet_filtre {
+              opacity: 0%;
+            }
+          }
+  
+          .projet_image {
+            width: 100%;
+            height: 100%;
+            background-image: url("images/projets-etudiants/triptyque.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left 50% top 65%;
+            border-radius: 16px;
+          }
+  
           .projet_filtre {
-            opacity: 0%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 50%;
+            border-radius: 16px;
+            transition: opacity 0.75s;
           }
         }
-
-        .projet_image {
-          width: 100%;
-          height: 100%;
-          background-image: url("images/projets-etudiants/triptyque.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: left 50% top 65%;
-          border-radius: 16px;
-        }
-
-        .projet_filtre {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 50%;
-          border-radius: 16px;
-          transition: opacity 0.75s;
-        }
       }
+
     }
   }
 
