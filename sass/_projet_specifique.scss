@@ -1,5 +1,10 @@
 #projet_specifique{
     padding: 2vh 0%;
+
+    @media (min-width: 744px) {
+        display: flex;
+        flex-direction: column;
+    }
     
     .fond_projet{
         display: flex;
@@ -8,45 +13,151 @@
         align-items: center;
         width: 100vw;
         background-color: #2B2B2B;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 2rem;
+
+        @media (min-width: 744px) {
+            align-self: center;
+            width: 90vw;
+        }
 
         .titre_projet{
+            font-size: 3.25rem;
             font-weight: bold;
             margin: 0;
             margin-bottom: 1rem;
+
+            @media (min-width: 744px) {
+                font-size: 4rem;
+                align-self: flex-start;
+                margin-left: 2vw;
+            }
         }
 
         .infos_projet{
             display: flex;
             flex-flow: column nowrap;
+
+            @media (min-width: 744px) {
+                width: 95%;
+                flex-flow: row nowrap;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
             
             .infos_specifiques{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
+                @media (min-width: 744px){
+                    align-items: flex-start;
+                }
                 
                 .type_projet{
+                    
+                    width: 50%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     padding: 0.1rem 1rem;
 
+                    
+
+                    @media (min-width: 744px) and (max-width: 1023px) {
+                        margin-top: 1rem;
+                        width: 55%;
+                    }
+                    @media (min-width: 1024px){
+                        text-align: start;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-around;
+                    }
+
+                    .titre_type{
+                        font-weight: bold; 
+
+                        @media (min-width: 744px) {
+                            align-self: flex-start;
+                        }
+                    }
+
+                    .type svg{
+                        width: 3rem;
+                        height: auto;
+                    }
+                    
                     .les_types{
+                        width: 100%;
                         display: flex;
                         justify-content: space-around;
                         flex-flow: row nowrap;
+
+                        @media (min-width: 744px) {
+                            margin-top: 0.5rem;
+                        }
+
+                        .type_projet_web{
+                            background-color: #25CF56;
+                            border: 7px solid #005719;
+                            border-radius: 1rem;
+                            padding: 1rem;
+                        }
+                        .type_projet_jeu{
+                            background-color: #25AFCF;
+                            border: 7px solid #004657;
+                            border-radius: 1rem;
+                            padding: 0.75rem;
+                        }
+                        .type_projet_3d{
+                            background-color: #FFCA92;
+                            border: 7px solid #572D00;
+                            border-radius: 1rem;
+                            padding: 0.75rem;
+                        }
+                        .type_projet_ui{
+                            background-color: #FF92DE;
+                            border: 7px solid #57003D;
+                            border-radius: 1rem;
+                            padding: 1rem;
+                        }
+                        .type_projet_video{
+                            background-color: #9B92FF;
+                            border: 7px solid #070057;
+                            border-radius: 1rem;
+                            padding: 1rem;
+                        }
                     }
-
+                    
                 }
-
+                
                 .cours_projet{
                     margin-top: 1rem;
-                    width: 70%;
+                    width: 80%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     padding: 0.1rem 1rem;
 
-                    font-weight: bold;
+                    p{
+                        text-align: center;
+                        font-weight: bold;
+                    }
+
+                    @media (min-width: 744px) and (max-width: 1023px){
+                        align-items: flex-start;
+                        p{
+                            text-align: left;
+                        }
+                    }
+                    @media (min-width: 1024px){
+                        text-align: start;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-around;
+                    }
                 }
             }
 
@@ -56,10 +167,51 @@
                 flex-direction: column;
                 align-items: center;
 
-                .auteur{
-                    text-align: center;
-                    margin-top: 1rem;
-                    padding: 0;
+                p{
+                    font-size: 1.5rem;
+                }
+                
+                @media (min-width: 744px) and (max-width: 1023px) {
+                    margin-top: 0rem;
+                    align-items: flex-end;
+                }
+                @media (min-width: 1024px){
+                    margin-top: 0rem;
+                    align-items: flex-start;
+                }
+
+                .les_auteurs{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    @media (min-width: 744px) and (max-width: 1023px){
+                        align-items: flex-end;
+                    }
+                    
+                    @media (min-width: 1024px){
+                        width: clamp(25rem, 2.2781rem + 35.503vw, 40rem);
+                        justify-content: space-between;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+
+                    .auteur{
+                        width: 75%;
+                        margin-bottom: 1rem;
+                        font-size: 1.25rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        
+                        @media (min-width: 1024px){
+                            height: 6rem;
+                            width: 49%;
+                            font-size: clamp(0.75rem, 0.3713rem + 0.5917vw, 1rem);
+                        }
+                    }
+
                 }
             }
 
@@ -70,14 +222,35 @@
             .desc{
                 font-weight: bold;
             }
+
+            @media (min-width: 744px) {
+                max-width: 70vw;
+            }
+        }
+        
+        .img_projet{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .img{
+                max-width: 70vw;
+                height: auto;
+                border-radius: 30px;
+            }
+
+            a{
+                color: white;
+                font-weight: bold;
+                font-size: 0.75rem;
+                max-width: 70vw;
+            }
         }
 
-        .img{
-            width: 5rem;
-            height: 5rem;
-            background-image: url("images/projets-etudiants/triptyque.png");
-            background-repeat: no-repeat;
-            background-size: cover;
+        .desc_projet,
+        .img_projet{
+            margin-top: var(--espacement);
         }
     }
     
@@ -92,20 +265,36 @@
     
     .projet_web{
         background-color: #25CF56;
-        border: 1px solid #005719;
+        border: 7px solid #005719;
+        color: black;
+        border-radius: 1rem;
+        padding: 1rem;
+        font-weight: bold;
     }
     .projet_video{
         background-color: #9B92FF;
-        border: 1px solid #070057;
+        border: 7px solid #070057;
+        color: black;
+        border-radius: 1rem;
+        padding: 1rem;
+        font-weight: bold;
     }
     .projet_ui{
         background-color: #FF92DE;
-        border: 1px solid #57003D;
+        border: 7px solid #57003D;
+        color: black;
+        border-radius: 1rem;
+        padding: 1rem;
+        font-weight: bold;
     }
     .projet_jeu{
         background-color: #25AFCF;
         border: 7px solid #004657;
         border-radius: 1rem;
         padding: 1rem;
+        color: black;
+        border-radius: 1rem;
+        padding: 1rem;
+        font-weight: bold;
     }
 }

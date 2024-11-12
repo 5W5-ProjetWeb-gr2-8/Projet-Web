@@ -917,6 +917,12 @@ button.btn-cours:focus {
 #projet_specifique {
   padding: 2vh 0%;
 }
+@media (min-width: 744px) {
+  #projet_specifique {
+    display: flex;
+    flex-direction: column;
+  }
+}
 #projet_specifique .fond_projet {
   display: flex;
   flex-flow: column nowrap;
@@ -924,40 +930,152 @@ button.btn-cours:focus {
   align-items: center;
   width: 100vw;
   background-color: #2B2B2B;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 2rem;
+}
+@media (min-width: 744px) {
+  #projet_specifique .fond_projet {
+    align-self: center;
+    width: 90vw;
+  }
 }
 #projet_specifique .fond_projet .titre_projet {
+  font-size: 3.25rem;
   font-weight: bold;
   margin: 0;
   margin-bottom: 1rem;
 }
+@media (min-width: 744px) {
+  #projet_specifique .fond_projet .titre_projet {
+    font-size: 4rem;
+    align-self: flex-start;
+    margin-left: 2vw;
+  }
+}
 #projet_specifique .fond_projet .infos_projet {
   display: flex;
   flex-flow: column nowrap;
+}
+@media (min-width: 744px) {
+  #projet_specifique .fond_projet .infos_projet {
+    width: 95%;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
 #projet_specifique .fond_projet .infos_projet .infos_specifiques {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 744px) {
+  #projet_specifique .fond_projet .infos_projet .infos_specifiques {
+    align-items: flex-start;
+  }
+}
 #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet {
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0.1rem 1rem;
 }
+@media (min-width: 744px) and (max-width: 1023px) {
+  #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet {
+    margin-top: 1rem;
+    width: 55%;
+  }
+}
+@media (min-width: 1024px) {
+  #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet {
+    text-align: start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .titre_type {
+  font-weight: bold;
+}
+@media (min-width: 744px) {
+  #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .titre_type {
+    align-self: flex-start;
+  }
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .type svg {
+  width: 3rem;
+  height: auto;
+}
 #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   flex-flow: row nowrap;
 }
+@media (min-width: 744px) {
+  #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types {
+    margin-top: 0.5rem;
+  }
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_web {
+  background-color: #25CF56;
+  border: 7px solid #005719;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_jeu {
+  background-color: #25AFCF;
+  border: 7px solid #004657;
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_3d {
+  background-color: #FFCA92;
+  border: 7px solid #572D00;
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_ui {
+  background-color: #FF92DE;
+  border: 7px solid #57003D;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_video {
+  background-color: #9B92FF;
+  border: 7px solid #070057;
+  border-radius: 1rem;
+  padding: 1rem;
+}
 #projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet {
   margin-top: 1rem;
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0.1rem 1rem;
+}
+#projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet p {
+  text-align: center;
   font-weight: bold;
+}
+@media (min-width: 744px) and (max-width: 1023px) {
+  #projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet {
+    align-items: flex-start;
+  }
+  #projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet p {
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  #projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet {
+    text-align: start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 #projet_specifique .fond_projet .infos_projet .auteurs_projet {
   margin-top: 1rem;
@@ -965,10 +1083,54 @@ button.btn-cours:focus {
   flex-direction: column;
   align-items: center;
 }
-#projet_specifique .fond_projet .infos_projet .auteurs_projet .auteur {
+#projet_specifique .fond_projet .infos_projet .auteurs_projet p {
+  font-size: 1.5rem;
+}
+@media (min-width: 744px) and (max-width: 1023px) {
+  #projet_specifique .fond_projet .infos_projet .auteurs_projet {
+    margin-top: 0rem;
+    align-items: flex-end;
+  }
+}
+@media (min-width: 1024px) {
+  #projet_specifique .fond_projet .infos_projet .auteurs_projet {
+    margin-top: 0rem;
+    align-items: flex-start;
+  }
+}
+#projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 744px) and (max-width: 1023px) {
+  #projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs {
+    align-items: flex-end;
+  }
+}
+@media (min-width: 1024px) {
+  #projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs {
+    width: clamp(25rem, 2.2781rem + 35.503vw, 40rem);
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+#projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs .auteur {
+  width: 75%;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-top: 1rem;
-  padding: 0;
+}
+@media (min-width: 1024px) {
+  #projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs .auteur {
+    height: 6rem;
+    width: 49%;
+    font-size: clamp(0.75rem, 0.3713rem + 0.5917vw, 1rem);
+  }
 }
 #projet_specifique .fond_projet .desc_projet {
   max-width: 95vw;
@@ -976,12 +1138,30 @@ button.btn-cours:focus {
 #projet_specifique .fond_projet .desc_projet .desc {
   font-weight: bold;
 }
-#projet_specifique .fond_projet .img {
-  width: 5rem;
-  height: 5rem;
-  background-image: url("images/projets-etudiants/triptyque.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+@media (min-width: 744px) {
+  #projet_specifique .fond_projet .desc_projet {
+    max-width: 70vw;
+  }
+}
+#projet_specifique .fond_projet .img_projet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#projet_specifique .fond_projet .img_projet .img {
+  max-width: 70vw;
+  height: auto;
+  border-radius: 30px;
+}
+#projet_specifique .fond_projet .img_projet a {
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+  max-width: 70vw;
+}
+#projet_specifique .fond_projet .desc_projet,
+#projet_specifique .fond_projet .img_projet {
+  margin-top: var(--espacement);
 }
 #projet_specifique .projet_3d {
   background-color: #FFCA92;
@@ -993,21 +1173,37 @@ button.btn-cours:focus {
 }
 #projet_specifique .projet_web {
   background-color: #25CF56;
-  border: 1px solid #005719;
+  border: 7px solid #005719;
+  color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
 }
 #projet_specifique .projet_video {
   background-color: #9B92FF;
-  border: 1px solid #070057;
+  border: 7px solid #070057;
+  color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
 }
 #projet_specifique .projet_ui {
   background-color: #FF92DE;
-  border: 1px solid #57003D;
+  border: 7px solid #57003D;
+  color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
 }
 #projet_specifique .projet_jeu {
   background-color: #25AFCF;
   border: 7px solid #004657;
   border-radius: 1rem;
   padding: 1rem;
+  color: black;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
 }
 
 .carriere {
