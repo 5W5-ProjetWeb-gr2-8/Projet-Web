@@ -80,16 +80,22 @@
             }
             .detail-universelle {
                 margin: 5rem 0rem 5rem 0rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             .detail {
-                 margin: 5rem 0 5rem 0;
+                 display: flex;
+                 flex-direction: column;
+                 align-items: flex-start;
+                 margin: 5rem 0rem 5rem 0rem;
+                 
             }
-            .detail p{
-                text-wrap: wrap;
-            }
+            
             .detail:nth-of-type(even) {
                 display: flex;
-                flex-direction: row-reverse;
+                flex-direction: column;
+                align-items: flex-end;
             }
 
             //=========LOGO=======//
@@ -121,6 +127,9 @@
                 .intro-paragraphe{
                     flex-direction: column;
                     align-items: center;
+                }
+                .description-intro{
+                    width: 75%;
                 }
                 .trois-cat {
                     flex-direction: column;
