@@ -1,8 +1,10 @@
-main.carriere {
+.carriere {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #000;
 
   .intro-carr {
     width: 1200px;
@@ -15,7 +17,7 @@ main.carriere {
   h3 {
     font-size: var(--taille-police-grande);
     font-weight: bold;
-    color: #000;
+    color: #ffffff;
     margin-left: 30px;
   }
 
@@ -36,7 +38,7 @@ main.carriere {
     width: 70%;
     margin-left: 30px;
     font-size: 1.2em;
-    color: #000;
+    color: #ffffff;
   }
   .trois-cat {
     height: 70px;
@@ -45,7 +47,7 @@ main.carriere {
     margin-top: 20px;
     text-align: center;
   }
-  .trois-cat h5 {
+  .trois-cat a {
     width: 200px;
     height: 40px;
     background-color: rgb(176, 176, 176);
@@ -60,8 +62,24 @@ main.carriere {
     border-radius: 50px;
     cursor: pointer;
   }
-  .trois-cat h5:hover {
-    background-color: #000;
-    color: #fff;
+  .trois-cat a:hover {
+    background-color: #ffffff;
+  }
+
+  .detail-carri {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    width: 1200px;
+  }
+  .detail-universelle {
+    margin: 10rem 0rem 10rem 0rem;
+  }
+  .detail {
+    margin: 5rem 0 5rem 0;
+  }
+  .detail:nth-of-type(even) {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
