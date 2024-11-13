@@ -1329,6 +1329,18 @@ h3 {
   .description-intro {
     width: 60%;
   }
+  .contenu-image-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenu-image-description img {
+    width: 60%;
+    height: auto;
+  }
+  .contenu-image-description p {
+    width: 70%;
+  }
 }
 @media (max-width: 768px) {
   .intro-paragraphe {
