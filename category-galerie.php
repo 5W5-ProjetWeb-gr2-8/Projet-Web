@@ -1,13 +1,6 @@
 <?php
 // Appelle le fichier header.php
 get_header();
-// // Importe et décode le fichier svg.json 
-// $svgJson = file_get_contents(__DIR__ . '/js/svg.json');
-// $svg = json_decode($svgJson, true);
-// // Importe et décode le fichier texte.json 
-// $texteJson = file_get_contents(__DIR__ . '/js/texte.json');
-// $texte = json_decode($texteJson, true);
-// $_comp = $texte["competences"];
 ?>
 
 <!-- Main //////////////////////////////////////////////////////////////////////// -->
@@ -124,7 +117,7 @@ get_header();
 <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
 <?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets ?>
 <!-- FAQ //////////////////////////////////////////////////////////////////////// -->
-<?php get_template_part('template', 'faq'); ?>
+<?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq ?>
 
 <!-- Affiche le footer -->
 <?php get_footer() ?>
