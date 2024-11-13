@@ -5,9 +5,9 @@ get_header();
 
 <!-- Main //////////////////////////////////////////////////////////////////////// -->
 <main class="principal">
-    <?php 
-    if (have_posts()) :
-        while (have_posts()) :
+    <?php
+    if (have_posts()):
+        while (have_posts()):
             the_post();
             ?>
             <article class="article">
@@ -20,9 +20,10 @@ get_header();
     ?>
 </main>
 
+<!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
+<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets ?>
 
 <!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
-
 <?php include 'template-faq.php'; ?>
 
 

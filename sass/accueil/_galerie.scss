@@ -6,11 +6,12 @@
   .galerie-titre {
     color: var(--couleur-galerie-texte); /* Texte noir */
     font-size: var(--taille-police-grande);
-    margin-bottom: var(--espacement);
+    margin-bottom: 0.5rem;
   }
 
   .titre-projet {
     color: var(--couleur-texte-pale);
+    margin-bottom: 0.5rem;
   }
 
   .carrousel-container {

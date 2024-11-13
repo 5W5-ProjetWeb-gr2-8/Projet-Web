@@ -1,9 +1,9 @@
 // Sélection des éléments dans le DOM
-const questions = document.querySelectorAll(".question");
-const boiteReponse = document.getElementById("boite-reponse");
+let questions = document.querySelectorAll(".question");
+let boiteReponse = document.getElementById("boite-reponse");
 
 // Réponses prédéfinies en français
-const questionsReponses = {
+let questionsReponses = {
   question1: {
     reponse:
       "Les TIMS sont un programme de formation en intégration multimédia, combinant la création visuelle et le développement web.",
@@ -29,7 +29,7 @@ const questionsReponses = {
 // Gestion des événements pour afficher les réponses
 questions.forEach((question) => {
   question.addEventListener("click", () => {
-    const data = questionsReponses[question.getAttribute("data-question")];
+    let data = questionsReponses[question.getAttribute("data-question")];
     boiteReponse.querySelector(".reponse-affichee").textContent = data.reponse;
   });
 });

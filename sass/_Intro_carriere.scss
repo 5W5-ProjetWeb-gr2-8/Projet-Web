@@ -1,170 +1,146 @@
+//=========SECTION HAUT DE PAGE=======//
+.carriere {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+.intro-carr {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
 
-            //=========SECTION HAUT DE PAGE=======//
-            .carriere {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
-            }
-            .intro-carr {
-                width: 1200px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin-top: 50px;
-            }
+.ligne-intro {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin-top: 10px;
+}
+.intro-paragraphe {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 
-            h3 {
-                font-size: var(--taille-police-grande);
-                font-weight: bold;
-                color: #ffffff;
-                margin-left: 30px;
-            }
+.description-intro {
+  width: 70%;
+  margin-left: 30px;
+  font-size: var(--poid_textes);
+  color: #ffffff;
+}
+.trois-cat {
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  text-align: center;
+}
+.trois-cat a {
+  width: 200px;
+  height: 40px;
+  background-color: rgb(176, 176, 176);
+  color: #000;
+  font-size: var(--taille-police);
+  font-weight: var(--poid_textes);
 
-            .ligne-intro {
-                width: 100%;
-                height: 1px;
-                background-color: #000;
-                margin-top: 10px;
-            }
-            .intro-paragraphe {
-                width: 100%;
-                display: flex;
-                flex-wrap: wrap;
-                margin-top: 20px;
-            }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-            .description-intro {
-                width: 70%;
-                margin-left: 30px;
-                font-size: var(--poid_textes);
-                color: #ffffff;
-            }
-            .trois-cat {
-                height: 70px;
-                display: flex;
-                justify-content: space-evenly;
-                margin-top: 20px;
-                text-align: center;
-            }
-            .trois-cat a {
-                width: 200px;
-                height: 40px;
-                background-color: rgb(176, 176, 176);
-                color: #000;
-                font-size: var(--taille-police);
-                font-weight: var(--poid_textes);
+  border-radius: 50px;
+  cursor: pointer;
+}
+.trois-cat a:hover {
+  background-color: #ffffff;
+}
+//=======================//
 
-                display: flex;
-                justify-content: center;
-                align-items: center;
+//=========PARTIE EN BAS DETAILS =======//
+.detail-carri {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  width: 1200px;
+}
+.detail-universelle {
+  margin: 5rem 0rem 5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0rem 5rem 0rem;
+}
+.contenu-image-description {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-around;
+}
+.contenu-image-description:nth-of-type(even) {
+  align-items: flex-end;
+}
+.contenu-image-description p {
+  padding-left: 20px;
+}
 
-                border-radius: 50px;
-                cursor: pointer;
-            }
-            .trois-cat a:hover {
-                background-color: #ffffff;
-            }
-            //=======================//
+//=========LOGO=======//
+.logo_carriere {
+  width: 25%;
+  height: auto;
+}
+.logo_flecheCar {
+  width: 100%;
+  height: auto;
+}
 
+//RESPONSIVE========//
+@media (max-width: 1240px) {
+  .intro-carr {
+    width: 100%;
+  }
+  .description-intro {
+    width: 60%;
+  }
+  .contenu-image-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenu-image-description img {
+    width: 60%;
+    height: auto;
+  }
+  .contenu-image-description p {
+    width: 70%;
+  }
+}
 
-
-            //=========PARTIE EN BAS DETAILS =======//
-            .detail-carri {
-                display: flex;
-                flex-direction: column;
-                color: #ffffff;
-                width: 1200px;
-            }
-            .detail-universelle {
-                margin: 5rem 0rem 5rem 0rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .detail {
-                 display: flex;
-                 flex-direction: column;
-                 align-items: center;
-                 margin: 5rem 0rem 5rem 0rem;
-            }
-            .contenu-image-description{
-                display: flex;
-                margin-top: 3rem;
-                justify-content: space-around;
-                
-            }
-            .contenu-image-description:nth-of-type(even){
-                align-items: flex-end;
-            }
-            .contenu-image-description p{
-                padding-left: 20px;
-            }
-
-
-            //=========LOGO=======//
-            .logo_carriere {
-                width:25% ;
-                height: auto;
-            }
-            .logo_flecheCar {
-                width: 100%;
-                height: auto;
-            }
-            
-
-
-
-            //RESPONSIVE========//
-            @media (max-width: 1240px) {
-                .intro-carr {
-                    width: 100%;
-                }
-                .description-intro {
-                    width: 60%;
-                }
-                .contenu-image-description{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-                .contenu-image-description img{
-                    width: 60%;
-                    height: auto;
-                    
-                }
-                .contenu-image-description p{
-                    width: 70%;
-                }
-               
-                
-            } 
-            
-            @media (max-width: 768px) {
-                .intro-paragraphe{
-                    flex-direction: column;
-                    align-items: center;
-                }
-                .description-intro{
-                    width: 75%;
-                }
-                .trois-cat {
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-                    height: 200px;
-                }
-                .logo_carriere {
-                    width:40% ;
-                    height: auto;
-                    margin: 3rem 0 3rem 0;
-                }
-                
-            }
-
-
- 
-
-
+@media (max-width: 768px) {
+  .intro-paragraphe {
+    flex-direction: column;
+    align-items: center;
+  }
+  .description-intro {
+    width: 75%;
+  }
+  .trois-cat {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+  }
+  .logo_carriere {
+    width: 40%;
+    height: auto;
+    margin: 3rem 0 3rem 0;
+  }
+}
