@@ -87,16 +87,22 @@
             .detail {
                  display: flex;
                  flex-direction: column;
-                 align-items: flex-start;
+                 align-items: center;
                  margin: 5rem 0rem 5rem 0rem;
-                 
             }
-            
-            .detail:nth-of-type(even) {
+            .contenu-image-description{
                 display: flex;
-                flex-direction: column;
+                margin-top: 3rem;
+                justify-content: space-around;
+                
+            }
+            .contenu-image-description:nth-of-type(even){
                 align-items: flex-end;
             }
+            .contenu-image-description p{
+                padding-left: 20px;
+            }
+
 
             //=========LOGO=======//
             .logo_carriere {
