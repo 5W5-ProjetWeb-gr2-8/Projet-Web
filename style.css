@@ -804,6 +804,7 @@ button.btn-cours:focus {
   flex: 0 1 80%;
   justify-content: space-around;
   align-items: center;
+  gap: 0.5rem;
 }
 @media (min-width: 1001px) {
   .galerie_projet .section_filtres .les_filtres {
@@ -816,8 +817,8 @@ button.btn-cours:focus {
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre input:checked ~ .filtre {
   background-color: black;
-  color: #929292;
-  border: 1px solid #929292;
+  color: white;
+  border: 1px solid white;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .filtre {
   display: flex;
@@ -833,7 +834,8 @@ button.btn-cours:focus {
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .filtre:hover {
   color: white;
-  background-color: black;
+  background-color: rgb(55, 55, 55);
+  cursor: pointer;
 }
 @media (min-width: 1240px) {
   .galerie_projet .section_filtres .les_filtres .conteneur_filtre .filtre {
@@ -870,6 +872,7 @@ button.btn-cours:focus {
   width: 89%;
   height: 100%;
   box-shadow: 20px 15px 45px -12px hsl(0, 0%, 61%);
+  cursor: pointer;
 }
 .galerie_projet .section_galerie .conteneur_projet .projet_galerie:hover .projet_filtre {
   opacity: 0%;
