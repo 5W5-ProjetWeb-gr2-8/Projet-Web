@@ -1265,6 +1265,140 @@ button.btn-cours:focus {
   font-weight: bold;
 }
 
+#vie_etudiante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#vie_etudiante h2 {
+  align-self: flex-start;
+  font-weight: bold;
+}
+#vie_etudiante .fond_section {
+  width: 100vw;
+  overflow: hidden;
+  background-color: #2B2B2B;
+  border-radius: 2rem;
+  padding-inline: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#vie_etudiante .fond_section p {
+  font-weight: bold;
+}
+@media (min-width: 1024px) {
+  #vie_etudiante .fond_section {
+    width: 80vw;
+  }
+}
+#vie_etudiante .fond_section .titre_section {
+  margin-top: 0;
+  font-size: 1.75rem;
+  text-align: center;
+  align-self: center;
+}
+@media (min-width: 744px) {
+  #vie_etudiante .fond_section .titre_section {
+    align-self: flex-start;
+  }
+}
+#vie_etudiante .fond_section .desc {
+  margin-bottom: 1rem;
+}
+#vie_etudiante .fond_section .conteneur_images {
+  width: 125vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#vie_etudiante .fond_section .conteneur_images .element_principal {
+  flex: 0 1 40%;
+  transition: box-shadow 1s, flex 0.5s;
+}
+#vie_etudiante .fond_section .conteneur_images .element_principal:hover {
+  flex: 0 1 45%;
+}
+@media (min-width: 1024px) {
+  #vie_etudiante .fond_section .conteneur_images .element_principal:hover {
+    flex: 0 1 30%;
+  }
+}
+@media (min-width: 1024px) {
+  #vie_etudiante .fond_section .conteneur_images .element_principal {
+    flex: 0 1 30%;
+  }
+}
+@media (min-width: 1024px) {
+  #vie_etudiante .fond_section .conteneur_images {
+    width: 100%;
+  }
+}
+#vie_etudiante .fond_section .conteneur_images > img,
+#vie_etudiante .fond_section .conteneur_images > div {
+  flex: 0 1 25%;
+}
+#vie_etudiante .fond_section .conteneur_images > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#vie_etudiante .fond_section .conteneur_images > div img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+#vie_etudiante .fond_section .conteneur_images > div a {
+  color: white;
+  transition: font-size 1s;
+}
+#vie_etudiante .fond_section .conteneur_images > div a:hover {
+  font-size: 1.25rem;
+}
+#vie_etudiante .vie_galerie {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 2rem;
+}
+@media (min-width: 744px) and (max-width: 1023px) {
+  #vie_etudiante .vie_galerie {
+    grid-template-columns: 45% 45%;
+    column-gap: 10%;
+  }
+}
+@media (min-width: 1024px) {
+  #vie_etudiante .vie_galerie {
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 5%;
+  }
+}
+#vie_etudiante .vie_galerie img {
+  width: 100%;
+  height: auto;
+}
+#vie_etudiante img {
+  width: 25%;
+  height: auto;
+  border-radius: 1rem;
+}
+#vie_etudiante .comite_couleurs {
+  background-color: #25CF56;
+  border: 7px solid #005719;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#vie_etudiante .evenements_couleurs {
+  background-color: #25AFCF;
+  border: 7px solid #004657;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
 .carriere {
   width: 100%;
   display: flex;
