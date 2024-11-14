@@ -19,8 +19,8 @@ get_header();
                 <div class="les_filtres">
                     <!-- Filtre 1 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="UI/UX"><!-- Checkbox pour pouvoir changer letat du filtre -->
-                        <label for="UI/UX" class="filtre filtre_ui">UI/UX</label>
+                        <input type="checkbox" id="UI"><!-- Checkbox pour pouvoir changer letat du filtre -->
+                        <label for="UI" class="filtre filtre_ui">UI/UX</label>
                     </div>
                     <!-- Filtre 2 ///////////// -->
                     <div class="conteneur_filtre">
@@ -115,9 +115,14 @@ get_header();
 <!-- Fin du contenu de la page ///////////////////////////////////////////////// -->
 
 <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
-<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets ?>
+<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets 
+?>
 <!-- FAQ //////////////////////////////////////////////////////////////////////// -->
-<?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq ?>
+<?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq 
+?>
+
+<!-- Inclure les fichiers JavaScript -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/galerie.js"></script>
 
 <!-- Affiche le footer -->
 <?php get_footer() ?>
