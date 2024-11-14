@@ -75,7 +75,7 @@ $_comp = $texte["competences"];
           foreach ($comp["projets"] as $projet => $srcProj):
             ?>
             <!-- un projet -->
-            <article>
+            <article class="item">
               <!-- image du projet -->
               <div class="miniature inactif">
                 <?php
