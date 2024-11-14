@@ -1273,45 +1273,45 @@ button.btn-cours:focus {
   align-items: center;
   background-color: #000;
 }
-.carriere .intro-carr {
+
+.intro-carr {
   width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
 }
-.carriere h3 {
-  font-size: var(--taille-police-grande);
-  font-weight: bold;
-  color: #ffffff;
-  margin-left: 30px;
-}
-.carriere .ligne-intro {
+
+.ligne-intro {
   width: 100%;
   height: 1px;
   background-color: #000;
   margin-top: 10px;
 }
-.carriere .intro-paragraphe {
+
+.intro-paragraphe {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
 }
-.carriere .description-intro {
+
+.description-intro {
   width: 70%;
   margin-left: 30px;
-  font-size: 1.2em;
+  font-size: var(--poid_textes);
   color: #ffffff;
 }
-.carriere .trois-cat {
+
+.trois-cat {
   height: 70px;
   display: flex;
   justify-content: space-evenly;
   margin-top: 20px;
   text-align: center;
 }
-.carriere .trois-cat a {
+
+.trois-cat a {
   width: 200px;
   height: 40px;
   background-color: rgb(176, 176, 176);
@@ -1324,26 +1324,96 @@ button.btn-cours:focus {
   border-radius: 50px;
   cursor: pointer;
 }
-.carriere .trois-cat a:hover {
+
+.trois-cat a:hover {
   background-color: #ffffff;
 }
-.carriere .detail-carri {
+
+.detail-carri {
   display: flex;
   flex-direction: column;
   color: #ffffff;
   width: 1200px;
 }
-.carriere .detail-universelle {
-  margin: 10rem 0rem 10rem 0rem;
-}
-.carriere .detail {
-  margin: 5rem 0 5rem 0;
-}
-.carriere .detail:nth-of-type(even) {
+
+.detail-universelle {
+  margin: 5rem 0rem 5rem 0rem;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  align-items: center;
 }
 
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0rem 5rem 0rem;
+}
+
+.contenu-image-description {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-around;
+}
+
+.contenu-image-description:nth-of-type(even) {
+  align-items: flex-end;
+}
+
+.contenu-image-description p {
+  padding-left: 20px;
+}
+
+.logo_carriere {
+  width: 25%;
+  height: auto;
+}
+
+.logo_flecheCar {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1240px) {
+  .intro-carr {
+    width: 100%;
+  }
+  .description-intro {
+    width: 60%;
+  }
+  .contenu-image-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenu-image-description img {
+    width: 60%;
+    height: auto;
+  }
+  .contenu-image-description p {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .intro-paragraphe {
+    flex-direction: column;
+    align-items: center;
+  }
+  .description-intro {
+    width: 75%;
+  }
+  .trois-cat {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+  }
+  .logo_carriere {
+    width: 40%;
+    height: auto;
+    margin: 3rem 0 3rem 0;
+  }
+}
 /* ////////////////////////////////////////// */
 /* Accueil                                    */
 /* ////////////////////////////////////////// */
@@ -1406,10 +1476,11 @@ section.debut_accueil div h1 {
 .galerie-projets .galerie-titre {
   color: var(--couleur-galerie-texte); /* Texte noir */
   font-size: var(--taille-police-grande);
-  margin-bottom: var(--espacement);
+  margin-bottom: 0.5rem;
 }
 .galerie-projets .titre-projet {
   color: var(--couleur-texte-pale);
+  margin-bottom: 0.5rem;
 }
 .galerie-projets .carrousel-container {
   position: relative;
@@ -1765,7 +1836,6 @@ section.competences div.competence-item.active .competence-content {
     display: block;
     position: absolute;
     right: 4%;
-    top: 2.4rem;
   }
 }
 @media (min-width: 769px) {
