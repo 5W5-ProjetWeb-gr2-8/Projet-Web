@@ -1209,6 +1209,11 @@ button.btn-cours:focus {
   font-weight: bold;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .carriere {
   width: 100%;
   display: flex;
@@ -1311,8 +1316,23 @@ h3 {
   align-items: flex-end;
 }
 
-.contenu-image-description p {
-  padding-left: 20px;
+.paragraphe {
+  margin-left: 20px;
+}
+
+.paragraphe p {
+  margin-top: 2rem;
+  padding: 10px;
+  background-color: rgba(55, 55, 55, 0.6352941176);
+  border-radius: 10px;
+}
+
+.paragraphe a {
+  color: bisque;
+}
+
+.paragraphe a:hover {
+  color: #ff9980;
 }
 
 .logo_carriere {
@@ -1342,7 +1362,12 @@ h3 {
     height: auto;
   }
   .contenu-image-description p {
-    width: 70%;
+    width: 60%;
+  }
+  .paragraphe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media (max-width: 768px) {
@@ -1363,6 +1388,10 @@ h3 {
     width: 40%;
     height: auto;
     margin: 3rem 0 3rem 0;
+  }
+  .contenu-image-description {
+    width: 60%;
+    height: auto;
   }
 }
 /* ////////////////////////////////////////// */
