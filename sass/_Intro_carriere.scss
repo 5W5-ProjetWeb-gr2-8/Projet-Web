@@ -1,34 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
-        
-            * {
-                margin: 0;
-                padding: 0;
-            }
-
-
-            //=========SECTION HAUT DE PAGE=======//
-            .carriere {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
-            }
-            .intro-carr {
-                width: 1200px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin-top: 50px;
-            }
-
-            h3 {
-                font-size: var(--taille-police-grande);
-                font-weight: bold;
-                color: #ffffff;
-                margin-left: 30px;
-            }
+//=========SECTION HAUT DE PAGE=======//
+.carriere {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+.intro-carr {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
 
 .ligne-intro {
   width: 100%;
@@ -76,52 +66,48 @@
 }
 //=======================//
 
-            //=========PARTIE EN BAS DETAILS =======//
-            .detail-carri {
-                display: flex;
-                flex-direction: column;
-                color: #ffffff;
-                width: 1200px;
-            }
-            .detail-universelle {
-                margin: 5rem 0rem 5rem 0rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .detail {
-                 display: flex;
-                 flex-direction: column;
-                 align-items: center;
-                 margin: 5rem 0rem 5rem 0rem;
-            }
-            .contenu-image-description{
-                display: flex;
-                margin-top: 3rem;
-                justify-content: space-around;
-                
-            }
-            .contenu-image-description:nth-of-type(even){
-                align-items: flex-end;
-            }
-            .paragraphe {
-                margin-left: 20px;
-            }
-            .paragraphe p{
-                margin-top: 2rem;
-                padding: 10px;
-                background-color: #373737a2;
-                border-radius: 10px;
-            }
-            .paragraphe a{
-                color: bisque;
-            }
-            .paragraphe a:hover{
-                color: #ff9980;
-            }
-            
-            
-
+//=========PARTIE EN BAS DETAILS =======//
+.detail-carri {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  width: 1200px;
+}
+.detail-universelle {
+  margin: 5rem 0rem 5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0rem 5rem 0rem;
+}
+.contenu-image-description {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-around;
+}
+.contenu-image-description:nth-of-type(even) {
+  align-items: flex-end;
+}
+.paragraphe {
+  margin-left: 20px;
+}
+.paragraphe p {
+  margin-top: 2rem;
+  padding: 10px;
+  background-color: #373737a2;
+  border-radius: 10px;
+}
+.paragraphe a {
+  color: bisque;
+}
+.paragraphe a:hover {
+  color: #ff9980;
+}
 
 //=========LOGO=======//
 .logo_carriere {
@@ -133,67 +119,55 @@
   height: auto;
 }
 
-            //RESPONSIVE========//
-            @media (max-width: 1240px) {
-                .intro-carr {
-                    width: 100%;
-                }
-                .description-intro {
-                    width: 60%;
-                }
-                .contenu-image-description{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                   
-                }
-                .contenu-image-description img{
-                    width: 60%;
-                    height: auto;
-                    
-                }
-                .contenu-image-description p{
-                    width: 60%;
-                }
-                .paragraphe{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-               
-                
-            } 
-            
-            @media (max-width: 768px) {
-                .intro-paragraphe{
-                    flex-direction: column;
-                    align-items: center;
-                }
-                .description-intro{
-                    width: 75%;
-                }
-                .trois-cat {
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-                    height: 200px;
-                }
-                .logo_carriere {
-                    width:40% ;
-                    height: auto;
-                    margin: 3rem 0 3rem 0;
-                }
+//RESPONSIVE========//
+@media (max-width: 1240px) {
+  .intro-carr {
+    width: 100%;
+  }
+  .description-intro {
+    width: 60%;
+  }
+  .contenu-image-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenu-image-description img {
+    width: 60%;
+    height: auto;
+  }
+  .contenu-image-description p {
+    width: 60%;
+  }
+  .paragraphe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
-                .contenu-image-description{
-                    width: 60%;
-                    height: auto;
-                    
-                }
-                
-                
-            }
+@media (max-width: 768px) {
+  .intro-paragraphe {
+    flex-direction: column;
+    align-items: center;
+  }
+  .description-intro {
+    width: 75%;
+  }
+  .trois-cat {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+  }
+  .logo_carriere {
+    width: 40%;
+    height: auto;
+    margin: 3rem 0 3rem 0;
+  }
 
-
- 
-
-
+  .contenu-image-description {
+    width: 60%;
+    height: auto;
+  }
+}

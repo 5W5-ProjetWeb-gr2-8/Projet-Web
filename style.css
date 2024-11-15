@@ -794,8 +794,8 @@ button.btn-cours:focus {
 }
 .galerie_projet .section_filtres p,
 .galerie_projet .section_filtres .filtre {
-  text-align: center;
   font-family: var(--police_titres);
+  text-align: center;
 }
 .galerie_projet .section_filtres .les_filtres {
   color: black;
@@ -847,10 +847,12 @@ button.btn-cours:focus {
   grid-template-columns: 50% 50%;
   row-gap: 2rem;
   padding: 10px;
+  gap: 2rem;
 }
 @media (min-width: 744px) {
   .galerie_projet .section_galerie {
     grid-template-columns: 33% 33% 33%;
+    gap: 2rem;
   }
 }
 .galerie_projet .section_galerie .conteneur_projet {
@@ -859,18 +861,18 @@ button.btn-cours:focus {
   justify-content: center;
   align-items: center;
   height: clamp(10rem, 10.984vw + 7.4256rem, 25rem);
+  gap: 1rem; /* Ajoute un écart entre les images */
 }
 .galerie_projet .section_galerie .conteneur_projet .projet_galerie {
-  width: 80%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   border-radius: 16px;
   position: relative;
   box-shadow: 0px 0px 0px 0px hsl(0, 0%, 61%);
+  overflow: hidden; /* Empêche l'image de déborder de sa case */
   transition: width 0.5s, height 0.5s, box-shadow 0.5s;
 }
 .galerie_projet .section_galerie .conteneur_projet .projet_galerie:hover {
-  width: 89%;
-  height: 100%;
   box-shadow: 20px 15px 45px -12px hsl(0, 0%, 61%);
   cursor: pointer;
 }
@@ -880,11 +882,13 @@ button.btn-cours:focus {
 .galerie_projet .section_galerie .conteneur_projet .projet_galerie .projet_image {
   width: 100%;
   height: 100%;
-  background-image: url("images/projets-etudiants/triptyque.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left 50% top 65%;
+  object-fit: cover; /* Utilisation de 'cover' pour remplir complètement la case */
   border-radius: 16px;
+}
+.galerie_projet .section_galerie .conteneur_projet .projet_galerie .projet_image .img_galerie {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .galerie_projet .section_galerie .conteneur_projet .projet_galerie .projet_filtre {
   position: absolute;
@@ -1229,13 +1233,6 @@ button.btn-cours:focus {
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
-}
-
-h3 {
-  font-size: var(--taille-police-grande);
-  font-weight: bold;
-  color: #ffffff;
-  margin-left: 30px;
 }
 
 .ligne-intro {

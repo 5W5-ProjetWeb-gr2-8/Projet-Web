@@ -19,27 +19,27 @@ get_header();
                 <div class="les_filtres">
                     <!-- Filtre 1 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="UI"><!-- Checkbox pour pouvoir changer letat du filtre -->
+                        <input type="checkbox" id="UI"><!-- Checkbox pour pouvoir changer l'état du filtre -->
                         <label for="UI" class="filtre filtre_ui">UI/UX</label>
                     </div>
                     <!-- Filtre 2 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="WEB"><!-- Checkbox pour pouvoir changer letat du filtre -->
+                        <input type="checkbox" id="WEB"><!-- Checkbox pour pouvoir changer l'état du filtre -->
                         <label for="WEB" class="filtre filtre_web">WEB</label>
                     </div>
                     <!-- Filtre 3 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="3D"><!-- Checkbox pour pouvoir changer letat du filtre -->
+                        <input type="checkbox" id="3D"><!-- Checkbox pour pouvoir changer l'état du filtre -->
                         <label for="3D" class="filtre filtre_3d">3D</label>
                     </div>
                     <!-- Filtre 4 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="JEU"><!-- Checkbox pour pouvoir changer letat du filtre -->
+                        <input type="checkbox" id="JEU"><!-- Checkbox pour pouvoir changer l'état du filtre -->
                         <label for="JEU" class="filtre filtre_jeu">JEU</label>
                     </div>
                     <!-- Filtre 5 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="VIDEO"><!-- Checkbox pour pouvoir changer letat du filtre -->
+                        <input type="checkbox" id="VIDEO"><!-- Checkbox pour pouvoir changer l'état du filtre -->
                         <label for="VIDEO" class="filtre filtre_video">VIDEO</label>
                     </div>
                     <!-- Fin des differents filtres ///////////////-->
@@ -51,65 +51,36 @@ get_header();
 
         <!-- Section qui montre les differents projets//////////////////////////////////////////////////////////////// -->
         <div class="section_galerie">
-            <!-- Les differents projets ///////////////////-->
-            <!-- Exemple projet 1 -->
-            <div class="conteneur_projet">
-                <div class="projet_galerie">
-                    <p class="projet_image">
-                    <p class="projet_filtre gal_proj_web">
+            <?php
+            // Tableau associatif contenant les IDs d'images et leurs classes de filtre
+            $projets = [
+                ['id' => 240, 'filtre_classe' => 'gal_proj_web'],
+                ['id' => 203, 'filtre_classe' => 'gal_proj_jeu'],
+                ['id' => 248, 'filtre_classe' => 'gal_proj_3d'],
+                ['id' => 202, 'filtre_classe' => 'gal_proj_ui'],
+                ['id' => 207, 'filtre_classe' => 'gal_proj_video'],
+                ['id' => 195, 'filtre_classe' => 'gal_proj_ui'],
+                ['id' => 191, 'filtre_classe' => 'gal_proj_video'],
+                ['id' => 201, 'filtre_classe' => 'gal_proj_web'],
+            ];
+
+            // Boucle pour afficher chaque projet
+            foreach ($projets as $projet) :
+                // Récupérer l'URL de l'image avec wp_get_attachment_url()
+                $image_url = wp_get_attachment_url($projet['id']);
+            ?>
+                <div class="conteneur_projet">
+                    <div class="projet_galerie">
+                        <div class="projet_image">
+                            <!-- Afficher l'image en utilisant l'URL récupérée -->
+                            <img class="img_galerie" src="<?php echo esc_url($image_url); ?>" alt="Projet">
+                        </div>
+                        <div class="projet_filtre <?php echo esc_attr($projet['filtre_classe']); ?>"></div>
+                    </div>
                 </div>
-            </div>
-            <!-- Exemple projet 2 -->
-            <div class="conteneur_projet">
-                <div class="projet_galerie">
-                    <p class="projet_image">
-                    <p class="projet_filtre gal_proj_jeu">
-                </div>
-            </div>
-            <!-- Exemple projet 3 -->
-            <div class="conteneur_projet">
-                <div class="projet_galerie">
-                    <p class="projet_image">
-                    <p class="projet_filtre gal_proj_3d">
-                </div>
-            </div>
-            <!-- Exemple projet 4 -->
-            <div class="conteneur_projet">
-                <div class="projet_galerie">
-                    <p class="projet_image">
-                    <p class="projet_filtre gal_proj_ui">
-                </div>
-            </div>
-            <!-- Exemple projet 5 -->
-            <div class="conteneur_projet">
-                <div class="projet_galerie">
-                    <p class="projet_image">
-                    <p class="projet_filtre gal_proj_video">
-                </div>
-            </div>
-            <!-- Exemple projet 6 -->
-            <div class="conteneur_projet">
-                <div class="projet_galerie">
-                    <p class="projet_image">
-                    <p class="projet_filtre gal_proj_ui">
-                </div>
-            </div>
-            <!-- Exemple projet 7 -->
-            <div class="conteneur_projet">
-                <div class="projet_galerie">
-                    <p class="projet_image">
-                    <p class="projet_filtre gal_proj_video">
-                </div>
-            </div>
-            <!-- Exemple projet 8 -->
-            <div class="conteneur_projet">
-                <div class="projet_galerie">
-                    <p class="projet_image">
-                    <p class="projet_filtre gal_proj_ui">
-                </div>
-            </div>
-            <!-- Fin section ////////////////////// -->
+            <?php endforeach; ?>
         </div>
+        <!-- Fin section ////////////////////// -->
     </section>
 </main>
 <!-- Fin du contenu de la page ///////////////////////////////////////////////// -->
@@ -125,4 +96,4 @@ get_header();
 <script src="<?php echo get_template_directory_uri(); ?>/js/galerie.js"></script>
 
 <!-- Affiche le footer -->
-<?php get_footer() ?>
+<?php get_footer(); ?>
