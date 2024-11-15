@@ -27,25 +27,29 @@ get_header();
             <div class="alignementTextIcon">
                 <h5>Création Video</h5>
                 <button class="btn-cours">
-                    <img id="iconCours" src="images/logo_video.png" alt="Logo Video" />
+                    <img id="iconCours" src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Logo Video" />
+
                 </button>
             </div>
             <div class="alignementTextIcon">
                 <h5>Création Video</h5>
                 <button class="btn-cours">
-                    <img id="iconCours" src="images/logo_video.png" alt="Logo Video" />
+                    <img id="iconCours" src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Logo Video" />
+
                 </button>
             </div>
             <div class="alignementTextIcon">
                 <h5>Création Video</h5>
                 <button class="btn-cours">
-                    <img id="iconCours" src="images/logo_video.png" alt="Logo Video" />
+                    <img id="iconCours" src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Logo Video" />
+
                 </button>
             </div>
             <div class="alignementTextIcon">
                 <h5>Création Video</h5>
                 <button class="btn-cours">
-                    <img id="iconCours" src="images/logo_video.png" alt="Logo Video" />
+                    <img id="iconCours" src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Logo Video" />
+
                 </button>
             </div>
         </div>
@@ -81,10 +85,12 @@ get_header();
     </div>
 </section>
 <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
-<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets ?>
+<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets 
+?>
 
 <!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
-<?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq ?>
+<?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq 
+?>
 
 <!-- Affiche le footer -->
 <?php get_footer() ?>

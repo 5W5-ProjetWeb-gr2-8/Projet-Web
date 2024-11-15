@@ -17,7 +17,7 @@ get_header();
 
         <section class="intro-paragraphe">
 
-            <img class="logo_carriere" src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Diagram Venn TIM" />
+            <img class="logo_carriere" src="<?php echo wp_get_attachment_url(303); ?>" alt="Diagram Venn TIM" />
 
 
             <div class="description-intro">
@@ -29,7 +29,7 @@ get_header();
                 <p>LES TROIX SECTIONS SUIVANTES VOUS EXPLIQUERONT LES DÉTAILS DE CHAQUE CHOIX.</p>
 
 
-                <img class="logo_flecheCar" src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Logo Direction Carrière">
+                <img class="logo_flecheCar" src="<?php echo wp_get_attachment_url(309); ?>" alt="Logo Direction Carrière">
 
             </div>
         </section>
@@ -45,7 +45,7 @@ get_header();
                 <h5>Stage</h5>
 
                 <div class="contenu-image-description">
-                    <img src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="image qui illustre un stage">
+                    <img src="<?php echo wp_get_attachment_url(305); ?>" alt="image qui illustre un stage">
 
 
                     <section class="paragraphe">
@@ -70,7 +70,7 @@ get_header();
                 <h5>Université</h5>
 
                 <div class="contenu-image-description">
-                    <img src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="image d'un Université">
+                    <img src="<?php echo wp_get_attachment_url(306); ?>" alt="image d'un Université">
 
 
                     <section class="paragraphe">
@@ -91,7 +91,7 @@ get_header();
 
 
                 <div class="contenu-image-description">
-                    <img src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="image emploi">
+                    <img src="<?php echo wp_get_attachment_url(307); ?>" alt="image emploi">
 
 
                     <section class="paragraphe">
@@ -152,13 +152,13 @@ get_header();
             <div class="social-media">
                 <!-- Site collège -->
                 <a href="https://www.cmaisonneuve.qc.ca/" target="_blank">
-                    <img src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Logo Collège de Maisonneuve" />
+                    <img src="<?php echo wp_get_attachment_url(52); ?>" alt="Logo Collège de Maisonneuve" />
 
                 </a>
                 <!-- LinkedIn -->
                 <a
                     href="https://www.linkedin.com/in/tim-coll%C3%A8ge-de-maisonneuve-9407b7131/">
-                    <img src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="LinkedIn" />
+                    <img src="<?php echo wp_get_attachment_url(53); ?>" alt="LinkedIn" />
 
                 </a>
                 <!-- Behance -->
