@@ -82,6 +82,7 @@
           margin-top: var(--espacement);
           border: 1px solid rgba(0, 0, 0, 0);
           transition: background-color 0.5s, color 0.5s, border 0.5s;
+          font-weight: bold;
 
           &:hover {
             color: white;
