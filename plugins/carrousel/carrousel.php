@@ -22,12 +22,12 @@ add_action('wp_enqueue_scripts', 'carrousel_enqueue');
 function genere_html()
 {
   // Tableau des IDs d'images pour le carrousel
-  $projets_ids = array(64, 66, 63, 65, 62);
+  $projets_ids = array(244, 66, 240, 65, 248);
 
   // Début du contenu HTML de la section carrousel
   $contenu = '<section class="galerie-projets">
         <h2 class="galerie-titre">Projets étudiants</h2>
-        <h3 id="titre-projet" class="titre-projet">Titre du projet</h3>
+        <h3 id="titre-projet" class="titre-projet">Projet web en équipe</h3>
         <div class="carrousel-container">
             <div class="fleche gauche" onclick="changerImage(-1)">&#9664;</div>
             <!-- Flèche gauche -->

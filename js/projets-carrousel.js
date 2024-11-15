@@ -1,15 +1,15 @@
 let indexActuel = 0;
-const items = document.querySelectorAll(".carrousel-item");
-const indications = document.querySelectorAll(".indication");
-const titreProjet = document.getElementById("titre-projet"); // Sélectionne l'élément titre
+let items = document.querySelectorAll(".carrousel-item");
+let indications = document.querySelectorAll(".indication");
+let titreProjet = document.getElementById("titre-projet"); // Sélectionne l'élément titre
 
 // Tableau des titres de projets
-const titres = [
-  "Lacryma",
+let titres = [
+  "Projet web en équipe",
   "Triptyque",
-  "Inserxion",
+  "Projet web en équipe",
   "Réalité virtuelle",
-  "Dystopie chronique",
+  "Création 3D",
 ];
 
 function afficherImage(index) {

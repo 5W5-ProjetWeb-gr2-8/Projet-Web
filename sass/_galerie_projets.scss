@@ -4,7 +4,6 @@
   padding: 2vh 10%; /* variable à changer */
 
   h2 {
-    // titre de la page
     margin: 30px 0; /* variable à changer */
   }
 
@@ -42,10 +41,8 @@
 
     p,
     .filtre {
-      // font-size: clamp(1.5rem, .7323vw + 1.3284rem, 2.5rem);
-      text-align: center;
-
       font-family: var(--police_titres);
+      text-align: center;
     }
 
     .les_filtres {
@@ -55,6 +52,7 @@
       flex: 0 1 80%;
       justify-content: space-around;
       align-items: center;
+      gap: 0.5rem;
 
       @media (min-width: 1001px) {
         flex-flow: nowrap row;
@@ -65,10 +63,11 @@
         input {
           display: none;
         }
+
         input:checked ~ .filtre {
           background-color: black;
-          color: #929292;
-          border: 1px solid #929292;
+          color: white;
+          border: 1px solid white;
         }
 
         .filtre {
@@ -86,7 +85,8 @@
 
           &:hover {
             color: white;
-            background-color: black;
+            background-color: rgb(55, 55, 55);
+            cursor: pointer;
           }
 
           @media (min-width: 1240px) {
@@ -102,8 +102,11 @@
     grid-template-columns: 50% 50%;
     row-gap: 2rem;
     padding: 10px;
+    gap: 2rem;
+
     @media (min-width: 744px) {
       grid-template-columns: 33% 33% 33%;
+      gap: 2rem;
     }
 
     .conteneur_projet {
@@ -112,19 +115,20 @@
       justify-content: center;
       align-items: center;
       height: clamp(10rem, 10.984vw + 7.4256rem, 25rem);
+      gap: 1rem; /* Ajoute un écart entre les images */
 
       .projet_galerie {
-        width: 80%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
         border-radius: 16px;
         position: relative;
         box-shadow: 0px 0px 0px 0px hsl(0, 0%, 61%);
+        overflow: hidden; /* Empêche l'image de déborder de sa case */
         transition: width 0.5s, height 0.5s, box-shadow 0.5s;
 
         &:hover {
-          width: 89%;
-          height: 100%;
           box-shadow: 20px 15px 45px -12px hsl(0, 0%, 61%);
+          cursor: pointer;
           .projet_filtre {
             opacity: 0%;
           }
@@ -133,11 +137,14 @@
         .projet_image {
           width: 100%;
           height: 100%;
-          background-image: url("images/projets-etudiants/triptyque.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: left 50% top 65%;
+          object-fit: cover; /* Utilisation de 'cover' pour remplir complètement la case */
           border-radius: 16px;
+
+          .img_galerie {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
 
         .projet_filtre {
