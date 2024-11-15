@@ -1500,6 +1500,14 @@ html {
   justify-content: space-around;
 }
 
+#univer .contenu-image-description {
+  flex-direction: row-reverse;
+}
+
+#univer .contenu-image-description img {
+  margin-left: 20px;
+}
+
 .paragraphe {
   margin-left: 20px;
 }
@@ -1535,6 +1543,9 @@ html {
   }
   .description-intro {
     width: 60%;
+  }
+  #univer .contenu-image-description {
+    flex-direction: column;
   }
   .contenu-image-description {
     display: flex;
