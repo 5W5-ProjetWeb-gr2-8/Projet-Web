@@ -32,8 +32,16 @@ $_comp = $texte["competences"];
         <div class="competence-header">
           <!-- button Ouverture et fermeture -->
           <button class="top-right-button">
-            <!-- L'animation fonctionne pas avec la référence -->
-            <?= $svg["x"]; ?>
+            <?php
+            // Initialise le compteur pour chaque compétence
+            static $counter = 1;
+
+            // Affiche l'élément svg en fonction du compteur
+            if ($counter <= 5) {
+              echo $svg["x" . $counter];
+              $counter++; // Incrémente le compteur
+            }
+            ?>
           </button>
           <!-- Logo de la compétence -->
           <div class="logo">
@@ -73,9 +81,9 @@ $_comp = $texte["competences"];
           // Tableau d'IDs des images depuis la bibliothèque de médias
           $projets_ids = array(64, 66, 63, 65, 62);
           foreach ($comp["projets"] as $projet => $srcProj):
-            ?>
+          ?>
             <!-- un projet -->
-            <article>
+            <article class="item">
               <!-- image du projet -->
               <div class="miniature inactif">
                 <?php
@@ -107,10 +115,12 @@ $_comp = $texte["competences"];
   </section>
 </main>
 <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
-<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets ?>
+<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets 
+?>
 
 <!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
-<?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq ?>
+<?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq 
+?>
 
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/competences.js"></script>
