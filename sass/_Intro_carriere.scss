@@ -106,11 +106,12 @@
             .contenu-image-description:nth-of-type(even){
                 align-items: flex-end;
             }
-            .contenu-image-description p{
-                padding-left: 20px;
+            .paragraphe {
+                margin-left: 20px;
             }
             .paragraphe p{
                 margin-top: 2rem;
+                padding: 10px;
                 background-color: #373737a2;
                 border-radius: 10px;
             }
