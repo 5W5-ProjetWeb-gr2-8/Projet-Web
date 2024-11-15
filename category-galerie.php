@@ -85,9 +85,6 @@ get_header();
 </main>
 <!-- Fin du contenu de la page ///////////////////////////////////////////////// -->
 
-<!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
-<?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets 
-?>
 <!-- FAQ //////////////////////////////////////////////////////////////////////// -->
 <?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq 
 ?>
