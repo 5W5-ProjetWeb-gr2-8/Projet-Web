@@ -136,7 +136,7 @@
 
   .alignementTextIcon {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-direction: row-reverse;
     align-items: center;
     gap: 1rem;
@@ -182,7 +182,7 @@
 
 .cours-boxes {
   margin: 40px 20px;
-  border: 8px solid var(--couleur-video-bordure);
+  border: 8px solid;
   border-radius: 16px;
   overflow: hidden;
   box-sizing: border-box;
@@ -190,6 +190,31 @@
   /* Largeur maximale sur plus grands écrans */
   color: var(--couleur-texte2);
   height: 25rem;
+
+  &#video {
+    background-color: var(--couleur-video-fond);
+    border-color: var(--couleur-video-bordure);
+  }
+
+  &#_3d {
+    background-color: var(--couleur-3d-fond);
+    border-color: var(--couleur-3d-bordure);
+  }
+
+  &#web {
+    background-color: var(--couleur-web-fond);
+    border-color: var(--couleur-web-bordure);
+  }
+
+  &#design {
+    background-color: var(--couleur-design-fond);
+    border-color: var(--couleur-design-bordure);
+  }
+
+  &#jeux {
+    background-color: var(--couleur-jeux-fond);
+    border-color: var(--couleur-jeux-bordure);
+  }
 
   @media (min-width: 768px) {
     margin: 0 21px;
@@ -241,7 +266,7 @@
   }
 
   .leCours {
-    background-color: var(--couleur-video-fond);
+    background-color: var(--couleur-3d-fond);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -290,9 +315,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--couleur-video-fond);
   /* Bouton gris */
-  border: 5px solid var(--couleur-video-bordure);
+  border: 5px solid;
   width: 75px;
   height: 75px;
   color: var(--couleur-texte-pale);
@@ -300,13 +324,68 @@
   cursor: pointer;
   border-radius: 16px;
   transition: transform, background-color, border-color, 0.3s ease;
+
+  // couleur selon les compétence
+  &#video {
+    background-color: var(--couleur-video-fond);
+    border-color: var(--couleur-video-bordure);
+  }
+
+  &#_3d {
+    background-color: var(--couleur-3d-fond);
+    border-color: var(--couleur-3d-bordure);
+  }
+
+  &#web {
+    background-color: var(--couleur-web-fond);
+    border-color: var(--couleur-web-bordure);
+  }
+
+  &#design {
+    background-color: var(--couleur-design-fond);
+    border-color: var(--couleur-design-bordure);
+  }
+
+  &#jeux {
+    background-color: var(--couleur-jeux-fond);
+    border-color: var(--couleur-jeux-bordure);
+  }
 }
 
 button.btn-cours:focus {
-  background-color: var(--couleur-video-bordure);
-  /* Bouton gris */
-  border: 5px solid var(--couleur-video-fond);
+  // /* Bouton gris */
+  border: 5px solid;
+
+  &#video {
+    background-color: var(--couleur-video-bordure);
+    border: var(--couleur-video-fond);
+  }
+
+  &#_3d {
+    background-color: var(--couleur-3d-bordure);
+    border-color: var(--couleur-3d-fond);
+  }
+
+  &#web {
+    background-color: var(--couleur-web-bordure);
+    border-color: var(--couleur-web-fond);
+  }
+
+  &#design {
+    background-color: var(--couleur-design-bordure);
+    border-color: var(--couleur-design-fond);
+  }
+
+  &#jeux {
+    background-color: var(--couleur-jeux-bordure);
+    border-color: var(--couleur-jeux-fond);
+  }
+
 }
+
+
+
+
 
 .alignementTextIcon:hover {
   transform: translateX(10px);

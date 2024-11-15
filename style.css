@@ -456,7 +456,7 @@ footer a {
 }
 .nomDuCours .alignementTextIcon {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: row-reverse;
   align-items: center;
   gap: 1rem;
@@ -500,7 +500,7 @@ footer a {
 
 .cours-boxes {
   margin: 40px 20px;
-  border: 8px solid var(--couleur-video-bordure);
+  border: 8px solid;
   border-radius: 16px;
   overflow: hidden;
   box-sizing: border-box;
@@ -508,6 +508,26 @@ footer a {
   /* Largeur maximale sur plus grands écrans */
   color: var(--couleur-texte2);
   height: 25rem;
+}
+.cours-boxes#video {
+  background-color: var(--couleur-video-fond);
+  border-color: var(--couleur-video-bordure);
+}
+.cours-boxes#_3d {
+  background-color: var(--couleur-3d-fond);
+  border-color: var(--couleur-3d-bordure);
+}
+.cours-boxes#web {
+  background-color: var(--couleur-web-fond);
+  border-color: var(--couleur-web-bordure);
+}
+.cours-boxes#design {
+  background-color: var(--couleur-design-fond);
+  border-color: var(--couleur-design-bordure);
+}
+.cours-boxes#jeux {
+  background-color: var(--couleur-jeux-fond);
+  border-color: var(--couleur-jeux-bordure);
 }
 @media (min-width: 768px) {
   .cours-boxes {
@@ -552,7 +572,7 @@ footer a {
   gap: 1rem;
 }
 .cours-boxes .leCours {
-  background-color: var(--couleur-video-fond);
+  background-color: var(--couleur-3d-fond);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -593,9 +613,8 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--couleur-video-fond);
   /* Bouton gris */
-  border: 5px solid var(--couleur-video-bordure);
+  border: 5px solid;
   width: 75px;
   height: 75px;
   color: var(--couleur-texte-pale);
@@ -604,11 +623,49 @@ footer a {
   border-radius: 16px;
   transition: transform, background-color, border-color, 0.3s ease;
 }
+.btn-cours#video {
+  background-color: var(--couleur-video-fond);
+  border-color: var(--couleur-video-bordure);
+}
+.btn-cours#_3d {
+  background-color: var(--couleur-3d-fond);
+  border-color: var(--couleur-3d-bordure);
+}
+.btn-cours#web {
+  background-color: var(--couleur-web-fond);
+  border-color: var(--couleur-web-bordure);
+}
+.btn-cours#design {
+  background-color: var(--couleur-design-fond);
+  border-color: var(--couleur-design-bordure);
+}
+.btn-cours#jeux {
+  background-color: var(--couleur-jeux-fond);
+  border-color: var(--couleur-jeux-bordure);
+}
 
 button.btn-cours:focus {
+  border: 5px solid;
+}
+button.btn-cours:focus#video {
   background-color: var(--couleur-video-bordure);
-  /* Bouton gris */
-  border: 5px solid var(--couleur-video-fond);
+  border: var(--couleur-video-fond);
+}
+button.btn-cours:focus#_3d {
+  background-color: var(--couleur-3d-bordure);
+  border-color: var(--couleur-3d-fond);
+}
+button.btn-cours:focus#web {
+  background-color: var(--couleur-web-bordure);
+  border-color: var(--couleur-web-fond);
+}
+button.btn-cours:focus#design {
+  background-color: var(--couleur-design-bordure);
+  border-color: var(--couleur-design-fond);
+}
+button.btn-cours:focus#jeux {
+  background-color: var(--couleur-jeux-bordure);
+  border-color: var(--couleur-jeux-fond);
 }
 
 .alignementTextIcon:hover {
