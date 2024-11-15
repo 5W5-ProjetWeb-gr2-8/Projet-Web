@@ -72,10 +72,6 @@ $_comp = $texte["competences"];
         </div>
         <!-- Partie dépliable -->
         <div class="competence-content">
-          <!-- Flèche gauche -->
-          <div class="flecheGauche">
-            &#9664;
-          </div>
           <!-- Boucle qui affiche tous les projets -->
           <?php
           // Tableau d'IDs des images depuis la bibliothèque de médias
@@ -105,10 +101,6 @@ $_comp = $texte["competences"];
               <h4><?= $projet; ?></h4>
             </article>
           <?php endforeach ?>
-          <!-- Flèche droite -->
-          <div class="flecheDroite">
-            &#9654;
-          </div>
         </div>
       </div>
     <?php endforeach ?>

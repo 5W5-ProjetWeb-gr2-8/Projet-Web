@@ -20,27 +20,27 @@ get_header();
                     <!-- Filtre 1 ///////////// -->
                     <div class="conteneur_filtre">
                         <input type="checkbox" id="UI"><!-- Checkbox pour pouvoir changer l'état du filtre -->
-                        <label for="UI" class="filtre filtre_ui">UI/UX</label>
+                        <label for="UI" class="filtre filtre_ui">Design</label>
                     </div>
                     <!-- Filtre 2 ///////////// -->
                     <div class="conteneur_filtre">
                         <input type="checkbox" id="WEB"><!-- Checkbox pour pouvoir changer l'état du filtre -->
-                        <label for="WEB" class="filtre filtre_web">WEB</label>
+                        <label for="WEB" class="filtre filtre_web">Programmation</label>
                     </div>
                     <!-- Filtre 3 ///////////// -->
                     <div class="conteneur_filtre">
                         <input type="checkbox" id="3D"><!-- Checkbox pour pouvoir changer l'état du filtre -->
-                        <label for="3D" class="filtre filtre_3d">3D</label>
+                        <label for="3D" class="filtre filtre_3d">Création</label>
                     </div>
                     <!-- Filtre 4 ///////////// -->
                     <div class="conteneur_filtre">
                         <input type="checkbox" id="JEU"><!-- Checkbox pour pouvoir changer l'état du filtre -->
-                        <label for="JEU" class="filtre filtre_jeu">JEU</label>
+                        <label for="JEU" class="filtre filtre_jeu">Jeux</label>
                     </div>
                     <!-- Filtre 5 ///////////// -->
                     <div class="conteneur_filtre">
                         <input type="checkbox" id="VIDEO"><!-- Checkbox pour pouvoir changer l'état du filtre -->
-                        <label for="VIDEO" class="filtre filtre_video">VIDEO</label>
+                        <label for="VIDEO" class="filtre filtre_video">Montage</label>
                     </div>
                     <!-- Fin des differents filtres ///////////////-->
                 </div>
@@ -53,6 +53,7 @@ get_header();
         <div class="section_galerie">
             <?php
             // Tableau associatif contenant les IDs d'images et leurs classes de filtre
+            // Il faut faire un loop pour que sa soit automatique
             $projets = [
                 ['id' => 240, 'filtre_classe' => 'gal_proj_web'],
                 ['id' => 203, 'filtre_classe' => 'gal_proj_jeu'],
