@@ -2,9 +2,12 @@
   background-color: var(--couleur-fond);
   color: var(--couleur-texte-pale);
   padding: 2vh 10%; /* variable à changer */
-
+  
   h2 {
     margin: 30px 0; /* variable à changer */
+  }
+  .titre_galerie{
+    font-weight: bold;
   }
 
   .conteneur_section_filtres {
@@ -24,6 +27,8 @@
 
     .titre_section_filtre {
       align-self: flex-start;
+      font-weight: bold;
+      font-size: clamp(1rem, .7143vw + .8571rem, 1.5rem);
     }
 
     @media (min-width: 1001px) {
@@ -77,12 +82,14 @@
           align-items: center;
           width: clamp(3rem, 1.4645vw + 2.6568rem, 5rem);
           padding: clamp(0.5rem, 0.1831vw + 0.4571rem, 0.75rem)
-            clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
+          clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
           border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
           margin-top: var(--espacement);
           border: 1px solid rgba(0, 0, 0, 0);
+          font-weight: bold;
+          font-size: clamp(1rem, .7143vw + .8571rem, 1.5rem);
           transition: background-color 0.5s, color 0.5s, border 0.5s;
-
+          
           &:hover {
             color: white;
             background-color: rgb(55, 55, 55);
