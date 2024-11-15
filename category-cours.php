@@ -27,35 +27,35 @@ get_header();
             <div class="alignementTextIcon">
                 <h5>Création Video</h5>
                 <button class="btn-cours">
-                    <img id="iconCours" src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Logo Video" />
+                    <img id="iconCours" src="<?php echo wp_get_attachment_url(312); ?>" alt="Logo Video" />
 
                 </button>
             </div>
             <div class="alignementTextIcon">
                 <h5>Création Video</h5>
                 <button class="btn-cours">
-                    <img id="iconCours" src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Logo Video" />
+                    <img id="iconCours" src="<?php echo wp_get_attachment_url(312); ?>" alt="Logo Video" />
 
                 </button>
             </div>
             <div class="alignementTextIcon">
                 <h5>Création Video</h5>
                 <button class="btn-cours">
-                    <img id="iconCours" src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Logo Video" />
+                    <img id="iconCours" src="<?php echo wp_get_attachment_url(312); ?>" alt="Logo Video" />
 
                 </button>
             </div>
             <div class="alignementTextIcon">
                 <h5>Création Video</h5>
                 <button class="btn-cours">
-                    <img id="iconCours" src="<?php echo wp_get_attachment_url(ID_DE_L_IMAGE); ?>" alt="Logo Video" />
+                    <img id="iconCours" src="<?php echo wp_get_attachment_url(312); ?>" alt="Logo Video" />
 
                 </button>
             </div>
         </div>
         <div class="cours-boxes">
             <div class="leCours">
-                <h2>Concecption graphique</h2>
+                <h2>Conception graphique</h2>
                 <h4>582-1M2-MA</h4>
                 <div class="tempParCours">
                     <ol>

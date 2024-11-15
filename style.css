@@ -1391,60 +1391,6 @@ button.btn-cours:focus {
     height: auto;
   }
 }
-/* ////////////////////////////////////////// */
-/* Accueil                                    */
-/* ////////////////////////////////////////// */
-/* 
-  Feuille de style 
-  de la première section 
-  de la page d'accueil 
-*/
-section.debut_accueil {
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-image: url("images/sortie-vr/sortie-vr4.jpg");
-  background-size: cover;
-  background-position: center;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  section.debut_accueil {
-    background-image: url("images/sortie-vr/sortie-vr5.jpg");
-  }
-}
-@media (min-width: 1025px) {
-  section.debut_accueil {
-    background-image: url("images/sortie-vr/sortie-vr7.jpg");
-  }
-}
-section.debut_accueil div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7); /* variable à changer */
-  border-radius: 50%;
-  /* Utilise vw pour un ajustement dynamique */
-  width: 60vw;
-  max-width: 32rem;
-  min-width: 15rem;
-  height: 60vw;
-  /* Hauteur égale à la largeur pour maintenir le cercle */
-  max-height: 32rem;
-  min-height: 15rem;
-  /* Retire le padding pour garder le cercle */
-  padding: 0;
-}
-section.debut_accueil div h1,
-section.debut_accueil div h6 {
-  color: var(--couleur-texte-pale);
-}
-section.debut_accueil div h1 {
-  font-size: clamp(2.244rem, 1.93rem + 1.569vw, 45px);
-}
-
 .galerie-projets {
   background-color: var(--couleur-galerie-fond); /* Fond blanc */
   padding: var(--espacement);
@@ -1533,6 +1479,60 @@ section.debut_accueil div h1 {
 }
 .galerie-projets .indications .indication.active {
   background-color: #dbb2ab; /* Couleur de l'indicateur actif */
+}
+
+/* ////////////////////////////////////////// */
+/* Accueil                                    */
+/* ////////////////////////////////////////// */
+/* 
+  Feuille de style 
+  de la première section 
+  de la page d'accueil 
+*/
+section.debut_accueil {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("images/sortie-vr/sortie-vr4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  section.debut_accueil {
+    background-image: url("images/sortie-vr/sortie-vr5.jpg");
+  }
+}
+@media (min-width: 1025px) {
+  section.debut_accueil {
+    background-image: url("images/sortie-vr/sortie-vr7.jpg");
+  }
+}
+section.debut_accueil div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); /* variable à changer */
+  border-radius: 50%;
+  /* Utilise vw pour un ajustement dynamique */
+  width: 60vw;
+  max-width: 32rem;
+  min-width: 15rem;
+  height: 60vw;
+  /* Hauteur égale à la largeur pour maintenir le cercle */
+  max-height: 32rem;
+  min-height: 15rem;
+  /* Retire le padding pour garder le cercle */
+  padding: 0;
+}
+section.debut_accueil div h1,
+section.debut_accueil div h6 {
+  color: var(--couleur-texte-pale);
+}
+section.debut_accueil div h1 {
+  font-size: clamp(2.244rem, 1.93rem + 1.569vw, 45px);
 }
 
 .presPro {
