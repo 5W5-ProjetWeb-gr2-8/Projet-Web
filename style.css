@@ -1770,10 +1770,25 @@ section.competences div.competence-item.active .competence-content {
   color: var(--couleur-fond);
   font-weight: bold;
   padding: 0.5rem 1rem;
-  transition: color 0.3s;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 .menu-menu-principal-container .menu li a:hover {
   color: #0073e6;
+  transform: scale(1.1);
+}
+.menu-menu-principal-container .menu li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0073e6;
+  transition: width 0.3s ease;
+}
+.menu-menu-principal-container .menu li a:hover:before {
+  width: 100%;
 }
 @media (max-width: 768px) {
   .menu-menu-principal-container .menu {
@@ -1826,4 +1841,34 @@ section.competences div.competence-item.active .competence-content {
 
 .menu-menu-principal-container.active .menu {
   display: flex;
+}
+
+.menu_titre {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.menu_titre .logo_img {
+  width: auto;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.menu_titre:hover .logo_img {
+  transform: scale(1.1);
+}
+.menu_titre:hover {
+  color: #0073e6;
+}
+.menu_titre:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0073e6;
+  transition: width 0.3s ease;
+}
+.menu_titre:hover:before {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
