@@ -1780,7 +1780,7 @@ section.competences div.competence-item .top-right-button .x-symbol {
   transition: stroke 0.3s ease;
 }
 section.competences div.competence-item .top-right-button:hover .x-symbol {
-  stroke: rgb(232, 14, 14);
+  stroke: white;
 }
 section.competences div.competence-item .competence-header {
   display: flex;
