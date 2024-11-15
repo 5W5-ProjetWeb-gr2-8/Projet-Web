@@ -2,8 +2,17 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 //=========SECTION HAUT DE PAGE=======//
+.section-stage {
+  font-weight: var(--poid_textes);
+  font-size: var(--taille-police-grande);
+  color: #ffffff;
+  margin-left: 20px;
+}
 .carriere {
   width: 100%;
   display: flex;
@@ -63,6 +72,7 @@
 }
 .trois-cat a:hover {
   background-color: #ffffff;
+  transition: background-color 0.7s;
 }
 //=======================//
 
@@ -90,9 +100,9 @@
   margin-top: 3rem;
   justify-content: space-around;
 }
-.contenu-image-description:nth-of-type(even) {
-  align-items: flex-end;
-}
+// .contenu-image-description:nth-of-type(even) {
+//   align-items: flex-end;
+// }
 .paragraphe {
   margin-left: 20px;
 }

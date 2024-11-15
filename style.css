@@ -1218,6 +1218,17 @@ button.btn-cours:focus {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.section-stage {
+  font-weight: var(--poid_textes);
+  font-size: var(--taille-police-grande);
+  color: #ffffff;
+  margin-left: 20px;
+}
+
 .carriere {
   width: 100%;
   display: flex;
@@ -1280,6 +1291,7 @@ button.btn-cours:focus {
 
 .trois-cat a:hover {
   background-color: #ffffff;
+  transition: background-color 0.7s;
 }
 
 .detail-carri {
@@ -1307,10 +1319,6 @@ button.btn-cours:focus {
   display: flex;
   margin-top: 3rem;
   justify-content: space-around;
-}
-
-.contenu-image-description:nth-of-type(even) {
-  align-items: flex-end;
 }
 
 .paragraphe {
