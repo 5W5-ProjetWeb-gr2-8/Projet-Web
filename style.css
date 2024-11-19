@@ -341,14 +341,17 @@ footer a {
 .competences-container,
 .session-container {
   display: flex;
-  justify-content: center; /* Centrage horizontal */
+  justify-content: center;
+  /* Centrage horizontal */
   flex-wrap: wrap;
   gap: 20px;
 }
 
 .competence {
-  width: 10rem; /* Largeur fixe */
-  height: 2.5rem; /* Hauteur fixe */
+  width: 10rem;
+  /* Largeur fixe */
+  height: 2.5rem;
+  /* Hauteur fixe */
   padding: 20px;
   color: white;
   text-align: center;
@@ -356,9 +359,12 @@ footer a {
   font-size: 18px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  display: flex; /* Flexbox pour centrer le texte */
-  align-items: center; /* Centrage vertical du texte */
-  justify-content: center; /* Centrage horizontal du texte */
+  display: flex;
+  /* Flexbox pour centrer le texte */
+  align-items: center;
+  /* Centrage vertical du texte */
+  justify-content: center;
+  /* Centrage horizontal du texte */
 }
 
 .session {
@@ -374,9 +380,12 @@ footer a {
   font-weight: 500;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  display: flex; /* Flexbox pour centrer le texte */
-  align-items: center; /* Centrage vertical du texte */
-  justify-content: center; /* Centrage horizontal du texte */
+  display: flex;
+  /* Flexbox pour centrer le texte */
+  align-items: center;
+  /* Centrage vertical du texte */
+  justify-content: center;
+  /* Centrage horizontal du texte */
 }
 
 .session:hover {
@@ -401,7 +410,8 @@ footer a {
   padding: 40px 20px;
   background-color: var(--couleur-fond-cours);
   display: flex;
-  justify-content: center; /* Centrage horizontal */
+  justify-content: center;
+  /* Centrage horizontal */
   flex-wrap: wrap;
   margin: 0 auto;
 }
@@ -412,7 +422,8 @@ footer a {
   flex-direction: column-reverse;
   border-radius: 20px;
   overflow: hidden;
-  width: 100%; /* Pleine largeur sur mobile */
+  width: 100%;
+  /* Pleine largeur sur mobile */
   color: var(--couleur-texte2);
 }
 @media (min-width: 768px) {
@@ -457,7 +468,7 @@ footer a {
 }
 .nomDuCours .alignementTextIcon {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: row-reverse;
   align-items: center;
   gap: 1rem;
@@ -479,29 +490,85 @@ footer a {
 .logicielIcon {
   display: flex;
   justify-content: center;
-  margin-left: 1rem;
   flex-direction: column;
-  margin-top: 55px;
+  margin-top: 5px;
+}
+@media (min-width: 768px) {
+  .logicielIcon {
+    margin-top: 5%;
+  }
+  .logicielIcon img {
+    width: 3rem;
+  }
+}
+@media (min-width: 1025px) {
+  .logicielIcon {
+    margin-top: 3%;
+  }
+  .logicielIcon img {
+    width: 4rem;
+  }
 }
 
 .cours-boxes {
   margin: 40px 20px;
-  border: 8px solid var(--couleur-design-bordure);
+  border: 8px solid;
   border-radius: 16px;
   overflow: hidden;
-  max-width: fit-content; /* Largeur maximale sur plus grands écrans */
+  box-sizing: border-box;
+  max-width: fit-content;
+  /* Largeur maximale sur plus grands écrans */
   color: var(--couleur-texte2);
   height: 25rem;
+}
+.cours-boxes#video {
+  background-color: var(--couleur-video-fond);
+  border-color: var(--couleur-video-bordure);
+}
+.cours-boxes#_3d {
+  background-color: var(--couleur-3d-fond);
+  border-color: var(--couleur-3d-bordure);
+}
+.cours-boxes#web {
+  background-color: var(--couleur-web-fond);
+  border-color: var(--couleur-web-bordure);
+}
+.cours-boxes#design {
+  background-color: var(--couleur-design-fond);
+  border-color: var(--couleur-design-bordure);
+}
+.cours-boxes#jeux {
+  background-color: var(--couleur-jeux-fond);
+  border-color: var(--couleur-jeux-bordure);
 }
 @media (min-width: 768px) {
   .cours-boxes {
     margin: 0 21px;
+  }
+  .cours-boxes .logoCours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cours-boxes .logoCours img {
+    width: 10%;
   }
 }
 @media (min-width: 1025px) {
   .cours-boxes {
     width: 100%;
     margin: 50px 25px;
+  }
+  .cours-boxes .logoCours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cours-boxes .logoCours img {
+    width: var(--taille-icone);
+    height: var(--taille-icone);
   }
 }
 .cours-boxes .tempParCours {
@@ -517,15 +584,29 @@ footer a {
   gap: 1rem;
 }
 .cours-boxes .leCours {
-  background-color: #ff92de;
+  background-color: var(--couleur-3d-fond);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   height: 100%;
+  min-width: fit-content;
 }
 .cours-boxes .leCours h2,
 .cours-boxes .leCours h4 {
   margin-left: 1rem;
+}
+.cours-boxes .leCours .logoCours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cours-boxes .leCours .logoCours img {
+  width: 3rem;
+}
+.cours-boxes .leCours .logoCours p {
+  font-size: clamp(1rem, -3.5rem + 7vw, 1.5rem);
+  font-weight: bold;
 }
 .cours-boxes .logicielIcon li {
   display: flex;
@@ -544,8 +625,8 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--couleur-video-fond); /* Bouton gris */
-  border: 5px solid var(--couleur-video-bordure);
+  /* Bouton gris */
+  border: 5px solid;
   width: 75px;
   height: 75px;
   color: var(--couleur-texte-pale);
@@ -554,10 +635,49 @@ footer a {
   border-radius: 16px;
   transition: transform, background-color, border-color, 0.3s ease;
 }
+.btn-cours#video {
+  background-color: var(--couleur-video-fond);
+  border-color: var(--couleur-video-bordure);
+}
+.btn-cours#_3d {
+  background-color: var(--couleur-3d-fond);
+  border-color: var(--couleur-3d-bordure);
+}
+.btn-cours#web {
+  background-color: var(--couleur-web-fond);
+  border-color: var(--couleur-web-bordure);
+}
+.btn-cours#design {
+  background-color: var(--couleur-design-fond);
+  border-color: var(--couleur-design-bordure);
+}
+.btn-cours#jeux {
+  background-color: var(--couleur-jeux-fond);
+  border-color: var(--couleur-jeux-bordure);
+}
 
 button.btn-cours:focus {
-  background-color: var(--couleur-video-bordure); /* Bouton gris */
-  border: 5px solid var(--couleur-video-fond);
+  border: 5px solid;
+}
+button.btn-cours:focus#video {
+  background-color: var(--couleur-video-bordure);
+  border: var(--couleur-video-fond);
+}
+button.btn-cours:focus#_3d {
+  background-color: var(--couleur-3d-bordure);
+  border-color: var(--couleur-3d-fond);
+}
+button.btn-cours:focus#web {
+  background-color: var(--couleur-web-bordure);
+  border-color: var(--couleur-web-fond);
+}
+button.btn-cours:focus#design {
+  background-color: var(--couleur-design-bordure);
+  border-color: var(--couleur-design-fond);
+}
+button.btn-cours:focus#jeux {
+  background-color: var(--couleur-jeux-bordure);
+  border-color: var(--couleur-jeux-fond);
 }
 
 .alignementTextIcon:hover {
@@ -567,21 +687,6 @@ button.btn-cours:focus {
 #iconCours {
   width: 50px;
   height: 50px;
-}
-
-.btn-cours:nth-child(2) {
-  background-color: var(--couleur-video-fond); /* Bouton gris */
-  border: 5px solid var(--couleur-video-bordure);
-}
-
-.btn-cours:nth-child(3) {
-  background-color: var(--couleur-jeux-fond); /* Bouton gris */
-  border: 5px solid var(--couleur-jeux-bordure);
-}
-
-.btn-cours:nth-child(4) {
-  background-color: var(--couleur-web-fond); /* Bouton gris */
-  border: 5px solid var(--couleur-web-bordure);
 }
 
 .cours-header {
@@ -595,7 +700,8 @@ button.btn-cours:focus {
 }
 
 .btn-plus {
-  background-color: var(--couleur-bouton-fond-cours-detail); /* Bouton gris */
+  background-color: var(--couleur-bouton-fond-cours-detail);
+  /* Bouton gris */
   color: var(--couleur-texte-pale);
   border: none;
   padding: 10px;
@@ -604,13 +710,15 @@ button.btn-cours:focus {
 }
 
 .btn-plus:hover {
-  background-color: var(--couleur-bouton-fond-cours-detail-hover); /* Bouton gris plus foncé au survol */
+  background-color: var(--couleur-bouton-fond-cours-detail-hover);
+  /* Bouton gris plus foncé au survol */
 }
 
 .cours-details {
   padding: 20px;
   display: none;
-  background-color: var(--couleur-fond-cours-detail); /* Fond légèrement plus clair pour les détails */
+  background-color: var(--couleur-fond-cours-detail);
+  /* Fond légèrement plus clair pour les détails */
   color: var(--couleur-texte-pale);
 }
 
@@ -1800,17 +1908,21 @@ section.competences div.competence-item {
   padding: var(--espacement);
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  width: 100%; /* variable à changer --> espacement que le main prend*/
+  width: 100%;
+  /* variable à changer --> espacement que le main prend*/
 }
 @media (min-width: 1025px) {
   section.competences div.competence-item {
-    width: 80%; /* variable à changer */
+    width: 80%;
+    /* variable à changer */
   }
 }
 section.competences div.competence-item .top-right-button {
   position: absolute;
-  top: -1.5rem; /* variable à changer */
-  right: -1.5rem; /* variable à changer */
+  top: -1.5rem;
+  /* variable à changer */
+  right: -1.5rem;
+  /* variable à changer */
   margin-bottom: 2rem;
   cursor: pointer;
   rotate: 45deg;
@@ -1828,14 +1940,20 @@ section.competences div.competence-item .top-right-button:hover .circle {
   stroke-dashoffset: 0;
 }
 section.competences div.competence-item .top-right-button .x-symbol {
-  transition: stroke 0.3s ease;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 section.competences div.competence-item .top-right-button:hover .x-symbol {
   stroke: white;
 }
+section.competences div.competence-item button.clicked .x-symbol:nth-child(3) {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
 section.competences div.competence-item .competence-header {
   display: flex;
-  position: relative; /* pour le bouton */
+  position: relative;
+  /* pour le bouton */
   flex-direction: column;
   align-items: center;
   border-radius: 0.5rem;
@@ -1950,7 +2068,8 @@ section.competences div.competence-item .competence-content .flecheDroite {
   border: none;
   transform: translateY(-50%);
   font-size: var(--h3);
-  color: #dbb2ab; /* variable à changer */
+  color: #dbb2ab;
+  /* variable à changer */
   cursor: pointer;
   z-index: 10;
 }
@@ -1961,8 +2080,10 @@ section.competences div.competence-item .competence-content .flecheDroite {
   right: 10px;
 }
 section.competences div.competence-item .competence-content article .miniature {
-  height: 225px; /* variable à changer */
-  width: 400px; /* variable à changer */
+  height: 225px;
+  /* variable à changer */
+  width: 400px;
+  /* variable à changer */
   position: relative;
 }
 section.competences div.competence-item .competence-content article .miniature.inactif::after {
