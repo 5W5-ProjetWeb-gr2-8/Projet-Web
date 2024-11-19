@@ -22,6 +22,8 @@ get_header();
 
 <!-- Section des cours -->
 <section class="cours-section" id="cours">
+    <?php get_the ?>
+    <?php while(have_posts()): the_post(); ?>
     <div class="cours-box">
         <div class="nomDuCours">
             <div class="alignementTextIcon">
@@ -79,6 +81,7 @@ get_header();
             </div>
         </div>
     </div>
+    <?php endwhile; ?>
 </section>
 <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
 <?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets ?>
