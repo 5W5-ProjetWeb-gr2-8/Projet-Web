@@ -2016,7 +2016,7 @@ section.competences div.competence-item.active .competence-content {
   .menu-menu-principal-container .menu {
     display: none;
     flex-direction: column;
-    background-color: var(--couleur-fond);
+    background-color: var(--couleur-fond-accueil);
     position: absolute;
     width: 100%;
     left: 0;
@@ -2030,7 +2030,7 @@ section.competences div.competence-item.active .competence-content {
     text-align: center;
   }
   .menu-menu-principal-container .menu li a {
-    color: white;
+    color: black;
     padding: 1rem;
     display: block;
     transition: background 0.3s;

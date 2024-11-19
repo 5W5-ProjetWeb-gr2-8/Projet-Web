@@ -50,7 +50,7 @@
     @media (max-width: 768px) {
       display: none; // Masquer le menu par défaut
       flex-direction: column; // Alignement vertical
-      background-color: var(--couleur-fond);
+      background-color: var(--couleur-fond-accueil);
       position: absolute;
       width: 100%; // Prendre toute la largeur
       left: 0; // Alignement à gauche
@@ -65,7 +65,7 @@
         text-align: center; // Centrer le texte
 
         a {
-          color: white; // Couleur du texte des liens
+          color: black; // Couleur du texte des liens
           padding: 1rem; // Espacement autour des liens
           display: block; // Prendre toute la largeur
           transition: background 0.3s;
