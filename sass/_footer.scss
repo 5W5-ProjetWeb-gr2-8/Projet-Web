@@ -1,5 +1,3 @@
-/* Feuille de style pour le footer des pages du site */
-
 footer {
   background-color: var(--couleur-fond-gris);
   color: var(--couleur-texte-fonce);
@@ -10,15 +8,13 @@ footer {
   flex-wrap: wrap;
 
   @media (min-width: 768px) {
-    // pas centré sur tablette et plus large
     justify-content: space-between;
   }
 
-  // partie gauche du footer
+  // Partie gauche du footer
   .footer-gauche {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
     gap: var(--espacement);
     text-align: center;
 
@@ -29,12 +25,28 @@ footer {
     }
   }
 
-  // Inscription
+  // Section Crédits
+  .footer-credits {
+    display: flex; /* Ligne horizontale */
+    align-items: center; /* Alignement vertical au centre */
+    gap: 10px; /* Espacement entre les éléments */
+    text-align: center; /* Par défaut : centré pour mobile */
+
+    @media (min-width: 768px) {
+      text-align: left; /* Alignement gauche pour tablette et plus */
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // Inscription (si nécessaire plus tard)
   a {
     color: var(--couleur-texte-fonce);
-    margin: 5px auto; // centre le texte pour mobile
+    margin: 5px auto;
+
     @media (min-width: 768px) {
-      // pas centré sur tablette et plus large
       margin: unset;
     }
   }
