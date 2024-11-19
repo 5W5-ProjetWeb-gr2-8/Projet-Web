@@ -10,7 +10,7 @@ let questionsReponses = {
   },
   question2: {
     reponse:
-      "Nous utilisons des outils comme Unity, Photoshop, Figma, Maya, et des langages comme HTML, SCSS, JavaScript, et React.",
+      "Nous utilisons des outils comme Unity, Photoshop, Figma, Maya, Premiere Pro, After Effects, Audition, Illustrator, ainsi que des langages comme HTML, SCSS, JavaScript, C#, React, et WordPress.",
   },
   question3: {
     reponse:

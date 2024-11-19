@@ -64,10 +64,34 @@
           display: none;
         }
 
-        input:checked ~ .filtre {
-          background-color: black;
-          color: white;
-          border: 1px solid white;
+        input:checked + label.filtre {
+          background-color: var(--couleur-design-fond);
+          border: none;
+          color: black;
+        }
+
+        input:checked + label.filtre.filtre_web {
+          background-color: var(--couleur-web4);
+          border: none;
+          color: black;
+        }
+
+        input:checked + label.filtre.filtre_3d {
+          background-color: var(--couleur-3d-fond);
+          border: none;
+          color: black;
+        }
+
+        input:checked + label.filtre.filtre_jeu {
+          background-color: var(--couleur-jeux4);
+          border: none;
+          color: black;
+        }
+
+        input:checked + label.filtre.filtre_video {
+          background-color: var(--couleur-video-fond);
+          border: none;
+          color: black;
         }
 
         .filtre {
@@ -75,13 +99,16 @@
           flex-flow: row nowrap;
           justify-content: center;
           align-items: center;
+          background-color: black;
+          color: white;
           width: clamp(3rem, 1.4645vw + 2.6568rem, 5rem);
           padding: clamp(0.5rem, 0.1831vw + 0.4571rem, 0.75rem)
             clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
           border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
           margin-top: var(--espacement);
-          border: 1px solid rgba(0, 0, 0, 0);
+          border: 1px solid white;
           transition: background-color 0.5s, color 0.5s, border 0.5s;
+          font-weight: bold;
 
           &:hover {
             color: white;
@@ -165,18 +192,22 @@
   .filtre_web {
     background-color: var(--couleur-web4);
   }
+
   .gal_proj_jeu,
   .filtre_jeu {
     background-color: var(--couleur-jeux4);
   }
+
   .gal_proj_3d,
   .filtre_3d {
     background-color: var(--couleur-3d-fond);
   }
+
   .gal_proj_video,
   .filtre_video {
     background-color: var(--couleur-video-fond);
   }
+
   .gal_proj_ui,
   .filtre_ui {
     background-color: var(--couleur-design-fond);

@@ -1,9 +1,23 @@
 #projet_specifique{
     padding: 2vh 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    @media (min-width: 744px) {
-        display: flex;
-        flex-direction: column;
+    .conteneur_fleche{
+        width: 90vw;
+
+        .fleche_projet{
+            width: 5rem;
+            height: 5rem;
+            clip-path: polygon(30% 31%, 30% 44%, 69% 44%, 69% 57%, 30% 57%, 30% 70%, 0 50%);
+            background-color: white;
+            transition: clip-path 0.5s;
+
+            &:hover{
+                clip-path: polygon(55% 24%, 55% 42%, 89% 42%, 89% 57%, 54% 57%, 54% 75%, 14% 50%);
+            }
+        }
     }
     
     .fond_projet{
@@ -57,19 +71,22 @@
                 
                 .type_projet{
                     
-                    width: 50%;
+                    width: 45%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     padding: 0.1rem 1rem;
 
                     
-
+                    @media (min-width: 500px) and (max-width: 743px) {
+                        width: 30%;
+                    }
                     @media (min-width: 744px) and (max-width: 1023px) {
                         margin-top: 1rem;
-                        width: 55%;
+                        width: 60%;
                     }
                     @media (min-width: 1024px){
+                        width: 60%;
                         text-align: start;
                         flex-direction: row;
                         align-items: center;
@@ -85,7 +102,7 @@
                     }
 
                     .type svg{
-                        width: 3rem;
+                        width: clamp(2rem, 1.4286vw + 1.7143rem, 3rem);
                         height: auto;
                     }
                     
@@ -101,33 +118,63 @@
 
                         .type_projet_web{
                             background-color: #25CF56;
-                            border: 7px solid #005719;
+                            border: 3px solid #005719;
                             border-radius: 1rem;
-                            padding: 1rem;
+                            padding: 0.15rem;
+                            transition: background-color 0.3s, border 0.3s;
+
+                            &:hover{
+                                background-color: #005719;
+                                border: 3px solid #25CF56;
+                            }
                         }
                         .type_projet_jeu{
                             background-color: #25AFCF;
-                            border: 7px solid #004657;
-                            border-radius: 1rem;
-                            padding: 0.75rem;
+                            border: 3px solid #004657;
+                            border-radius: 0.5rem;
+                            padding: 0.15rem;
+                            transition: background-color 0.3s, border 0.3s;
+
+                            &:hover{
+                                background-color: #004657;
+                                border: 3px solid #25AFCF;
+                            }
                         }
                         .type_projet_3d{
                             background-color: #FFCA92;
-                            border: 7px solid #572D00;
-                            border-radius: 1rem;
-                            padding: 0.75rem;
+                            border: 3px solid #572D00;
+                            border-radius: 0.5rem;
+                            padding: 0.15rem;
+                            transition: background-color 0.3s, border 0.3s;
+
+                            &:hover{
+                                background-color: #572D00;
+                                border: 3px solid #FFCA92;
+                            }
                         }
                         .type_projet_ui{
                             background-color: #FF92DE;
-                            border: 7px solid #57003D;
+                            border: 3px solid #57003D;
                             border-radius: 1rem;
-                            padding: 1rem;
+                            padding: 0.15rem;
+                            transition: background-color 0.3s, border 0.3s;
+
+                            &:hover{
+                                background-color: #57003D;
+                                border: 3px solid #FF92DE;
+                            }
                         }
                         .type_projet_video{
                             background-color: #9B92FF;
-                            border: 7px solid #070057;
+                            border: 3px solid #070057;
                             border-radius: 1rem;
-                            padding: 1rem;
+                            padding: 0.15rem;
+                            transition: background-color 0.3s, border 0.3s;
+
+                            &:hover{
+                                background-color: #070057;
+                                border: 3px solid #9B92FF;
+                            }
                         }
                     }
                     
@@ -245,6 +292,11 @@
                 font-weight: bold;
                 font-size: 0.75rem;
                 max-width: 70vw;
+                transition: font-size 1s;
+
+                &:hover{
+                    font-size: 0.9rem;
+                }
             }
         }
 
