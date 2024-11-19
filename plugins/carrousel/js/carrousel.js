@@ -18,8 +18,10 @@ function afficherImage(index) {
     indications[i].classList.toggle("active", i === index);
   });
 
-  // Met à jour le titre du projet
-  titreProjet.textContent = titres[index]; // Change le texte du titre
+  // Vérifie si l'élément titre-projet existe avant de mettre à jour son texte
+  if (titreProjet) {
+    titreProjet.textContent = titres[index]; // Change le texte du titre
+  }
 }
 
 function changerImage(direction) {
