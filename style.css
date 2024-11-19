@@ -1892,17 +1892,21 @@ section.competences div.competence-item {
   padding: var(--espacement);
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  width: 100%; /* variable à changer --> espacement que le main prend*/
+  width: 100%;
+  /* variable à changer --> espacement que le main prend*/
 }
 @media (min-width: 1025px) {
   section.competences div.competence-item {
-    width: 80%; /* variable à changer */
+    width: 80%;
+    /* variable à changer */
   }
 }
 section.competences div.competence-item .top-right-button {
   position: absolute;
-  top: -1.5rem; /* variable à changer */
-  right: -1.5rem; /* variable à changer */
+  top: -1.5rem;
+  /* variable à changer */
+  right: -1.5rem;
+  /* variable à changer */
   margin-bottom: 2rem;
   cursor: pointer;
   rotate: 45deg;
@@ -1920,14 +1924,20 @@ section.competences div.competence-item .top-right-button:hover .circle {
   stroke-dashoffset: 0;
 }
 section.competences div.competence-item .top-right-button .x-symbol {
-  transition: stroke 0.3s ease;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 section.competences div.competence-item .top-right-button:hover .x-symbol {
   stroke: white;
 }
+section.competences div.competence-item button.clicked .x-symbol:nth-child(3) {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
 section.competences div.competence-item .competence-header {
   display: flex;
-  position: relative; /* pour le bouton */
+  position: relative;
+  /* pour le bouton */
   flex-direction: column;
   align-items: center;
   border-radius: 0.5rem;
@@ -2042,7 +2052,8 @@ section.competences div.competence-item .competence-content .flecheDroite {
   border: none;
   transform: translateY(-50%);
   font-size: var(--h3);
-  color: #dbb2ab; /* variable à changer */
+  color: #dbb2ab;
+  /* variable à changer */
   cursor: pointer;
   z-index: 10;
 }
@@ -2053,8 +2064,10 @@ section.competences div.competence-item .competence-content .flecheDroite {
   right: 10px;
 }
 section.competences div.competence-item .competence-content article .miniature {
-  height: 225px; /* variable à changer */
-  width: 400px; /* variable à changer */
+  height: 225px;
+  /* variable à changer */
+  width: 400px;
+  /* variable à changer */
   position: relative;
 }
 section.competences div.competence-item .competence-content article .miniature.inactif::after {
