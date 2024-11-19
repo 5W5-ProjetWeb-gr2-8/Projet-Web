@@ -283,7 +283,6 @@ nav.menu div.menu_contenu .menu_hamburger span {
   }
 }
 
-/* Feuille de style pour le footer des pages du site */
 footer {
   background-color: var(--couleur-fond-gris);
   color: var(--couleur-texte-fonce);
@@ -301,13 +300,26 @@ footer {
 footer .footer-gauche {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
   gap: var(--espacement);
   text-align: center;
 }
 footer .footer-gauche .logo {
   width: 4rem;
   height: 2rem;
+}
+footer .footer-credits {
+  display: flex; /* Ligne horizontale */
+  align-items: center; /* Alignement vertical au centre */
+  gap: 10px; /* Espacement entre les éléments */
+  text-align: center; /* Par défaut : centré pour mobile */
+}
+@media (min-width: 768px) {
+  footer .footer-credits {
+    text-align: left; /* Alignement gauche pour tablette et plus */
+  }
+}
+footer .footer-credits p {
+  margin: 0;
 }
 footer a {
   color: var(--couleur-texte-fonce);
@@ -1681,6 +1693,10 @@ html {
   cursor: pointer;
   z-index: 10;
   transition: transform 0.2s ease-in-out; /* Animation légère pour les flèches */
+}
+.galerie-projets .carrousel-container .fleche i {
+  /* Cible l'icône Font Awesome */
+  font-size: 2rem; /* Taille de l'icône */
 }
 .galerie-projets .carrousel-container .fleche.gauche {
   left: 10px;

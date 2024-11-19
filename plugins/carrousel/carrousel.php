@@ -14,6 +14,9 @@ function carrousel_enqueue()
 
   // Ajoute le fichier JavaScript
   wp_enqueue_script('carrousel-script', plugin_dir_url(__FILE__) . 'js/carrousel.js', array('jquery'), null, true);
+
+  // Ajoute Font Awesome pour les flèches
+  wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 }
 // Enregistre la fonction carrousel_enqueue pour être appelée lorsque WordPress charge les scripts
 add_action('wp_enqueue_scripts', 'carrousel_enqueue');
@@ -29,8 +32,9 @@ function genere_html()
         <h2 class="galerie-titre">Projets étudiants</h2>
         <h3 id="titre-projet" class="titre-projet">Projet web en équipe</h3>
         <div class="carrousel-container">
-            <div class="fleche gauche" onclick="changerImage(-1)">&#9664;</div>
-            <!-- Flèche gauche -->
+            <div class="fleche gauche" onclick="changerImage(-1)">
+                <i class="fas fa-chevron-left"></i> <!-- Flèche gauche -->
+            </div>
             <div class="carrousel">';
 
   // Boucle pour générer un élément HTML pour chaque image dans le carrousel
@@ -48,12 +52,13 @@ function genere_html()
 
   // Ferme le conteneur carrousel et ajoute une flèche de navigation à droite
   $contenu .= '</div>
-            <div class="fleche droite" onclick="changerImage(1)">&#9654;</div>
-            <!-- Flèche droite -->
+            <div class="fleche droite" onclick="changerImage(1)">
+                <i class="fas fa-chevron-right"></i> <!-- Flèche droite -->
+            </div>
         </div>
         <div class="indications">';
 
-  // Boucle pour générer des indications (les rectangles avec des coins arrondies) pour chaque image
+  // Boucle pour générer des indications (les rectangles avec des coins arrondis) pour chaque image
   for ($i = 0; $i < count($projets_ids); $i++) {
     $contenu .= '<span class="indication" onclick="montrerImage(' . $i . ')"></span>';
   }
@@ -68,4 +73,3 @@ function genere_html()
 
 // Enregistre un shortcode carrousel
 add_shortcode('carrousel', 'genere_html');
-?>
