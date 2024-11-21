@@ -66,32 +66,42 @@
 
         input:checked + label.filtre {
           background-color: var(--couleur-design-fond);
-          border: none;
-          color: black;
         }
 
         input:checked + label.filtre.filtre_web {
           background-color: var(--couleur-web4);
-          border: none;
-          color: black;
         }
 
         input:checked + label.filtre.filtre_3d {
           background-color: var(--couleur-3d-fond);
-          border: none;
-          color: black;
         }
 
         input:checked + label.filtre.filtre_jeu {
           background-color: var(--couleur-jeux4);
-          border: none;
-          color: black;
         }
 
         input:checked + label.filtre.filtre_video {
           background-color: var(--couleur-video-fond);
-          border: none;
-          color: black;
+        }
+
+        .bordure_ui {
+          border: 6px solid var(--couleur-design-fond);
+        }
+
+        .bordure_web {
+          border: 6px solid var(--couleur-web4);
+        }
+
+        .bordure_3d {
+          border: 6px solid var(--couleur-3d-fond);
+        }
+
+        .bordure_jeu {
+          border: 6px solid var(--couleur-jeux4);
+        }
+
+        .bordure_video {
+          border: 6px solid var(--couleur-video-fond);
         }
 
         .filtre {
@@ -106,18 +116,111 @@
             clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
           border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
           margin-top: var(--espacement);
-          border: 1px solid white;
           transition: background-color 0.5s, color 0.5s, border 0.5s;
           font-weight: bold;
 
           &:hover {
-            color: white;
-            background-color: rgb(55, 55, 55);
             cursor: pointer;
           }
 
           @media (min-width: 1240px) {
             margin-top: 0rem;
+          }
+        }
+
+        // Animation du hover
+        .hover_ui {
+          border-color: var(--couleur-design-fond);
+          color: #fff;
+          background: {
+            image: linear-gradient(
+              45deg,
+              var(--couleur-design-fond) 50%,
+              transparent 50%
+            );
+            position: 100%;
+            size: 400%;
+          }
+          transition: background 300ms ease-in-out;
+
+          &:hover {
+            background-position: 0;
+          }
+        }
+        // Animation du hover
+        .hover_web {
+          border-color: var(--couleur-web4);
+          color: #fff;
+          background: {
+            image: linear-gradient(
+              45deg,
+              var(--couleur-web4) 50%,
+              transparent 50%
+            );
+            position: 100%;
+            size: 400%;
+          }
+          transition: background 300ms ease-in-out;
+
+          &:hover {
+            background-position: 0;
+          }
+        }
+        // Animation du hover
+        .hover_3d {
+          border-color: var(--couleur-3d-fond);
+          color: #fff;
+          background: {
+            image: linear-gradient(
+              45deg,
+              var(--couleur-3d-fond) 50%,
+              transparent 50%
+            );
+            position: 100%;
+            size: 400%;
+          }
+          transition: background 300ms ease-in-out;
+
+          &:hover {
+            background-position: 0;
+          }
+        }
+        // Animation du hover
+        .hover_jeu {
+          border-color: var(--couleur-jeux4);
+          color: #fff;
+          background: {
+            image: linear-gradient(
+              45deg,
+              var(--couleur-jeux4) 50%,
+              transparent 50%
+            );
+            position: 100%;
+            size: 400%;
+          }
+          transition: background 300ms ease-in-out;
+
+          &:hover {
+            background-position: 0;
+          }
+        }
+        // Animation du hover
+        .hover_video {
+          border-color: var(--couleur-video-fond);
+          color: #fff;
+          background: {
+            image: linear-gradient(
+              45deg,
+              var(--couleur-video-fond) 50%,
+              transparent 50%
+            );
+            position: 100%;
+            size: 400%;
+          }
+          transition: background 300ms ease-in-out;
+
+          &:hover {
+            background-position: 0;
           }
         }
       }

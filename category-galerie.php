@@ -20,27 +20,27 @@ get_header();
                     <!-- Filtre 1 ///////////// -->
                     <div class="conteneur_filtre">
                         <input type="checkbox" id="UI"><!-- Checkbox pour pouvoir changer l'état du filtre -->
-                        <label for="UI" class="filtre filtre_ui">Design</label>
+                        <label for="UI" class="filtre filtre_ui bordure_ui hover_ui">Design</label>
                     </div>
                     <!-- Filtre 2 ///////////// -->
                     <div class="conteneur_filtre">
                         <input type="checkbox" id="WEB"><!-- Checkbox pour pouvoir changer l'état du filtre -->
-                        <label for="WEB" class="filtre filtre_web">Programmation</label>
+                        <label for="WEB" class="filtre filtre_web bordure_web hover_web">Programmation</label>
                     </div>
                     <!-- Filtre 3 ///////////// -->
                     <div class="conteneur_filtre">
                         <input type="checkbox" id="3D"><!-- Checkbox pour pouvoir changer l'état du filtre -->
-                        <label for="3D" class="filtre filtre_3d">Création</label>
+                        <label for="3D" class="filtre filtre_3d bordure_3d hover_3d">Création</label>
                     </div>
                     <!-- Filtre 4 ///////////// -->
                     <div class="conteneur_filtre">
                         <input type="checkbox" id="JEU"><!-- Checkbox pour pouvoir changer l'état du filtre -->
-                        <label for="JEU" class="filtre filtre_jeu">Jeux</label>
+                        <label for="JEU" class="filtre filtre_jeu bordure_jeu hover_jeu">Jeux</label>
                     </div>
                     <!-- Filtre 5 ///////////// -->
                     <div class="conteneur_filtre">
                         <input type="checkbox" id="VIDEO"><!-- Checkbox pour pouvoir changer l'état du filtre -->
-                        <label for="VIDEO" class="filtre filtre_video">Montage</label>
+                        <label for="VIDEO" class="filtre filtre_video bordure_video hover_video">Montage</label>
                     </div>
                     <!-- Fin des differents filtres ///////////////-->
                 </div>
