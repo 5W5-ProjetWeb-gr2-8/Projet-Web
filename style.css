@@ -1148,343 +1148,101 @@ button.btn-cours:focus#jeux {
   background-color: var(--couleur-design-fond);
 }
 
-#projet_specifique {
-  padding: 2vh 0%;
+.principal_specifique {
+  padding: 20px;
+  background-color: #000;
+}
+.principal_specifique .presPro {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+.principal_specifique .presPro .fond_projet {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
+}
+.principal_specifique .presPro .fond_projet .contenu_projet {
+  display: flex;
+  gap: 20px;
   align-items: center;
 }
-#projet_specifique .conteneur_fleche {
-  width: 90vw;
+.principal_specifique .presPro .fond_projet .contenu_projet .image_projet {
+  width: 15rem;
+  height: 10rem;
 }
-#projet_specifique .conteneur_fleche .fleche_projet {
-  width: 5rem;
-  height: 5rem;
-  clip-path: polygon(30% 31%, 30% 44%, 69% 44%, 69% 57%, 30% 57%, 30% 70%, 0 50%);
-  background-color: white;
-  transition: clip-path 0.5s;
+.principal_specifique .presPro .fond_projet .contenu_projet .image_projet img {
+  border-radius: 10px;
 }
-#projet_specifique .conteneur_fleche .fleche_projet:hover {
-  clip-path: polygon(55% 24%, 55% 42%, 89% 42%, 89% 57%, 54% 57%, 54% 75%, 14% 50%);
+.principal_specifique .presPro .fond_projet .contenu_projet .image_projet .jeux {
+  border: 6px solid var(--couleur-jeux4);
 }
-#projet_specifique .fond_projet {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100vw;
-  background-color: #2B2B2B;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-radius: 2rem;
-}
-@media (min-width: 744px) {
-  #projet_specifique .fond_projet {
-    align-self: center;
-    width: 90vw;
-  }
-}
-#projet_specifique .fond_projet .titre_projet {
-  font-size: 3.25rem;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 1rem;
-}
-@media (min-width: 744px) {
-  #projet_specifique .fond_projet .titre_projet {
-    font-size: 4rem;
-    align-self: flex-start;
-    margin-left: 2vw;
-  }
-}
-#projet_specifique .fond_projet .infos_projet {
-  display: flex;
-  flex-flow: column nowrap;
-}
-@media (min-width: 744px) {
-  #projet_specifique .fond_projet .infos_projet {
-    width: 95%;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques {
+.principal_specifique .presPro .fond_projet .contenu_projet .details_projet {
+  flex: 1;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 744px) {
-  #projet_specifique .fond_projet .infos_projet .infos_specifiques {
-    align-items: flex-start;
-  }
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.1rem 1rem;
-}
-@media (min-width: 500px) and (max-width: 743px) {
-  #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet {
-    width: 30%;
-  }
-}
-@media (min-width: 744px) and (max-width: 1023px) {
-  #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet {
-    margin-top: 1rem;
-    width: 60%;
-  }
-}
-@media (min-width: 1024px) {
-  #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet {
-    width: 60%;
-    text-align: start;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .titre_type {
-  font-weight: bold;
-}
-@media (min-width: 744px) {
-  #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .titre_type {
-    align-self: flex-start;
-  }
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .type svg {
-  width: clamp(2rem, 1.4286vw + 1.7143rem, 3rem);
-  height: auto;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row nowrap;
-}
-@media (min-width: 744px) {
-  #projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types {
-    margin-top: 0.5rem;
-  }
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_web {
-  background-color: #25CF56;
-  border: 3px solid #005719;
-  border-radius: 1rem;
-  padding: 0.15rem;
-  transition: background-color 0.3s, border 0.3s;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_web:hover {
-  background-color: #005719;
-  border: 3px solid #25CF56;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_jeu {
-  background-color: #25AFCF;
-  border: 3px solid #004657;
-  border-radius: 0.5rem;
-  padding: 0.15rem;
-  transition: background-color 0.3s, border 0.3s;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_jeu:hover {
-  background-color: #004657;
-  border: 3px solid #25AFCF;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_3d {
-  background-color: #FFCA92;
-  border: 3px solid #572D00;
-  border-radius: 0.5rem;
-  padding: 0.15rem;
-  transition: background-color 0.3s, border 0.3s;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_3d:hover {
-  background-color: #572D00;
-  border: 3px solid #FFCA92;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_ui {
-  background-color: #FF92DE;
-  border: 3px solid #57003D;
-  border-radius: 1rem;
-  padding: 0.15rem;
-  transition: background-color 0.3s, border 0.3s;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_ui:hover {
-  background-color: #57003D;
-  border: 3px solid #FF92DE;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_video {
-  background-color: #9B92FF;
-  border: 3px solid #070057;
-  border-radius: 1rem;
-  padding: 0.15rem;
-  transition: background-color 0.3s, border 0.3s;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .type_projet .les_types .type_projet_video:hover {
-  background-color: #070057;
-  border: 3px solid #9B92FF;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet {
-  margin-top: 1rem;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.1rem 1rem;
-}
-#projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet p {
-  text-align: center;
-  font-weight: bold;
-}
-@media (min-width: 744px) and (max-width: 1023px) {
-  #projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet {
-    align-items: flex-start;
-  }
-  #projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet p {
-    text-align: left;
-  }
-}
-@media (min-width: 1024px) {
-  #projet_specifique .fond_projet .infos_projet .infos_specifiques .cours_projet {
-    text-align: start;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-}
-#projet_specifique .fond_projet .infos_projet .auteurs_projet {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#projet_specifique .fond_projet .infos_projet .auteurs_projet p {
-  font-size: 1.5rem;
-}
-@media (min-width: 744px) and (max-width: 1023px) {
-  #projet_specifique .fond_projet .infos_projet .auteurs_projet {
-    margin-top: 0rem;
-    align-items: flex-end;
-  }
-}
-@media (min-width: 1024px) {
-  #projet_specifique .fond_projet .infos_projet .auteurs_projet {
-    margin-top: 0rem;
-    align-items: flex-start;
-  }
-}
-#projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media (min-width: 744px) and (max-width: 1023px) {
-  #projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs {
-    align-items: flex-end;
-  }
-}
-@media (min-width: 1024px) {
-  #projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs {
-    width: clamp(25rem, 2.2781rem + 35.503vw, 40rem);
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-#projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs .auteur {
-  width: 75%;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
+}
+.principal_specifique .presPro .fond_projet .contenu_projet .details_projet h2.titre_projet {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.principal_specifique .presPro .fond_projet .contenu_projet .details_projet p {
+  margin: 5px 0;
+  color: #ccc;
+}
+.principal_specifique .presPro .fond_projet .description_projet {
   text-align: center;
-}
-@media (min-width: 1024px) {
-  #projet_specifique .fond_projet .infos_projet .auteurs_projet .les_auteurs .auteur {
-    height: 6rem;
-    width: 49%;
-    font-size: clamp(0.75rem, 0.3713rem + 0.5917vw, 1rem);
-  }
-}
-#projet_specifique .fond_projet .desc_projet {
-  max-width: 95vw;
-}
-#projet_specifique .fond_projet .desc_projet .desc {
-  font-weight: bold;
-}
-@media (min-width: 744px) {
-  #projet_specifique .fond_projet .desc_projet {
-    max-width: 70vw;
-  }
-}
-#projet_specifique .fond_projet .img_projet {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#projet_specifique .fond_projet .img_projet .img {
-  max-width: 70vw;
-  height: auto;
-  border-radius: 30px;
-}
-#projet_specifique .fond_projet .img_projet a {
-  color: white;
-  font-weight: bold;
-  font-size: 0.75rem;
-  max-width: 70vw;
-  transition: font-size 1s;
-}
-#projet_specifique .fond_projet .img_projet a:hover {
-  font-size: 0.9rem;
-}
-#projet_specifique .fond_projet .desc_projet,
-#projet_specifique .fond_projet .img_projet {
-  margin-top: var(--espacement);
-}
-#projet_specifique .projet_3d {
-  background-color: #FFCA92;
-  border: 7px solid #572D00;
-  color: black;
-  border-radius: 1rem;
-  padding: 1rem;
-  font-weight: bold;
-}
-#projet_specifique .projet_web {
-  background-color: #25CF56;
-  border: 7px solid #005719;
-  color: black;
-  border-radius: 1rem;
-  padding: 1rem;
-  font-weight: bold;
-}
-#projet_specifique .projet_video {
-  background-color: #9B92FF;
-  border: 7px solid #070057;
-  color: black;
-  border-radius: 1rem;
-  padding: 1rem;
-  font-weight: bold;
-}
-#projet_specifique .projet_ui {
-  background-color: #FF92DE;
-  border: 7px solid #57003D;
-  color: black;
-  border-radius: 1rem;
-  padding: 1rem;
-  font-weight: bold;
-}
-#projet_specifique .projet_jeu {
-  background-color: #25AFCF;
-  border: 7px solid #004657;
-  border-radius: 1rem;
-  padding: 1rem;
-  color: black;
-  border-radius: 1rem;
-  padding: 1rem;
-  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .presPro .fond_projet {
+    display: flex;
+    flex-direction: column;
+  }
+  .presPro .fond_projet .contenu_projet {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .presPro .fond_projet .contenu_projet .image_projet img {
+    width: 100%;
+    height: 100%;
+  }
+  .presPro .fond_projet .contenu_projet .details_projet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    flex: 1;
+  }
+  .presPro .fond_projet .description_projet {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  .presPro .fond_projet .contenu_projet .image_projet img {
+    max-width: 300px;
+  }
+  .presPro .fond_projet .details_projet h2 {
+    font-size: 2.2rem;
+  }
+  .presPro .fond_projet .description_projet {
+    font-size: 1.1rem;
+  }
+}
 #vie_etudiante {
   display: flex;
   flex-direction: column;
