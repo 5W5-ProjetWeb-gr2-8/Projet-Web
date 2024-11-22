@@ -2,7 +2,7 @@
   "competences": {
     "video": {
       "nom": "Montage",
-      "desc": "L'étudiant apprend à utiliser les périphériques et logiciels de traitement sonore et vidéo, ainsi qu'à créer des effets spéciaux visuels, animations graphiques, 3D, caméras et lumières virtuelles, et techniques d'écran vert.",
+      "desc": "L'étudiant apprend à utiliser les périphériques et logiciels de traitement sonore et vidéo, ainsi qu'à créer des effets spéciaux visuels, animations graphiques, 3D et caméras",
       "outils": {
         "Premiere Pro": "premiere",
         "Audition": "audition",
@@ -28,7 +28,7 @@
     },
     "jeux": {
       "nom": "Jeux",
-      "desc": "Cette compétence se développe en deuxième année, lorsque l'étudiant utilise ses connaissances de base pour assembler et intégrer des éléments dans Unity, notamment pour créer des jeux vidéo originaux.",
+      "desc": "Cette compétence se développe en deuxième année, lorsque l'étudiant utilise ses connaissances de base pour assembler et intégrer des éléments dans Unity pour créer des jeux vidéo originaux.",
       "outils": {
         "Unity": "unity",
         "C Sharp": "csharp"

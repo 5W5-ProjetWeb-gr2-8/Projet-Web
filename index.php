@@ -115,6 +115,7 @@ $_comp = $texte["competences"];
 ?>
 
 <!-- fichier js juste pour l'accueil -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/competences.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/button.js"></script>
 
 
