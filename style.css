@@ -291,11 +291,16 @@ footer {
   align-items: center;
   padding: 20px;
   flex-wrap: wrap;
+  gap: 0.8rem;
 }
 @media (min-width: 768px) {
   footer {
     justify-content: space-between;
   }
+}
+footer .logo {
+  width: 4rem;
+  height: 2rem;
 }
 footer .footer-gauche {
   display: flex;
@@ -303,19 +308,42 @@ footer .footer-gauche {
   gap: var(--espacement);
   text-align: center;
 }
-footer .footer-gauche .logo {
-  width: 4rem;
-  height: 2rem;
+footer .footer-gauche .logo_footer {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+footer .footer-gauche .logo_footer .logo {
+  transition: transform 0.3s ease;
+}
+footer .footer-gauche .logo_footer:hover .logo {
+  transform: scale(1.1);
+}
+footer .footer-gauche .logo_footer:hover {
+  color: #0073e6;
+}
+footer .footer-gauche .logo_footer:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0073e6;
+  transition: width 0.3s ease;
+}
+footer .footer-gauche .logo_footer:hover:before {
+  width: 100%;
 }
 footer .footer-credits {
-  display: flex; /* Ligne horizontale */
-  align-items: center; /* Alignement vertical au centre */
-  gap: 10px; /* Espacement entre les éléments */
-  text-align: center; /* Par défaut : centré pour mobile */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
 }
 @media (min-width: 768px) {
   footer .footer-credits {
-    text-align: left; /* Alignement gauche pour tablette et plus */
+    text-align: left;
   }
 }
 footer .footer-credits p {
@@ -992,7 +1020,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 300ms ease-in-out;
+  transition: background 500ms ease-in-out;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .hover_ui:hover {
   background-position: 0;
@@ -1003,7 +1031,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-web4) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 300ms ease-in-out;
+  transition: background 500ms ease-in-out;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .hover_web:hover {
   background-position: 0;
@@ -1014,7 +1042,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-3d-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 300ms ease-in-out;
+  transition: background 500ms ease-in-out;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .hover_3d:hover {
   background-position: 0;
@@ -1025,7 +1053,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-jeux4) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 300ms ease-in-out;
+  transition: background 500ms ease-in-out;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .hover_jeu:hover {
   background-position: 0;
@@ -1036,7 +1064,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-video-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 300ms ease-in-out;
+  transition: background 500ms ease-in-out;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .hover_video:hover {
   background-position: 0;
@@ -1674,7 +1702,7 @@ html {
   background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 300ms ease-in-out;
+  transition: background-position 500ms ease-in-out;
 }
 .animation-stage:hover {
   background-position: 0;
@@ -1685,7 +1713,7 @@ html {
   background-image: linear-gradient(45deg, var(--couleur-3d-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 300ms ease-in-out;
+  transition: background-position 500ms ease-in-out;
 }
 .animation-universite:hover {
   background-position: 0;
@@ -1696,7 +1724,7 @@ html {
   background-image: linear-gradient(45deg, var(--couleur-video-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 300ms ease-in-out;
+  transition: background-position 500ms ease-in-out;
 }
 .animation-emploi:hover {
   background-position: 0;

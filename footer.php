@@ -7,7 +7,7 @@
         ?>
 
         <!-- Logo TIM -->
-        <a href="<?php echo esc_url(home_url('/')); ?>">
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="logo_footer">
             <?php echo wp_get_attachment_image($logo_tim_id, 'full', false, array('class' => 'logo', 'alt' => 'Logo TIM')); ?>
         </a>
 

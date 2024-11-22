@@ -6,9 +6,15 @@ footer {
   align-items: center;
   padding: 20px;
   flex-wrap: wrap;
+  gap: 0.8rem;
 
   @media (min-width: 768px) {
     justify-content: space-between;
+  }
+  
+  .logo {
+    width: 4rem;
+    height: 2rem;
   }
 
   // Partie gauche du footer
@@ -18,22 +24,50 @@ footer {
     gap: var(--espacement);
     text-align: center;
 
-    // Logo TIM
-    .logo {
-      width: 4rem;
-      height: 2rem;
+    // Animation du logo
+    .logo_footer {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.3s ease;
+
+      .logo {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover .logo {
+        transform: scale(1.1); // Agrandir le logo au survol
+      }
+
+      &:hover {
+        color: #0073e6; // Couleur de texte au survol
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -5px; // Ajuster l'espace entre le logo et la sous-ligne
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #0073e6;
+        transition: width 0.3s ease;
+      }
+
+      &:hover:before {
+        width: 100%; // Étendre la sous-ligne au survol
+      }
     }
   }
 
   // Section Crédits
   .footer-credits {
-    display: flex; /* Ligne horizontale */
-    align-items: center; /* Alignement vertical au centre */
-    gap: 10px; /* Espacement entre les éléments */
-    text-align: center; /* Par défaut : centré pour mobile */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
 
     @media (min-width: 768px) {
-      text-align: left; /* Alignement gauche pour tablette et plus */
+      text-align: left;
     }
 
     p {
