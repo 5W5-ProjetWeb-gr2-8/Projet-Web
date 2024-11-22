@@ -2060,9 +2060,6 @@ section.competences div.competence-item .top-right-button .x-symbol {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
-section.competences div.competence-item .top-right-button:hover .x-symbol {
-  stroke: white;
-}
 section.competences div.competence-item button.clicked .x-symbol:nth-child(3) {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;

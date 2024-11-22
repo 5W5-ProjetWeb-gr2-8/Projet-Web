@@ -2,7 +2,7 @@
   "competences": {
     "video": {
       "nom": "Montage",
-      "desc": "L'étudiant apprend à utiliser les périphériques et logiciels de traitement sonore et vidéo, ainsi qu'à créer des effets spéciaux visuels, animations graphiques, 3D et caméras",
+      "desc": "L'étudiant apprend à utiliser les périphériques et logiciels de traitement sonore et vidéo, ainsi qu'à créer des effets spéciaux visuels, animations graphiques, 3D et caméras.",
       "outils": {
         "Premiere Pro": "premiere",
         "Audition": "audition",
