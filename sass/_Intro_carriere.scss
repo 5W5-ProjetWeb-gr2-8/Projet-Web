@@ -43,7 +43,6 @@ html {
   margin-top: 20px;
 }
 
-
 .description-intro {
   width: 70%;
   margin-left: 30px;
@@ -60,10 +59,10 @@ html {
 .trois-cat a {
   width: 200px;
   height: 40px;
-  background-color: rgb(176, 176, 176);
-  color: #000;
+  background-color: black;
+  color: white;
   font-size: var(--taille-police);
-  font-weight: var(--poid_textes);
+  font-weight: bold;
 
   display: flex;
   justify-content: center;
@@ -72,12 +71,62 @@ html {
   border-radius: 50px;
   cursor: pointer;
 }
-.trois-cat a:hover {
-  background-color: #ffffff;
-  transition: background-color 0.7s;
-}
-//=======================//
 
+// Animations hover
+.animation-stage {
+  border: 6px solid var(--couleur-design-fond);
+
+  background: {
+    image: linear-gradient(
+      45deg,
+      var(--couleur-design-fond) 50%,
+      transparent 50%
+    );
+    position: 100%;
+    size: 400%;
+  }
+  transition: background-position 300ms ease-in-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+.animation-universite {
+  border: 6px solid var(--couleur-3d-fond);
+
+  background: {
+    image: linear-gradient(45deg, var(--couleur-3d-fond) 50%, transparent 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: background-position 300ms ease-in-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+.animation-emploi {
+  border: 6px solid var(--couleur-video-fond);
+
+  background: {
+    image: linear-gradient(
+      45deg,
+      var(--couleur-video-fond) 50%,
+      transparent 50%
+    );
+    position: 100%;
+    size: 400%;
+  }
+  transition: background-position 300ms ease-in-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+//=======================//
 
 //=========PARTIE EN BAS DETAILS =======//
 .detail-carri {
@@ -92,7 +141,7 @@ html {
   flex-direction: column;
   align-items: center;
 }
-.detail{
+.detail {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,7 +210,9 @@ html {
     flex-direction: column;
     align-items: center;
   }
-  .contenu-image-description img, .contenu-image-description p, .images-stage img {
+  .contenu-image-description img,
+  .contenu-image-description p,
+  .images-stage img {
     width: 65%;
     height: auto;
   }
