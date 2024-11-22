@@ -16,15 +16,15 @@ get_header();
       <div class="contenu_projet">
         <!-- Image en haut à gauche -->
         <div class="image_projet">
-          <img class="jeux" src="<?php echo wp_get_attachment_url(66); ?>" alt="Image du projet">
+          <img class="jeux_bordure" src="<?php echo wp_get_attachment_url(66); ?>" alt="Image du projet">
         </div>
 
         <!-- Informations à droite -->
         <div class="details_projet">
-          <h2 class="titre_projet">Tryptique</h2>
-          <p class="type_projet">Type : Jeu 3D</p>
-          <p class="cours_projet">Cours : 360-4J4-MA Création de jeu en équipe</p>
-          <p class="auteurs_projet">Auteurs : Dylan Carle, Eloi Yuri Chayer, Clovis Gauthier, Vincent Genest,</p>
+          <h1 class="titre_projet jeux_titre">Tryptique</h1>
+          <p class="type_projet"><b class="jeux_gras">Type :</b> Jeu 3D</p>
+          <p class="cours_projet"><b class="jeux_gras">Cours :</b> 360-4J4-MA Création de jeu en équipe</p>
+          <p class="auteurs_projet"><b class="jeux_gras">Auteurs :</b> Dylan Carle, Eloi Yuri Chayer, Clovis Gauthier, Vincent Genest,</p>
         </div>
       </div>
 

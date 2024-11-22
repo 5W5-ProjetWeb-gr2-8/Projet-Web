@@ -1174,7 +1174,7 @@ button.btn-cours:focus#jeux {
 .principal_specifique .presPro .fond_projet .contenu_projet .image_projet img {
   border-radius: 10px;
 }
-.principal_specifique .presPro .fond_projet .contenu_projet .image_projet .jeux {
+.principal_specifique .presPro .fond_projet .contenu_projet .image_projet .jeux_bordure {
   border: 6px solid var(--couleur-jeux4);
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet {
@@ -1184,23 +1184,19 @@ button.btn-cours:focus#jeux {
   flex-direction: column;
   justify-content: center;
 }
-.principal_specifique .presPro .fond_projet .contenu_projet .details_projet h2.titre_projet {
-  font-size: 1.5rem;
-  color: #fff;
-  margin-bottom: 10px;
+.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .jeux_titre {
+  color: var(--couleur-jeux4);
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet p {
   margin: 5px 0;
   color: #ccc;
 }
 .principal_specifique .presPro .fond_projet .description_projet {
-  text-align: center;
-  margin-top: 20px;
+  text-align: start;
   font-size: 1rem;
   line-height: 1.5;
   color: #fff;
   max-width: 800px;
-  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -1224,12 +1220,15 @@ button.btn-cours:focus#jeux {
     text-align: left;
     flex: 1;
   }
+  .presPro .fond_projet .contenu_projet .details_projet .jeux_gras {
+    color: var(--couleur-jeux4);
+    font-weight: bold;
+  }
   .presPro .fond_projet .description_projet {
     margin-top: 20px;
     text-align: center;
     font-size: 1rem;
     max-width: 800px;
-    margin: 0 auto;
   }
 }
 @media (min-width: 1024px) {

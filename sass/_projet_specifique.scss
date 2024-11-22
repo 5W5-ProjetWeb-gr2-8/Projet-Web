@@ -25,7 +25,7 @@
           img {
             border-radius: 10px;
           }
-          .jeux {
+          .jeux_bordure {
             border: 6px solid var(--couleur-jeux4);
           }
         }
@@ -37,10 +37,8 @@
           flex-direction: column;
           justify-content: center;
 
-          h2.titre_projet {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-bottom: 10px;
+          .jeux_titre {
+            color: var(--couleur-jeux4);
           }
 
           p {
@@ -52,13 +50,11 @@
 
       // Description centrée en bas
       .description_projet {
-        text-align: center;
-        margin-top: 20px;
+        text-align: start;
         font-size: 1rem;
         line-height: 1.5;
         color: #fff;
         max-width: 800px;
-        margin: 0 auto;
       }
     }
   }
@@ -89,6 +85,11 @@
           justify-content: center;
           text-align: left;
           flex: 1;
+
+          .jeux_gras {
+            color: var(--couleur-jeux4);
+            font-weight: bold;
+          }
         }
       }
 
@@ -97,7 +98,6 @@
         text-align: center;
         font-size: 1rem;
         max-width: 800px;
-        margin: 0 auto;
       }
     }
   }
