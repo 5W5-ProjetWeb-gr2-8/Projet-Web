@@ -18,7 +18,6 @@
         display: flex;
         flex-direction: column; // Par défaut en colonne
         gap: 20px;
-        align-items: center;
 
         .image_projet {
           width: 100%; // Utiliser 100% pour occuper toute la largeur parent
@@ -79,7 +78,7 @@
     .fond_projet {
       .contenu_projet {
         flex-direction: row !important; // Image à gauche et détails à droite
-        align-items: flex-start;
+        align-items: end;
 
         .image_projet {
           max-width: 200px; // Taille ajustée pour tablettes
@@ -119,4 +118,43 @@
 .programmation_gras {
   color: var(--couleur-web4);
   font-weight: bold;
+}
+
+// Section Galerie de Projets //////////////////////////////////////////////////
+.galerie_projets {
+  padding: 20px;
+  margin-top: 40px;
+
+  .conteneur_galerie {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+
+    .projet_item {
+      .image_projet_galerie {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+// Adaptabilité pour la galerie /////////////////////////////////////////////////////
+// Tablettes
+@media (min-width: 768px) {
+  .galerie_projets {
+    .conteneur_galerie {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// Ordinateurs
+@media (min-width: 1024px) {
+  .galerie_projets {
+    .conteneur_galerie {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
