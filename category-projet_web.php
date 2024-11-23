@@ -46,18 +46,17 @@ get_header();
     <h2 class="titre_galerie">Galerie de Projets</h2>
     <div class="conteneur_galerie">
       <?php
-      // Exemple de projets
+      // Ajouté le ID de l'image ici
       $projets = [
-        ['id' => 241, 'titre' => 'Projet 1'],
-        ['id' => 242, 'titre' => 'Projet 2'],
-        ['id' => 243, 'titre' => 'Projet 3'],
+        ['id' => 535,],
+        ['id' => 536,],
       ];
 
       foreach ($projets as $projet) {
         $image_url = wp_get_attachment_url($projet['id']);
         echo "
         <div class='projet_item'>
-          <img src='{$image_url}' alt='{$projet['titre']}' class='image_projet_galerie'>
+          <img src='{$image_url}' alt='Projet' class='image_projet_galerie'>
         </div>";
       }
       ?>

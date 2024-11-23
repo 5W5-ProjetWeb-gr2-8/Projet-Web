@@ -1167,7 +1167,6 @@ button.btn-cours:focus#jeux {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .image_projet {
   width: 100%;
@@ -1212,7 +1211,7 @@ button.btn-cours:focus#jeux {
 @media (min-width: 768px) {
   .presPro .fond_projet .contenu_projet {
     flex-direction: row !important;
-    align-items: flex-start;
+    align-items: end;
   }
   .presPro .fond_projet .contenu_projet .image_projet {
     max-width: 200px;
@@ -1238,6 +1237,40 @@ button.btn-cours:focus#jeux {
 .programmation_gras {
   color: var(--couleur-web4);
   font-weight: bold;
+}
+
+/* Style de la galerie */
+.galerie_projets {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.conteneur_galerie {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 colonne par défaut (mobile/tablette) */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+/* Deux colonnes sur les écrans plus larges (ordinateur) */
+@media screen and (min-width: 768px) {
+  .conteneur_galerie {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* Style des éléments de la galerie */
+.projet_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_projet_galerie {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 #vie_etudiante {

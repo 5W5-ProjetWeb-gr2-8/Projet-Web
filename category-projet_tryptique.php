@@ -39,6 +39,28 @@ get_header();
       </div>
     </div>
   </section>
+
+  <!-- Galerie de Projets -->
+  <section class="galerie_projets">
+    <h2 class="titre_galerie">Galerie de Projets</h2>
+    <div class="conteneur_galerie">
+      <?php
+      // Ajouté le ID de l'image ici
+      $projets = [
+        ['id' => 535,],
+        ['id' => 536,],
+      ];
+
+      foreach ($projets as $projet) {
+        $image_url = wp_get_attachment_url($projet['id']);
+        echo "
+        <div class='projet_item'>
+          <img src='{$image_url}' alt='Projet' class='image_projet_galerie'>
+        </div>";
+      }
+      ?>
+    </div>
+  </section>
 </main>
 
 
