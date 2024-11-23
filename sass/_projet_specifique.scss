@@ -48,6 +48,10 @@
             color: var(--couleur-3d-fond);
           }
 
+          .video_titre {
+            color: var(--couleur-video-fond);
+          }
+
           p {
             margin: 5px 0;
             color: #ccc;
@@ -124,6 +128,11 @@
   font-weight: bold;
 }
 
+.video_gras {
+  color: var(--couleur-video-fond);
+  font-weight: bold;
+}
+
 // Bordure /////////////////////////////////////////////////////////
 .jeux_bordure {
   border: 6px solid var(--couleur-jeux4);
@@ -135,6 +144,10 @@
 
 .creation_bordure {
   border: 6px solid var(--couleur-3d-fond);
+}
+
+.video_bordure {
+  border: 6px solid var(--couleur-video-fond);
 }
 
 // Section Galerie //////////////////////////////////////////////////

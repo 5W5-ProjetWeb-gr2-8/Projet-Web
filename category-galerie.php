@@ -61,7 +61,7 @@ get_header();
                 ['id' => 64, 'filtre_classe' => 'gal_proj_jeu', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_lacryma/'],
                 ['id' => 207, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_souffle/'],
                 ['id' => 195, 'filtre_classe' => 'gal_proj_ui', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/ui/'],
-                ['id' => 191, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/video/'],
+                ['id' => 206, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_rlyeh/'],
                 ['id' => 201, 'filtre_classe' => 'gal_proj_web', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/web/'],
             ];
 

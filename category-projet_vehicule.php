@@ -23,7 +23,7 @@ get_header();
         <div class="details_projet">
           <h1 class="titre_projet creation_titre">Réalisation 3D</h1>
           <p class="type_projet"><b class="creation_gras">Domaine :</b> Création 3D</p>
-          <p class="cours_projet"><b class="creation_gras">Cours :</b> 582-3M5-MA Imagerie 3D</p>
+          <p class="cours_projet"><b class="creation_gras">Cours :</b> 582-3M5-MA - Imagerie 3D</p>
           <p class="auteurs_projet"><b class="creation_gras">Auteur :</b> Nicolas Carrière</p>
         </div>
       </div>
