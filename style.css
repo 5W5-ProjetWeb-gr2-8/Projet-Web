@@ -1126,6 +1126,7 @@ button.btn-cours:focus#jeux {
   opacity: 50%;
   border-radius: 16px;
   transition: opacity 0.75s;
+  pointer-events: none;
 }
 .galerie_projet .gal_proj_web,
 .galerie_projet .filtre_web {
@@ -1180,6 +1181,9 @@ button.btn-cours:focus#jeux {
 .principal_specifique .presPro .fond_projet .contenu_projet .image_projet .jeux_bordure {
   border: 6px solid var(--couleur-jeux4);
 }
+.principal_specifique .presPro .fond_projet .contenu_projet .image_projet .programmation_bordure {
+  border: 6px solid var(--couleur-web4);
+}
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet {
   flex: 1;
   text-align: left;
@@ -1189,6 +1193,9 @@ button.btn-cours:focus#jeux {
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet .jeux_titre {
   color: var(--couleur-jeux4);
+}
+.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .programmation_titre {
+  color: var(--couleur-web4);
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet p {
   margin: 5px 0;
@@ -1214,10 +1221,6 @@ button.btn-cours:focus#jeux {
     flex: 1;
     text-align: left;
   }
-  .presPro .fond_projet .contenu_projet .details_projet .jeux_gras {
-    color: var(--couleur-jeux4);
-    font-weight: bold;
-  }
 }
 @media (min-width: 1024px) {
   .presPro .fond_projet .contenu_projet .image_projet {
@@ -1227,6 +1230,16 @@ button.btn-cours:focus#jeux {
     font-size: 1.1rem;
   }
 }
+.jeux_gras {
+  color: var(--couleur-jeux4);
+  font-weight: bold;
+}
+
+.programmation_gras {
+  color: var(--couleur-web4);
+  font-weight: bold;
+}
+
 #vie_etudiante {
   display: flex;
   flex-direction: column;

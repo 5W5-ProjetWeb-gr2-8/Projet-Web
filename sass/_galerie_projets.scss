@@ -285,6 +285,7 @@
           opacity: 50%;
           border-radius: 16px;
           transition: opacity 0.75s;
+          pointer-events: none; // Empêche les couleurs de bloquer le clic sur l'image
         }
       }
     }

@@ -31,6 +31,10 @@
           .jeux_bordure {
             border: 6px solid var(--couleur-jeux4);
           }
+
+          .programmation_bordure {
+            border: 6px solid var(--couleur-web4);
+          }
         }
 
         .details_projet {
@@ -42,6 +46,10 @@
 
           .jeux_titre {
             color: var(--couleur-jeux4);
+          }
+
+          .programmation_titre {
+            color: var(--couleur-web4);
           }
 
           p {
@@ -80,11 +88,6 @@
         .details_projet {
           flex: 1;
           text-align: left;
-
-          .jeux_gras {
-            color: var(--couleur-jeux4);
-            font-weight: bold;
-          }
         }
       }
     }
@@ -106,4 +109,14 @@
       }
     }
   }
+}
+
+.jeux_gras {
+  color: var(--couleur-jeux4);
+  font-weight: bold;
+}
+
+.programmation_gras {
+  color: var(--couleur-web4);
+  font-weight: bold;
 }

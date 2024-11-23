@@ -33,7 +33,7 @@ get_header();
         <p>
           Le jeu raconte l'histoire de Mathieu, un jeune artiste avec une enfance difficile, piégé dans ses cauchemars
           sous forme d'une galerie d'art. Pour s'échapper, il doit finir son chef-d'œuvre, un tableau en trois
-          parties : son triptyque. Mais la tâche est plus compliquée que prévu : plus il avance dans son rêve,
+          parties : son <b class="jeux_gras">triptyque</b>. Mais la tâche est plus compliquée que prévu : plus il avance dans son rêve,
           plus la réalité devient étrange. Il devra affronter ses peurs pour s'en sortir.
         </p>
       </div>

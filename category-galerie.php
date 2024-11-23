@@ -55,14 +55,14 @@ get_header();
             // Tableau associatif contenant les IDs d'images et leurs classes de filtre
             // Il faut faire un loop pour que sa soit automatique
             $projets = [
-                ['id' => 240, 'filtre_classe' => 'gal_proj_web'],
-                ['id' => 203, 'filtre_classe' => 'gal_proj_jeu'],
-                ['id' => 248, 'filtre_classe' => 'gal_proj_3d'],
-                ['id' => 202, 'filtre_classe' => 'gal_proj_ui'],
-                ['id' => 207, 'filtre_classe' => 'gal_proj_video'],
-                ['id' => 195, 'filtre_classe' => 'gal_proj_ui'],
-                ['id' => 191, 'filtre_classe' => 'gal_proj_video'],
-                ['id' => 201, 'filtre_classe' => 'gal_proj_web'],
+                ['id' => 240, 'filtre_classe' => 'gal_proj_web', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_web/'],
+                ['id' => 203, 'filtre_classe' => 'gal_proj_jeu', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/jeu/'],
+                ['id' => 248, 'filtre_classe' => 'gal_proj_3d', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/3d/'],
+                ['id' => 202, 'filtre_classe' => 'gal_proj_ui', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/ui/'],
+                ['id' => 207, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/video/'],
+                ['id' => 195, 'filtre_classe' => 'gal_proj_ui', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/ui/'],
+                ['id' => 191, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/video/'],
+                ['id' => 201, 'filtre_classe' => 'gal_proj_web', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/web/'],
             ];
 
             // Boucle pour afficher chaque projet
@@ -74,7 +74,9 @@ get_header();
                     <div class="projet_galerie">
                         <div class="projet_image">
                             <!-- Afficher l'image en utilisant l'URL récupérée -->
-                            <img class="img_galerie" src="<?php echo esc_url($image_url); ?>" alt="Projet">
+                            <a href="<?php echo esc_url($projet['url']); ?>">
+                                <img class="img_galerie" src="<?php echo esc_url($image_url); ?>" alt="Projet">
+                            </a>
                         </div>
                         <div class="projet_filtre <?php echo esc_attr($projet['filtre_classe']); ?>"></div>
                     </div>
