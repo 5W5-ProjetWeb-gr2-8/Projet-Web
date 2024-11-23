@@ -1177,12 +1177,6 @@ button.btn-cours:focus#jeux {
   height: auto;
   border-radius: 10px;
 }
-.principal_specifique .presPro .fond_projet .contenu_projet .image_projet .jeux_bordure {
-  border: 6px solid var(--couleur-jeux4);
-}
-.principal_specifique .presPro .fond_projet .contenu_projet .image_projet .programmation_bordure {
-  border: 6px solid var(--couleur-web4);
-}
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet {
   flex: 1;
   text-align: left;
@@ -1237,6 +1231,14 @@ button.btn-cours:focus#jeux {
 .programmation_gras {
   color: var(--couleur-web4);
   font-weight: bold;
+}
+
+.jeux_bordure {
+  border: 6px solid var(--couleur-jeux4);
+}
+
+.programmation_bordure {
+  border: 6px solid var(--couleur-web4);
 }
 
 /* Style de la galerie */

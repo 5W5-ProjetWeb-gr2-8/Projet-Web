@@ -56,7 +56,7 @@ get_header();
         $image_url = wp_get_attachment_url($projet['id']);
         echo "
         <div class='projet_item'>
-          <img src='{$image_url}' alt='Projet' class='image_projet_galerie'>
+          <img src='{$image_url}' alt='Projet' class='image_projet_galerie programmation_bordure'>
         </div>";
       }
       ?>

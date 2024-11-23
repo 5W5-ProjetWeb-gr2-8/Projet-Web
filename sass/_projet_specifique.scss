@@ -27,13 +27,6 @@
             height: auto; // Maintient les proportions
             border-radius: 10px;
           }
-          .jeux_bordure {
-            border: 6px solid var(--couleur-jeux4);
-          }
-
-          .programmation_bordure {
-            border: 6px solid var(--couleur-web4);
-          }
         }
 
         .details_projet {
@@ -110,6 +103,8 @@
   }
 }
 
+// Gras /////////////////////////////////////////////////////////////
+
 .jeux_gras {
   color: var(--couleur-jeux4);
   font-weight: bold;
@@ -118,6 +113,15 @@
 .programmation_gras {
   color: var(--couleur-web4);
   font-weight: bold;
+}
+
+// Bordure /////////////////////////////////////////////////////////
+.jeux_bordure {
+  border: 6px solid var(--couleur-jeux4);
+}
+
+.programmation_bordure {
+  border: 6px solid var(--couleur-web4);
 }
 
 // Section Galerie //////////////////////////////////////////////////

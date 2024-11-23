@@ -47,15 +47,19 @@ get_header();
       <?php
       // Ajouté le ID de l'image ici
       $projets = [
-        ['id' => 535,],
-        ['id' => 536,],
+        ['id' => 558,],
+        ['id' => 559,],
+        ['id' => 560,],
+        ['id' => 561,],
+        ['id' => 562,],
+        ['id' => 563,],
       ];
 
       foreach ($projets as $projet) {
         $image_url = wp_get_attachment_url($projet['id']);
         echo "
         <div class='projet_item'>
-          <img src='{$image_url}' alt='Projet' class='image_projet_galerie'>
+          <img src='{$image_url}' alt='Projet' class='image_projet_galerie jeux_bordure'>
         </div>";
       }
       ?>

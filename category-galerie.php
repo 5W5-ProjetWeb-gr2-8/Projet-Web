@@ -56,7 +56,7 @@ get_header();
             // Il faut faire un loop pour que sa soit automatique
             $projets = [
                 ['id' => 240, 'filtre_classe' => 'gal_proj_web', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_web/'],
-                ['id' => 203, 'filtre_classe' => 'gal_proj_jeu', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/jeu/'],
+                ['id' => 66, 'filtre_classe' => 'gal_proj_jeu', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_tryptique/'],
                 ['id' => 248, 'filtre_classe' => 'gal_proj_3d', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/3d/'],
                 ['id' => 202, 'filtre_classe' => 'gal_proj_ui', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/ui/'],
                 ['id' => 207, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/video/'],
