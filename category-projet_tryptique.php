@@ -23,7 +23,7 @@ get_header();
         <div class="details_projet">
           <h1 class="titre_projet jeux_titre">Tryptique</h1>
           <p class="type_projet"><b class="jeux_gras">Type :</b> Jeu 3D</p>
-          <p class="cours_projet"><b class="jeux_gras">Cours :</b> 360-4J4-MA Création de jeu en équipe</p>
+          <p class="cours_projet"><b class="jeux_gras">Domaine :</b> 360-4J4-MA Création de jeu en équipe</p>
           <p class="auteurs_projet"><b class="jeux_gras">Auteurs :</b> Dylan Carle, Eloi Yuri Chayer, Clovis Gauthier, Vincent Genest,</p>
         </div>
       </div>
