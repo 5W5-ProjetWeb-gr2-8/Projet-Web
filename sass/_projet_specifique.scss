@@ -120,41 +120,39 @@
   font-weight: bold;
 }
 
-// Section Galerie de Projets //////////////////////////////////////////////////
+// Section Galerie //////////////////////////////////////////////////
+
+/* Style de la galerie */
 .galerie_projets {
+  margin: 0 auto;
   padding: 20px;
-  margin-top: 40px;
+}
 
+.conteneur_galerie {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 colonne par défaut (mobile/tablette) */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+/* Deux colonnes sur les écrans plus larges (ordinateur) */
+@media screen and (min-width: 768px) {
   .conteneur_galerie {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-
-    .projet_item {
-      .image_projet_galerie {
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
-      }
-    }
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-// Adaptabilité pour la galerie /////////////////////////////////////////////////////
-// Tablettes
-@media (min-width: 768px) {
-  .galerie_projets {
-    .conteneur_galerie {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+/* Style des éléments de la galerie */
+.projet_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-// Ordinateurs
-@media (min-width: 1024px) {
-  .galerie_projets {
-    .conteneur_galerie {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+.image_projet_galerie {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
