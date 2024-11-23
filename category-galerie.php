@@ -55,14 +55,14 @@ get_header();
             // Tableau associatif contenant les IDs d'images et leurs classes de filtre
             // Il faut faire un loop pour que sa soit automatique
             $projets = [
-                ['id' => 240, 'filtre_classe' => 'gal_proj_web', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_web/'],
+                ['id' => 64, 'filtre_classe' => 'gal_proj_jeu', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_lacryma/'],
                 ['id' => 66, 'filtre_classe' => 'gal_proj_jeu', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_tryptique/'],
                 ['id' => 248, 'filtre_classe' => 'gal_proj_3d', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_vehicule/'],
-                ['id' => 64, 'filtre_classe' => 'gal_proj_jeu', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_lacryma/'],
-                ['id' => 207, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_souffle/'],
-                ['id' => 195, 'filtre_classe' => 'gal_proj_ui', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/ui/'],
                 ['id' => 206, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_rlyeh/'],
-                ['id' => 201, 'filtre_classe' => 'gal_proj_web', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/web/'],
+                ['id' => 207, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_souffle/'],
+                ['id' => 617, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_checo/'],
+                ['id' => 240, 'filtre_classe' => 'gal_proj_web', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_web/'],
+                ['id' => 201, 'filtre_classe' => 'gal_proj_ui', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_carolyn/'],
             ];
 
             // Boucle pour afficher chaque projet

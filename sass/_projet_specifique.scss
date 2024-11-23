@@ -52,6 +52,10 @@
             color: var(--couleur-video-fond);
           }
 
+          .ui_titre {
+            color: var(--couleur-design-fond);
+          }
+
           p {
             margin: 5px 0;
             color: #ccc;
@@ -133,6 +137,11 @@
   font-weight: bold;
 }
 
+.ui_gras {
+  color: var(--couleur-design-fond);
+  font-weight: bold;
+}
+
 // Bordure /////////////////////////////////////////////////////////
 .jeux_bordure {
   border: 6px solid var(--couleur-jeux4);
@@ -148,6 +157,10 @@
 
 .video_bordure {
   border: 6px solid var(--couleur-video-fond);
+}
+
+.ui_bordure {
+  border: 6px solid var(--couleur-design-fond);
 }
 
 // Section Galerie //////////////////////////////////////////////////
