@@ -22,8 +22,8 @@ get_header();
         <!-- Informations à droite -->
         <div class="details_projet">
           <h1 class="titre_projet jeux_titre">Tryptique</h1>
-          <p class="type_projet"><b class="jeux_gras">Type :</b> Jeu 3D</p>
-          <p class="cours_projet"><b class="jeux_gras">Domaine :</b> 360-4J4-MA Création de jeu en équipe</p>
+          <p class="type_projet"><b class="jeux_gras">Domaine :</b> Jeu 3D</p>
+          <p class="cours_projet"><b class="jeux_gras">Cours :</b> 360-4J4-MA Création de jeu en équipe</p>
           <p class="auteurs_projet"><b class="jeux_gras">Auteurs :</b> Dylan Carle, Eloi Yuri Chayer, Clovis Gauthier, Vincent Genest,</p>
         </div>
       </div>
@@ -42,7 +42,6 @@ get_header();
 
   <!-- Galerie de Projets -->
   <section class="galerie_projets">
-    <h2 class="titre_galerie">Galerie de Projets</h2>
     <div class="conteneur_galerie">
       <?php
       // Ajouté le ID de l'image ici

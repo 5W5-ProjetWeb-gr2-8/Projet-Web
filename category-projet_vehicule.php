@@ -44,7 +44,6 @@ get_header();
 
   <!-- Galerie de Projets -->
   <section class=" galerie_projets">
-    <h2 class="titre_galerie">Galerie de Projets</h2>
     <div class="conteneur_galerie">
       <?php
       // Ajouté le ID de l'image ici
