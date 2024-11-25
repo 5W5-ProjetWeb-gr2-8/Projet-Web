@@ -399,38 +399,22 @@ footer a {
   width: 8rem;
   height: 2.5rem;
   padding: 10px;
-  color: black;
-  background-color: rgb(206, 206, 206);
-  border: rgb(153, 153, 153), 2.5px solid;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
+  background-color: black;
+  color: white;
+  font-size: var(--taille-police);
+  font-weight: bold;
+  padding: 1.6rem 0rem 1.6rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
   display: flex;
   /* Flexbox pour centrer le texte */
   align-items: center;
   /* Centrage vertical du texte */
   justify-content: center;
   /* Centrage horizontal du texte */
-}
-
-.session:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  transition: all 0.5s ease-in-out;
-}
-
-.session.active {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  transform: scale(1.1);
-}
-
-.competence:hover,
-.session:hover {
-  transform: scale(1.1);
 }
 
 .cours-section {
@@ -785,6 +769,96 @@ button.btn-cours:focus#jeux {
 
 .menu_liste li:nth-child(6) {
   font-size: var(--taille-police-grande);
+}
+
+.session-1 {
+  border: 6px solid var(--couleur-video-fond);
+}
+
+.session-2 {
+  border: 6px solid var(--couleur-video-fond);
+}
+
+.session-3 {
+  border: 6px solid var(--couleur-video-fond);
+}
+
+.session-4 {
+  border: 6px solid var(--couleur-video-fond);
+}
+
+.session-5 {
+  border: 6px solid var(--couleur-video-fond);
+}
+
+.session-6 {
+  border: 6px solid var(--couleur-video-fond);
+}
+
+.animation-session-1 {
+  border: 6px solid var(--couleur-design-fond);
+  background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background-position 500ms ease-in-out;
+}
+.animation-session-1:hover {
+  background-position: 0;
+}
+
+.animation-session-2 {
+  border: 6px solid var(--couleur-design-fond);
+  background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background-position 500ms ease-in-out;
+}
+.animation-session-2:hover {
+  background-position: 0;
+}
+
+.animation-session-3 {
+  border: 6px solid var(--couleur-design-fond);
+  background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background-position 500ms ease-in-out;
+}
+.animation-session-3:hover {
+  background-position: 0;
+}
+
+.animation-session-4 {
+  border: 6px solid var(--couleur-design-fond);
+  background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background-position 500ms ease-in-out;
+}
+.animation-session-4:hover {
+  background-position: 0;
+}
+
+.animation-session-5 {
+  border: 6px solid var(--couleur-design-fond);
+  background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background-position 500ms ease-in-out;
+}
+.animation-session-5:hover {
+  background-position: 0;
+}
+
+.animation-session-6 {
+  border: 6px solid var(--couleur-design-fond);
+  background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background-position 500ms ease-in-out;
+}
+.animation-session-6:hover {
+  background-position: 0;
 }
 
 .faq-section .titre_FAQ {
