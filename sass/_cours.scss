@@ -1,10 +1,14 @@
 /* Style pour la page cours.htm */
 
+.sessions_conteneur {
+  background-color: var(--couleur-fond);
+  padding: 2vh 10% 0px 10%;
+}
+
 // C'est les filtres de compétences de la page cours.htm //
 .competences-section,
 .session-container {
-  padding: 20px;
-  background-color: var(--couleur-fond-gris);
+  padding: 20px 0px;
 }
 
 .competences-container,
@@ -63,8 +67,8 @@
 
 .cours-section {
   gap: 1.5rem;
-  padding: 40px 20px;
-  background-color: var(--couleur-fond-cours);
+  padding: 0px 20px 40px 20px;
+  background-color: var(--couleur-fond);
   display: flex;
   justify-content: center;
   /* Centrage horizontal */
@@ -94,6 +98,11 @@
     gap: 1rem;
     margin: 75px;
   }
+}
+
+.titre_cours {
+  color: var(--couleur-galerie-texte);
+  margin: 30px 0;
 }
 
 .nomDuCours {
@@ -445,26 +454,6 @@ button.btn-cours:focus {
   font-size: var(--taille-police-grande);
 }
 
-// Couleurs des bordures pour les sessions //////////////////////////////////////////////////////////////////////////////////////
-.session-1 {
-  border: 6px solid var(--couleur-video-fond);
-}
-.session-2 {
-  border: 6px solid var(--couleur-video-fond);
-}
-.session-3 {
-  border: 6px solid var(--couleur-video-fond);
-}
-.session-4 {
-  border: 6px solid var(--couleur-video-fond);
-}
-.session-5 {
-  border: 6px solid var(--couleur-video-fond);
-}
-.session-6 {
-  border: 6px solid var(--couleur-video-fond);
-}
-
 // Animations hover pour les sessions //////////////////////////////////////////////////////////////////////////////////////
 .animation-session-1 {
   border: 6px solid var(--couleur-design-fond);
@@ -478,7 +467,7 @@ button.btn-cours:focus {
     position: 100%;
     size: 400%;
   }
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 
   &:hover {
     background-position: 0;
@@ -486,18 +475,14 @@ button.btn-cours:focus {
 }
 
 .animation-session-2 {
-  border: 6px solid var(--couleur-design-fond);
+  border: 6px solid var(--couleur-web4);
 
   background: {
-    image: linear-gradient(
-      45deg,
-      var(--couleur-design-fond) 50%,
-      transparent 50%
-    );
+    image: linear-gradient(45deg, var(--couleur-web4) 50%, transparent 50%);
     position: 100%;
     size: 400%;
   }
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 
   &:hover {
     background-position: 0;
@@ -505,18 +490,14 @@ button.btn-cours:focus {
 }
 
 .animation-session-3 {
-  border: 6px solid var(--couleur-design-fond);
+  border: 6px solid var(--couleur-3d-fond);
 
   background: {
-    image: linear-gradient(
-      45deg,
-      var(--couleur-design-fond) 50%,
-      transparent 50%
-    );
+    image: linear-gradient(45deg, var(--couleur-3d-fond) 50%, transparent 50%);
     position: 100%;
     size: 400%;
   }
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 
   &:hover {
     background-position: 0;
@@ -524,18 +505,14 @@ button.btn-cours:focus {
 }
 
 .animation-session-4 {
-  border: 6px solid var(--couleur-design-fond);
+  border: 6px solid var(--couleur-jeux4);
 
   background: {
-    image: linear-gradient(
-      45deg,
-      var(--couleur-design-fond) 50%,
-      transparent 50%
-    );
+    image: linear-gradient(45deg, var(--couleur-jeux4) 50%, transparent 50%);
     position: 100%;
     size: 400%;
   }
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 
   &:hover {
     background-position: 0;
@@ -543,18 +520,18 @@ button.btn-cours:focus {
 }
 
 .animation-session-5 {
-  border: 6px solid var(--couleur-design-fond);
+  border: 6px solid var(--couleur-video-fond);
 
   background: {
     image: linear-gradient(
       45deg,
-      var(--couleur-design-fond) 50%,
+      var(--couleur-video-fond) 50%,
       transparent 50%
     );
     position: 100%;
     size: 400%;
   }
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 
   &:hover {
     background-position: 0;
@@ -573,7 +550,7 @@ button.btn-cours:focus {
     position: 100%;
     size: 400%;
   }
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 
   &:hover {
     background-position: 0;

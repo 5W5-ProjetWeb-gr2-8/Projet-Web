@@ -360,10 +360,14 @@ footer a {
 }
 
 /* Style pour la page cours.htm */
+.sessions_conteneur {
+  background-color: var(--couleur-fond);
+  padding: 2vh 10% 0px 10%;
+}
+
 .competences-section,
 .session-container {
-  padding: 20px;
-  background-color: var(--couleur-fond-gris);
+  padding: 20px 0px;
 }
 
 .competences-container,
@@ -419,8 +423,8 @@ footer a {
 
 .cours-section {
   gap: 1.5rem;
-  padding: 40px 20px;
-  background-color: var(--couleur-fond-cours);
+  padding: 0px 20px 40px 20px;
+  background-color: var(--couleur-fond);
   display: flex;
   justify-content: center;
   /* Centrage horizontal */
@@ -452,6 +456,11 @@ footer a {
     gap: 1rem;
     margin: 75px;
   }
+}
+
+.titre_cours {
+  color: var(--couleur-galerie-texte);
+  margin: 30px 0;
 }
 
 .nomDuCours {
@@ -771,80 +780,56 @@ button.btn-cours:focus#jeux {
   font-size: var(--taille-police-grande);
 }
 
-.session-1 {
-  border: 6px solid var(--couleur-video-fond);
-}
-
-.session-2 {
-  border: 6px solid var(--couleur-video-fond);
-}
-
-.session-3 {
-  border: 6px solid var(--couleur-video-fond);
-}
-
-.session-4 {
-  border: 6px solid var(--couleur-video-fond);
-}
-
-.session-5 {
-  border: 6px solid var(--couleur-video-fond);
-}
-
-.session-6 {
-  border: 6px solid var(--couleur-video-fond);
-}
-
 .animation-session-1 {
   border: 6px solid var(--couleur-design-fond);
   background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 }
 .animation-session-1:hover {
   background-position: 0;
 }
 
 .animation-session-2 {
-  border: 6px solid var(--couleur-design-fond);
-  background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
+  border: 6px solid var(--couleur-web4);
+  background-image: linear-gradient(45deg, var(--couleur-web4) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 }
 .animation-session-2:hover {
   background-position: 0;
 }
 
 .animation-session-3 {
-  border: 6px solid var(--couleur-design-fond);
-  background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
+  border: 6px solid var(--couleur-3d-fond);
+  background-image: linear-gradient(45deg, var(--couleur-3d-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 }
 .animation-session-3:hover {
   background-position: 0;
 }
 
 .animation-session-4 {
-  border: 6px solid var(--couleur-design-fond);
-  background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
+  border: 6px solid var(--couleur-jeux4);
+  background-image: linear-gradient(45deg, var(--couleur-jeux4) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 }
 .animation-session-4:hover {
   background-position: 0;
 }
 
 .animation-session-5 {
-  border: 6px solid var(--couleur-design-fond);
-  background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
+  border: 6px solid var(--couleur-video-fond);
+  background-image: linear-gradient(45deg, var(--couleur-video-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 }
 .animation-session-5:hover {
   background-position: 0;
@@ -855,7 +840,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 }
 .animation-session-6:hover {
   background-position: 0;
@@ -1025,7 +1010,7 @@ button.btn-cours:focus#jeux {
   flex: 0 1 80%;
   justify-content: space-around;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 @media (min-width: 1001px) {
   .galerie_projet .section_filtres .les_filtres {
@@ -1067,20 +1052,17 @@ button.btn-cours:focus#jeux {
   border: 6px solid var(--couleur-video-fond);
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .filtre {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  width: 11rem;
+  height: 1rem;
   background-color: black;
   color: white;
-  width: clamp(3rem, 1.4645vw + 2.6568rem, 5rem);
-  padding: clamp(0.5rem, 0.1831vw + 0.4571rem, 0.75rem) clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
-  border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
-  margin-top: var(--espacement);
-  transition: background-color 0.5s, color 0.5s, border 0.5s;
+  font-size: var(--taille-police);
   font-weight: bold;
-}
-.galerie_projet .section_filtres .les_filtres .conteneur_filtre .filtre:hover {
+  padding: 1.6rem 0rem 1.6rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
   cursor: pointer;
 }
 @media (min-width: 1240px) {
@@ -1094,7 +1076,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 500ms ease-in-out;
+  transition: background 400ms ease-in-out;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .hover_ui:hover {
   background-position: 0;
@@ -1105,7 +1087,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-web4) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 500ms ease-in-out;
+  transition: background 400ms ease-in-out;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .hover_web:hover {
   background-position: 0;
@@ -1116,7 +1098,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-3d-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 500ms ease-in-out;
+  transition: background 400ms ease-in-out;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .hover_3d:hover {
   background-position: 0;
@@ -1127,7 +1109,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-jeux4) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 500ms ease-in-out;
+  transition: background 400ms ease-in-out;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .hover_jeu:hover {
   background-position: 0;
@@ -1138,7 +1120,7 @@ button.btn-cours:focus#jeux {
   background-image: linear-gradient(45deg, var(--couleur-video-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background 500ms ease-in-out;
+  transition: background 400ms ease-in-out;
 }
 .galerie_projet .section_filtres .les_filtres .conteneur_filtre .hover_video:hover {
   background-position: 0;
@@ -1603,7 +1585,7 @@ html {
   background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 }
 .animation-stage:hover {
   background-position: 0;
@@ -1614,7 +1596,7 @@ html {
   background-image: linear-gradient(45deg, var(--couleur-3d-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 }
 .animation-universite:hover {
   background-position: 0;
@@ -1625,7 +1607,7 @@ html {
   background-image: linear-gradient(45deg, var(--couleur-video-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 500ms ease-in-out;
+  transition: background-position 400ms ease-in-out;
 }
 .animation-emploi:hover {
   background-position: 0;

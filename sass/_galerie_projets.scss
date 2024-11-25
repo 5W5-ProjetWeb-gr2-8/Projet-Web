@@ -51,7 +51,7 @@
       flex: 0 1 80%;
       justify-content: space-around;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
 
       @media (min-width: 1001px) {
         flex-flow: nowrap row;
@@ -104,23 +104,19 @@
         }
 
         .filtre {
-          display: flex;
-          flex-flow: row nowrap;
-          justify-content: center;
-          align-items: center;
+          width: 11rem;
+          height: 1rem;
           background-color: black;
           color: white;
-          width: clamp(3rem, 1.4645vw + 2.6568rem, 5rem);
-          padding: clamp(0.5rem, 0.1831vw + 0.4571rem, 0.75rem)
-            clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
-          border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
-          margin-top: var(--espacement);
-          transition: background-color 0.5s, color 0.5s, border 0.5s;
+          font-size: var(--taille-police);
           font-weight: bold;
+          padding: 1.6rem 0rem 1.6rem 0rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-          &:hover {
-            cursor: pointer;
-          }
+          border-radius: 50px;
+          cursor: pointer;
 
           @media (min-width: 1240px) {
             margin-top: 0rem;
@@ -140,7 +136,7 @@
             position: 100%;
             size: 400%;
           }
-          transition: background 500ms ease-in-out;
+          transition: background 400ms ease-in-out;
 
           &:hover {
             background-position: 0;
@@ -159,7 +155,7 @@
             position: 100%;
             size: 400%;
           }
-          transition: background 500ms ease-in-out;
+          transition: background 400ms ease-in-out;
 
           &:hover {
             background-position: 0;
@@ -178,7 +174,7 @@
             position: 100%;
             size: 400%;
           }
-          transition: background 500ms ease-in-out;
+          transition: background 400ms ease-in-out;
 
           &:hover {
             background-position: 0;
@@ -197,7 +193,7 @@
             position: 100%;
             size: 400%;
           }
-          transition: background 500ms ease-in-out;
+          transition: background 400ms ease-in-out;
 
           &:hover {
             background-position: 0;
@@ -216,7 +212,7 @@
             position: 100%;
             size: 400%;
           }
-          transition: background 500ms ease-in-out;
+          transition: background 400ms ease-in-out;
 
           &:hover {
             background-position: 0;

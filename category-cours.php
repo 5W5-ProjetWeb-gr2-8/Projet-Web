@@ -4,10 +4,11 @@ get_header();
 ?>
 
 <!-- Section SESSION 1 à 6 avec boutons dynamiques -->
-<section class="session1-6">
+<section class="sessions_conteneur">
+    <h1 class="titre_cours">Nos cours offerts</h1>
     <div class="session-container">
         <?php for ($i = 1; $i <= 6; $i++): ?>
-            <button class="session session-<?php echo $i; ?> animation-session-<?php echo $i; ?>" data-session="session-<?php echo $i; ?>">Session <?php echo $i; ?></button>
+            <button class="session animation-session-<?php echo $i; ?>" data-session="session-<?php echo $i; ?>">Session <?php echo $i; ?></button>
         <?php endfor; ?>
     </div>
 </section>
