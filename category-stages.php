@@ -50,7 +50,7 @@ get_header();
             <div class="detail" id="univer">
                 <h2 class="couleur_universite">Université</h2>
                 <div class="contenu-image-description">
-                    <img src="<?php echo wp_get_attachment_url(474); ?>" alt="image d'un Université" />
+                    <img class="bordure_universite" src="<?php echo wp_get_attachment_url(474); ?>" alt="image d'un Université" />
                     <section class="paragraphe">
                         <p>Après avoir terminé votre stage, vous aurez également l'opportunité de continuer
                             vos études à l'université pour obtenir un diplôme de votre choix. <br><br>
@@ -63,7 +63,7 @@ get_header();
             <div class="detail" id="emploi">
                 <h2 class="couleur_emploi">Marché d'Emploi</h2>
                 <div class="contenu-image-description">
-                    <img src="<?php echo wp_get_attachment_url(470); ?>" alt="image emploi" />
+                    <img class="bordure_emploi" src="<?php echo wp_get_attachment_url(470); ?>" alt="image emploi" />
                     <section class="paragraphe">
                         <p>Ce parcours est le meilleur choix si vous choisissez d'implémenter les compétences
                             acquises directement dans le marché d'emploi. Il est le choix le plus rapide pour

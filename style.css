@@ -1655,6 +1655,11 @@ html {
   height: auto;
 }
 
+@media (max-width: 2000px) {
+  .logo_carriere {
+    width: 17rem;
+  }
+}
 @media (max-width: 1240px) {
   .intro-carr {
     width: 100%;
@@ -1680,9 +1685,6 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .logo_carriere {
-    width: 17rem;
   }
 }
 @media (max-width: 768px) {
