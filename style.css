@@ -904,10 +904,10 @@ button.btn-cours:focus#jeux {
 .galerie_projet {
   background-color: var(--couleur-fond);
   color: var(--couleur-texte-pale);
-  padding: 2vh 10%; /* variable à changer */
+  padding: 2vh 10%;
 }
-.galerie_projet h2 {
-  margin: 30px 0; /* variable à changer */
+.galerie_projet h1 {
+  margin: 30px 0;
 }
 .galerie_projet .conteneur_section_filtres {
   display: flex;
@@ -1457,10 +1457,9 @@ html {
 }
 
 .section-stage {
-  font-weight: var(--poid_textes);
-  font-size: var(--taille-police-grande);
   color: #ffffff;
   margin-left: 20px;
+  margin-bottom: 1rem;
 }
 
 .carriere {
@@ -1492,6 +1491,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .description-intro {
@@ -1557,6 +1557,33 @@ html {
   background-position: 0;
 }
 
+.couleur_stage {
+  color: var(--couleur-design-fond);
+}
+
+.couleur_universite {
+  color: var(--couleur-3d-fond);
+}
+
+.couleur_emploi {
+  color: var(--couleur-video-fond);
+}
+
+.bordure_stage {
+  border: 6px solid var(--couleur-design-fond);
+  border-radius: 25px;
+}
+
+.bordure_universite {
+  border: 6px solid var(--couleur-3d-fond);
+  border-radius: 25px;
+}
+
+.bordure_emploi {
+  border: 6px solid var(--couleur-video-fond);
+  border-radius: 25px;
+}
+
 .detail-carri {
   display: flex;
   flex-direction: column;
@@ -1592,7 +1619,7 @@ html {
 
 .contenu-image-description {
   display: flex;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   justify-content: space-around;
 }
 
@@ -1613,17 +1640,14 @@ html {
   border-radius: 10px;
 }
 
-.paragraphe a {
-  color: bisque;
-}
-
 .paragraphe a:hover {
-  color: #ff9980;
+  color: #ff92de;
 }
 
 .logo_carriere {
-  width: 25%;
+  width: 12rem;
   height: auto;
+  object-fit: contain;
 }
 
 .logo_flecheCar {
@@ -1657,6 +1681,9 @@ html {
     flex-direction: column;
     align-items: center;
   }
+  .logo_carriere {
+    width: 17rem;
+  }
 }
 @media (max-width: 768px) {
   .intro-paragraphe {
@@ -1675,6 +1702,9 @@ html {
   .contenu-image-description {
     width: 100%;
     height: auto;
+  }
+  .logo_carriere {
+    width: 17rem;
   }
 }
 .galerie-projets {
@@ -1833,12 +1863,8 @@ section.debut_accueil div h1 {
   color: var(--couleur-texte-pale);
   padding: 2vh 10%; /* variable à changer */
 }
-.presPro h2 {
+.presPro h1 {
   margin: 30px 0; /* variable à changer */
-  font-weight: 400;
-}
-.presPro h2 span {
-  font-weight: var(--poid_titres);
 }
 
 section.competences {

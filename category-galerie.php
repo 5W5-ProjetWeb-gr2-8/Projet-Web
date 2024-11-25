@@ -8,7 +8,7 @@ get_header();
     <!-- Contenu de la page //////////////////////////////////////////////////////// -->
     <section class="galerie_projet">
         <!-- Titre de la page -->
-        <h2 class="titre_galerie">Galerie projets étudiants</h2>
+        <h1 class="titre_galerie">Galerie projets étudiants</h1>
         <!-- Conteneur des differents filtres de la page ////////////// -->
         <div class="conteneur_section_filtres">
             <!-- Section qui a les filtres ///////////// -->

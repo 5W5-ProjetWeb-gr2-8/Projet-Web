@@ -9,10 +9,9 @@ html {
 
 //=========SECTION HAUT DE PAGE=======//
 .section-stage {
-  font-weight: var(--poid_textes);
-  font-size: var(--taille-police-grande);
   color: #ffffff;
   margin-left: 20px;
+  margin-bottom: 1rem;
 }
 .carriere {
   width: 100%;
@@ -41,6 +40,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .description-intro {
@@ -126,7 +126,34 @@ html {
   }
 }
 
-//=======================//
+//==========Couleurs =============//
+
+.couleur_stage {
+  color: var(--couleur-design-fond);
+}
+
+.couleur_universite {
+  color: var(--couleur-3d-fond);
+}
+
+.couleur_emploi {
+  color: var(--couleur-video-fond);
+}
+
+.bordure_stage {
+  border: 6px solid var(--couleur-design-fond);
+  border-radius: 25px;
+}
+
+.bordure_universite {
+  border: 6px solid var(--couleur-3d-fond);
+  border-radius: 25px;
+}
+
+.bordure_emploi {
+  border: 6px solid var(--couleur-video-fond);
+  border-radius: 25px;
+}
 
 //=========PARTIE EN BAS DETAILS =======//
 .detail-carri {
@@ -160,7 +187,7 @@ html {
 
 .contenu-image-description {
   display: flex;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   justify-content: space-around;
 }
 #univer .contenu-image-description {
@@ -177,17 +204,16 @@ html {
   padding: 10px;
   border-radius: 10px;
 }
-.paragraphe a {
-  color: bisque;
-}
+
 .paragraphe a:hover {
-  color: #ff9980;
+  color: #ff92de;
 }
 
 //=========LOGO=======//
 .logo_carriere {
-  width: 25%;
+  width: 12rem;
   height: auto;
+  object-fit: contain;
 }
 .logo_flecheCar {
   width: 100%;
@@ -221,6 +247,10 @@ html {
     flex-direction: column;
     align-items: center;
   }
+
+  .logo_carriere {
+    width: 17rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -241,5 +271,8 @@ html {
   .contenu-image-description {
     width: 100%;
     height: auto;
+  }
+  .logo_carriere {
+    width: 17rem;
   }
 }

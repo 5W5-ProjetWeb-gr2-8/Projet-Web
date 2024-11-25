@@ -20,7 +20,7 @@ $_comp = $texte["competences"];
   </section>
   <!-- Présentation Programme -->
   <section class="presPro">
-    <h2>C'est quoi le <span>Multimédia ?</span></h2>
+    <h1>C'est quoi le <span>Multimédia ?</span></h1>
     <p><?= $texte["prespro"]; ?></p>
   </section>
   <!-- Compétences ///////////////////////////////////////////////////////////////////// -->

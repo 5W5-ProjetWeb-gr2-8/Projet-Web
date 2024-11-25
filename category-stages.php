@@ -6,7 +6,7 @@ get_header();
 
 <main class="carriere">
     <section class="intro-carr">
-        <h3 class="section-stage">Stages et carrière</h3>
+        <h1 class="section-stage">Stages et carrière</h1>
         <div class="trois-cat">
             <a href="#stage" class="animation-stage">Stage</a>
             <a href="#univer" class="animation-universite">Université</a>
@@ -28,10 +28,10 @@ get_header();
     <section class="detail-carri">
         <div class="detail-universelle">
             <div class="detail" id="stage">
-                <h5>Stage</h5>
+                <h2 class="couleur_stage">Stage</h2>
                 <div class="contenu-image-description">
                     <div class="images-stage">
-                        <img src="<?php echo wp_get_attachment_url(472); ?>" alt="image qui illustre un stage" />
+                        <img class="bordure_stage" src="<?php echo wp_get_attachment_url(472); ?>" alt="image qui illustre un stage" />
                     </div>
                     <section class="paragraphe">
                         <p>Une fois que vous atteignez la 5e session, vous allez vous préparer pour le stage
@@ -42,13 +42,13 @@ get_header();
                             Ce stage est obligatoire pour obtenir votre diplôme.
                             <br><br>
                             Pour savoir d'autres informations sur le stage ainsi que l'horaire de stage, consulter notre site officiel
-                            du collège : <a href="https://www.cmaisonneuve.qc.ca/">Collège de Maisonneuve</a>
+                            du collège : <a class="couleur_stage" href="https://www.cmaisonneuve.qc.ca/">Collège de Maisonneuve</a>
                         </p>
                     </section>
                 </div>
             </div>
             <div class="detail" id="univer">
-                <h5>Université</h5>
+                <h2 class="couleur_universite">Université</h2>
                 <div class="contenu-image-description">
                     <img src="<?php echo wp_get_attachment_url(474); ?>" alt="image d'un Université" />
                     <section class="paragraphe">
@@ -61,7 +61,7 @@ get_header();
                 </div>
             </div>
             <div class="detail" id="emploi">
-                <h5>Marché d'Emploi</h5>
+                <h2 class="couleur_emploi">Marché d'Emploi</h2>
                 <div class="contenu-image-description">
                     <img src="<?php echo wp_get_attachment_url(470); ?>" alt="image emploi" />
                     <section class="paragraphe">
