@@ -62,7 +62,7 @@ get_header();
             $the_query = new WP_Query( [ 
                 'post_type' => 'post',
                 'category_name' => 'cours',
-                'posts_per_page' => 2
+                'posts_per_page' => 1
                 ]);
 
                 /* Restore original Post Data */
