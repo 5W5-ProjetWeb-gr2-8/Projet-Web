@@ -31,13 +31,9 @@ get_header();
       <!-- Description en dessous -->
       <div class="description_projet">
         <p>
-          Dans le cadre d'un travail pratique en <b class="ui_gras">TIM</b>, une équipe de 3 étudiants a travaillé
-          sur la refonte d'un site web. Leur tâche, après avoir trouvé un site avec un design peu attrayant, était
-          de <b class="ui_gras">proposer</b> des idées pour l'améliorer. Ils ont utilisé <b class="ui_gras">Adobe XD</b> pour
-          créer des <b class="ui_gras">maquettes interactives</b>
-          qui montrent une version plus moderne et <b class="ui_gras">agréable</b> du site. Ces maquettes ont été adaptées pour deux
-          formats : <b class="ui_gras">mobile et ordinateur</b>. Ce projet a permis à l'équipe d'améliorer ses compétences
-          en <b class="ui_gras">design</b> tout en travaillant ensemble pour rendre le site plus beau et plus facile à utiliser.
+          Dans un projet <b class="ui_gras">TIM</b>, une équipe de 3 étudiants a refondu un site au design peu attrayant.
+          Avec <b class="ui_gras">Adobe XD</b>, ils ont créé des <b class="ui_gras">maquettes interactives</b> modernes pour mobile et ordinateur.
+          Ce travail a renforcé leurs compétences en design et en <b class="ui_gras">collaboration</b>, rendant le site plus esthétique et intuitif.
         </p>
       </div>
     </div>

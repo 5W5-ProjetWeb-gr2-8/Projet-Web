@@ -31,12 +31,9 @@ get_header();
       <!-- Description en dessous -->
       <div class="description_projet">
         <p>
-          Dans le cadre du cours d'<b class="creation_gras">Imagerie 3D</b>, l'étudiant a conçu une civilisation imaginaire.
-          Pour cette partie du projet, il a créé un véhicule <b class="creation_gras">3D</b> inspiré des mouvements d'un animal,
-          avec l'objectif qu'il soit simple et adapté aux ressources de l'environnement. Le projet mettait en scène les Djindalis,
-          un peuple nomade qui utilise le sable comme source d'énergie. Le véhicule, nommé le <b class="creation_gras">Zandslide</b>, s'inspire du serpent du désert
-          pour se déplacer facilement sur le sable. Fabriqué à partir de matériaux locaux, il reflète le mode de vie simple et économique
-          des Djindalis.
+          Dans le cours d'Imagerie 3D, l'étudiant a conçu une <b class="creation_gras">civilisation imaginaire</b>. Il a créé le <b class="creation_gras">Zandslide</b>,
+          un <b class="creation_gras">véhicule 3D</b> inspiré du serpent du <b class="creation_gras">désert</b>, conçu pour glisser sur le sable. Utilisant des matériaux locaux,
+          il reflète le mode de vie simple des <b class="creation_gras">Djindalis</b>, un peuple nomade qui puise l'énergie du sable.
         </p>
       </div>
     </div>

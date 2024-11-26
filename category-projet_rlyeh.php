@@ -31,14 +31,11 @@ get_header();
       <!-- Description en dessous -->
       <div class="description_projet">
         <p>
-          Dans le cadre du cours Effets Spéciaux et Animation en <b class="video_gras">TIM</b>, Vincent Genest a créé
-          un <b class="video_gras">concept de jeu</b> original. Il a utilisé des dessins faits sur <b class="video_gras">Illustrator</b> et les
-          a animés avec <b class="video_gras">After Effects</b> pour donner vie à son idée. La vidéo raconte l'histoire
-          d'un homme dont le bateau se brise pendant une tempête. Il se réveille sur une plage et
-          commence à explorer une forêt sombre et <b class="video_gras">effrayante</b>, avec des arbres morts et un ciel de nuit.
-          En passant près d'un feu de camp, il trouve une mine et y entre. Là, il se retrouve face à un énorme monstre.
-          La vidéo se termine avec le titre du jeu : <b class="video_gras">R'lyeh</b>. Ce projet montre l'imagination de
-          Vincent et ses talents en animation et en création visuelle.
+          Dans le cours Effets Spéciaux et Animation en TIM, Vincent Genest a créé <b class="video_gras">R'lyeh</b>,
+          un concept de jeu animé avec <b class="video_gras">After Effects</b> à partir de dessins sur <b class="video_gras">Illustrator</b>.
+          La vidéo suit un naufragé explorant une forêt sombre, découvrant une mine, puis
+          affrontant un <b class="video_gras">énorme monstre</b>. Ce projet illustre l'<b class="video_gras">imagination</b> de Vincent
+          et son talent en animation et création visuelle.
         </p>
       </div>
     </div>

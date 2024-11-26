@@ -31,16 +31,11 @@ get_header();
       <!-- Description en dessous -->
       <div class="description_projet">
         <p>
-          Dans le cadre du cours Effets Spéciaux et Animation, Maëlle Léger, étudiante en <b class="video_gras">TIM</b>,
-          a créé un concept de jeu vidéo unique. À partir de dessins préparatoires faits sur <b class="video_gras">Illustrator</b>
-          et animés dans <b class="video_gras">After Effects</b>, elle a réalisé une <b class="video_gras">bande-annonce</b> pour son jeu.
-          La vidéo commence dans une ville joyeuse en plein jour, avant de montrer une usine
-          en fonctionnement, un des niveaux du jeu. Le personnage principal, <b class="video_gras">Chéco</b>, un petit
-          chat gris mignon avec un foulard rouge, doit sauver le monde de la <b class="video_gras">pollution</b>. On découvre
-          les <b class="video_gras">différents niveaux</b>, comme une centrale nucléaire et une zone remplie de déchets, avant de
-          voir le <b class="video_gras">boss</b> final, une grande machine métallique. La <b class="video_gras">bande-annonce</b> se termine en présentant
-          tous les personnages principaux du jeu. Ce projet met en avant l'<b class="video_gras">imagination</b> de Maëlle et
-          son envie de parler d'un sujet important : <b class="video_gras">protéger l'environnement</b>.
+          Dans le cours Effets Spéciaux et Animation, Maëlle Léger, étudiante en <b class="video_gras">TIM</b>,
+          a créé une <b class="video_gras">bande-annonce animée</b> pour son jeu vidéo. Elle met en scène <b class="video_gras">Chéco</b>,
+          un chat gris avec un <b class="video_gras">foulard rouge</b>, sauvant le monde de la <b class="video_gras">pollution</b>. Les
+          niveaux incluent une usine, une centrale nucléaire et un <b class="video_gras">boss final</b>, une
+          machine métallique. Ce projet reflète l'imagination de Maëlle et son engagement pour l'<b class="video_gras">environnement</b>.
         </p>
       </div>
     </div>
