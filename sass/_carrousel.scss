@@ -70,6 +70,11 @@
       z-index: 10;
       transition: transform 0.2s ease-in-out; /* Animation légère pour les flèches */
 
+      i {
+        /* Cible l'icône Font Awesome */
+        font-size: 2rem; /* Taille de l'icône */
+      }
+
       &.gauche {
         left: 10px;
       }

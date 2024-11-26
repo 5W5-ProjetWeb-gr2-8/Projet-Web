@@ -69,6 +69,8 @@
           padding: 1rem; // Espacement autour des liens
           display: block; // Prendre toute la largeur
           transition: background 0.3s;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
 
           &:hover {
             background: rgba(255, 255, 255, 0.1); // Effet de survol

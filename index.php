@@ -20,7 +20,7 @@ $_comp = $texte["competences"];
   </section>
   <!-- Présentation Programme -->
   <section class="presPro">
-    <h2>C'est quoi le <span>Multimédia ?</span></h2>
+    <h1>C'est quoi le <span>Multimédia ?</span></h1>
     <p><?= $texte["prespro"]; ?></p>
   </section>
   <!-- Compétences ///////////////////////////////////////////////////////////////////// -->
@@ -114,7 +114,10 @@ $_comp = $texte["competences"];
 <?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq 
 ?>
 
-
+<!-- fichier js juste pour l'accueil -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/competences.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/button.js"></script>
+
+
 <!-- Affiche le footer -->
 <?php get_footer() ?>

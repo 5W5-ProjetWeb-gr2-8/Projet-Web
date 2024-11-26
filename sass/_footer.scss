@@ -1,5 +1,3 @@
-/* Feuille de style pour le footer des pages du site */
-
 footer {
   background-color: var(--couleur-fond-gris);
   color: var(--couleur-texte-fonce);
@@ -8,33 +6,81 @@ footer {
   align-items: center;
   padding: 20px;
   flex-wrap: wrap;
+  gap: 0.8rem;
 
   @media (min-width: 768px) {
-    // pas centré sur tablette et plus large
     justify-content: space-between;
   }
+  
+  .logo {
+    width: 4rem;
+    height: 2rem;
+  }
 
-  // partie gauche du footer
+  // Partie gauche du footer
   .footer-gauche {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
     gap: var(--espacement);
     text-align: center;
 
-    // Logo TIM
-    .logo {
-      width: 4rem;
-      height: 2rem;
+    // Animation du logo
+    .logo_footer {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.3s ease;
+
+      .logo {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover .logo {
+        transform: scale(1.1); // Agrandir le logo au survol
+      }
+
+      &:hover {
+        color: #0073e6; // Couleur de texte au survol
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -5px; // Ajuster l'espace entre le logo et la sous-ligne
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #0073e6;
+        transition: width 0.3s ease;
+      }
+
+      &:hover:before {
+        width: 100%; // Étendre la sous-ligne au survol
+      }
     }
   }
 
-  // Inscription
+  // Section Crédits
+  .footer-credits {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // Inscription (si nécessaire plus tard)
   a {
     color: var(--couleur-texte-fonce);
-    margin: 5px auto; // centre le texte pour mobile
+    margin: 5px auto;
+
     @media (min-width: 768px) {
-      // pas centré sur tablette et plus large
       margin: unset;
     }
   }

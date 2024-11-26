@@ -1,10 +1,10 @@
 .galerie_projet {
   background-color: var(--couleur-fond);
   color: var(--couleur-texte-pale);
-  padding: 2vh 10%; /* variable à changer */
+  padding: 2vh 10%;
 
-  h2 {
-    margin: 30px 0; /* variable à changer */
+  h1 {
+    margin: 30px 0;
   }
 
   .conteneur_section_filtres {
@@ -46,13 +46,12 @@
     }
 
     .les_filtres {
-      color: black;
       display: flex;
       flex-flow: row wrap;
       flex: 0 1 80%;
       justify-content: space-around;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
 
       @media (min-width: 1001px) {
         flex-flow: nowrap row;
@@ -66,58 +65,157 @@
 
         input:checked + label.filtre {
           background-color: var(--couleur-design-fond);
-          border: none;
-          color: black;
         }
 
         input:checked + label.filtre.filtre_web {
           background-color: var(--couleur-web4);
-          border: none;
-          color: black;
         }
 
         input:checked + label.filtre.filtre_3d {
           background-color: var(--couleur-3d-fond);
-          border: none;
-          color: black;
         }
 
         input:checked + label.filtre.filtre_jeu {
           background-color: var(--couleur-jeux4);
-          border: none;
-          color: black;
         }
 
         input:checked + label.filtre.filtre_video {
           background-color: var(--couleur-video-fond);
-          border: none;
-          color: black;
+        }
+
+        .bordure_ui {
+          border: 6px solid var(--couleur-design-fond);
+        }
+
+        .bordure_web {
+          border: 6px solid var(--couleur-web4);
+        }
+
+        .bordure_3d {
+          border: 6px solid var(--couleur-3d-fond);
+        }
+
+        .bordure_jeu {
+          border: 6px solid var(--couleur-jeux4);
+        }
+
+        .bordure_video {
+          border: 6px solid var(--couleur-video-fond);
         }
 
         .filtre {
-          display: flex;
-          flex-flow: row nowrap;
-          justify-content: center;
-          align-items: center;
+          width: 11rem;
+          height: 1rem;
           background-color: black;
           color: white;
-          width: clamp(3rem, 1.4645vw + 2.6568rem, 5rem);
-          padding: clamp(0.5rem, 0.1831vw + 0.4571rem, 0.75rem)
-            clamp(4rem, 0.7323vw + 3.8284rem, 5rem);
-          border-radius: clamp(1.25rem, 0.458vw + 1.143rem, 1.875rem);
-          margin-top: var(--espacement);
-          border: 1px solid white;
-          transition: background-color 0.5s, color 0.5s, border 0.5s;
+          font-size: var(--taille-police);
           font-weight: bold;
+          padding: 1.6rem 0rem 1.6rem 0rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-          &:hover {
-            color: white;
-            background-color: rgb(55, 55, 55);
-            cursor: pointer;
-          }
+          border-radius: 50px;
+          cursor: pointer;
 
           @media (min-width: 1240px) {
             margin-top: 0rem;
+          }
+        }
+
+        // Animation des hovers ////////////////////////////////////////////////////////////////////////////
+        .hover_ui {
+          border-color: var(--couleur-design-fond);
+          color: #fff;
+          background: {
+            image: linear-gradient(
+              45deg,
+              var(--couleur-design-fond) 50%,
+              transparent 50%
+            );
+            position: 100%;
+            size: 400%;
+          }
+          transition: background 400ms ease-in-out;
+
+          &:hover {
+            background-position: 0;
+          }
+        }
+
+        .hover_web {
+          border-color: var(--couleur-web4);
+          color: #fff;
+          background: {
+            image: linear-gradient(
+              45deg,
+              var(--couleur-web4) 50%,
+              transparent 50%
+            );
+            position: 100%;
+            size: 400%;
+          }
+          transition: background 400ms ease-in-out;
+
+          &:hover {
+            background-position: 0;
+          }
+        }
+
+        .hover_3d {
+          border-color: var(--couleur-3d-fond);
+          color: #fff;
+          background: {
+            image: linear-gradient(
+              45deg,
+              var(--couleur-3d-fond) 50%,
+              transparent 50%
+            );
+            position: 100%;
+            size: 400%;
+          }
+          transition: background 400ms ease-in-out;
+
+          &:hover {
+            background-position: 0;
+          }
+        }
+
+        .hover_jeu {
+          border-color: var(--couleur-jeux4);
+          color: #fff;
+          background: {
+            image: linear-gradient(
+              45deg,
+              var(--couleur-jeux4) 50%,
+              transparent 50%
+            );
+            position: 100%;
+            size: 400%;
+          }
+          transition: background 400ms ease-in-out;
+
+          &:hover {
+            background-position: 0;
+          }
+        }
+
+        .hover_video {
+          border-color: var(--couleur-video-fond);
+          color: #fff;
+          background: {
+            image: linear-gradient(
+              45deg,
+              var(--couleur-video-fond) 50%,
+              transparent 50%
+            );
+            position: 100%;
+            size: 400%;
+          }
+          transition: background 400ms ease-in-out;
+
+          &:hover {
+            background-position: 0;
           }
         }
       }
@@ -183,6 +281,7 @@
           opacity: 50%;
           border-radius: 16px;
           transition: opacity 0.75s;
+          pointer-events: none; // Empêche les couleurs de bloquer le clic sur l'image
         }
       }
     }

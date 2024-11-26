@@ -3,22 +3,17 @@
 get_header();
 ?>
 
-<!-- Section SESSION 1 - 6  -->
-<section class="session1-6">
+<!-- Section SESSION 1 à 6 avec boutons dynamiques -->
+<section class="sessions_conteneur">
+    <h1 class="titre_cours">Nos cours offerts</h1>
     <div class="session-container">
-        <h2 class="session">Session 1</h2>
-
-        <h2 class="session">Session 2</h2>
-
-        <h2 class="session">Session 3</h2>
-
-        <h2 class="session">Session 4</h2>
-
-        <h2 class="session">Session 5</h2>
-
-        <h2 class="session">Session 6</h2>
+        <?php for ($i = 1; $i <= 6; $i++): ?>
+            <button class="session animation-session-<?php echo $i; ?>" data-session="session-<?php echo $i; ?>">Session <?php echo $i; ?></button>
+        <?php endfor; ?>
     </div>
 </section>
+
+
 
 <!-- Section des cours -->
 <section class="cours-section" id="cours">
