@@ -28,7 +28,7 @@
 
         // Sous-ligne qui apparaît lors du hover
         &:before {
-          content: ''; // Créer un pseudo-élément
+          content: ""; // Créer un pseudo-élément
           position: absolute;
           bottom: 0;
           left: 0;
@@ -36,7 +36,6 @@
           height: 2px; // Taille de la sous-ligne
           background-color: #0073e6; // Couleur de la sous-ligne
           transition: width 0.3s ease; // Effet de transition pour la largeur
-
         }
 
         // Lorsque l'élément est survolé, étendre la sous-ligne
@@ -65,12 +64,11 @@
         text-align: center; // Centrer le texte
 
         a {
+          font-size: 2rem;
           color: black; // Couleur du texte des liens
           padding: 1rem; // Espacement autour des liens
           display: block; // Prendre toute la largeur
           transition: background 0.3s;
-          border-top: 1px solid black;
-          border-bottom: 1px solid black;
 
           &:hover {
             background: rgba(255, 255, 255, 0.1); // Effet de survol
@@ -133,7 +131,7 @@
   }
 
   &:before {
-    content: ''; // Créer un pseudo-élément pour la sous-ligne
+    content: ""; // Créer un pseudo-élément pour la sous-ligne
     position: absolute;
     bottom: 0;
     left: 0;

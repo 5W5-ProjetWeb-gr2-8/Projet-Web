@@ -1697,7 +1697,7 @@ html {
 }
 
 .paragraphe a:hover {
-  color: #ff92de;
+  color: #ff00b2;
 }
 
 .logo_carriere {
@@ -2192,12 +2192,11 @@ section.competences div.competence-item.active .competence-content {
     text-align: center;
   }
   .menu-menu-principal-container .menu li a {
+    font-size: 2rem;
     color: black;
     padding: 1rem;
     display: block;
     transition: background 0.3s;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
   }
   .menu-menu-principal-container .menu li a:hover {
     background: rgba(255, 255, 255, 0.1);

@@ -13,7 +13,7 @@ get_header();
             <a href="#emploi" class="animation-emploi">Marché d'Emploi</a>
         </div>
         <section class="intro-paragraphe">
-            <img class="logo_carriere" src="<?php echo wp_get_attachment_url(303); ?>" alt="Diagram Venn TIM" />
+            <img class="logo_carriere" src="<?php echo wp_get_attachment_url(675); ?>" alt="Diagram Venn TIM" />
             <div class="description-intro">
                 <p>Après ce beau programme de 3 ans en Technique d'intégration de multimédia, vous allez avoir deux
                     choix de carrière totalement différents. Toutefois, il faut que vous complétiez le stage obligatoire
