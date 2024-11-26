@@ -81,7 +81,7 @@ $_comp = $texte["competences"];
             <!-- un projet -->
             <article class="item">
               <!-- image du projet -->
-              <div class="miniature inactif">
+              <div class="miniature">
                 <?php
                 /////////
                 // Récupérer l'URL, le titre, et l'attribut alt de l'image
