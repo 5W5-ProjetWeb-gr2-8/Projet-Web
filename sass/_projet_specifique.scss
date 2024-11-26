@@ -2,11 +2,25 @@
 .principal_specifique {
   padding: 20px;
   background-color: #000; // Fond noir
-
+  
   .presPro {
     margin: 0 auto;
     max-width: 1200px;
     padding: 20px;
+    
+   
+    .fleche_projet{
+      width: 7rem;
+      height: 7rem;
+      clip-path: polygon(30% 31%, 30% 44%, 69% 44%, 69% 57%, 30% 57%, 30% 70%, 0 50%);
+      background-color: white;
+      transition: clip-path 0.5s;
+
+      &:hover{
+        clip-path: polygon(55% 24%, 55% 42%, 89% 42%, 89% 57%, 54% 57%, 54% 75%, 14% 50%);
+      }
+      
+    }
 
     .fond_projet {
       display: flex;
