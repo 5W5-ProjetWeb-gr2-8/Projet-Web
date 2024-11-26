@@ -7,16 +7,18 @@
         ?>
 
         <!-- Logo TIM -->
-        <a href="<?php echo esc_url(home_url('/')); ?>">
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="logo_footer">
             <?php echo wp_get_attachment_image($logo_tim_id, 'full', false, array('class' => 'logo', 'alt' => 'Logo TIM')); ?>
         </a>
-
 
         <!-- Copyright -->
         <p>© <?php echo date('Y'); ?> Collège de Maisonneuve</p>
     </div>
 
-    <a href="#">Inscription</a>
+    <!-- Section Crédits -->
+    <div class="footer-credits">
+        <p><strong>Crédits :</strong> Émile Bécotte, Clovis Gauthier, James Ling, Michael-Ali Soeu, Janne Zhang Ellison</p>
+    </div>
 </footer>
 
 </main>

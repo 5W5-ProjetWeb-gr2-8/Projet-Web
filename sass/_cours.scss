@@ -1,16 +1,21 @@
 /* Style pour la page cours.htm */
 
+.sessions_conteneur {
+  background-color: var(--couleur-fond);
+  padding: 2vh 10% 0px 10%;
+}
+
 // C'est les filtres de compétences de la page cours.htm //
 .competences-section,
 .session-container {
-  padding: 20px;
-  background-color: var(--couleur-fond-gris);
+  padding: 20px 0px;
 }
 
 .competences-container,
 .session-container {
   display: flex;
-  justify-content: center; /* Centrage horizontal */
+  justify-content: center;
+  /* Centrage horizontal */
   flex-wrap: wrap;
   gap: 20px;
   // max-width: 1200px; /* Limite la largeur maximale */
@@ -18,8 +23,10 @@
 }
 
 .competence {
-  width: 10rem; /* Largeur fixe */
-  height: 2.5rem; /* Hauteur fixe */
+  width: 10rem;
+  /* Largeur fixe */
+  height: 2.5rem;
+  /* Hauteur fixe */
   padding: 20px;
   color: white;
   text-align: center;
@@ -27,65 +34,63 @@
   font-size: 18px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  display: flex; /* Flexbox pour centrer le texte */
-  align-items: center; /* Centrage vertical du texte */
-  justify-content: center; /* Centrage horizontal du texte */
+  display: flex;
+  /* Flexbox pour centrer le texte */
+  align-items: center;
+  /* Centrage vertical du texte */
+  justify-content: center;
+  /* Centrage horizontal du texte */
 }
 
 .session {
   width: 8rem;
   height: 2.5rem;
   padding: 10px;
-  color: black;
-  background-color: rgb(206, 206, 206);
-  border: rgb(153, 153, 153), 2.5px solid;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  display: flex; /* Flexbox pour centrer le texte */
-  align-items: center; /* Centrage vertical du texte */
-  justify-content: center; /* Centrage horizontal du texte */
-}
-.session:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   color: white;
-  transition: all 0.5s ease-in-out;
-}
-.session.active {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  transform: scale(1.1);
-}
+  font-size: var(--taille-police);
+  font-weight: bold;
+  padding: 1.6rem 0rem 1.6rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.competence:hover,
-.session:hover {
-  transform: scale(1.1);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  /* Flexbox pour centrer le texte */
+  align-items: center;
+  /* Centrage vertical du texte */
+  justify-content: center;
+  /* Centrage horizontal du texte */
 }
 
 .cours-section {
   gap: 1.5rem;
-  padding: 40px 20px;
-  background-color: var(--couleur-fond-cours);
+  padding: 0px 20px 40px 20px;
+  background-color: var(--couleur-fond);
   display: flex;
-  justify-content: center; /* Centrage horizontal */
+  justify-content: center;
+  /* Centrage horizontal */
   flex-wrap: wrap;
   margin: 0 auto;
 }
+
 .cours-box {
   background-color: #2b2b2b;
   display: flex;
   flex-direction: column-reverse;
   border-radius: 20px;
   overflow: hidden;
-  width: 100%; /* Pleine largeur sur mobile */
+  width: 100%;
+  /* Pleine largeur sur mobile */
   color: var(--couleur-texte2);
+
   @media (min-width: 768px) {
     flex-direction: column-reverse;
     max-width: 70%;
   }
+
   @media (min-width: 1025px) {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -94,6 +99,12 @@
     margin: 75px;
   }
 }
+
+.titre_cours {
+  color: var(--couleur-galerie-texte);
+  margin: 30px 0;
+}
+
 .nomDuCours {
   display: flex;
   justify-content: center;
@@ -101,11 +112,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 1rem;
+
   @media (min-width: 768px) {
     flex-direction: column;
     flex-wrap: wrap;
     height: 30%;
   }
+
   @media (min-width: 1025px) {
     gap: 1rem;
     flex-direction: column;
@@ -114,13 +127,15 @@
     width: 40%;
     margin-left: 1rem;
   }
+
   .alignementTextIcon {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-direction: row-reverse;
     align-items: center;
     gap: 1rem;
     transition: transform 0.3s ease;
+
     h5 {
       color: white;
       font-weight: bold;
@@ -139,27 +154,94 @@
 .logicielIcon {
   display: flex;
   justify-content: center;
-  margin-left: 1rem;
   flex-direction: column;
-  margin-top: 55px;
+  margin-top: 5px;
+
+  @media (min-width: 768px) {
+    img {
+      width: 3rem;
+    }
+
+    margin-top: 5%;
+  }
+
+  @media (min-width: 1025px) {
+    img {
+      width: 4rem;
+    }
+
+    margin-top: 3%;
+  }
 }
+
 .cours-boxes {
   margin: 40px 20px;
-  border: 8px solid var(--couleur-design-bordure);
+  border: 8px solid;
   border-radius: 16px;
   overflow: hidden;
-
-  max-width: fit-content; /* Largeur maximale sur plus grands écrans */
+  box-sizing: border-box;
+  max-width: fit-content;
+  /* Largeur maximale sur plus grands écrans */
   color: var(--couleur-texte2);
   height: 25rem;
 
+  &#video {
+    background-color: var(--couleur-video-fond);
+    border-color: var(--couleur-video-bordure);
+  }
+
+  &#_3d {
+    background-color: var(--couleur-3d-fond);
+    border-color: var(--couleur-3d-bordure);
+  }
+
+  &#web {
+    background-color: var(--couleur-web-fond);
+    border-color: var(--couleur-web-bordure);
+  }
+
+  &#design {
+    background-color: var(--couleur-design-fond);
+    border-color: var(--couleur-design-bordure);
+  }
+
+  &#jeux {
+    background-color: var(--couleur-jeux-fond);
+    border-color: var(--couleur-jeux-bordure);
+  }
+
   @media (min-width: 768px) {
     margin: 0 21px;
+
+    .logoCours {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 10%;
+      }
+    }
   }
+
   @media (min-width: 1025px) {
     width: 100%;
     margin: 50px 25px;
+
+    .logoCours {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: var(--taille-icone);
+        height: var(--taille-icone);
+      }
+    }
   }
+
   .tempParCours {
     display: flex;
     justify-content: start;
@@ -173,22 +255,43 @@
       gap: 1rem;
     }
   }
+
   .leCours {
-    background-color: #ff92de;
+    background-color: var(--couleur-3d-fond);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     height: 100%;
+    min-width: fit-content;
+
     h2,
     h4 {
       margin-left: 1rem;
     }
+
+    .logoCours {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 3rem;
+      }
+
+      p {
+        font-size: clamp(1rem, -3.5rem + 7vw, 1.5rem);
+        font-weight: bold;
+      }
+    }
   }
+
   .logicielIcon li {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
+
   h2,
   h4,
   h5,
@@ -197,12 +300,13 @@
     color: black;
   }
 }
+
 .btn-cours {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--couleur-video-fond); /* Bouton gris */
-  border: 5px solid var(--couleur-video-bordure);
+  /* Bouton gris */
+  border: 5px solid;
   width: 75px;
   height: 75px;
   color: var(--couleur-texte-pale);
@@ -210,30 +314,73 @@
   cursor: pointer;
   border-radius: 16px;
   transition: transform, background-color, border-color, 0.3s ease;
+
+  // couleur selon les compétence
+  &#video {
+    background-color: var(--couleur-video-fond);
+    border-color: var(--couleur-video-bordure);
+  }
+
+  &#_3d {
+    background-color: var(--couleur-3d-fond);
+    border-color: var(--couleur-3d-bordure);
+  }
+
+  &#web {
+    background-color: var(--couleur-web-fond);
+    border-color: var(--couleur-web-bordure);
+  }
+
+  &#design {
+    background-color: var(--couleur-design-fond);
+    border-color: var(--couleur-design-bordure);
+  }
+
+  &#jeux {
+    background-color: var(--couleur-jeux-fond);
+    border-color: var(--couleur-jeux-bordure);
+  }
 }
+
 button.btn-cours:focus {
-  background-color: var(--couleur-video-bordure); /* Bouton gris */
-  border: 5px solid var(--couleur-video-fond);
+  // /* Bouton gris */
+  border: 5px solid;
+
+  &#video {
+    background-color: var(--couleur-video-bordure);
+    border: var(--couleur-video-fond);
+  }
+
+  &#_3d {
+    background-color: var(--couleur-3d-bordure);
+    border-color: var(--couleur-3d-fond);
+  }
+
+  &#web {
+    background-color: var(--couleur-web-bordure);
+    border-color: var(--couleur-web-fond);
+  }
+
+  &#design {
+    background-color: var(--couleur-design-bordure);
+    border-color: var(--couleur-design-fond);
+  }
+
+  &#jeux {
+    background-color: var(--couleur-jeux-bordure);
+    border-color: var(--couleur-jeux-fond);
+  }
 }
+
 .alignementTextIcon:hover {
   transform: translateX(10px);
 }
+
 #iconCours {
   width: 50px;
   height: 50px;
 }
-.btn-cours:nth-child(2) {
-  background-color: var(--couleur-video-fond); /* Bouton gris */
-  border: 5px solid var(--couleur-video-bordure);
-}
-.btn-cours:nth-child(3) {
-  background-color: var(--couleur-jeux-fond); /* Bouton gris */
-  border: 5px solid var(--couleur-jeux-bordure);
-}
-.btn-cours:nth-child(4) {
-  background-color: var(--couleur-web-fond); /* Bouton gris */
-  border: 5px solid var(--couleur-web-bordure);
-}
+
 .cours-header {
   background-color: var(--couleur-fond);
   padding: 20px;
@@ -245,7 +392,8 @@ button.btn-cours:focus {
 }
 
 .btn-plus {
-  background-color: var(--couleur-bouton-fond-cours-detail); /* Bouton gris */
+  background-color: var(--couleur-bouton-fond-cours-detail);
+  /* Bouton gris */
   color: var(--couleur-texte-pale);
   border: none;
   padding: 10px;
@@ -254,17 +402,15 @@ button.btn-cours:focus {
 }
 
 .btn-plus:hover {
-  background-color: var(
-    --couleur-bouton-fond-cours-detail-hover
-  ); /* Bouton gris plus foncé au survol */
+  background-color: var(--couleur-bouton-fond-cours-detail-hover);
+  /* Bouton gris plus foncé au survol */
 }
 
 .cours-details {
   padding: 20px;
   display: none;
-  background-color: var(
-    --couleur-fond-cours-detail
-  ); /* Fond légèrement plus clair pour les détails */
+  background-color: var(--couleur-fond-cours-detail);
+  /* Fond légèrement plus clair pour les détails */
   color: var(--couleur-texte-pale);
 }
 
@@ -273,25 +419,26 @@ button.btn-cours:focus {
   height: 2rem;
   display: flex;
   gap: 1rem;
+
   img {
     width: var(--taille-icone);
     height: var(--taille-icone);
   }
 }
 
-
-.menu_liste li{
+.menu_liste li {
   position: relative;
 }
-.menu_liste li:hover::before{
+
+.menu_liste li:hover::before {
   background-color: var(--couleur-fond);
   transform: scale(1);
-
 }
-.menu_liste li::before{
+
+.menu_liste li::before {
   content: "";
   // color: var(--couleur-bordur-video);
-  position:absolute;
+  position: absolute;
   left: 0;
   top: -10px;
   right: 0;
@@ -302,6 +449,110 @@ button.btn-cours:focus {
   transform: scale(0);
   // opacity: 0;
 }
-.menu_liste li:nth-child(6){
+
+.menu_liste li:nth-child(6) {
   font-size: var(--taille-police-grande);
+}
+
+// Animations hover pour les sessions //////////////////////////////////////////////////////////////////////////////////////
+.animation-session-1 {
+  border: 6px solid var(--couleur-design-fond);
+
+  background: {
+    image: linear-gradient(
+      45deg,
+      var(--couleur-design-fond) 50%,
+      transparent 50%
+    );
+    position: 100%;
+    size: 400%;
+  }
+  transition: background-position 400ms ease-in-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+.animation-session-2 {
+  border: 6px solid var(--couleur-web4);
+
+  background: {
+    image: linear-gradient(45deg, var(--couleur-web4) 50%, transparent 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: background-position 400ms ease-in-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+.animation-session-3 {
+  border: 6px solid var(--couleur-3d-fond);
+
+  background: {
+    image: linear-gradient(45deg, var(--couleur-3d-fond) 50%, transparent 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: background-position 400ms ease-in-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+.animation-session-4 {
+  border: 6px solid var(--couleur-jeux4);
+
+  background: {
+    image: linear-gradient(45deg, var(--couleur-jeux4) 50%, transparent 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: background-position 400ms ease-in-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+.animation-session-5 {
+  border: 6px solid var(--couleur-video-fond);
+
+  background: {
+    image: linear-gradient(
+      45deg,
+      var(--couleur-video-fond) 50%,
+      transparent 50%
+    );
+    position: 100%;
+    size: 400%;
+  }
+  transition: background-position 400ms ease-in-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+.animation-session-6 {
+  border: 6px solid var(--couleur-design-fond);
+
+  background: {
+    image: linear-gradient(
+      45deg,
+      var(--couleur-design-fond) 50%,
+      transparent 50%
+    );
+    position: 100%;
+    size: 400%;
+  }
+  transition: background-position 400ms ease-in-out;
+
+  &:hover {
+    background-position: 0;
+  }
 }

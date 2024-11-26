@@ -20,7 +20,7 @@ $_comp = $texte["competences"];
   </section>
   <!-- Présentation Programme -->
   <section class="presPro">
-    <h2>C'est quoi le <span>Multimédia ?</span></h2>
+    <h1>C'est quoi le <span>Multimédia ?</span></h1>
     <p><?= $texte["prespro"]; ?></p>
   </section>
   <!-- Compétences ///////////////////////////////////////////////////////////////////// -->
@@ -72,10 +72,6 @@ $_comp = $texte["competences"];
         </div>
         <!-- Partie dépliable -->
         <div class="competence-content">
-          <!-- Flèche gauche -->
-          <div class="flecheGauche">
-            &#9664;
-          </div>
           <!-- Boucle qui affiche tous les projets -->
           <?php
           // Tableau d'IDs des images depuis la bibliothèque de médias
@@ -105,10 +101,6 @@ $_comp = $texte["competences"];
               <h4><?= $projet; ?></h4>
             </article>
           <?php endforeach ?>
-          <!-- Flèche droite -->
-          <div class="flecheDroite">
-            &#9654;
-          </div>
         </div>
       </div>
     <?php endforeach ?>
@@ -122,7 +114,10 @@ $_comp = $texte["competences"];
 <?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq 
 ?>
 
-
+<!-- fichier js juste pour l'accueil -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/competences.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/button.js"></script>
+
+
 <!-- Affiche le footer -->
 <?php get_footer() ?>

@@ -11,19 +11,25 @@ section.competences {
     padding: var(--espacement);
     margin-bottom: 1rem;
     border-radius: 0.5rem;
-    width: 100%; /* variable à changer --> espacement que le main prend*/
+    width: 100%;
+
+    /* variable à changer --> espacement que le main prend*/
     @media (min-width: 1025px) {
-      width: 80%; /* variable à changer */
+      width: 80%;
+      /* variable à changer */
     }
 
     // Bouton ouvrir/fermer
     .top-right-button {
       position: absolute;
-      top: -1.5rem; /* variable à changer */
-      right: -1.5rem; /* variable à changer */
+      top: -1.5rem;
+      /* variable à changer */
+      right: -1.5rem;
+      /* variable à changer */
       margin-bottom: 2rem;
       cursor: pointer;
       rotate: 45deg;
+
       .svg_1 {
         width: 75px;
         height: 75px;
@@ -40,24 +46,40 @@ section.competences {
       }
 
       .x-symbol {
-        transition: stroke 0.3s ease;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out; // Apply transition to both properties
+
       }
 
       &:hover .x-symbol {
-        stroke: white;
+        // stroke: white;
       }
+
     }
+
+    button.clicked {
+      .x-symbol:nth-child(3) {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out; // Apply transition to both properties
+      }
+
+    }
+
+
 
     // Entête de la compétence // Partie visible en tout temps
     .competence-header {
       display: flex;
-      position: relative; /* pour le bouton */
+      position: relative;
+      /* pour le bouton */
       flex-direction: column;
       align-items: center;
+
       @media (min-width: 768px) {
         flex-direction: row;
         // align-items: flex-start;
       }
+
       border-radius: 0.5rem;
       gap: var(--espacement);
 
@@ -69,6 +91,7 @@ section.competences {
         flex-basis: 25%;
         align-items: center;
         flex-direction: column-reverse;
+
         @media (min-width: 768px) {
           flex-direction: column;
           text-align: center;
@@ -84,10 +107,12 @@ section.competences {
           border: solid 7px;
           height: 120px;
           width: 120px;
+
           @media (min-width: 768px) {
             width: 150px;
             height: 150px;
           }
+
           // rectangle invisible entourant le svg
           rect {
             display: flex;
@@ -101,18 +126,22 @@ section.competences {
           background-color: var(--couleur-video-fond);
           border-color: var(--couleur-video-bordure);
         }
+
         .contour#_3d {
           background-color: var(--couleur-3d-fond);
           border-color: var(--couleur-3d-bordure);
         }
+
         .contour#web {
           background-color: var(--couleur-web-fond);
           border-color: var(--couleur-web-bordure);
         }
+
         .contour#design {
           background-color: var(--couleur-design-fond);
           border-color: var(--couleur-design-bordure);
         }
+
         .contour#jeux {
           background-color: var(--couleur-jeux-fond);
           border-color: var(--couleur-jeux-bordure);
@@ -123,20 +152,25 @@ section.competences {
       .info {
         box-sizing: border-box;
         flex-basis: 70%;
+
         // texte descriptif
-        & > p {
+        &>p {
           margin-bottom: var(--espacement);
+
           @media (min-width: 768px) {
             text-align: unset;
           }
         }
+
         // Outils/Logiciels utilisés dans le cours
         .outils {
           display: flex;
           flex-wrap: wrap;
+
           @media (min-width: 768px) {
             justify-content: unset;
           }
+
           column-gap: var(--espacement);
           align-items: center;
 
@@ -176,7 +210,8 @@ section.competences {
         // centre verticalement
         transform: translateY(-50%);
         font-size: var(--h3);
-        color: #dbb2ab; /* variable à changer */
+        color: #dbb2ab;
+        /* variable à changer */
         cursor: pointer;
         z-index: 10;
       }
@@ -184,17 +219,21 @@ section.competences {
       .flecheGauche {
         left: 10px;
       }
+
       .flecheDroite {
         right: 10px;
       }
 
       article {
         .miniature {
-          height: 225px; /* variable à changer */
-          width: 400px; /* variable à changer */
+          height: 225px;
+          /* variable à changer */
+          width: 400px;
+          /* variable à changer */
           position: relative;
 
           &.inactif {
+
             // height: 171px;
             // width: 304px;
             &::after {
@@ -207,6 +246,7 @@ section.competences {
               bottom: 0;
             }
           }
+
           img {
             height: 100%;
             // object-fit: cover;
@@ -219,6 +259,7 @@ section.competences {
         }
       }
     }
+
     // Quand on clique sur la compétence : elle se déplie
     &.active .competence-content {
       display: flex;
