@@ -21,7 +21,28 @@ get_header();
 
         <!-- Informations à droite -->
         <div class="details_projet">
-          <h1 class="titre_projet ui_titre">Carolyn's Gift creations</h1>
+
+            
+            
+          <div class="espacement_fleche_titre">
+            <h1 class="titre_projet ui_titre">Carolyn's Gift creations</h1>
+            <?php
+                $lesCategories = get_categories();
+                foreach($lesCategories as $category) :
+                  $nomCat = $category->name;
+                  if ($nomCat == "Galerie") {
+                    $galerie_url = get_category_link($category->term_id);
+                  }
+            ?>
+              <?php  if ($nomCat == "Galerie") :
+                  $galerie_url = get_category_link($category->term_id);
+                ?>
+                  <a href="<?= $galerie_url; ?>" class="conteneur_fleche">
+                    <div class="fleche_projet"></div>
+                  </a>
+              <?php endif; ?>
+            <?php endforeach; ?>
+          </div>
           <p class="type_projet"><b class="ui_gras">Domaine :</b> Design</p>
           <p class="cours_projet"><b class="ui_gras">Cours :</b> 582-3C1-MA - Design d'interactivité</p>
           <p class="auteurs_projet"><b class="ui_gras">Auteurs :</b> Marguerite Demontigny, Lhaissa Jérôme, James Ling</p>
