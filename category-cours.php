@@ -24,10 +24,16 @@ $svg = json_decode($svgJson, true);
             // Requête
             // reset
             wp_reset_postdata(); 
-            // parametres
+            // parametres url
+            if (isset($_GET['session'])) {
+                $session = $_GET['session'];
+            } else {
+                $session = '1';
+            }
+            // parametres requête
             $the_query = new WP_Query( [ 
                 'post_type' => 'post', 
-                'category_name' => 'session1' // variable à ajouter
+                'category_name' => 'session' . $session // variable à ajouter
             ]); 
             // Boucle
             if ($the_query->have_posts()): 
@@ -61,7 +67,7 @@ $svg = json_decode($svgJson, true);
                 'post_type' => 'post',
                 'category_name' => 'session1', // variable à ajouter
                 'posts_per_page' => 1, //nb de post affichés
-				'p' => 9 //id post
+				'p' => 9 //id post // variable à ajouter
             ]);
             // Boucle
             if ($the_query2->have_posts()):
@@ -111,6 +117,9 @@ $svg = json_decode($svgJson, true);
 <!-- FAQ ////////////////////////////////////////////////////////////////////////////////// -->
 <?php echo do_shortcode('[faq]'); // Exécution du shortcode pour le faq 
 ?>
+
+<!-- fichier js de la page cours -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/cours.js"></script>
 
 <!-- Affiche le footer -->
 <?php get_footer() ?>
