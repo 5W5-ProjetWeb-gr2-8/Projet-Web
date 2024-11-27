@@ -540,7 +540,6 @@ footer a {
   max-width: fit-content;
   /* Largeur maximale sur plus grands écrans */
   color: var(--couleur-texte2);
-  height: 25rem;
 }
 .cours-boxes#video {
   background-color: var(--couleur-video-fond);

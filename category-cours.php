@@ -18,76 +18,76 @@ $svg = json_decode($svgJson, true);
 
 <!-- Section des cours -->
 <section class="cours-section" id="cours">
+    <!-- Liste de cours -->
     <div class="cours-box">
         <?php
-            // La requête pour affiche les noms des cours
-            /* Restore original Post Data */
-            wp_reset_postdata();
-            // FONCTIONNE PAS CORRECTEMENT //
+            // Requête
+            // reset
+            wp_reset_postdata(); 
+            // parametres
             $the_query = new WP_Query( [ 
                 'post_type' => 'post', 
-                'category_name' => 'session1' // catégorie: session1
-            ]);
+                'category_name' => 'session1' // variable à ajouter
+            ]); 
+            // Boucle
+            if ($the_query->have_posts()): 
+            while ($the_query->have_posts()): $the_query->the_post();
+            // Formatage du titre
+            $title = get_the_title();
+            $titleLen = stripos($title, "(");
+            $titre = substr($title, 8, $titleLen-9);
+            $codeCours = substr($title, 0, 7);
         ?>
-        <?php if ($the_query->have_posts()): ?>
-                <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-                <?php
-                    //formatage du titre
-                    $title = get_the_title();
-                    $titleLen = stripos($title, "(");
-                    $titre = substr($title, 8, $titleLen-9);
-                    $codeCours = substr($title, 0, 7);
-                ?>
         <div class=nomDuCours>
             <div class="alignementTextIcon">
                 <h5><?= $titre ?></h5>
-                <h5><?php the_field('video') ?></h5>
                 <button class="btn-cours">
-                    <!-- Dynamiser avec ACF -->
-                     <?= $svg["video"] ?>
-                    
+                    <!-- svg dynamique -->
+                    <?= $svg[get_field('domaine')] ?>
                 </button>
             </div>
         </div>
         <?php endwhile; ?>
         <?php endif; ?>
     </div>
+    <!-- Affiche 1 cours en détail -->
     <div class="cours-boxes">
         <?php
-            /* Restore original Post Data */
+            // Requête
+            // reset
             wp_reset_postdata();
-            // La requête pour le nom et le contenu d'un cours
+            // Parametres
             $the_query2 = new WP_Query( [ 
                 'post_type' => 'post',
-                'category_name' => 'cours, session1',
+                'category_name' => 'session1', // variable à ajouter
                 'posts_per_page' => 1, //nb de post affichés
 				'p' => 9 //id post
-                ]);
-        ?>
-        <?php if ($the_query2->have_posts()): ?>
-        <?php while ($the_query2->have_posts()): $the_query2->the_post(); ?>
-        <?php
-            // formatage contenu
-            $content = get_the_content();
-            $conLen = stripos($content, "-");
-            $contenu = substr($content, 0, $conLen-2); // pas 100% fonctionnel
-
+            ]);
+            // Boucle
+            if ($the_query2->have_posts()):
+            while ($the_query2->have_posts()): $the_query2->the_post();
             //formatage du titre
             $title = get_the_title();
             $titleLen = stripos($title, "(");
             $titre = substr($title, 8, $titleLen-9);
             $codeCours = substr($title, 0, 7);
+            // formatage contenu
+            $contenu = get_the_content();
+            $heures = explode("-", get_field('ponderation'));
+            $prea = get_field('prealables');
         ?>
         <div class="leCours">
             <h2><?= $titre ?></h2>
             <h4><?= $codeCours ?></h4>
+            <h4>Préalables: <?= $prea; ?></h4>
             <div class="tempParCours">
                 <ol>
-                    <h6>3h Theorie</h6> <!--dynamiser-->
-                    <h6>2h pratique</h6> <!--dynamiser-->
-                    <h6>3h A la maison</h6> <!--dynamiser-->
+                    <h6><?= $heures[0]; ?>h Theorie</h6>
+                    <h6><?= $heures[1]; ?>h pratique</h6>
+                    <h6><?= $heures[2]; ?>h A la maison</h6>
                 </ol>
             </div>
+
             <div class="Description">
                 <h6><?= $contenu ?></h6>
             </div>
