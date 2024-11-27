@@ -1,6 +1,9 @@
 <?php
 // Appelle le fichier header.php
 get_header();
+// Importe et décode le fichier svg.json 
+$svgJson = file_get_contents(__DIR__ . '/js/svg.json');
+$svg = json_decode($svgJson, true);
 ?>
 
 <!-- Section SESSION 1 à 6 avec boutons dynamiques -->
@@ -13,90 +16,92 @@ get_header();
     </div>
 </section>
 
-
-
 <!-- Section des cours -->
 <section class="cours-section" id="cours">
-<div class="cours-box">
-        <div class="nomDuCours">
-            <?php
-                // La requête pour affiche les noms des cours
-                // FONCTIONNE PAS CORRECTEMENT //
-                $the_query = new WP_Query( [ 
-                    'post_type' => 'post', 
-                    'category_name' => 'cours', // catégorie: cours
-                    'category_and' => '7' // catégorie: session 1
-                    ]);
-
-                /* Restore original Post Data */
-                wp_reset_postdata();
-            ?>
-            <?php if (have_posts()): ?>
-            <?php while (have_posts()): the_post(); ?>
-            <?php
-                //formatage du titre
-                $title = get_the_title();
-                $titleLen = stripos($title, "(");
-                $titre = substr($title, 8, $titleLen-9);
-                $codeCours = substr($title, 0, 7);
-            ?>
+    <!-- Liste de cours -->
+    <div class="cours-box">
+        <?php
+            // Requête
+            // reset
+            wp_reset_postdata(); 
+            // parametres
+            $the_query = new WP_Query( [ 
+                'post_type' => 'post', 
+                'category_name' => 'session1' // variable à ajouter
+            ]); 
+            // Boucle
+            if ($the_query->have_posts()): 
+            while ($the_query->have_posts()): $the_query->the_post();
+            // Formatage du titre
+            $title = get_the_title();
+            $titleLen = stripos($title, "(");
+            $titre = substr($title, 8, $titleLen-9);
+            $codeCours = substr($title, 0, 7);
+        ?>
+        <div class=nomDuCours>
             <div class="alignementTextIcon">
                 <h5><?= $titre ?></h5>
                 <button class="btn-cours">
-                    <!-- Dynamiser avec ACF -->
-                    <img id="iconCours" src="<?php echo wp_get_attachment_url(312); ?>" alt="Logo Video" />
-
+                    <!-- svg dynamique -->
+                    <?= $svg[get_field('domaine')] ?>
                 </button>
             </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
         </div>
-        <div class="cours-boxes">
-            <?php
-            // La requête pour le nom et le contenu d'un cours
-            $the_query = new WP_Query( [ 
+        <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
+    <!-- Affiche 1 cours en détail -->
+    <div class="cours-boxes">
+        <?php
+            // Requête
+            // reset
+            wp_reset_postdata();
+            // Parametres
+            $the_query2 = new WP_Query( [ 
                 'post_type' => 'post',
-                'category_name' => 'cours',
-                'posts_per_page' => 1
-                ]);
-
-                /* Restore original Post Data */
-                wp_reset_postdata();
-
-            ?>
-            <?php if (have_posts()): ?>
-            <?php while (have_posts()): the_post(); ?>
-            <?php
-                // formatage contenu
-                $content = get_the_content();
-                $conLen = stripos($content, "-");
-                $contenu = substr($content, 0, $conLen-2); // pas 100% fonctionnel
-            ?>
-            <div class="leCours">
-                <h2><?= $titre ?></h2>
-                <h4><?= $codeCours ?></h4>
-                <div class="tempParCours">
-                    <ol>
-                        <h6>3h Theorie</h6> <!--dynamiser-->
-                        <h6>2h pratique</h6> <!--dynamiser-->
-                        <h6>3h A la maison</h6> <!--dynamiser-->
-                    </ol>
-                </div>
-                <div class="Description">
-                    <h6><?= $contenu ?></h6>
-                </div>
-                <div class="logicielIcon">
-                    <!--dynamiser avec ACF-->
-                    <li>
-                        <h5>logi</h5>
-                        <h5>logi</h5>
-                        <h5>logi</h5>
-                    </li>
-                </div>
+                'category_name' => 'session1', // variable à ajouter
+                'posts_per_page' => 1, //nb de post affichés
+				'p' => 9 //id post
+            ]);
+            // Boucle
+            if ($the_query2->have_posts()):
+            while ($the_query2->have_posts()): $the_query2->the_post();
+            //formatage du titre
+            $title = get_the_title();
+            $titleLen = stripos($title, "(");
+            $titre = substr($title, 8, $titleLen-9);
+            $codeCours = substr($title, 0, 7);
+            // formatage contenu
+            $contenu = get_the_content();
+            $heures = explode("-", get_field('ponderation'));
+            $prea = get_field('prealables');
+        ?>
+        <div class="leCours">
+            <h2><?= $titre ?></h2>
+            <h4><?= $codeCours ?></h4>
+            <h4>Préalables: <?= $prea; ?></h4>
+            <div class="tempParCours">
+                <ol>
+                    <h6><?= $heures[0]; ?>h Theorie</h6>
+                    <h6><?= $heures[1]; ?>h pratique</h6>
+                    <h6><?= $heures[2]; ?>h A la maison</h6>
+                </ol>
             </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
+
+            <div class="Description">
+                <h6><?= $contenu ?></h6>
+            </div>
+            <div class="logicielIcon">
+                <!--dynamiser avec ACF-->
+                <li>
+                    <h5>logi</h5>
+                    <h5>logi</h5>
+                    <h5>logi</h5>
+                </li>
+            </div>
         </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
     </div>
 </section>
 <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
