@@ -21,7 +21,12 @@ get_header();
 
         <!-- Informations à droite -->
         <div class="details_projet">
-          <h1 class="titre_projet video_titre">Chéco</h1>
+          <div class="espacement_fleche_titre">
+            <h1 class="titre_projet video_titre">Chéco</h1>
+            <a href="https://gftnth00.mywhc.ca/tim52/category/galerie/" class="conteneur_fleche">
+              <div class="fleche_projet"></div>
+            </a>
+          </div>
           <p class="type_projet"><b class="video_gras">Domaine :</b> Vidéo</p>
           <p class="cours_projet"><b class="video_gras">Cours :</b> 582-2M3-MA - Effets spéciaux et animation</p>
           <p class="auteurs_projet"><b class="video_gras">Autrice :</b> Maëlle Léger</p>

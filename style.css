@@ -1248,14 +1248,15 @@ button.btn-cours:focus#jeux {
   align-items: center;
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet .espacement_fleche_titre .fleche_projet {
-  width: 7rem;
-  height: 7rem;
+  margin-top: 0.8rem;
+  width: 5.5rem;
+  height: 5.5rem;
   background-color: white;
-  clip-path: polygon(70% 31%, 70% 43%, 31% 43%, 31% 57%, 70% 57%, 70% 70%, 100% 50%);
+  clip-path: polygon(30% 31%, 30% 43%, 69% 43%, 69% 57%, 30% 57%, 30% 70%, 0% 50%);
   transition: clip-path 0.5s;
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet .espacement_fleche_titre .fleche_projet:hover {
-  clip-path: polygon(45% 24%, 45% 42%, 0 42%, 0 57%, 45% 57%, 45% 75%, 86% 50%);
+  clip-path: polygon(35% 35%, 35% 45%, 60% 45%, 60% 55%, 35% 55%, 35% 65%, 5% 50%);
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet .jeux_titre {
   color: var(--couleur-jeux4);

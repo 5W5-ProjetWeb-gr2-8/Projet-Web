@@ -2,7 +2,7 @@
 .principal_specifique {
   padding: 20px;
   background-color: #000; // Fond noir
-  
+
   .presPro {
     margin: 0 auto;
     max-width: 1200px;
@@ -36,25 +36,38 @@
           flex-direction: column;
           justify-content: center;
 
-          .espacement_fleche_titre{
+          .espacement_fleche_titre {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
 
-            .fleche_projet{
-              width: 7rem;
-              height: 7rem;
+            .fleche_projet {
+              margin-top: 0.8rem;
+              width: 5.5rem;
+              height: 5.5rem;
               background-color: white;
-              // clip-path: polygon(+30 -20, +30 -6, +69 -6, +69 +7, +30 +7, +30 +20, neutral);
-              // clip-path: polygon(30% 31%, 30% 44%, 69% 44%, 69% 57%, 30% 57%, 30% 70%, 0 50%);
-              clip-path: polygon(70% 31%, 70% 43%, 31% 43%, 31% 57%, 70% 57%, 70% 70%, 100% 50%);
+              clip-path: polygon(
+                30% 31%,
+                30% 43%,
+                69% 43%,
+                69% 57%,
+                30% 57%,
+                30% 70%,
+                0% 50%
+              ); // Flèche vers la gauche
               transition: clip-path 0.5s;
 
-              &:hover{
-                // clip-path: polygon(+55 -26, +55 -8, +89 -8, +89 +7, +54 +7, +54 +25, +14 50%);
-                clip-path: polygon(45% 24%, 45% 42%, 0 42%, 0 57%, 45% 57%, 45% 75%, 86% 50%);
-                // clip-path: polygon(55% 24%, 55% 42%, 89% 42%, 89% 57%, 54% 57%, 54% 75%, 14% 50%);
+              &:hover {
+                clip-path: polygon(
+                  35% 35%,
+                  35% 45%,
+                  60% 45%,
+                  60% 55%,
+                  35% 55%,
+                  35% 65%,
+                  5% 50%
+                ); // Flèche plus petite et toujours vers la gauche
               }
             }
           }

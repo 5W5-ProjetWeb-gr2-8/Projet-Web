@@ -21,7 +21,12 @@ get_header();
 
         <!-- Informations à droite -->
         <div class="details_projet">
-          <h1 class="titre_projet programmation_titre">Projet Web</h1>
+          <div class="espacement_fleche_titre">
+            <h1 class="titre_projet programmation_titre">Projet Web</h1>
+            <a href="https://gftnth00.mywhc.ca/tim52/category/galerie/" class="conteneur_fleche">
+              <div class="fleche_projet"></div>
+            </a>
+          </div>
           <p class="type_projet"><b class="programmation_gras">Domaine :</b> Programmation</p>
           <p class="cours_projet"><b class="programmation_gras">Cours :</b> 582-5W5-MA - Projet web en équipe</p>
           <p class="auteurs_projet"><b class="programmation_gras">Auteurs :</b> Chloé Blanchette, Rafael Chew-Côté,
