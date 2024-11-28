@@ -12,21 +12,12 @@ add_action('wp_enqueue_scripts', 'ajouter_styles_personnalises');
 
 // Affiche la requête en cours
 add_action( 'wp_head', 'show_current_query' );
-
 function show_current_query() {
-    // La requête pour affiche les noms des cours
-/* Restore original Post Data */
-wp_reset_postdata();
-// FONCTIONNE PAS CORRECTEMENT //
-$the_query = new WP_Query( [ 
-    'post_type' => 'post', 
-    'category_name' => 'session1' // catégorie: session 1
-    ]);
+    // La requête pour affiche les noms des cours avec "?q"
     global $wp_query;
-
     if ( !isset( $_GET['q'] ) )
         return;
     echo '<textarea cols="50" rows="10">';
-    print_r( $the_query );
+    print_r( $wp_query );
     echo '</textarea>';
 }
