@@ -4,6 +4,8 @@ get_header();
 // Importe et décode le fichier svg.json 
 $svgJson = file_get_contents(__DIR__ . '/js/svg.json');
 $svg = json_decode($svgJson, true);
+//Tableau pour enregistrer les ids des posts
+$idCours = [];
 ?>
 
 <!-- Section SESSION 1 à 6 avec boutons dynamiques -->
@@ -25,16 +27,12 @@ $svg = json_decode($svgJson, true);
             // reset
             wp_reset_postdata(); 
             // parametres url
-            if (isset($_GET['session'])) {
-                $session = $_GET['session'];
-            } else {
-                $session = '1';
-            }
+            $session = $_GET['session'] ?? '1';
             // parametres requête
             $the_query = new WP_Query( [ 
                 'post_type' => 'post', 
                 'category_name' => 'session' . $session // variable à ajouter
-            ]); 
+            ]);
             // Boucle
             if ($the_query->have_posts()): 
             while ($the_query->have_posts()): $the_query->the_post();
@@ -43,6 +41,9 @@ $svg = json_decode($svgJson, true);
             $titleLen = stripos($title, "(");
             $titre = substr($title, 8, $titleLen-9);
             $codeCours = substr($title, 0, 7);
+            //id posts
+            $idPost = get_the_ID();
+            array_push($idCours, $idPost);
         ?>
         <div class=nomDuCours>
             <div class="alignementTextIcon">
@@ -62,12 +63,15 @@ $svg = json_decode($svgJson, true);
             // Requête
             // reset
             wp_reset_postdata();
-            // Parametres
+			// parametres url
+			$session = $_GET['session'] ?? '1';
+			$idp = $_GET['cours'] ? $idCours[$_GET['cours']] : $idCours[0];
+            // Parametres requête
             $the_query2 = new WP_Query( [ 
                 'post_type' => 'post',
-                'category_name' => 'session1', // variable à ajouter
+                'category_name' => $session, //combientième session?
                 'posts_per_page' => 1, //nb de post affichés
-				'p' => 9 //id post // variable à ajouter
+				'p' => $idp //id post
             ]);
             // Boucle
             if ($the_query2->have_posts()):
