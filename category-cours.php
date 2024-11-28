@@ -97,17 +97,8 @@ $idCours = [];
                     <h6><?= $heures[2]; ?>h A la maison</h6>
                 </ol>
             </div>
-
             <div class="Description">
                 <h6><?= $contenu ?></h6>
-            </div>
-            <div class="logicielIcon">
-                <!--dynamiser avec ACF-->
-                <li>
-                    <h5>logi</h5>
-                    <h5>logi</h5>
-                    <h5>logi</h5>
-                </li>
             </div>
         </div>
         <?php endwhile; ?>

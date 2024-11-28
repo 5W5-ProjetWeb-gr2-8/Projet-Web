@@ -185,7 +185,7 @@ section.competences {
             svg {
               height: var(--taille-icone);
               width: var(--taille-icone);
-              fill: white;
+              fill: var(--couleur-texte-pale);
             }
           }
         }
@@ -210,8 +210,7 @@ section.competences {
         // centre verticalement
         transform: translateY(-50%);
         font-size: var(--h3);
-        color: #dbb2ab;
-        /* variable à changer */
+        color: var(--couleur-random-a-changer3); /* variable à changer */
         cursor: pointer;
         z-index: 10;
       }

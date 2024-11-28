@@ -9,9 +9,9 @@ html {
 
 //=========SECTION HAUT DE PAGE=======//
 .section-stage {
-  color: #ffffff;
-  margin-left: 20px;
-  margin-bottom: 1rem;
+  color: var(--couleur-texte-pale);
+  margin-left: 20px; /* variable */
+  margin-bottom: 1rem; /* variable */
 }
 .carriere {
   width: 100%;
@@ -22,59 +22,59 @@ html {
   background-color: #000;
 }
 .intro-carr {
-  width: 1200px;
+  width: 1200px; /* variable */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 50px; /* variable */
 }
 
 .ligne-intro {
   width: 100%;
   height: 1px;
-  background-color: #000;
-  margin-top: 10px;
+  background-color: var(--couleur-fond);
+  margin-top: 10px; /* variable */
 }
 .intro-paragraphe {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 20px; /* variable */
   justify-content: center;
 }
 
 .description-intro {
-  width: 70%;
-  margin-left: 30px;
+  width: 70%; /* variable */
+  margin-left: 30px; /* variable */
   font-size: var(--poid_textes);
-  color: #ffffff;
+  color: var(--couleur-texte-pale);
 }
 .trois-cat {
-  height: 70px;
+  height: 70px; /* variable */
   display: flex;
   justify-content: space-evenly;
-  margin-top: 20px;
+  margin-top: 20px; /* variable */
   text-align: center;
 }
 .trois-cat a {
   width: 200px;
   height: 40px;
-  background-color: black;
+  background-color: var(--couleur-fond);
   color: white;
   font-size: var(--taille-police);
   font-weight: bold;
-  padding: 1.6rem 0rem 1.6rem 0rem;
+  padding: 1.6rem 0rem 1.6rem 0rem; /* variable */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  border-radius: 50px;
+  border-radius: 50px; /* variable */
   cursor: pointer;
 }
 
 // Animations hover
 .animation-stage {
-  border: 6px solid var(--couleur-design-fond);
+  border: 6px solid var(--couleur-design-fond); /* variable */
 
   background: {
     image: linear-gradient(
@@ -93,7 +93,7 @@ html {
 }
 
 .animation-universite {
-  border: 6px solid var(--couleur-3d-fond);
+  border: 6px solid var(--couleur-3d-fond); /* variable */
 
   background: {
     image: linear-gradient(45deg, var(--couleur-3d-fond) 50%, transparent 50%);
@@ -108,7 +108,7 @@ html {
 }
 
 .animation-emploi {
-  border: 6px solid var(--couleur-video-fond);
+  border: 6px solid var(--couleur-video-fond); /* variable */
 
   background: {
     image: linear-gradient(
@@ -141,17 +141,17 @@ html {
 }
 
 .bordure_stage {
-  border: 6px solid var(--couleur-design-fond);
+  border: 6px solid var(--couleur-design-fond); /* variable */
   border-radius: 25px;
 }
 
 .bordure_universite {
-  border: 6px solid var(--couleur-3d-fond);
+  border: 6px solid var(--couleur-3d-fond); /* variable */
   border-radius: 25px;
 }
 
 .bordure_emploi {
-  border: 6px solid var(--couleur-video-fond);
+  border: 6px solid var(--couleur-video-fond); /* variable */
   border-radius: 25px;
 }
 
@@ -159,11 +159,11 @@ html {
 .detail-carri {
   display: flex;
   flex-direction: column;
-  color: #ffffff;
-  width: 1200px;
+  color: var(--couleur-texte-pale);
+  width: 1200px; /* variable */
 }
 .detail-universelle {
-  margin: 5rem 0rem 5rem 0rem;
+  margin: 5rem 0rem 5rem 0rem; /* variable */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,7 +172,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 0rem 5rem 0rem;
+  margin: 5rem 0rem 5rem 0rem; /* variable */
 }
 .images-stage {
   display: flex;
@@ -182,36 +182,36 @@ html {
   width: 100%;
 }
 .images-stage img:nth-of-type(2) {
-  padding-top: 10px;
+  padding-top: 10px; /* variable */
 }
 
 .contenu-image-description {
   display: flex;
-  margin-top: 1.5rem;
+  margin-top: var(--espacement); 
   justify-content: space-around;
 }
 #univer .contenu-image-description {
   flex-direction: row-reverse;
 }
 #univer .contenu-image-description img {
-  margin-left: 20px;
+  margin-left: 20px; /* variable */
 }
 
 .paragraphe {
-  margin-left: 20px;
+  margin-left: 20px; /* variable */
 }
 .paragraphe p {
-  padding: 10px;
-  border-radius: 10px;
+  padding: 10px; /* variable */
+  border-radius: 10px; /* variable */
 }
 
 .paragraphe a:hover {
-  color: #ff00b2;
+  color: var(--couleur-random-a-changer); /* variable */
 }
 
 //=========LOGO=======//
 .logo_carriere {
-  width: 12rem;
+  width: 12rem; /* variable */
   height: auto;
   object-fit: contain;
 }
@@ -224,7 +224,7 @@ html {
 
 @media (max-width: 3500px) {
   .logo_carriere {
-    width: 17rem;
+    width: 17rem; /* variable */
   }
 }
 @media (max-width: 1240px) {
@@ -232,7 +232,7 @@ html {
     width: 100%;
   }
   .description-intro {
-    width: 60%;
+    width: 60%; /* variable */
   }
   #univer .contenu-image-description {
     flex-direction: column;
@@ -245,7 +245,7 @@ html {
   .contenu-image-description img,
   .contenu-image-description p,
   .images-stage img {
-    width: 65%;
+    width: 65%; /* variable */
     height: auto;
   }
   .paragraphe {
@@ -261,13 +261,13 @@ html {
     align-items: center;
   }
   .description-intro {
-    width: 75%;
+    width: 75%; /* variable */
   }
   .trois-cat {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 200px;
+    height: 200px; /* variable */
   }
 
   .contenu-image-description {
@@ -275,6 +275,6 @@ html {
     height: auto;
   }
   .logo_carriere {
-    width: 17rem;
+    width: 17rem; /* variable */
   }
 }

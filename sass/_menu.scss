@@ -4,15 +4,15 @@ nav.menu {
   display: flex;
   align-items: center;
   top: 0;
-  height: 10vh;
-  padding: 0 4%;
+  height: 10vh; /* variable */
+  padding: 0 4%; /* variable */
   z-index: 100;
   background-color: var(--couleur-fond-accueil);
   color: var(--couleur-texte-fonce);
 
   .logo_img {
-    width: 4rem;
-    height: 2rem;
+    width: 4rem; /* variable */
+    height: 2rem; /* variable */
   }
 
   // Contenu de la boîte
@@ -42,14 +42,14 @@ nav.menu {
       // Liens vers les onglets
       a {
         color: var(--couleur-texte-pale);
-        padding: 1rem;
+        padding: 1rem; /* variable */
       }
 
     }
 
     // Bouton Inscription
     .inscription {
-      padding: 2rem 0;
+      padding: 2rem 0; /* variable */
       color: var(--couleur-texte-fonce);
       width: auto;
       text-align: center;
@@ -69,10 +69,10 @@ nav.menu {
       transform: translateY(-50%);
 
       span {
-        width: 25px;
-        height: 3px;
+        width: 25px; /* variable */
+        height: 3px; /* variable */
         background: white;
-        margin: 4px 0;
+        margin: 4px 0; /* variable */
       }
     }
   }
@@ -84,7 +84,7 @@ nav.menu {
         display: none;
         flex-direction: column;
         width: 100%;
-        height: 30vh;
+        height: 30vh; /* variable */
         position: absolute;
         top: 10vh;
         left: 0;

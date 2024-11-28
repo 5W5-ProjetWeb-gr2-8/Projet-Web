@@ -4,17 +4,17 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 20px; /* variable */
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.8rem; /* variable */
 
   @media (min-width: 768px) {
     justify-content: space-between;
   }
   
   .logo {
-    width: 4rem;
-    height: 2rem;
+    width: 4rem; /* variable */
+    height: 2rem; /* variable */
   }
 
   // Partie gauche du footer
@@ -39,7 +39,7 @@ footer {
       }
 
       &:hover {
-        color: #0073e6; // Couleur de texte au survol
+        color: var(--couleur-survol-texte);
       }
 
       &:before {
@@ -49,7 +49,7 @@ footer {
         left: 0;
         width: 0;
         height: 2px;
-        background-color: #0073e6;
+        background-color: var(--couleur-survol-texte);
         transition: width 0.3s ease;
       }
 
@@ -63,7 +63,7 @@ footer {
   .footer-credits {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* variable */
     text-align: center;
 
     @media (min-width: 768px) {
@@ -78,7 +78,7 @@ footer {
   // Inscription (si nécessaire plus tard)
   a {
     color: var(--couleur-texte-fonce);
-    margin: 5px auto;
+    margin: 5px auto; /* variable */
 
     @media (min-width: 768px) {
       margin: unset;
