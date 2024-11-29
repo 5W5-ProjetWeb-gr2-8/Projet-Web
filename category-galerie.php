@@ -65,16 +65,15 @@ get_header();
                 while ($the_query->have_posts()): $the_query->the_post();
 
                     // Récupérer les champs personnalisés et les données nécessaires
-                    $idIMG = get_field('id_image_wordpress'); // ID de l'image personnalisée (ACF ou autre)
+                    $idIMG = get_field('id_image_wordpress'); // ID de l'image personnalisée (ACF)
                     $filtre = get_field('filtre_classe');    // Classe de filtre (champ personnalisé)
-                    $projet_url = get_permalink();          // URL de l'article
                     $idp = get_the_ID();                    // ID de l'article
             ?>
                     <div class="conteneur_projet">
                         <div class="projet_galerie">
                             <div class="projet_image">
                                 <!-- Lien cliquable vers l'article -->
-                                <a href="<?php echo esc_url($projet_url) . '?idp=' . $idp; ?>">
+                                <a href="<?= "https://gftnth00.mywhc.ca/tim52/category/projet/?idp=" . $idp; ?>">
                                     <!-- Affichage de l'image -->
                                     <img class="img_galerie" src="<?php echo esc_url(wp_get_attachment_url($idIMG)); ?>" alt="<?php the_title_attribute(); ?>">
                                 </a>
