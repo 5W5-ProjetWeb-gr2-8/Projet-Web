@@ -70,6 +70,7 @@ html {
 
   border-radius: 50px; /* variable */
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 // Animations hover
@@ -245,7 +246,7 @@ html {
   .contenu-image-description img,
   .contenu-image-description p,
   .images-stage img {
-    width: 65%; /* variable */
+    width: 70%; /* variable */
     height: auto;
   }
   .paragraphe {
@@ -280,5 +281,6 @@ html {
   }
   .logo_carriere {
     width: 17rem; /* variable */
+    margin-top: 1rem;
   }
 }
