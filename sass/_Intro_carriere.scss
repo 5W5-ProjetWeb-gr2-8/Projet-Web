@@ -39,7 +39,7 @@ html {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px; /* variable */
+  margin-top: 30px; /* variable */
   justify-content: center;
 }
 
@@ -269,6 +269,10 @@ html {
     align-items: center;
     height: 200px; /* variable */
   }
+  .trois-cat a {
+    margin-bottom: 1rem;
+  }
+ 
 
   .contenu-image-description {
     width: 100%;
