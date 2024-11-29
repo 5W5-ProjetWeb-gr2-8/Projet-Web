@@ -68,17 +68,18 @@ get_header();
                     $idIMG = get_field('id_image_wordpress'); // ID de l'image personnalisée (ACF ou autre)
                     $filtre = get_field('filtre_classe');    // Classe de filtre (champ personnalisé)
                     $projet_url = get_permalink();          // URL de l'article
+                    $idp = get_the_ID();                    // ID de l'article
             ?>
                     <div class="conteneur_projet">
                         <div class="projet_galerie">
                             <div class="projet_image">
                                 <!-- Lien cliquable vers l'article -->
-                                <a href="<?php echo esc_url($projet_url); ?>">
+                                <a href="<?php echo esc_url($projet_url) . '?idp=' . $idp; ?>">
                                     <!-- Affichage de l'image -->
                                     <img class="img_galerie" src="<?php echo esc_url(wp_get_attachment_url($idIMG)); ?>" alt="<?php the_title_attribute(); ?>">
                                 </a>
                             </div>
-                            <div class="projet_filtre <?php echo esc_attr($filtre); ?>"></div>
+                            <div class="projet_filtre <?= "gal_proj_"  . esc_attr($filtre); ?>"></div>
                         </div>
                     </div>
             <?php
