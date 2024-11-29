@@ -1,6 +1,8 @@
 <?php
 // Appelle le fichier header.php
 get_header();
+
+
 ?>
 
 <!-- Main //////////////////////////////////////////////////////////////////////// -->
@@ -52,37 +54,40 @@ get_header();
         <!-- Section qui montre les differents projets//////////////////////////////////////////////////////////////// -->
         <div class="section_galerie">
             <?php
-            // Tableau associatif contenant les IDs d'images et leurs classes de filtre
-            // Il faut faire un loop pour que sa soit automatique
-            $projets = [
-                ['id' => 64, 'filtre_classe' => 'gal_proj_jeu', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_lacryma/'],
-                ['id' => 66, 'filtre_classe' => 'gal_proj_jeu', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_tryptique/'],
-                ['id' => 248, 'filtre_classe' => 'gal_proj_3d', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_vehicule/'],
-                ['id' => 206, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_rlyeh/'],
-                ['id' => 207, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_souffle/'],
-                ['id' => 688, 'filtre_classe' => 'gal_proj_jeu', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_inserxion/'],
-                ['id' => 617, 'filtre_classe' => 'gal_proj_video', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_checo/'],
-                ['id' => 240, 'filtre_classe' => 'gal_proj_web', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_web/'],
-                ['id' => 201, 'filtre_classe' => 'gal_proj_ui', 'url' => 'https://gftnth00.mywhc.ca/tim52/category/projet_carolyn/'],
-            ];
+            // Requête pour récupérer les articles de la catégorie "projets"
+            $the_query = new WP_Query([
+                'post_type' => 'post',       // Type de contenu : articles
+                'category_name' => 'projets' // Catégorie : projets
+            ]);
 
-            // Boucle pour afficher chaque projet
-            foreach ($projets as $projet) :
-                // Récupérer l'URL de l'image avec wp_get_attachment_url()
-                $image_url = wp_get_attachment_url($projet['id']);
+            // Vérification de la présence des articles
+            if ($the_query->have_posts()):
+                while ($the_query->have_posts()): $the_query->the_post();
+
+                    // Récupérer les champs personnalisés et les données nécessaires
+                    $idIMG = get_field('id_image_wordpress'); // ID de l'image personnalisée (ACF ou autre)
+                    $filtre = get_field('filtre_classe');    // Classe de filtre (champ personnalisé)
+                    $projet_url = get_permalink();          // URL de l'article
             ?>
-                <div class="conteneur_projet">
-                    <div class="projet_galerie">
-                        <div class="projet_image">
-                            <!-- Afficher l'image en utilisant l'URL récupérée -->
-                            <a href="<?php echo esc_url($projet['url']); ?>">
-                                <img class="img_galerie" src="<?php echo esc_url($image_url); ?>" alt="Projet">
-                            </a>
+                    <div class="conteneur_projet">
+                        <div class="projet_galerie">
+                            <div class="projet_image">
+                                <!-- Lien cliquable vers l'article -->
+                                <a href="<?php echo esc_url($projet_url); ?>">
+                                    <!-- Affichage de l'image -->
+                                    <img class="img_galerie" src="<?php echo esc_url(wp_get_attachment_url($idIMG)); ?>" alt="<?php the_title_attribute(); ?>">
+                                </a>
+                            </div>
+                            <div class="projet_filtre <?php echo esc_attr($filtre); ?>"></div>
                         </div>
-                        <div class="projet_filtre <?php echo esc_attr($projet['filtre_classe']); ?>"></div>
                     </div>
-                </div>
-            <?php endforeach; ?>
+            <?php
+                endwhile;
+            endif;
+
+            // Réinitialiser les données de la requête principale
+            wp_reset_postdata();
+            ?>
         </div>
         <!-- Fin section ////////////////////// -->
     </section>
