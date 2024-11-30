@@ -16,7 +16,7 @@ get_header();
             <!-- Section qui a les filtres ///////////// -->
             <div class="section_filtres">
                 <!-- Titre de la section qui a les filtres -->
-                <h3 class="titre_section_filtre">Filtrer :</h3>
+                <p class="titre_section_filtre">Filtrer :</p>
                 <!-- Les differents filtres ////////////////////// -->
                 <div class="les_filtres">
                     <!-- Filtre 1 ///////////// -->

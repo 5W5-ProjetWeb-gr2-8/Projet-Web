@@ -30,7 +30,7 @@ $the_query = new WP_Query([
         $domaine = get_field('domaine');
         $auteur = get_field('auteur_du_projet');
         $cours = get_field('cours');
-        $bonneClasse = get_field('filtre_classe');
+        $classeProjet = get_field('filtre_classe');
 
 
     ?>
@@ -39,20 +39,20 @@ $the_query = new WP_Query([
           <div class="contenu_projet">
             <!-- Image en haut à gauche -->
             <div class="image_projet">
-              <img class="<?= $bonneClasse ?>_bordure" src="<?php echo wp_get_attachment_url($idIMG); ?>" alt="<?php the_title() ?>">
+              <img class="bordure_<?= $classeProjet ?>" src="<?php echo wp_get_attachment_url($idIMG); ?>" alt="<?php the_title() ?>">
             </div>
 
             <!-- Informations à droite -->
             <div class="details_projet">
               <div class="espacement_fleche_titre">
-                <h1 class="titre_projet <?= $bonneClasse ?>_titre"> <?php the_title() ?> </h1>
+                <h1 class="titre_projet titre_<?= $classeProjet ?>"> <?php the_title() ?> </h1>
                 <a href="https://gftnth00.mywhc.ca/tim52/category/galerie/" class="conteneur_fleche">
                   <div class="fleche_projet"></div>
                 </a>
               </div>
-              <p class="type_projet"><b class="<?= $bonneClasse ?>_gras">Domaine :</b> <?= $domaine ?></p>
-              <p class="cours_projet"><b class="<?= $bonneClasse ?>_gras">Cours :</b> <?= $cours ?></p>
-              <p class="auteurs_projet"><b class="<?= $bonneClasse ?>_gras">Auteurs :</b> <?= $auteur ?></p>
+              <p class="type_projet"><b class="gras_<?= $classeProjet ?>">Domaine :</b> <?= $domaine ?></p>
+              <p class="cours_projet"><b class="gras_<?= $classeProjet ?>">Cours :</b> <?= $cours ?></p>
+              <p class="auteurs_projet"><b class="gras_<?= $classeProjet ?>">Auteurs :</b> <?= $auteur ?></p>
             </div>
           </div>
 
@@ -86,7 +86,7 @@ $the_query = new WP_Query([
         $image_url = wp_get_attachment_url($projet['id']);
         echo "
         <div class='projet_item'>
-          <img src='{$image_url}' alt='Projet' class='image_projet_galerie jeux_bordure'>
+          <img src='{$image_url}' alt='Projet' class='image_projet_galerie jeu_bordure'>
         </div>";
       }
       ?>

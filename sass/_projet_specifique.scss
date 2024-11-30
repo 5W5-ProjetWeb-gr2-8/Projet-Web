@@ -72,23 +72,23 @@
             }
           }
 
-          .jeu_titre {
+          .titre_jeu {
             color: var(--couleur-jeux4);
           }
 
-          .programmation_titre {
+          .titre_programmation {
             color: var(--couleur-web4);
           }
 
-          .\3d_titre {
+          .titre_3d {
             color: var(--couleur-3d-fond);
           }
 
-          .video_titre {
+          .titre_video {
             color: var(--couleur-video-fond);
           }
 
-          .ui_titre {
+          .titre_ui {
             color: var(--couleur-design-fond);
           }
 
@@ -153,49 +153,49 @@
 
 // Gras /////////////////////////////////////////////////////////////
 
-.jeu_gras {
+.gras_jeu {
   color: var(--couleur-jeux4);
   font-weight: bold;
 }
 
-.programmation_gras {
+.gras_programmation {
   color: var(--couleur-web4);
   font-weight: bold;
 }
 
-.\3d_gras {
+.gras_3d {
   color: var(--couleur-3d-fond);
   font-weight: bold;
 }
 
-.video_gras {
+.gras_video {
   color: var(--couleur-video-fond);
   font-weight: bold;
 }
 
-.ui_gras {
+.gras_ui {
   color: var(--couleur-design-fond);
   font-weight: bold;
 }
 
 // Bordure /////////////////////////////////////////////////////////
-.jeu_bordure {
+.bordure_jeu {
   border: 6px solid var(--couleur-jeux4);
 }
 
-.programmation_bordure {
+.bordure_programmation {
   border: 6px solid var(--couleur-web4);
 }
 
-.\3d_bordure {
+.bordure_3d {
   border: 6px solid var(--couleur-3d-fond);
 }
 
-.video_bordure {
+.bordure_video {
   border: 6px solid var(--couleur-video-fond);
 }
 
-.ui_bordure {
+.bordure_ui {
   border: 6px solid var(--couleur-design-fond);
 }
 

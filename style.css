@@ -1311,19 +1311,19 @@ button.btn-cours:focus#jeux {
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet .espacement_fleche_titre .fleche_projet:hover {
   clip-path: polygon(35% 35%, 35% 45%, 60% 45%, 60% 55%, 35% 55%, 35% 65%, 5% 50%);
 }
-.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .jeu_titre {
+.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .titre_jeu {
   color: var(--couleur-jeux4);
 }
-.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .programmation_titre {
+.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .titre_programmation {
   color: var(--couleur-web4);
 }
-.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .\=_titre {
+.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .titre_3d {
   color: var(--couleur-3d-fond);
 }
-.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .video_titre {
+.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .titre_video {
   color: var(--couleur-video-fond);
 }
-.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .ui_titre {
+.principal_specifique .presPro .fond_projet .contenu_projet .details_projet .titre_ui {
   color: var(--couleur-design-fond);
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .details_projet p {
@@ -1359,48 +1359,48 @@ button.btn-cours:focus#jeux {
     font-size: 1.1rem;
   }
 }
-.jeu_gras {
+.gras_jeu {
   color: var(--couleur-jeux4);
   font-weight: bold;
 }
 
-.programmation_gras {
+.gras_programmation {
   color: var(--couleur-web4);
   font-weight: bold;
 }
 
-.\=_gras {
+.gras_3d {
   color: var(--couleur-3d-fond);
   font-weight: bold;
 }
 
-.video_gras {
+.gras_video {
   color: var(--couleur-video-fond);
   font-weight: bold;
 }
 
-.ui_gras {
+.gras_ui {
   color: var(--couleur-design-fond);
   font-weight: bold;
 }
 
-.jeu_bordure {
+.bordure_jeu {
   border: 6px solid var(--couleur-jeux4);
 }
 
-.programmation_bordure {
+.bordure_programmation {
   border: 6px solid var(--couleur-web4);
 }
 
-.\=_bordure {
+.bordure_3d {
   border: 6px solid var(--couleur-3d-fond);
 }
 
-.video_bordure {
+.bordure_video {
   border: 6px solid var(--couleur-video-fond);
 }
 
-.ui_bordure {
+.bordure_ui {
   border: 6px solid var(--couleur-design-fond);
 }
 
