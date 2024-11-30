@@ -72,7 +72,7 @@
             }
           }
 
-          .jeux_titre {
+          .jeu_titre {
             color: var(--couleur-jeux4);
           }
 
@@ -80,7 +80,7 @@
             color: var(--couleur-web4);
           }
 
-          .creation_titre {
+          .\3d_titre {
             color: var(--couleur-3d-fond);
           }
 
@@ -153,7 +153,7 @@
 
 // Gras /////////////////////////////////////////////////////////////
 
-.jeux_gras {
+.jeu_gras {
   color: var(--couleur-jeux4);
   font-weight: bold;
 }
@@ -163,7 +163,7 @@
   font-weight: bold;
 }
 
-.creation_gras {
+.\3d_gras {
   color: var(--couleur-3d-fond);
   font-weight: bold;
 }
@@ -179,7 +179,7 @@
 }
 
 // Bordure /////////////////////////////////////////////////////////
-.jeux_bordure {
+.jeu_bordure {
   border: 6px solid var(--couleur-jeux4);
 }
 
@@ -187,7 +187,7 @@
   border: 6px solid var(--couleur-web4);
 }
 
-.creation_bordure {
+.\3d_bordure {
   border: 6px solid var(--couleur-3d-fond);
 }
 
