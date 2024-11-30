@@ -366,12 +366,14 @@ footer a {
 /* Style pour la page cours.htm */
 .sessions_conteneur {
   background-color: var(--couleur-fond);
-  padding: 2vh 10% 0px 10%; /* variable */
+  padding: 2vh 10% 0px 10%;
+  /* variable */
 }
 
 .competences-section,
 .session-container {
-  padding: 20px 0px; /* variable */
+  padding: 20px 0px;
+  /* variable */
 }
 
 .competences-container,
@@ -384,14 +386,18 @@ footer a {
 }
 
 .competence {
-  width: 10rem; /* variable */
+  width: 10rem;
+  /* variable */
   /* Largeur fixe */
-  height: 2.5rem; /* variable */
+  height: 2.5rem;
+  /* variable */
   /* Hauteur fixe */
-  padding: 20px; /* variable */
+  padding: 20px;
+  /* variable */
   color: white;
   text-align: center;
-  border-radius: 8px; /* variable */
+  border-radius: 8px;
+  /* variable */
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   display: flex;
@@ -403,18 +409,23 @@ footer a {
 }
 
 .session {
-  width: 8rem; /* variable */
-  height: 2.5rem; /* variable */
-  padding: 10px; /* variable */
+  width: 8rem;
+  /* variable */
+  height: 2.5rem;
+  /* variable */
+  padding: 10px;
+  /* variable */
   background-color: black;
   color: white;
   font-size: var(--taille-police);
   font-weight: bold;
-  padding: 1.6rem 0rem 1.6rem 0rem; /* variable */
+  padding: 1.6rem 0rem 1.6rem 0rem;
+  /* variable */
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px; /* variable */
+  border-radius: 50px;
+  /* variable */
   cursor: pointer;
   display: flex;
   /* Flexbox pour centrer le texte */
@@ -426,12 +437,13 @@ footer a {
 
 .cours-section {
   gap: var(--espacement);
-  padding: 0px 20px 40px 20px; /* variable */
+  padding: 0px 20px 40px 20px;
+  /* variable */
   background-color: var(--couleur-fond);
   display: flex;
   justify-content: center;
   /* Centrage horizontal */
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0 auto;
 }
 
@@ -439,7 +451,8 @@ footer a {
   background-color: var(--couleur-competence-fond);
   display: flex;
   flex-direction: column-reverse;
-  border-radius: 20px; /* variable */
+  border-radius: 20px;
+  /* variable */
   overflow: hidden;
   width: 100%;
   /* Pleine largeur sur mobile */
@@ -448,22 +461,26 @@ footer a {
 @media (min-width: 768px) {
   .cours-box {
     flex-direction: column-reverse;
-    max-width: 70%; /* variable */
+    max-width: 70%;
+    /* variable */
   }
 }
 @media (min-width: 1025px) {
   .cours-box {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
-    width: 90%; /* variable */
+    width: 90%;
+    /* variable */
     gap: var(--espacement);
-    margin: 75px; /* variable */
+    margin: 75px;
+    /* variable */
   }
 }
 
 .titre_cours {
   color: var(--couleur-galerie-texte);
-  margin: 30px 0; /* variable */
+  margin: 30px 0;
+  /* variable */
 }
 
 .nomDuCours {
@@ -486,8 +503,10 @@ footer a {
     flex-direction: column;
     flex-wrap: nowrap;
     height: 100%;
-    width: 40%; /* variable */
-    margin-left: 1rem; /* variable */
+    width: 40%;
+    /* variable */
+    margin-left: 1rem;
+    /* variable */
   }
 }
 .nomDuCours .alignementTextIcon {
@@ -495,7 +514,8 @@ footer a {
   justify-content: start;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 1rem; /* variable */
+  gap: 1rem;
+  /* variable */
   transition: transform 0.3s ease;
 }
 .nomDuCours .alignementTextIcon h5 {
@@ -508,14 +528,16 @@ footer a {
   justify-content: center;
   margin-left: 1rem;
   flex-direction: column;
-  gap: 1rem; /* variable */
+  gap: 1rem;
+  /* variable */
 }
 
 .logicielIcon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 5px; /* variable */
+  margin-top: 5px;
+  /* variable */
 }
 @media (min-width: 768px) {
   .logicielIcon {
@@ -535,9 +557,11 @@ footer a {
 }
 
 .cours-boxes {
-  margin: 40px 20px; /* variable */
+  margin: 40px 20px;
+  /* variable */
   border: 8px solid;
-  border-radius: 16px; /* variable */
+  border-radius: 16px;
+  /* variable */
   overflow: hidden;
   box-sizing: border-box;
   max-width: fit-content;
@@ -566,7 +590,8 @@ footer a {
 }
 @media (min-width: 768px) {
   .cours-boxes {
-    margin: 0 21px; /* variable */
+    margin: 0 21px;
+    /* variable */
   }
   .cours-boxes .logoCours {
     display: flex;
@@ -581,7 +606,8 @@ footer a {
 @media (min-width: 1025px) {
   .cours-boxes {
     width: 100%;
-    margin: 50px 25px; /* variable */
+    margin: 50px 25px;
+    /* variable */
   }
   .cours-boxes .logoCours {
     display: flex;
@@ -597,26 +623,30 @@ footer a {
 .cours-boxes .tempParCours {
   display: flex;
   justify-content: start;
-  margin-left: 1rem; /* variable */
+  margin-left: 1rem;
+  /* variable */
 }
 .cours-boxes .tempParCours ol {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  gap: 1rem; /* variable */
+  gap: 1rem;
+  /* variable */
 }
 .cours-boxes .leCours {
   background-color: var(--couleur-3d-fond);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* variable */
+  gap: 0.5rem;
+  /* variable */
   height: 100%;
   min-width: fit-content;
 }
 .cours-boxes .leCours h2,
 .cours-boxes .leCours h4 {
-  margin-left: 1rem; /* variable */
+  margin-left: 1rem;
+  /* variable */
 }
 .cours-boxes .leCours .logoCours {
   display: flex;
@@ -625,11 +655,14 @@ footer a {
   align-items: center;
 }
 .cours-boxes .leCours .logoCours img {
-  width: 3rem; /* variable */
+  width: 3rem;
+  /* variable */
 }
 .cours-boxes .leCours .logoCours p {
-  font-size: clamp(1rem, -3.5rem + 7vw, 1.5rem); /* vérifier taille */
-  font-weight: bold; /* vérifier gras */
+  font-size: clamp(1rem, -3.5rem + 7vw, 1.5rem);
+  /* vérifier taille */
+  font-weight: bold;
+  /* vérifier gras */
 }
 .cours-boxes .logicielIcon li {
   display: flex;
@@ -650,12 +683,16 @@ footer a {
   align-items: center;
   /* Bouton gris */
   border: 5px solid;
-  width: 75px; /* variable */
-  height: 75px; /* variable */
+  width: 75px;
+  /* variable */
+  height: 75px;
+  /* variable */
   color: var(--couleur-texte-pale);
-  padding: 10px; /* variable */
+  padding: 10px;
+  /* variable */
   cursor: pointer;
-  border-radius: 16px; /* variable */
+  border-radius: 16px;
+  /* variable */
   transition: transform, background-color, border-color, 0.3s ease;
 }
 .btn-cours#video {
@@ -708,17 +745,21 @@ button.btn-cours:focus#jeux {
 }
 
 #iconCours {
-  width: 50px; /* variable */
-  height: 50px; /* variable */
+  width: 50px;
+  /* variable */
+  height: 50px;
+  /* variable */
 }
 
 .cours-header {
   background-color: var(--couleur-fond);
-  padding: 20px; /* variable */
+  padding: 20px;
+  /* variable */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px; /* vérifier taille */
+  font-size: 18px;
+  /* vérifier taille */
   font-weight: bold;
 }
 
@@ -727,7 +768,8 @@ button.btn-cours:focus#jeux {
   /* Bouton gris */
   color: var(--couleur-texte-pale);
   border: none;
-  padding: 10px; /* variable */
+  padding: 10px;
+  /* variable */
   cursor: pointer;
   border-radius: 50%;
 }
@@ -738,7 +780,8 @@ button.btn-cours:focus#jeux {
 }
 
 .cours-details {
-  padding: 20px; /* variable */
+  padding: 20px;
+  /* variable */
   display: none;
   background-color: var(--couleur-fond-cours-detail);
   /* Fond légèrement plus clair pour les détails */
@@ -746,10 +789,13 @@ button.btn-cours:focus#jeux {
 }
 
 .logo-social {
-  width: 200px; /* variable */
-  height: 2rem; /* variable */
+  width: 200px;
+  /* variable */
+  height: 2rem;
+  /* variable */
   display: flex;
-  gap: 1rem; /* variable */
+  gap: 1rem;
+  /* variable */
 }
 .logo-social img {
   width: var(--taille-icone);
@@ -774,7 +820,8 @@ button.btn-cours:focus#jeux {
   bottom: -10px;
   z-index: -1;
   transition: all 0.7s;
-  border-radius: 8px; /* variable */
+  border-radius: 8px;
+  /* variable */
   transform: scale(0);
 }
 
@@ -783,7 +830,8 @@ button.btn-cours:focus#jeux {
 }
 
 .animation-session-1 {
-  border: 6px solid var(--couleur-design-fond); /* variable */
+  border: 6px solid var(--couleur-design-fond);
+  /* variable */
   background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
@@ -794,7 +842,8 @@ button.btn-cours:focus#jeux {
 }
 
 .animation-session-2 {
-  border: 6px solid var(--couleur-web4); /* variable */
+  border: 6px solid var(--couleur-web4);
+  /* variable */
   background-image: linear-gradient(45deg, var(--couleur-web4) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
@@ -805,7 +854,8 @@ button.btn-cours:focus#jeux {
 }
 
 .animation-session-3 {
-  border: 6px solid var(--couleur-3d-fond); /* variable */
+  border: 6px solid var(--couleur-3d-fond);
+  /* variable */
   background-image: linear-gradient(45deg, var(--couleur-3d-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
@@ -816,7 +866,8 @@ button.btn-cours:focus#jeux {
 }
 
 .animation-session-4 {
-  border: 6px solid var(--couleur-jeux4); /* variable */
+  border: 6px solid var(--couleur-jeux4);
+  /* variable */
   background-image: linear-gradient(45deg, var(--couleur-jeux4) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
@@ -827,7 +878,8 @@ button.btn-cours:focus#jeux {
 }
 
 .animation-session-5 {
-  border: 6px solid var(--couleur-video-fond); /* variable */
+  border: 6px solid var(--couleur-video-fond);
+  /* variable */
   background-image: linear-gradient(45deg, var(--couleur-video-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
@@ -838,7 +890,8 @@ button.btn-cours:focus#jeux {
 }
 
 .animation-session-6 {
-  border: 6px solid var(--couleur-design-fond); /* variable */
+  border: 6px solid var(--couleur-design-fond);
+  /* variable */
   background-image: linear-gradient(45deg, var(--couleur-design-fond) 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
