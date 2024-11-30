@@ -1617,7 +1617,7 @@ html {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px; /* variable */
+  margin-top: 30px; /* variable */
   justify-content: center;
 }
 
@@ -1649,6 +1649,7 @@ html {
   align-items: center;
   border-radius: 50px; /* variable */
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .animation-stage {
@@ -1805,7 +1806,7 @@ html {
   .contenu-image-description img,
   .contenu-image-description p,
   .images-stage img {
-    width: 65%; /* variable */
+    width: 70%; /* variable */
     height: auto;
   }
   .paragraphe {
@@ -1828,12 +1829,16 @@ html {
     align-items: center;
     height: 200px; /* variable */
   }
+  .trois-cat a {
+    margin-bottom: 1rem;
+  }
   .contenu-image-description {
     width: 100%;
     height: auto;
   }
   .logo_carriere {
     width: 17rem; /* variable */
+    margin-top: 1rem;
   }
 }
 .galerie-projets {
@@ -1933,6 +1938,33 @@ html {
   background-color: #dbb2ab; /* Couleur de l'indicateur actif */
 }
 
+.galerie {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.galerie figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galerie figure img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 6px solid var(--couleur-jeux4);
+}
+
+@media screen and (min-width: 768px) {
+  .galerie {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 /* ////////////////////////////////////////// */
 /* Accueil                                    */
 /* ////////////////////////////////////////// */
