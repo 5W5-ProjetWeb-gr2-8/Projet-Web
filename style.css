@@ -1439,6 +1439,34 @@ button.btn-cours:focus#jeux {
   object-fit: cover;
 }
 
+.wp-block-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+.wp-block-group .wp-block-group__inner-container .wp-block-gallery {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+.wp-block-group .wp-block-group__inner-container .wp-block-gallery .wp-block-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  border: 6px solid var(--couleur-jeux4);
+}
+@media (min-width: 768px) {
+  .wp-block-group .wp-block-group__inner-container .wp-block-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image) {
+  width: 100% !important;
+}
+
 #vie_etudiante {
   display: flex;
   flex-direction: column;

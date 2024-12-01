@@ -58,9 +58,9 @@ $the_query = new WP_Query([
 
           <!-- Description en dessous -->
           <div class="description_projet">
-            <?php the_content() ?>
           </div>
         </div>
+        <?php the_content() ?>
     <?php
       endwhile;
     endif;
@@ -86,7 +86,7 @@ $the_query = new WP_Query([
         $image_url = wp_get_attachment_url($projet['id']);
         echo "
         <div class='projet_item'>
-          <img src='{$image_url}' alt='Projet' class='image_projet_galerie jeu_bordure'>
+          <img src='{$image_url}' alt='Projet' class='image_projet_galerie bordure_jeu'>
         </div>";
       }
       ?>
