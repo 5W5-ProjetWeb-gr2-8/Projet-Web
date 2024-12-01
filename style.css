@@ -1445,21 +1445,21 @@ button.btn-cours:focus#jeux {
   align-items: center;
   padding-top: 40px;
 }
-.wp-block-group .wp-block-group__inner-container .wp-block-gallery {
-  display: grid;
-  gap: 2rem;
+
+.wp-block-gallery {
+  display: grid !important;
+  gap: 2rem !important;
   grid-template-columns: 1fr;
 }
-.wp-block-group .wp-block-group__inner-container .wp-block-gallery .wp-block-image img {
+.wp-block-gallery .wp-block-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
   aspect-ratio: 16/9;
-  border: 6px solid var(--couleur-jeux4);
 }
 @media (min-width: 768px) {
-  .wp-block-group .wp-block-group__inner-container .wp-block-gallery {
-    grid-template-columns: repeat(2, 1fr);
+  .wp-block-gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
