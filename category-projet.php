@@ -60,7 +60,7 @@ $the_query = new WP_Query([
           <div class="description_projet">
           </div>
         </div>
-        <?php the_content() ?> <!-- Ajout de la galerie Wordpress -->
+        <?php the_content() ?> <!-- Ajout de la galerie et de la description par Wordpress avec l'éditeur Gutenberg -->
     <?php
       endwhile;
     endif;
