@@ -82,22 +82,28 @@
   /* variable */
   background-color: var(--couleur-fond);
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   /* Centrage horizontal */
   flex-wrap: nowrap;
   margin: 0 auto;
+
+  @media (min-width: 1025px) {
+    flex-direction: row;
+  }
+
 }
 
 .cours-box {
   background-color: var(--couleur-competence-fond);
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   border-radius: 20px;
-  /* variable */
   overflow: hidden;
   width: 100%;
-  /* Pleine largeur sur mobile */
   color: var(--couleur-texte2);
+  align-items: flex-start;
 
   @media (min-width: 768px) {
     flex-direction: column-reverse;
