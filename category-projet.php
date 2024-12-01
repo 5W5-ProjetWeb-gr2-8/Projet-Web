@@ -69,29 +69,6 @@ $the_query = new WP_Query([
     wp_reset_postdata();
     ?>
   </section>
-
-  <!-- Galerie de Projets -->
-  <section class=" galerie_projets">
-    <div class="conteneur_galerie">
-      <?php
-      // Ajouté le ID de l'image ici
-      $projets = [
-        ['id' => 679,],
-        ['id' => 678,],
-        ['id' => 680,],
-        ['id' => 690,],
-      ];
-
-      foreach ($projets as $projet) {
-        $image_url = wp_get_attachment_url($projet['id']);
-        echo "
-        <div class='projet_item'>
-          <img src='{$image_url}' alt='Projet' class='image_projet_galerie bordure_jeu'>
-        </div>";
-      }
-      ?>
-    </div>
-  </section>
 </main>
 
 

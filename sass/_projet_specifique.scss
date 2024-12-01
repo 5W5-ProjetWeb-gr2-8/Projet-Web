@@ -239,37 +239,45 @@
 
 // Section Galerie //////////////////////////////////////////////////
 
-.wp-block-group {
-  display: flex; // Ajoute flexbox pour centrer la galerie
-  justify-content: center; // Centre horizontalement la galerie
-  align-items: center; // Aligne verticalement si nécessaire
-  padding-top: 40px;
-}
-
 .wp-block-gallery {
   display: grid !important;
-  gap: 2rem !important; // Augmente l'espace entre les images
+  gap: 20px;
+  padding: 0;
 
-  // Pour mobile (une seule colonne par défaut)
-  grid-template-columns: 1fr;
-
-  // Style des images dans la galerie
-  .wp-block-image {
-    img {
-      width: 100%; // L'image occupe toute la largeur de son conteneur
-      height: auto; // L'image occupe toute la hauteur de son conteneur
-      object-fit: cover; // Les images s'adaptent au conteneur sans déformation
-      aspect-ratio: 16/9;
-    }
+  // Pour mobile
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr; // Une seule colonne sur mobile
   }
 
-  // Adaptation pour les tablettes et ordinateurs (deux colonnes)
+  // Pour tablette et plus grand (deux colonnes)
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr); // Deux colonnes
+  }
+
+  // Pour les ordinateurs (plus grand que tablette)
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); // Toujours deux colonnes
   }
 }
 
-.wp-block-gallery.has-nested-images.columns-default
-  figure.wp-block-image:not(#individual-image) {
-  width: 100% !important; // L'image occupe toute la largeur de son conteneur
+.wp-block-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; // Cache tout débordement d'image
+  height: 100%; // Pour s'assurer que l'image se redimensionne correctement
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Pour que l'image couvre tout l'espace sans déformer
+  }
+}
+
+.wp-block-gallery.wp-block-gallery-1 {
+  gap: 2rem !important;
+}
+
+.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image) {
+  width: 100% !important;
 }
