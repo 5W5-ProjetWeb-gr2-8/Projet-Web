@@ -76,7 +76,7 @@
             color: var(--couleur-jeux4);
           }
 
-          .titre_programmation {
+          .titre_web {
             color: var(--couleur-web4);
           }
 
@@ -158,7 +158,7 @@
   font-weight: bold;
 }
 
-.gras_programmation {
+.gras_web {
   color: var(--couleur-web4);
   font-weight: bold;
 }
@@ -183,7 +183,7 @@
   border: 6px solid var(--couleur-jeux4);
 }
 
-.bordure_programmation {
+.bordure_web {
   border: 6px solid var(--couleur-web4);
 }
 
@@ -243,6 +243,7 @@
   display: grid !important;
   gap: 20px;
   padding: 0;
+  padding-top: 4rem !important;
 
   // Pour mobile
   @media (max-width: 767px) {
