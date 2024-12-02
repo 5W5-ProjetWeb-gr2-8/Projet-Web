@@ -26,12 +26,10 @@ $the_query = new WP_Query([
       while ($the_query->have_posts()): $the_query->the_post();
 
         // Récupérer les champs personnalisés et les données nécessaires
-        $idIMG = get_field('id_image_wordpress'); // ID de l'image personnalisée (ACF ou autre)
         $domaine = get_field('domaine');
         $auteur = get_field('auteur_du_projet');
         $cours = get_field('cours');
         $classeProjet = get_field('filtre_classe');
-
 
     ?>
         <div class="fond_projet">
@@ -39,7 +37,13 @@ $the_query = new WP_Query([
           <div class="contenu_projet">
             <!-- Image en haut à gauche -->
             <div class="image_projet">
-              <img class="bordure_<?= $classeProjet ?>" src="<?php echo wp_get_attachment_url($idIMG); ?>" alt="<?php the_title() ?>">
+              <?php
+              // Vérifier si l'article a un thumbnail
+              if (has_post_thumbnail()) {
+                // Afficher le thumbnail de l'article
+                the_post_thumbnail('full', ['class' => 'bordure_' . $classeProjet, 'alt' => get_the_title()]);
+              }
+              ?>
             </div>
 
             <!-- Informations à droite -->
@@ -70,8 +74,6 @@ $the_query = new WP_Query([
     ?>
   </section>
 </main>
-
-
 
 <!-- Galerie de Projets ////////////////////////////////////////////////////////////-->
 <?php echo do_shortcode('[carrousel]'); // Exécution du shortcode pour la galerie de projets 

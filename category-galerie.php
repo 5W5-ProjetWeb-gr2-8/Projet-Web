@@ -1,8 +1,6 @@
 <?php
 // Appelle le fichier header.php
 get_header();
-
-
 ?>
 
 <!-- Main //////////////////////////////////////////////////////////////////////// -->
@@ -19,36 +17,28 @@ get_header();
                 <p class="titre_section_filtre">Filtrer :</p>
                 <!-- Les differents filtres ////////////////////// -->
                 <div class="les_filtres">
-                    <!-- Filtre 1 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="UI"><!-- Checkbox pour pouvoir changer l'état du filtre -->
+                        <input type="checkbox" id="UI">
                         <label for="UI" class="filtre filtre_ui bordure_ui hover_ui">Design</label>
                     </div>
-                    <!-- Filtre 2 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="WEB"><!-- Checkbox pour pouvoir changer l'état du filtre -->
+                        <input type="checkbox" id="WEB">
                         <label for="WEB" class="filtre filtre_web bordure_web hover_web">Programmation</label>
                     </div>
-                    <!-- Filtre 3 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="3D"><!-- Checkbox pour pouvoir changer l'état du filtre -->
+                        <input type="checkbox" id="3D">
                         <label for="3D" class="filtre filtre_3d bordure_3d hover_3d">Création</label>
                     </div>
-                    <!-- Filtre 4 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="JEU"><!-- Checkbox pour pouvoir changer l'état du filtre -->
+                        <input type="checkbox" id="JEU">
                         <label for="JEU" class="filtre filtre_jeu bordure_jeu hover_jeu">Jeux</label>
                     </div>
-                    <!-- Filtre 5 ///////////// -->
                     <div class="conteneur_filtre">
-                        <input type="checkbox" id="VIDEO"><!-- Checkbox pour pouvoir changer l'état du filtre -->
+                        <input type="checkbox" id="VIDEO">
                         <label for="VIDEO" class="filtre filtre_video bordure_video hover_video">Montage</label>
                     </div>
-                    <!-- Fin des differents filtres ///////////////-->
                 </div>
-                <!-- Fin de la section qui a les filtres /////////////////-->
             </div>
-            <!-- Fin du conteneur des différents filtres /////////////////////////////// -->
         </div>
 
         <!-- Section qui montre les differents projets//////////////////////////////////////////////////////////////// -->
@@ -65,20 +55,24 @@ get_header();
                 while ($the_query->have_posts()): $the_query->the_post();
 
                     // Récupérer les champs personnalisés et les données nécessaires
-                    $idIMG = get_field('id_image_wordpress'); // ID de l'image personnalisée (ACF)
-                    $filtre = get_field('filtre_classe');    // Classe de filtre (champ personnalisé)
-                    $idp = get_the_ID();                    // ID de l'article
+                    $filtre = get_field('filtre_classe'); // Classe de filtre (champ personnalisé)
+                    $idp = get_the_ID(); // ID de l'article
+
+                    // Récupérer l'URL du thumbnail
+                    $thumbnail_url = get_the_post_thumbnail_url($idp, 'full'); // 'full' pour la taille complète
             ?>
                     <div class="conteneur_projet">
                         <div class="projet_galerie">
                             <div class="projet_image">
                                 <!-- Lien cliquable vers l'article -->
                                 <a href="<?= "https://gftnth00.mywhc.ca/tim52/category/projet/?idp=" . $idp; ?>">
-                                    <!-- Affichage de l'image -->
-                                    <img class="img_galerie" src="<?php echo esc_url(wp_get_attachment_url($idIMG)); ?>" alt="<?php the_title_attribute(); ?>">
+                                    <!-- Affichage de l'image seulement si le thumbnail existe -->
+                                    <?php if ($thumbnail_url): ?>
+                                        <img class="img_galerie" src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>">
+                                    <?php endif; ?>
                                 </a>
                             </div>
-                            <div class="projet_filtre <?= "gal_proj_"  . esc_attr($filtre); ?>"></div>
+                            <div class="projet_filtre <?= "gal_proj_" . esc_attr($filtre); ?>"></div>
                         </div>
                     </div>
             <?php
