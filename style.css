@@ -574,23 +574,23 @@ footer a {
   /* Largeur maximale sur plus grands écrans */
   color: var(--couleur-texte2);
 }
-.cours-boxes#video {
+.cours-boxes #video {
   background-color: var(--couleur-video-fond);
   border-color: var(--couleur-video-bordure);
 }
-.cours-boxes#_3d {
+.cours-boxes #_3d {
   background-color: var(--couleur-3d-fond);
   border-color: var(--couleur-3d-bordure);
 }
-.cours-boxes#web {
+.cours-boxes #web {
   background-color: var(--couleur-web-fond);
   border-color: var(--couleur-web-bordure);
 }
-.cours-boxes#design {
+.cours-boxes #design {
   background-color: var(--couleur-design-fond);
   border-color: var(--couleur-design-bordure);
 }
-.cours-boxes#jeux {
+.cours-boxes #jeux {
   background-color: var(--couleur-jeux-fond);
   border-color: var(--couleur-jeux-bordure);
 }
@@ -701,23 +701,23 @@ footer a {
   /* variable */
   transition: transform, background-color, border-color, 0.3s ease;
 }
-.btn-cours#video {
+.btn-cours #video {
   background-color: var(--couleur-video-fond);
   border-color: var(--couleur-video-bordure);
 }
-.btn-cours#_3d {
+.btn-cours #_3d {
   background-color: var(--couleur-3d-fond);
   border-color: var(--couleur-3d-bordure);
 }
-.btn-cours#web {
+.btn-cours #web {
   background-color: var(--couleur-web-fond);
   border-color: var(--couleur-web-bordure);
 }
-.btn-cours#design {
+.btn-cours #design {
   background-color: var(--couleur-design-fond);
   border-color: var(--couleur-design-bordure);
 }
-.btn-cours#jeux {
+.btn-cours #jeux {
   background-color: var(--couleur-jeux-fond);
   border-color: var(--couleur-jeux-bordure);
 }
@@ -725,23 +725,23 @@ footer a {
 button.btn-cours:focus {
   border: 5px solid;
 }
-button.btn-cours:focus#video {
+button.btn-cours:focus #video {
   background-color: var(--couleur-video-bordure);
   border: var(--couleur-video-fond);
 }
-button.btn-cours:focus#_3d {
+button.btn-cours:focus #_3d {
   background-color: var(--couleur-3d-bordure);
   border-color: var(--couleur-3d-fond);
 }
-button.btn-cours:focus#web {
+button.btn-cours:focus #web {
   background-color: var(--couleur-web-bordure);
   border-color: var(--couleur-web-fond);
 }
-button.btn-cours:focus#design {
+button.btn-cours:focus #design {
   background-color: var(--couleur-design-bordure);
   border-color: var(--couleur-design-fond);
 }
-button.btn-cours:focus#jeux {
+button.btn-cours:focus #jeux {
   background-color: var(--couleur-jeux-bordure);
   border-color: var(--couleur-jeux-fond);
 }
@@ -1408,41 +1408,6 @@ button.btn-cours:focus#jeux {
 
 .bordure_ui {
   border: 6px solid var(--couleur-design-fond);
-}
-
-/* Style de la galerie */
-.galerie_projets {
-  margin: 0 auto;
-  padding: 20px;
-  padding-top: 40px;
-}
-
-.conteneur_galerie {
-  display: grid;
-  grid-template-columns: 1fr; /* 1 colonne par défaut (mobile/tablette) */
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 2rem;
-}
-
-/* Deux colonnes sur les écrans plus larges (ordinateur) */
-@media screen and (min-width: 768px) {
-  .conteneur_galerie {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-/* Style des éléments de la galerie */
-.projet_item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image_projet_galerie {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 .wp-block-gallery {
