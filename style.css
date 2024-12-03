@@ -2017,6 +2017,24 @@ html {
     grid-template-columns: 1fr 1fr;
   }
 }
+.erreur {
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.erreur .btn_retour {
+  font-size: var(--h5);
+  background-color: white;
+  height: 3rem;
+  border-radius: 1rem;
+  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+}
+.erreur .btn_retour:hover {
+  background-position: 0;
+}
+
 /* ////////////////////////////////////////// */
 /* Accueil                                    */
 /* ////////////////////////////////////////// */

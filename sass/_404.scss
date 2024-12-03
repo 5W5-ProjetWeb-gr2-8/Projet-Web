@@ -1,0 +1,44 @@
+.erreur{
+    background-color: black;
+    color: aliceblue;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn_retour {
+        font-size: var(--h5);
+        background-color: white;
+        height: 3rem;
+        border-radius: 1rem;
+        clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+        // border: 6px solid red;
+
+        // clip-path: inset(45% 0% 33% 10% round 10px);
+
+        // padding: 0.5rem 1.6rem;
+        // border-radius: 50px;
+
+        // color: var(--couleur-texte-pale);
+        // background: {
+        //     image: linear-gradient(
+        //     45deg,
+        //     var(--couleur-3d-fond),
+        //     var(--couleur-web-fond) 22%,
+        //     var(--couleur-jeux-fond) 25%,
+        //     var(--couleur-video-fond) 27%,
+        //     var(--couleur-design-fond) 45%,
+        //     transparent 46%
+        //   );
+        //   position: 0%;
+        //   size: 200%;
+        // }
+        // transition: background 400ms ease-in-out;
+        
+        &:hover {
+          background-position: 0;
+        }
+    }
+
+
+}
