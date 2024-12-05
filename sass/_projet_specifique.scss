@@ -36,42 +36,6 @@
           flex-direction: column;
           justify-content: center;
 
-          .espacement_fleche_titre {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            .fleche_projet {
-              margin-top: 0.8rem; /* variable */
-              width: 5.5rem; /* variable */
-              height: 5.5rem; /* variable */
-              background-color: var(--couleur-texte-pale); /* variable */
-              clip-path: polygon(
-                30% 31%,
-                30% 43%,
-                69% 43%,
-                69% 57%,
-                30% 57%,
-                30% 70%,
-                0% 50%
-              ); // Flèche vers la gauche
-              transition: clip-path 0.5s;
-
-              &:hover {
-                clip-path: polygon(
-                  35% 35%,
-                  35% 45%,
-                  60% 45%,
-                  60% 55%,
-                  35% 55%,
-                  35% 65%,
-                  5% 50%
-                ); // Flèche plus petite et toujours vers la gauche
-              }
-            }
-          }
-
           .titre_jeu {
             color: var(--couleur-jeux4);
           }
