@@ -1283,6 +1283,28 @@ button.btn-cours:focus #jeux {
   flex-direction: column;
   gap: 3rem; /* variable */
 }
+.principal_specifique .presPro .fond_projet .conteneur_fleche {
+  display: flex;
+  align-items: center;
+  color: var(--couleur-texte-pale);
+}
+.principal_specifique .presPro .fond_projet .conteneur_fleche .fleche_projet {
+  margin-top: 0.25rem; /* variable */
+  width: 3rem; /* variable */
+  height: 3rem; /* variable */
+  background-color: var(--couleur-texte-pale);
+  clip-path: polygon(30% 31%, 30% 43%, 69% 43%, 69% 57%, 30% 57%, 30% 70%, 0% 50%); /* Flèche vers la gauche */
+  transition: clip-path 0.5s;
+}
+.principal_specifique .presPro .fond_projet .conteneur_fleche h4 {
+  transition: transform 0.5s; /* Smooth transition */
+}
+.principal_specifique .presPro .fond_projet .conteneur_fleche:hover .fleche_projet {
+  clip-path: polygon(35% 35%, 35% 45%, 60% 45%, 60% 55%, 35% 55%, 35% 65%, 5% 50%); /* Flèche plus petite et toujours vers la gauche */
+}
+.principal_specifique .presPro .fond_projet .conteneur_fleche:hover h4 {
+  transform: translateX(-10px); /* This moves the h4 when hover happens */
+}
 .principal_specifique .presPro .fond_projet .contenu_projet {
   display: flex;
   flex-direction: column;
@@ -1290,7 +1312,11 @@ button.btn-cours:focus #jeux {
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .image_projet {
   width: 100%;
-  max-width: 400px;
+}
+@media (min-width: 768px) {
+  .principal_specifique .presPro .fond_projet .contenu_projet .image_projet {
+    max-width: 400px;
+  }
 }
 .principal_specifique .presPro .fond_projet .contenu_projet .image_projet img {
   width: 100%;
@@ -1334,8 +1360,15 @@ button.btn-cours:focus #jeux {
 @media (min-width: 768px) {
   .presPro .fond_projet .contenu_projet {
     flex-direction: row !important;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .presPro .fond_projet .contenu_projet {
     align-items: end;
   }
+}
+@media (min-width: 768px) {
   .presPro .fond_projet .contenu_projet .image_projet {
     max-width: 200px;
   }

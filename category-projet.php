@@ -33,6 +33,11 @@ $the_query = new WP_Query([
 
     ?>
         <div class="fond_projet">
+          <!-- Flèche de retour -->
+          <a href="https://gftnth00.mywhc.ca/tim52/category/galerie/" class="conteneur_fleche">
+              <div class="fleche_projet"></div>
+              <h4>Retour</h4>
+            </a>
           <!-- Contenu du projet -->
           <div class="contenu_projet">
             <!-- Image en haut à gauche -->
