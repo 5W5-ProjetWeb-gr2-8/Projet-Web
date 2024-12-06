@@ -52,7 +52,7 @@ $domaine = "";
                 <div class=nomDuCours>
                     <div class="alignementTextIcon">
                         <h5><?= $titre ?></h5>
-                        <button class="btn-cours" id="<?= $domaine ?>">
+                        <button class="btn-cours" id="<?= $domaine ?>" aria-label="<?= $domaine ?>">
                             <!-- svg dynamique -->
                             <?= $svg[get_field('domaine')] ?>
                         </button>
