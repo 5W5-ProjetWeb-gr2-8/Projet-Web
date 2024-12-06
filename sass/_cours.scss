@@ -1,4 +1,8 @@
-/* Style pour la page cours.htm */
+/* Style pour la page cours */
+
+.global {
+  background-color: var(--couleur-fond);
+}
 
 .sessions_conteneur {
   background-color: var(--couleur-fond);
@@ -88,6 +92,7 @@
   /* Centrage horizontal */
   flex-wrap: nowrap;
   margin: 0 auto;
+  max-width: 80vw;
 
   @media (min-width: 1025px) {
     flex-direction: row;

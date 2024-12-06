@@ -22,9 +22,9 @@ section.competences {
     // Bouton ouvrir/fermer
     .top-right-button {
       position: absolute;
-      top: -1.5rem;
+      top: 0;
       /* variable à changer */
-      right: -1.5rem;
+      right: -0.5rem;
       /* variable à changer */
       margin-bottom: 2rem;
       cursor: pointer;
@@ -48,13 +48,11 @@ section.competences {
       .x-symbol {
         opacity: 1;
         transition: opacity 0.3s ease-in-out; // Apply transition to both properties
-
       }
 
       &:hover .x-symbol {
         // stroke: white;
       }
-
     }
 
     button.clicked {
@@ -62,10 +60,7 @@ section.competences {
         opacity: 0;
         transition: opacity 0.3s ease-in-out; // Apply transition to both properties
       }
-
     }
-
-
 
     // Entête de la compétence // Partie visible en tout temps
     .competence-header {
@@ -152,9 +147,10 @@ section.competences {
       .info {
         box-sizing: border-box;
         flex-basis: 70%;
+        padding-right: 2rem;
 
         // texte descriptif
-        &>p {
+        & > p {
           margin-bottom: var(--espacement);
 
           @media (min-width: 768px) {
@@ -166,6 +162,7 @@ section.competences {
         .outils {
           display: flex;
           flex-wrap: wrap;
+          row-gap: 1rem;
 
           @media (min-width: 768px) {
             justify-content: unset;
@@ -232,7 +229,6 @@ section.competences {
           position: relative;
 
           &.inactif {
-
             // height: 171px;
             // width: 304px;
             &::after {

@@ -19,6 +19,7 @@
         padding: 0.5rem 1rem;
         position: relative; // Nécessaire pour l'animation de la sous-ligne
         transition: color 0.3s ease, transform 0.3s ease; // Transitions sur la couleur et la transformation
+        font-size: 1.5rem;
 
         // Effet de survol
         &:hover {
@@ -87,6 +88,8 @@
   font-size: 2rem; // Ajuster la taille selon le design
   color: white; // Couleur du texte
   cursor: pointer;
+  color: var(--couleur-fond);
+  transform: scale(1.3);
 
   @media (max-width: 768px) {
     // Afficher le bouton sur mobile
