@@ -92,11 +92,9 @@
   @media (min-width: 1025px) {
     flex-direction: row;
   }
-
 }
 
 .cours-box {
-  background-color: var(--couleur-competence-fond);
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -203,6 +201,31 @@
   }
 }
 
+#video {
+  background-color: var(--couleur-video-fond);
+  border-color: var(--couleur-video-bordure);
+}
+
+#_3d {
+  background-color: var(--couleur-3d-fond);
+  border-color: var(--couleur-3d-bordure);
+}
+
+#web {
+  background-color: var(--couleur-web-fond);
+  border-color: var(--couleur-web-bordure);
+}
+
+#design {
+  background-color: var(--couleur-design-fond);
+  border-color: var(--couleur-design-bordure);
+}
+
+#jeux {
+  background-color: var(--couleur-jeux-fond);
+  border-color: var(--couleur-jeux-bordure);
+}
+
 .cours-boxes {
   margin: 40px 20px;
   /* variable */
@@ -214,31 +237,6 @@
   max-width: fit-content;
   /* Largeur maximale sur plus grands écrans */
   color: var(--couleur-texte2);
-
-  #video {
-    background-color: var(--couleur-video-fond);
-    border-color: var(--couleur-video-bordure);
-  }
-
-  #_3d {
-    background-color: var(--couleur-3d-fond);
-    border-color: var(--couleur-3d-bordure);
-  }
-
-  #web {
-    background-color: var(--couleur-web-fond);
-    border-color: var(--couleur-web-bordure);
-  }
-
-  #design {
-    background-color: var(--couleur-design-fond);
-    border-color: var(--couleur-design-bordure);
-  }
-
-  #jeux {
-    background-color: var(--couleur-jeux-fond);
-    border-color: var(--couleur-jeux-bordure);
-  }
 
   @media (min-width: 768px) {
     margin: 0 21px;
@@ -513,9 +511,11 @@ button.btn-cours:focus {
   /* variable */
 
   background: {
-    image: linear-gradient(45deg,
-        var(--couleur-design-fond) 50%,
-        transparent 50%);
+    image: linear-gradient(
+      45deg,
+      var(--couleur-design-fond) 50%,
+      transparent 50%
+    );
     position: 100%;
     size: 400%;
   }
@@ -583,9 +583,11 @@ button.btn-cours:focus {
   /* variable */
 
   background: {
-    image: linear-gradient(45deg,
-        var(--couleur-video-fond) 50%,
-        transparent 50%);
+    image: linear-gradient(
+      45deg,
+      var(--couleur-video-fond) 50%,
+      transparent 50%
+    );
     position: 100%;
     size: 400%;
   }
@@ -602,9 +604,11 @@ button.btn-cours:focus {
   /* variable */
 
   background: {
-    image: linear-gradient(45deg,
-        var(--couleur-design-fond) 50%,
-        transparent 50%);
+    image: linear-gradient(
+      45deg,
+      var(--couleur-design-fond) 50%,
+      transparent 50%
+    );
     position: 100%;
     size: 400%;
   }

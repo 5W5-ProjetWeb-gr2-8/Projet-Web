@@ -455,7 +455,6 @@ footer a {
 }
 
 .cours-box {
-  background-color: var(--couleur-competence-fond);
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -562,6 +561,31 @@ footer a {
   }
 }
 
+#video {
+  background-color: var(--couleur-video-fond);
+  border-color: var(--couleur-video-bordure);
+}
+
+#_3d {
+  background-color: var(--couleur-3d-fond);
+  border-color: var(--couleur-3d-bordure);
+}
+
+#web {
+  background-color: var(--couleur-web-fond);
+  border-color: var(--couleur-web-bordure);
+}
+
+#design {
+  background-color: var(--couleur-design-fond);
+  border-color: var(--couleur-design-bordure);
+}
+
+#jeux {
+  background-color: var(--couleur-jeux-fond);
+  border-color: var(--couleur-jeux-bordure);
+}
+
 .cours-boxes {
   margin: 40px 20px;
   /* variable */
@@ -573,26 +597,6 @@ footer a {
   max-width: fit-content;
   /* Largeur maximale sur plus grands écrans */
   color: var(--couleur-texte2);
-}
-.cours-boxes #video {
-  background-color: var(--couleur-video-fond);
-  border-color: var(--couleur-video-bordure);
-}
-.cours-boxes #_3d {
-  background-color: var(--couleur-3d-fond);
-  border-color: var(--couleur-3d-bordure);
-}
-.cours-boxes #web {
-  background-color: var(--couleur-web-fond);
-  border-color: var(--couleur-web-bordure);
-}
-.cours-boxes #design {
-  background-color: var(--couleur-design-fond);
-  border-color: var(--couleur-design-bordure);
-}
-.cours-boxes #jeux {
-  background-color: var(--couleur-jeux-fond);
-  border-color: var(--couleur-jeux-bordure);
 }
 @media (min-width: 768px) {
   .cours-boxes {
