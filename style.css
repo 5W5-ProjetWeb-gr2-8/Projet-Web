@@ -1046,6 +1046,7 @@ button.btn-cours:focus #jeux {
 .galerie_projet .section_filtres .titre_section_filtre {
   align-self: flex-start;
   text-wrap: nowrap;
+  font-weight: var(--poid_titres);
 }
 @media (min-width: 1001px) {
   .galerie_projet .section_filtres {
@@ -1118,6 +1119,8 @@ button.btn-cours:focus #jeux {
   height: 1rem; /* variable */
   background-color: var(--couleur-fond);
   color: var(--couleur-texte-pale);
+  font-weight: var(--poid_titres);
+  font-size: var(--h6);
   padding: 1.6rem 0rem 1.6rem 0rem; /* variable */
   display: flex;
   justify-content: center;
