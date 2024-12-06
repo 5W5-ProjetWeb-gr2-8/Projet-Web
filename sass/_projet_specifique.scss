@@ -36,42 +36,6 @@
           flex-direction: column;
           justify-content: center;
 
-          .espacement_fleche_titre {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-
-            .fleche_projet {
-              margin-top: 0.8rem; /* variable */
-              width: 5.5rem; /* variable */
-              height: 5.5rem; /* variable */
-              background-color: var(--couleur-texte-pale); /* variable */
-              clip-path: polygon(
-                30% 31%,
-                30% 43%,
-                69% 43%,
-                69% 57%,
-                30% 57%,
-                30% 70%,
-                0% 50%
-              ); // Flèche vers la gauche
-              transition: clip-path 0.5s;
-
-              &:hover {
-                clip-path: polygon(
-                  35% 35%,
-                  35% 45%,
-                  60% 45%,
-                  60% 55%,
-                  35% 55%,
-                  35% 65%,
-                  5% 50%
-                ); // Flèche plus petite et toujours vers la gauche
-              }
-            }
-          }
-
           .titre_jeu {
             color: var(--couleur-jeux4);
           }
@@ -199,44 +163,6 @@
   border: 6px solid var(--couleur-design-fond);
 }
 
-// Section Galerie Vieille a supprimer //////////////////////////////////////////////////
-
-/* Style de la galerie */
-.galerie_projets {
-  margin: 0 auto;
-  padding: 20px;
-  padding-top: 40px;
-}
-
-.conteneur_galerie {
-  display: grid;
-  grid-template-columns: 1fr; /* 1 colonne par défaut (mobile/tablette) */
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 2rem;
-}
-
-/* Deux colonnes sur les écrans plus larges (ordinateur) */
-@media screen and (min-width: 768px) {
-  .conteneur_galerie {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* Style des éléments de la galerie */
-.projet_item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image_projet_galerie {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
 // Section Galerie //////////////////////////////////////////////////
 
 .wp-block-gallery {
@@ -279,6 +205,7 @@
   gap: 2rem !important;
 }
 
-.wp-block-gallery.has-nested-images.columns-default figure.wp-block-image:not(#individual-image) {
+.wp-block-gallery.has-nested-images.columns-default
+  figure.wp-block-image:not(#individual-image) {
   width: 100% !important;
 }

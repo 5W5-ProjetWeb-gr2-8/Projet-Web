@@ -48,12 +48,7 @@ $the_query = new WP_Query([
 
             <!-- Informations à droite -->
             <div class="details_projet">
-              <div class="espacement_fleche_titre">
-                <h1 class="titre_projet titre_<?= $classeProjet ?>"> <?php the_title() ?> </h1>
-                <a href="https://gftnth00.mywhc.ca/tim52/category/galerie/" class="conteneur_fleche">
-                  <div class="fleche_projet"></div>
-                </a>
-              </div>
+              <h1 class="titre_projet titre_<?= $classeProjet ?>"> <?php the_title() ?> </h1>
               <p class="type_projet"><b class="gras_<?= $classeProjet ?>">Domaine :</b> <?= $domaine ?></p>
               <p class="cours_projet"><b class="gras_<?= $classeProjet ?>">Cours :</b> <?= $cours ?></p>
               <p class="auteurs_projet"><b class="gras_<?= $classeProjet ?>">Auteurs :</b> <?= $auteur ?></p>

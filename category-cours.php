@@ -6,6 +6,7 @@ $svgJson = file_get_contents(__DIR__ . '/js/svg.json');
 $svg = json_decode($svgJson, true);
 //Tableau pour enregistrer les ids des posts
 $idCours = [];
+$domaine = "";
 ?>
 
 <!-- Section SESSION 1 à 6 avec boutons dynamiques -->
@@ -44,11 +45,12 @@ $idCours = [];
             //id posts
             $idPost = get_the_ID();
             array_push($idCours, $idPost);
+            $domaine = get_field('domaine');
         ?>
         <div class=nomDuCours>
             <div class="alignementTextIcon">
                 <h5><?= $titre ?></h5>
-                <button class="btn-cours">
+                <button class="btn-cours"  id="<?= $domaine ?>">
                     <!-- svg dynamique -->
                     <?= $svg[get_field('domaine')] ?>
                 </button>
@@ -58,7 +60,7 @@ $idCours = [];
         <?php endif; ?>
     </div>
     <!-- Affiche 1 cours en détail -->
-    <div class="cours-boxes">
+    <div class="cours-boxes" id="<?= $domaine ?>">
         <?php
             // Requête
             // reset
@@ -86,7 +88,7 @@ $idCours = [];
             $heures = explode("-", get_field('ponderation'));
             $prea = get_field('prealables');
         ?>
-        <div class="leCours">
+        <div class="leCours" id="<?= $domaine ?>">
             <h2><?= $titre ?></h2>
             <h4><?= $codeCours ?></h4>
             <h4>Préalables: <?= $prea; ?></h4>

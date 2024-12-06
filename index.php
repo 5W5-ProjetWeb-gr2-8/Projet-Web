@@ -31,7 +31,7 @@ $_comp = $texte["competences"];
         <!-- Partie non pliable -->
         <div class="competence-header">
           <!-- button Ouverture et fermeture -->
-          <button class="top-right-button">
+          <button class="top-right-button" aria-label="Basculer les informations pour la compétence <?= htmlspecialchars($comp['nom']); ?>">
             <?php
             // Initialise le compteur pour chaque compétence
             static $counter = 1;

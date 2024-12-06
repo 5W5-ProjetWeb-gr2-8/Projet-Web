@@ -215,27 +215,27 @@
   /* Largeur maximale sur plus grands écrans */
   color: var(--couleur-texte2);
 
-  &#video {
+  #video {
     background-color: var(--couleur-video-fond);
     border-color: var(--couleur-video-bordure);
   }
 
-  &#_3d {
+  #_3d {
     background-color: var(--couleur-3d-fond);
     border-color: var(--couleur-3d-bordure);
   }
 
-  &#web {
+  #web {
     background-color: var(--couleur-web-fond);
     border-color: var(--couleur-web-bordure);
   }
 
-  &#design {
+  #design {
     background-color: var(--couleur-design-fond);
     border-color: var(--couleur-design-bordure);
   }
 
-  &#jeux {
+  #jeux {
     background-color: var(--couleur-jeux-fond);
     border-color: var(--couleur-jeux-bordure);
   }
@@ -360,27 +360,27 @@
   transition: transform, background-color, border-color, 0.3s ease;
 
   // couleur selon les compétence
-  &#video {
+  #video {
     background-color: var(--couleur-video-fond);
     border-color: var(--couleur-video-bordure);
   }
 
-  &#_3d {
+  #_3d {
     background-color: var(--couleur-3d-fond);
     border-color: var(--couleur-3d-bordure);
   }
 
-  &#web {
+  #web {
     background-color: var(--couleur-web-fond);
     border-color: var(--couleur-web-bordure);
   }
 
-  &#design {
+  #design {
     background-color: var(--couleur-design-fond);
     border-color: var(--couleur-design-bordure);
   }
 
-  &#jeux {
+  #jeux {
     background-color: var(--couleur-jeux-fond);
     border-color: var(--couleur-jeux-bordure);
   }
@@ -390,27 +390,27 @@ button.btn-cours:focus {
   // /* Bouton gris */
   border: 5px solid;
 
-  &#video {
+  #video {
     background-color: var(--couleur-video-bordure);
     border: var(--couleur-video-fond);
   }
 
-  &#_3d {
+  #_3d {
     background-color: var(--couleur-3d-bordure);
     border-color: var(--couleur-3d-fond);
   }
 
-  &#web {
+  #web {
     background-color: var(--couleur-web-bordure);
     border-color: var(--couleur-web-fond);
   }
 
-  &#design {
+  #design {
     background-color: var(--couleur-design-bordure);
     border-color: var(--couleur-design-fond);
   }
 
-  &#jeux {
+  #jeux {
     background-color: var(--couleur-jeux-bordure);
     border-color: var(--couleur-jeux-fond);
   }
