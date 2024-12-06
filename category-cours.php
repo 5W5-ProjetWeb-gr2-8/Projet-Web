@@ -32,7 +32,9 @@ $domaine = "";
             // parametres requête
             $the_query = new WP_Query( [ 
                 'post_type' => 'post', 
-                'category_name' => 'session' . $session // variable à ajouter
+                'category_name' => 'session' . $session, // variable à ajouter
+                'orderby' => 'name', // tri par nom
+                'order' => 'ASC' // nom ascendant
             ]);
             // Boucle
             if ($the_query->have_posts()): 
@@ -67,7 +69,7 @@ $domaine = "";
             wp_reset_postdata();
 			// parametres url
 			$session = $_GET['session'] ?? '1';
-			$idp = $_GET['cours'] ? $idCours[$_GET['cours']] : $idCours[0];
+            $idp = isset($_GET['cours']) && $_GET['cours'] ? $idCours[$_GET['cours']] : $idCours[0];
             // Parametres requête
             $the_query2 = new WP_Query( [ 
                 'post_type' => 'post',
