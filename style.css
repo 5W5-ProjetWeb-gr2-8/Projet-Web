@@ -608,6 +608,7 @@ footer a {
 }
 @media (min-width: 768px) {
   .cours-boxes {
+    height: 100%;
     margin: 0 21px;
     /* variable */
   }
@@ -624,6 +625,7 @@ footer a {
 @media (min-width: 1025px) {
   .cours-boxes {
     width: 175%;
+    height: 31rem;
     margin: 50px 25px 50px 0;
     /* variable */
   }
