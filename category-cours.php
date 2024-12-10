@@ -95,7 +95,7 @@ $domaine = "";
                 <div class="leCours" id="<?= $domaine ?>">
                     <h2><?= $titre ?></h2>
                     <h4><?= $codeCours ?></h4>
-                    <h4>Préalables: <?= $prea; ?></h4>
+                    <h4 class="prealables">Préalables: <?= $prea; ?></h4>
                     <div class="tempParCours">
                         <ol>
                             <h6><?= $heures[0]; ?>h Theorie</h6>

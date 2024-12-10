@@ -536,7 +536,10 @@ footer a {
 .Description {
   display: flex;
   justify-content: center;
-  margin-left: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
   flex-direction: column;
   gap: 1rem;
   /* variable */
@@ -638,7 +641,8 @@ footer a {
 .cours-boxes .tempParCours {
   display: flex;
   justify-content: start;
-  margin-left: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   /* variable */
 }
 .cours-boxes .tempParCours ol {
@@ -653,15 +657,22 @@ footer a {
   background-color: var(--couleur-3d-fond);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   /* variable */
   height: 100%;
   min-width: fit-content;
 }
 .cours-boxes .leCours h2,
 .cours-boxes .leCours h4 {
-  margin-left: 1rem;
-  /* variable */
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+.cours-boxes .leCours .prealables {
+  margin-top: 1.5rem;
+}
+.cours-boxes .leCours h2 {
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
 }
 .cours-boxes .leCours .logoCours {
   display: flex;
