@@ -81,7 +81,6 @@
 }
 
 .cours-section {
-  gap: var(--espacement);
   padding: 0px 20px 40px 20px;
   /* variable */
   background-color: var(--couleur-fond);
@@ -120,7 +119,7 @@
     width: 90%;
     /* variable */
     gap: var(--espacement);
-    margin: 75px;
+    margin: 75px 5px 75px 75px;
     /* variable */
   }
 }
@@ -150,7 +149,6 @@
     flex-direction: column;
     flex-wrap: nowrap;
     height: 100%;
-    width: 40%;
     /* variable */
     margin-left: 1rem;
     /* variable */
@@ -235,7 +233,9 @@
 }
 
 .cours-boxes {
-  margin: 40px 20px;
+  width: 200rem;
+  height: 100%;
+  margin: 40px 20px 40px 0;
   /* variable */
   border: 8px solid;
   border-radius: 16px;
@@ -263,8 +263,8 @@
   }
 
   @media (min-width: 1025px) {
-    width: 100%;
-    margin: 50px 25px;
+    width: 175%;
+    margin: 50px 25px 50px 0;
     /* variable */
 
     .logoCours {
@@ -278,6 +278,10 @@
         height: var(--taille-icone);
       }
     }
+  }
+
+  @media (min-width: 1320px) {
+    width: 250%;
   }
 
   .tempParCours {
