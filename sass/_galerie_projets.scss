@@ -25,6 +25,8 @@
     .titre_section_filtre {
       align-self: flex-start;
       text-wrap: nowrap;
+      font-weight: bold;
+      font-size: 1.5rem;
     }
 
     @media (min-width: 1001px) {
@@ -125,6 +127,8 @@
         .hover_ui {
           border-color: var(--couleur-design-fond);
           color: var(--couleur-texte-pale);
+          font-weight: bold;
+          font-size: 1.2rem;
           background: {
             image: linear-gradient(
               45deg,
@@ -144,6 +148,8 @@
         .hover_web {
           border-color: var(--couleur-web4);
           color: var(--couleur-texte-pale);
+          font-weight: bold;
+          font-size: 1.2rem;
           background: {
             image: linear-gradient(
               45deg,
@@ -163,6 +169,8 @@
         .hover_3d {
           border-color: var(--couleur-3d-fond);
           color: var(--couleur-texte-pale);
+          font-weight: bold;
+          font-size: 1.2rem;
           background: {
             image: linear-gradient(
               45deg,
@@ -182,6 +190,8 @@
         .hover_jeu {
           border-color: var(--couleur-jeux4);
           color: var(--couleur-texte-pale);
+          font-weight: bold;
+          font-size: 1.2rem;
           background: {
             image: linear-gradient(
               45deg,
@@ -201,6 +211,8 @@
         .hover_video {
           border-color: var(--couleur-video-fond);
           color: var(--couleur-texte-pale);
+          font-weight: bold;
+          font-size: 1.2rem;
           background: {
             image: linear-gradient(
               45deg,
